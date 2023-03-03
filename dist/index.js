@@ -63,6 +63,7 @@ const client_s3_1 = __nccwpck_require__(19250);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
+            const include = core.getMultilineInput('include');
             const options = {
                 accessKeyId: core.getInput('accessKeyId', {
                     required: true
@@ -72,8 +73,8 @@ function run() {
                 }),
                 bucketName: core.getInput('bucketName', { required: true }),
                 sourceDir: core.getInput('sourceDir') || node_process_1.default.cwd(),
-                include: core.getMultilineInput('include') || ['**'],
-                exclude: core.getMultilineInput('exclude') || [],
+                include: include.length > 0 ? include : ['**'],
+                exclude: core.getMultilineInput('exclude'),
                 region: core.getInput('region') || constants_1.YANDEX_CLOUD_REGION,
                 clear: core.getBooleanInput('clear')
             };

@@ -1,5 +1,5 @@
 import {upload} from '../src/yc-upload'
-import {expect, test} from '@jest/globals'
+import {expect, test, beforeEach} from '@jest/globals'
 import {logger} from '../__mock__/logger'
 import {mockClient} from 'aws-sdk-client-mock';
 

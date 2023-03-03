@@ -7,6 +7,8 @@ import {S3Client} from '@aws-sdk/client-s3'
 
 async function run(): Promise<void> {
   try {
+    const include = core.getMultilineInput('include')
+
     const options: Options = {
       accessKeyId: core.getInput('accessKeyId', {
         required: true
@@ -16,8 +18,8 @@ async function run(): Promise<void> {
       }),
       bucketName: core.getInput('bucketName', {required: true}),
       sourceDir: core.getInput('sourceDir') || process.cwd(),
-      include: core.getMultilineInput('include') || ['**'],
-      exclude: core.getMultilineInput('exclude') || [],
+      include: include.length > 0 ? include : ['**'],
+      exclude: core.getMultilineInput('exclude'),
       region: core.getInput('region') || YANDEX_CLOUD_REGION,
       clear: core.getBooleanInput('clear')
     }
