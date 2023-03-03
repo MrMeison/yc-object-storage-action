@@ -1,11 +1,38 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Yandex.Cloud Object Storage Upload (S3)'
+description: 'Deploy static website to Yandex Object Storage'
+author: 'Konstantin Mamaev'
+
 inputs:
-  milliseconds: # change this
+  accessKeyId:
+    description: 'Service account access key id'
+    default: ''
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+  secretAccessKey:
+    description: 'Service account secret access key'
+    default: ''
+    required: true
+  bucketName:
+    description: 'Bucket name'
+    default: ''
+    required: true
+  sourceDir:
+    description: 'Path to upload folder'
+    default: ''
+    required: true
+  include:
+    description: 'Include patterns for files'
+    required: false
+  exclude:
+    description: 'Exclude patterns for files'
+    required: false
+  clear:
+    description: 'Clear bucket before deploy'
+    required: false
+  region:
+    description: 'Bucket region'
+    default: 'ru-central1-a'
+    required: false
+
 runs:
   using: 'node16'
   main: 'dist/index.js'

@@ -2,6 +2,7 @@
     "plugins": ["jest", "@typescript-eslint"],
     "extends": ["plugin:github/recommended"],
     "parser": "@typescript-eslint/parser",
+    "ignorePatterns": ["__tests__/**/*", "__mock__/**/*", "__fixtures__/**/*"],
     "parserOptions": {
       "ecmaVersion": 9,
       "sourceType": "module",
