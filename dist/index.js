@@ -64,13 +64,17 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const include = core.getMultilineInput('include');
+            const accessKeyId = core.getInput('accessKeyId', {
+                required: true
+            });
+            core.setSecret(accessKeyId);
+            const secretAccessKey = core.getInput('secretAccessKey', {
+                required: true
+            });
+            core.setSecret(secretAccessKey);
             const options = {
-                accessKeyId: core.getInput('accessKeyId', {
-                    required: true
-                }),
-                secretAccessKey: core.getInput('secretAccessKey', {
-                    required: true
-                }),
+                accessKeyId,
+                secretAccessKey,
                 bucketName: core.getInput('bucketName', { required: true }),
                 sourceDir: core.getInput('sourceDir') || node_process_1.default.cwd(),
                 include: include.length > 0 ? include : ['**'],
@@ -82,8 +86,17 @@ function run() {
                 log: (...messages) => {
                     core.info(messages.join('\n'));
                 },
+                info: (...messages) => {
+                    core.info(messages.join('\n'));
+                },
                 warn: (...messages) => {
                     core.warning(messages.join('\n'));
+                },
+                debug: (...messages) => {
+                    core.debug(messages.join('\n'));
+                },
+                error: (...messages) => {
+                    core.error(messages.join('\n'));
                 }
             };
             const s3 = new client_s3_1.S3Client({
@@ -92,7 +105,8 @@ function run() {
                     accessKeyId: options.accessKeyId,
                     secretAccessKey: options.secretAccessKey
                 },
-                region: options.region
+                region: options.region,
+                logger
             });
             yield (0, yc_upload_1.upload)(s3, logger, options);
         }
@@ -202,7 +216,7 @@ function upload(s3Client, logger, options) {
         }
         catch (e) {
             if (e instanceof Error) {
-                logger.log(e.message);
+                logger.error(e.message);
                 throw e;
             }
         }

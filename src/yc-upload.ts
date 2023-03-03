@@ -71,7 +71,7 @@ export async function upload(
     await Promise.all(s3Requests)
   } catch (e) {
     if (e instanceof Error) {
-      logger.log(e.message)
+      logger.error(e.message)
       throw e
     }
   }

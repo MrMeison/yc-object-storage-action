@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export type Options = {
   accessKeyId: string
   secretAccessKey: string
@@ -10,8 +11,9 @@ export type Options = {
 }
 
 export type Logger = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   log: (...messages: any[]) => void
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  info: (...message: any[]) => void
+  error: (...message: any[]) => void
+  debug: (...message: any[]) => void
   warn: (...message: any[]) => void
 }

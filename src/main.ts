@@ -8,14 +8,21 @@ import {S3Client} from '@aws-sdk/client-s3'
 async function run(): Promise<void> {
   try {
     const include = core.getMultilineInput('include')
+    const accessKeyId = core.getInput('accessKeyId', {
+      required: true
+    })
+
+    core.setSecret(accessKeyId)
+
+    const secretAccessKey = core.getInput('secretAccessKey', {
+      required: true
+    })
+
+    core.setSecret(secretAccessKey)
 
     const options: Options = {
-      accessKeyId: core.getInput('accessKeyId', {
-        required: true
-      }),
-      secretAccessKey: core.getInput('secretAccessKey', {
-        required: true
-      }),
+      accessKeyId,
+      secretAccessKey,
       bucketName: core.getInput('bucketName', {required: true}),
       sourceDir: core.getInput('sourceDir') || process.cwd(),
       include: include.length > 0 ? include : ['**'],
@@ -28,8 +35,17 @@ async function run(): Promise<void> {
       log: (...messages) => {
         core.info(messages.join('\n'))
       },
+      info: (...messages) => {
+        core.info(messages.join('\n'))
+      },
       warn: (...messages) => {
         core.warning(messages.join('\n'))
+      },
+      debug: (...messages) => {
+        core.debug(messages.join('\n'))
+      },
+      error: (...messages) => {
+        core.error(messages.join('\n'))
       }
     }
 
@@ -39,7 +55,8 @@ async function run(): Promise<void> {
         accessKeyId: options.accessKeyId,
         secretAccessKey: options.secretAccessKey
       },
-      region: options.region
+      region: options.region,
+      logger
     })
 
     await ycUpload(s3, logger, options)
