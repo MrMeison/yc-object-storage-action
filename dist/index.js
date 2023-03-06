@@ -105,8 +105,7 @@ function run() {
                     accessKeyId: options.accessKeyId,
                     secretAccessKey: options.secretAccessKey
                 },
-                region: options.region,
-                logger
+                region: options.region
             });
             yield (0, yc_upload_1.upload)(s3, logger, options);
         }
@@ -197,7 +196,12 @@ function upload(s3Client, logger, options) {
                         Body: node_fs_1.default.createReadStream(node_path_1.default.resolve(sourceDirFullPath, filePath)),
                         ContentType: type
                     });
-                    s3Requests.push(s3Client.send(putCommand));
+                    logger.info(`Starting to upload: ${filePath}`);
+                    s3Requests.push(
+                    // eslint-disable-next-line github/no-then
+                    s3Client.send(putCommand).then(() => {
+                        logger.info(`Uploaded: ${filePath}`);
+                    }));
                 }
                 finally {
                     _d = true;
@@ -216,9 +220,9 @@ function upload(s3Client, logger, options) {
         }
         catch (e) {
             if (e instanceof Error) {
-                logger.error(e.message);
-                throw e;
+                logger.error('Error: ', e.message);
             }
+            throw e;
         }
     });
 }

@@ -64,10 +64,13 @@ export async function upload(
       Body: fs.createReadStream(path.resolve(sourceDirFullPath, filePath)),
       ContentType: type
     })
+
+    logger.info(`Starting to upload: ${filePath}`)
+
     s3Requests.push(
       // eslint-disable-next-line github/no-then
       s3Client.send(putCommand).then(() => {
-        logger.info(`Uploaded ${filePath}`)
+        logger.info(`Uploaded: ${filePath}`)
       })
     )
   }
