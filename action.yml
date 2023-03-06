@@ -33,6 +33,10 @@ inputs:
     default: 'ru-central1-a'
     required: false
 
+branding:
+  color: blue
+  icon: upload-cloud
+
 runs:
   using: 'node16'
   main: 'dist/index.js'
