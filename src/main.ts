@@ -55,8 +55,7 @@ async function run(): Promise<void> {
         accessKeyId: options.accessKeyId,
         secretAccessKey: options.secretAccessKey
       },
-      region: options.region,
-      logger
+      region: options.region
     })
 
     await ycUpload(s3, logger, options)
