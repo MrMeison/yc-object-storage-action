@@ -3864,13 +3864,8 @@ exports.AbortMultipartUploadCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class AbortMultipartUploadCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -3885,6 +3880,10 @@ class AbortMultipartUploadCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, AbortMultipartUploadCommand.getEndpointParameterInstructions()));
@@ -3896,8 +3895,8 @@ class AbortMultipartUploadCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.AbortMultipartUploadRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.AbortMultipartUploadOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3929,10 +3928,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class CompleteMultipartUploadCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -3946,6 +3941,10 @@ class CompleteMultipartUploadCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -3993,10 +3992,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class CopyObjectCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -4010,6 +4005,10 @@ class CopyObjectCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4053,13 +4052,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_location_constraint_1 = __nccwpck_require__(42098);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class CreateBucketCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             DisableAccessPoints: { type: "staticContextParams", value: true },
@@ -4075,6 +4069,10 @@ class CreateBucketCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, CreateBucketCommand.getEndpointParameterInstructions()));
@@ -4087,8 +4085,8 @@ class CreateBucketCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CreateBucketRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreateBucketOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4119,10 +4117,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class CreateMultipartUploadCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -4136,6 +4130,10 @@ class CreateMultipartUploadCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4177,13 +4175,8 @@ exports.DeleteBucketAnalyticsConfigurationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeleteBucketAnalyticsConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -4198,6 +4191,10 @@ class DeleteBucketAnalyticsConfigurationCommand extends smithy_client_1.Command 
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteBucketAnalyticsConfigurationCommand.getEndpointParameterInstructions()));
@@ -4209,8 +4206,8 @@ class DeleteBucketAnalyticsConfigurationCommand extends smithy_client_1.Command 
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteBucketAnalyticsConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4237,13 +4234,8 @@ exports.DeleteBucketCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeleteBucketCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -4258,6 +4250,10 @@ class DeleteBucketCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteBucketCommand.getEndpointParameterInstructions()));
@@ -4269,8 +4265,8 @@ class DeleteBucketCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteBucketRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4297,13 +4293,8 @@ exports.DeleteBucketCorsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeleteBucketCorsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -4318,6 +4309,10 @@ class DeleteBucketCorsCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteBucketCorsCommand.getEndpointParameterInstructions()));
@@ -4329,8 +4324,8 @@ class DeleteBucketCorsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteBucketCorsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4357,13 +4352,8 @@ exports.DeleteBucketEncryptionCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeleteBucketEncryptionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -4378,6 +4368,10 @@ class DeleteBucketEncryptionCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteBucketEncryptionCommand.getEndpointParameterInstructions()));
@@ -4389,8 +4383,8 @@ class DeleteBucketEncryptionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteBucketEncryptionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4417,13 +4411,8 @@ exports.DeleteBucketIntelligentTieringConfigurationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeleteBucketIntelligentTieringConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -4438,6 +4427,10 @@ class DeleteBucketIntelligentTieringConfigurationCommand extends smithy_client_1
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteBucketIntelligentTieringConfigurationCommand.getEndpointParameterInstructions()));
@@ -4449,8 +4442,8 @@ class DeleteBucketIntelligentTieringConfigurationCommand extends smithy_client_1
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteBucketIntelligentTieringConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4477,13 +4470,8 @@ exports.DeleteBucketInventoryConfigurationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeleteBucketInventoryConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -4498,6 +4486,10 @@ class DeleteBucketInventoryConfigurationCommand extends smithy_client_1.Command 
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteBucketInventoryConfigurationCommand.getEndpointParameterInstructions()));
@@ -4509,8 +4501,8 @@ class DeleteBucketInventoryConfigurationCommand extends smithy_client_1.Command 
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteBucketInventoryConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4537,13 +4529,8 @@ exports.DeleteBucketLifecycleCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeleteBucketLifecycleCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -4558,6 +4545,10 @@ class DeleteBucketLifecycleCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteBucketLifecycleCommand.getEndpointParameterInstructions()));
@@ -4569,8 +4560,8 @@ class DeleteBucketLifecycleCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteBucketLifecycleRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4597,13 +4588,8 @@ exports.DeleteBucketMetricsConfigurationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeleteBucketMetricsConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -4618,6 +4604,10 @@ class DeleteBucketMetricsConfigurationCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteBucketMetricsConfigurationCommand.getEndpointParameterInstructions()));
@@ -4629,8 +4619,8 @@ class DeleteBucketMetricsConfigurationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteBucketMetricsConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4657,13 +4647,8 @@ exports.DeleteBucketOwnershipControlsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeleteBucketOwnershipControlsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -4678,6 +4663,10 @@ class DeleteBucketOwnershipControlsCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteBucketOwnershipControlsCommand.getEndpointParameterInstructions()));
@@ -4689,8 +4678,8 @@ class DeleteBucketOwnershipControlsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteBucketOwnershipControlsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4717,13 +4706,8 @@ exports.DeleteBucketPolicyCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeleteBucketPolicyCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -4738,6 +4722,10 @@ class DeleteBucketPolicyCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteBucketPolicyCommand.getEndpointParameterInstructions()));
@@ -4749,8 +4737,8 @@ class DeleteBucketPolicyCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteBucketPolicyRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4777,13 +4765,8 @@ exports.DeleteBucketReplicationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeleteBucketReplicationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -4798,6 +4781,10 @@ class DeleteBucketReplicationCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteBucketReplicationCommand.getEndpointParameterInstructions()));
@@ -4809,8 +4796,8 @@ class DeleteBucketReplicationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteBucketReplicationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4837,13 +4824,8 @@ exports.DeleteBucketTaggingCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeleteBucketTaggingCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -4858,6 +4840,10 @@ class DeleteBucketTaggingCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteBucketTaggingCommand.getEndpointParameterInstructions()));
@@ -4869,8 +4855,8 @@ class DeleteBucketTaggingCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteBucketTaggingRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4897,13 +4883,8 @@ exports.DeleteBucketWebsiteCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeleteBucketWebsiteCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -4918,6 +4899,10 @@ class DeleteBucketWebsiteCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteBucketWebsiteCommand.getEndpointParameterInstructions()));
@@ -4929,8 +4914,8 @@ class DeleteBucketWebsiteCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteBucketWebsiteRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4957,13 +4942,8 @@ exports.DeleteObjectCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeleteObjectCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -4978,6 +4958,10 @@ class DeleteObjectCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteObjectCommand.getEndpointParameterInstructions()));
@@ -4989,8 +4973,8 @@ class DeleteObjectCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteObjectRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteObjectOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5017,13 +5001,8 @@ exports.DeleteObjectTaggingCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeleteObjectTaggingCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -5038,6 +5017,10 @@ class DeleteObjectTaggingCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteObjectTaggingCommand.getEndpointParameterInstructions()));
@@ -5049,8 +5032,8 @@ class DeleteObjectTaggingCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteObjectTaggingRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteObjectTaggingOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5078,13 +5061,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeleteObjectsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -5098,6 +5076,10 @@ class DeleteObjectsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5115,8 +5097,8 @@ class DeleteObjectsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteObjectsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteObjectsOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5143,13 +5125,8 @@ exports.DeletePublicAccessBlockCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class DeletePublicAccessBlockCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -5164,6 +5141,10 @@ class DeletePublicAccessBlockCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeletePublicAccessBlockCommand.getEndpointParameterInstructions()));
@@ -5175,8 +5156,8 @@ class DeletePublicAccessBlockCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeletePublicAccessBlockRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5203,13 +5184,8 @@ exports.GetBucketAccelerateConfigurationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketAccelerateConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -5224,6 +5200,10 @@ class GetBucketAccelerateConfigurationCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketAccelerateConfigurationCommand.getEndpointParameterInstructions()));
@@ -5235,8 +5215,8 @@ class GetBucketAccelerateConfigurationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketAccelerateConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketAccelerateConfigurationOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5263,13 +5243,8 @@ exports.GetBucketAclCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketAclCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -5284,6 +5259,10 @@ class GetBucketAclCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketAclCommand.getEndpointParameterInstructions()));
@@ -5295,8 +5274,8 @@ class GetBucketAclCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketAclRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketAclOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5323,13 +5302,8 @@ exports.GetBucketAnalyticsConfigurationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketAnalyticsConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -5344,6 +5318,10 @@ class GetBucketAnalyticsConfigurationCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketAnalyticsConfigurationCommand.getEndpointParameterInstructions()));
@@ -5355,8 +5333,8 @@ class GetBucketAnalyticsConfigurationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketAnalyticsConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketAnalyticsConfigurationOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5383,13 +5361,8 @@ exports.GetBucketCorsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketCorsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -5404,6 +5377,10 @@ class GetBucketCorsCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketCorsCommand.getEndpointParameterInstructions()));
@@ -5415,8 +5392,8 @@ class GetBucketCorsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketCorsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketCorsOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5446,10 +5423,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketEncryptionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -5464,6 +5437,10 @@ class GetBucketEncryptionCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketEncryptionCommand.getEndpointParameterInstructions()));
@@ -5475,7 +5452,7 @@ class GetBucketEncryptionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketEncryptionRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_0_1.GetBucketEncryptionOutputFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -5503,13 +5480,8 @@ exports.GetBucketIntelligentTieringConfigurationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketIntelligentTieringConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -5524,6 +5496,10 @@ class GetBucketIntelligentTieringConfigurationCommand extends smithy_client_1.Co
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketIntelligentTieringConfigurationCommand.getEndpointParameterInstructions()));
@@ -5535,8 +5511,8 @@ class GetBucketIntelligentTieringConfigurationCommand extends smithy_client_1.Co
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketIntelligentTieringConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketIntelligentTieringConfigurationOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5566,10 +5542,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketInventoryConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -5584,6 +5556,10 @@ class GetBucketInventoryConfigurationCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketInventoryConfigurationCommand.getEndpointParameterInstructions()));
@@ -5595,7 +5571,7 @@ class GetBucketInventoryConfigurationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketInventoryConfigurationRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_0_1.GetBucketInventoryConfigurationOutputFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -5623,13 +5599,8 @@ exports.GetBucketLifecycleConfigurationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketLifecycleConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -5644,6 +5615,10 @@ class GetBucketLifecycleConfigurationCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketLifecycleConfigurationCommand.getEndpointParameterInstructions()));
@@ -5655,8 +5630,8 @@ class GetBucketLifecycleConfigurationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketLifecycleConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketLifecycleConfigurationOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5683,13 +5658,8 @@ exports.GetBucketLocationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketLocationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -5704,6 +5674,10 @@ class GetBucketLocationCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketLocationCommand.getEndpointParameterInstructions()));
@@ -5715,8 +5689,8 @@ class GetBucketLocationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketLocationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketLocationOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5743,13 +5717,8 @@ exports.GetBucketLoggingCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketLoggingCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -5764,6 +5733,10 @@ class GetBucketLoggingCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketLoggingCommand.getEndpointParameterInstructions()));
@@ -5775,8 +5748,8 @@ class GetBucketLoggingCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketLoggingRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketLoggingOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5803,13 +5776,8 @@ exports.GetBucketMetricsConfigurationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketMetricsConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -5824,6 +5792,10 @@ class GetBucketMetricsConfigurationCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketMetricsConfigurationCommand.getEndpointParameterInstructions()));
@@ -5835,8 +5807,8 @@ class GetBucketMetricsConfigurationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketMetricsConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketMetricsConfigurationOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5863,13 +5835,8 @@ exports.GetBucketNotificationConfigurationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketNotificationConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -5884,6 +5851,10 @@ class GetBucketNotificationConfigurationCommand extends smithy_client_1.Command 
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketNotificationConfigurationCommand.getEndpointParameterInstructions()));
@@ -5895,8 +5866,8 @@ class GetBucketNotificationConfigurationCommand extends smithy_client_1.Command 
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketNotificationConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.NotificationConfigurationFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5923,13 +5894,8 @@ exports.GetBucketOwnershipControlsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketOwnershipControlsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -5944,6 +5910,10 @@ class GetBucketOwnershipControlsCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketOwnershipControlsCommand.getEndpointParameterInstructions()));
@@ -5955,8 +5925,8 @@ class GetBucketOwnershipControlsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketOwnershipControlsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketOwnershipControlsOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5983,13 +5953,8 @@ exports.GetBucketPolicyCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketPolicyCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6004,6 +5969,10 @@ class GetBucketPolicyCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketPolicyCommand.getEndpointParameterInstructions()));
@@ -6015,8 +5984,8 @@ class GetBucketPolicyCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketPolicyRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketPolicyOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6043,13 +6012,8 @@ exports.GetBucketPolicyStatusCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketPolicyStatusCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6064,6 +6028,10 @@ class GetBucketPolicyStatusCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketPolicyStatusCommand.getEndpointParameterInstructions()));
@@ -6075,8 +6043,8 @@ class GetBucketPolicyStatusCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketPolicyStatusRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketPolicyStatusOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6103,13 +6071,8 @@ exports.GetBucketReplicationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketReplicationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6124,6 +6087,10 @@ class GetBucketReplicationCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketReplicationCommand.getEndpointParameterInstructions()));
@@ -6135,8 +6102,8 @@ class GetBucketReplicationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketReplicationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketReplicationOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6163,13 +6130,8 @@ exports.GetBucketRequestPaymentCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketRequestPaymentCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6184,6 +6146,10 @@ class GetBucketRequestPaymentCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketRequestPaymentCommand.getEndpointParameterInstructions()));
@@ -6195,8 +6161,8 @@ class GetBucketRequestPaymentCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketRequestPaymentRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketRequestPaymentOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6223,13 +6189,8 @@ exports.GetBucketTaggingCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketTaggingCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6244,6 +6205,10 @@ class GetBucketTaggingCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketTaggingCommand.getEndpointParameterInstructions()));
@@ -6255,8 +6220,8 @@ class GetBucketTaggingCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketTaggingRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketTaggingOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6283,13 +6248,8 @@ exports.GetBucketVersioningCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketVersioningCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6304,6 +6264,10 @@ class GetBucketVersioningCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketVersioningCommand.getEndpointParameterInstructions()));
@@ -6315,8 +6279,8 @@ class GetBucketVersioningCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketVersioningRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketVersioningOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6343,13 +6307,8 @@ exports.GetBucketWebsiteCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetBucketWebsiteCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6364,6 +6323,10 @@ class GetBucketWebsiteCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetBucketWebsiteCommand.getEndpointParameterInstructions()));
@@ -6375,8 +6338,8 @@ class GetBucketWebsiteCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetBucketWebsiteRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetBucketWebsiteOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6403,13 +6366,8 @@ exports.GetObjectAclCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetObjectAclCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6424,6 +6382,10 @@ class GetObjectAclCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetObjectAclCommand.getEndpointParameterInstructions()));
@@ -6435,8 +6397,8 @@ class GetObjectAclCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetObjectAclRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetObjectAclOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6467,10 +6429,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetObjectAttributesCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6485,6 +6443,10 @@ class GetObjectAttributesCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetObjectAttributesCommand.getEndpointParameterInstructions()));
@@ -6498,7 +6460,7 @@ class GetObjectAttributesCommand extends smithy_client_1.Command {
             clientName,
             commandName,
             inputFilterSensitiveLog: models_0_1.GetObjectAttributesRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetObjectAttributesOutputFilterSensitiveLog,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6530,10 +6492,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetObjectCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6547,6 +6505,10 @@ class GetObjectCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6594,13 +6556,8 @@ exports.GetObjectLegalHoldCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetObjectLegalHoldCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6615,6 +6572,10 @@ class GetObjectLegalHoldCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetObjectLegalHoldCommand.getEndpointParameterInstructions()));
@@ -6626,8 +6587,8 @@ class GetObjectLegalHoldCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetObjectLegalHoldRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetObjectLegalHoldOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6654,13 +6615,8 @@ exports.GetObjectLockConfigurationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetObjectLockConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6675,6 +6631,10 @@ class GetObjectLockConfigurationCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetObjectLockConfigurationCommand.getEndpointParameterInstructions()));
@@ -6686,8 +6646,8 @@ class GetObjectLockConfigurationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetObjectLockConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetObjectLockConfigurationOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6714,13 +6674,8 @@ exports.GetObjectRetentionCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetObjectRetentionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6735,6 +6690,10 @@ class GetObjectRetentionCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetObjectRetentionCommand.getEndpointParameterInstructions()));
@@ -6746,8 +6705,8 @@ class GetObjectRetentionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetObjectRetentionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetObjectRetentionOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6774,13 +6733,8 @@ exports.GetObjectTaggingCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetObjectTaggingCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6795,6 +6749,10 @@ class GetObjectTaggingCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetObjectTaggingCommand.getEndpointParameterInstructions()));
@@ -6806,8 +6764,8 @@ class GetObjectTaggingCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetObjectTaggingRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetObjectTaggingOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6837,10 +6795,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetObjectTorrentCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6855,6 +6809,10 @@ class GetObjectTorrentCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetObjectTorrentCommand.getEndpointParameterInstructions()));
@@ -6866,7 +6824,7 @@ class GetObjectTorrentCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetObjectTorrentRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_0_1.GetObjectTorrentOutputFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -6894,13 +6852,8 @@ exports.GetPublicAccessBlockCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class GetPublicAccessBlockCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6915,6 +6868,10 @@ class GetPublicAccessBlockCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetPublicAccessBlockCommand.getEndpointParameterInstructions()));
@@ -6926,8 +6883,8 @@ class GetPublicAccessBlockCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetPublicAccessBlockRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetPublicAccessBlockOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6954,13 +6911,8 @@ exports.HeadBucketCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class HeadBucketCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -6975,6 +6927,10 @@ class HeadBucketCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, HeadBucketCommand.getEndpointParameterInstructions()));
@@ -6986,8 +6942,8 @@ class HeadBucketCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.HeadBucketRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7018,10 +6974,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class HeadObjectCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -7035,6 +6987,10 @@ class HeadObjectCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7076,13 +7032,8 @@ exports.ListBucketAnalyticsConfigurationsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class ListBucketAnalyticsConfigurationsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -7097,6 +7048,10 @@ class ListBucketAnalyticsConfigurationsCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListBucketAnalyticsConfigurationsCommand.getEndpointParameterInstructions()));
@@ -7108,8 +7063,8 @@ class ListBucketAnalyticsConfigurationsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListBucketAnalyticsConfigurationsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListBucketAnalyticsConfigurationsOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7136,13 +7091,8 @@ exports.ListBucketIntelligentTieringConfigurationsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class ListBucketIntelligentTieringConfigurationsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -7157,6 +7107,10 @@ class ListBucketIntelligentTieringConfigurationsCommand extends smithy_client_1.
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListBucketIntelligentTieringConfigurationsCommand.getEndpointParameterInstructions()));
@@ -7168,8 +7122,8 @@ class ListBucketIntelligentTieringConfigurationsCommand extends smithy_client_1.
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListBucketIntelligentTieringConfigurationsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListBucketIntelligentTieringConfigurationsOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7199,10 +7153,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class ListBucketInventoryConfigurationsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -7217,6 +7167,10 @@ class ListBucketInventoryConfigurationsCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListBucketInventoryConfigurationsCommand.getEndpointParameterInstructions()));
@@ -7228,7 +7182,7 @@ class ListBucketInventoryConfigurationsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListBucketInventoryConfigurationsRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_0_1.ListBucketInventoryConfigurationsOutputFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -7256,13 +7210,8 @@ exports.ListBucketMetricsConfigurationsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class ListBucketMetricsConfigurationsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -7277,6 +7226,10 @@ class ListBucketMetricsConfigurationsCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListBucketMetricsConfigurationsCommand.getEndpointParameterInstructions()));
@@ -7288,8 +7241,8 @@ class ListBucketMetricsConfigurationsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListBucketMetricsConfigurationsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListBucketMetricsConfigurationsOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7316,13 +7269,8 @@ exports.ListBucketsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class ListBucketsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             ForcePathStyle: { type: "clientContextParams", name: "forcePathStyle" },
@@ -7336,6 +7284,10 @@ class ListBucketsCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListBucketsCommand.getEndpointParameterInstructions()));
@@ -7347,8 +7299,8 @@ class ListBucketsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: (input) => input,
-            outputFilterSensitiveLog: models_0_1.ListBucketsOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7375,13 +7327,8 @@ exports.ListMultipartUploadsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class ListMultipartUploadsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -7396,6 +7343,10 @@ class ListMultipartUploadsCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListMultipartUploadsCommand.getEndpointParameterInstructions()));
@@ -7407,8 +7358,8 @@ class ListMultipartUploadsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListMultipartUploadsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListMultipartUploadsOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7435,13 +7386,8 @@ exports.ListObjectVersionsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class ListObjectVersionsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -7456,6 +7402,10 @@ class ListObjectVersionsCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListObjectVersionsCommand.getEndpointParameterInstructions()));
@@ -7467,8 +7417,8 @@ class ListObjectVersionsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListObjectVersionsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListObjectVersionsOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7495,13 +7445,8 @@ exports.ListObjectsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class ListObjectsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -7516,6 +7461,10 @@ class ListObjectsCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListObjectsCommand.getEndpointParameterInstructions()));
@@ -7527,8 +7476,8 @@ class ListObjectsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListObjectsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListObjectsOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7555,13 +7504,8 @@ exports.ListObjectsV2Command = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class ListObjectsV2Command extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -7576,6 +7520,10 @@ class ListObjectsV2Command extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListObjectsV2Command.getEndpointParameterInstructions()));
@@ -7587,8 +7535,8 @@ class ListObjectsV2Command extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.ListObjectsV2RequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListObjectsV2OutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7619,10 +7567,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class ListPartsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -7637,6 +7581,10 @@ class ListPartsCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListPartsCommand.getEndpointParameterInstructions()));
@@ -7650,7 +7598,7 @@ class ListPartsCommand extends smithy_client_1.Command {
             clientName,
             commandName,
             inputFilterSensitiveLog: models_0_1.ListPartsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListPartsOutputFilterSensitiveLog,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7678,13 +7626,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketAccelerateConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -7698,6 +7641,10 @@ class PutBucketAccelerateConfigurationCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7715,8 +7662,8 @@ class PutBucketAccelerateConfigurationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutBucketAccelerateConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7744,13 +7691,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketAclCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -7764,6 +7706,10 @@ class PutBucketAclCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7781,8 +7727,8 @@ class PutBucketAclCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutBucketAclRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7809,13 +7755,8 @@ exports.PutBucketAnalyticsConfigurationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketAnalyticsConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -7830,6 +7771,10 @@ class PutBucketAnalyticsConfigurationCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, PutBucketAnalyticsConfigurationCommand.getEndpointParameterInstructions()));
@@ -7841,8 +7786,8 @@ class PutBucketAnalyticsConfigurationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutBucketAnalyticsConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7870,13 +7815,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketCorsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -7890,6 +7830,10 @@ class PutBucketCorsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7907,8 +7851,8 @@ class PutBucketCorsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutBucketCorsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7939,10 +7883,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketEncryptionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -7956,6 +7896,10 @@ class PutBucketEncryptionCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7974,7 +7918,7 @@ class PutBucketEncryptionCommand extends smithy_client_1.Command {
             clientName,
             commandName,
             inputFilterSensitiveLog: models_0_1.PutBucketEncryptionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8001,13 +7945,8 @@ exports.PutBucketIntelligentTieringConfigurationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketIntelligentTieringConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -8022,6 +7961,10 @@ class PutBucketIntelligentTieringConfigurationCommand extends smithy_client_1.Co
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, PutBucketIntelligentTieringConfigurationCommand.getEndpointParameterInstructions()));
@@ -8033,8 +7976,8 @@ class PutBucketIntelligentTieringConfigurationCommand extends smithy_client_1.Co
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutBucketIntelligentTieringConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8064,10 +8007,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketInventoryConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -8082,6 +8021,10 @@ class PutBucketInventoryConfigurationCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, PutBucketInventoryConfigurationCommand.getEndpointParameterInstructions()));
@@ -8094,7 +8037,7 @@ class PutBucketInventoryConfigurationCommand extends smithy_client_1.Command {
             clientName,
             commandName,
             inputFilterSensitiveLog: models_0_1.PutBucketInventoryConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8122,13 +8065,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketLifecycleConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -8142,6 +8080,10 @@ class PutBucketLifecycleConfigurationCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8159,8 +8101,8 @@ class PutBucketLifecycleConfigurationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutBucketLifecycleConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8188,13 +8130,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketLoggingCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -8208,6 +8145,10 @@ class PutBucketLoggingCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8225,8 +8166,8 @@ class PutBucketLoggingCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutBucketLoggingRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8253,13 +8194,8 @@ exports.PutBucketMetricsConfigurationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketMetricsConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -8274,6 +8210,10 @@ class PutBucketMetricsConfigurationCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, PutBucketMetricsConfigurationCommand.getEndpointParameterInstructions()));
@@ -8285,8 +8225,8 @@ class PutBucketMetricsConfigurationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutBucketMetricsConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8313,13 +8253,8 @@ exports.PutBucketNotificationConfigurationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketNotificationConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -8334,6 +8269,10 @@ class PutBucketNotificationConfigurationCommand extends smithy_client_1.Command 
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, PutBucketNotificationConfigurationCommand.getEndpointParameterInstructions()));
@@ -8345,8 +8284,8 @@ class PutBucketNotificationConfigurationCommand extends smithy_client_1.Command 
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutBucketNotificationConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8374,13 +8313,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketOwnershipControlsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -8395,6 +8329,10 @@ class PutBucketOwnershipControlsCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, PutBucketOwnershipControlsCommand.getEndpointParameterInstructions()));
@@ -8407,8 +8345,8 @@ class PutBucketOwnershipControlsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutBucketOwnershipControlsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8436,13 +8374,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketPolicyCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -8456,6 +8389,10 @@ class PutBucketPolicyCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8473,8 +8410,8 @@ class PutBucketPolicyCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutBucketPolicyRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8502,13 +8439,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketReplicationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -8522,6 +8454,10 @@ class PutBucketReplicationCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8539,8 +8475,8 @@ class PutBucketReplicationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutBucketReplicationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8568,13 +8504,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketRequestPaymentCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -8588,6 +8519,10 @@ class PutBucketRequestPaymentCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8605,8 +8540,8 @@ class PutBucketRequestPaymentCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutBucketRequestPaymentRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8634,13 +8569,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketTaggingCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -8654,6 +8584,10 @@ class PutBucketTaggingCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8671,8 +8605,8 @@ class PutBucketTaggingCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutBucketTaggingRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8700,13 +8634,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketVersioningCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -8720,6 +8649,10 @@ class PutBucketVersioningCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8737,8 +8670,8 @@ class PutBucketVersioningCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutBucketVersioningRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8766,13 +8699,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutBucketWebsiteCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -8786,6 +8714,10 @@ class PutBucketWebsiteCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8803,8 +8735,8 @@ class PutBucketWebsiteCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutBucketWebsiteRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8832,13 +8764,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutObjectAclCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -8852,6 +8779,10 @@ class PutObjectAclCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8869,8 +8800,8 @@ class PutObjectAclCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutObjectAclRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.PutObjectAclOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8903,10 +8834,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutObjectCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -8920,6 +8847,10 @@ class PutObjectCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8968,13 +8899,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutObjectLegalHoldCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -8988,6 +8914,10 @@ class PutObjectLegalHoldCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9005,8 +8935,8 @@ class PutObjectLegalHoldCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutObjectLegalHoldRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.PutObjectLegalHoldOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9034,13 +8964,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(51628);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutObjectLockConfigurationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -9054,6 +8979,10 @@ class PutObjectLockConfigurationCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9071,8 +9000,8 @@ class PutObjectLockConfigurationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.PutObjectLockConfigurationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.PutObjectLockConfigurationOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9100,13 +9029,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(6958);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutObjectRetentionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -9120,6 +9044,10 @@ class PutObjectRetentionCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9137,8 +9065,8 @@ class PutObjectRetentionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.PutObjectRetentionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.PutObjectRetentionOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9166,13 +9094,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(6958);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutObjectTaggingCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -9186,6 +9109,10 @@ class PutObjectTaggingCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9203,8 +9130,8 @@ class PutObjectTaggingCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.PutObjectTaggingRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.PutObjectTaggingOutputFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9232,13 +9159,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_flexible_checksums_1 = __nccwpck_require__(13799);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(6958);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class PutPublicAccessBlockCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -9252,6 +9174,10 @@ class PutPublicAccessBlockCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9269,8 +9195,8 @@ class PutPublicAccessBlockCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.PutPublicAccessBlockRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9301,10 +9227,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(6958);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class RestoreObjectCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -9318,6 +9240,10 @@ class RestoreObjectCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9336,7 +9262,7 @@ class RestoreObjectCommand extends smithy_client_1.Command {
             clientName,
             commandName,
             inputFilterSensitiveLog: models_1_1.RestoreObjectRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.RestoreObjectOutputFilterSensitiveLog,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9367,10 +9293,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(6958);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class SelectObjectContentCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -9384,6 +9306,10 @@ class SelectObjectContentCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9430,10 +9356,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(6958);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class UploadPartCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -9447,6 +9369,10 @@ class UploadPartCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9498,10 +9424,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(6958);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class UploadPartCopyCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             Bucket: { type: "contextParams", name: "Bucket" },
@@ -9515,6 +9437,10 @@ class UploadPartCopyCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9560,10 +9486,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(6958);
 const Aws_restXml_1 = __nccwpck_require__(39809);
 class WriteGetObjectResponseCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseObjectLambdaEndpoint: { type: "staticContextParams", value: true },
@@ -9578,6 +9500,10 @@ class WriteGetObjectResponseCommand extends smithy_client_1.Command {
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
     }
+    constructor(input) {
+        super();
+        this.input = input;
+    }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
         this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, WriteGetObjectResponseCommand.getEndpointParameterInstructions()));
@@ -9590,7 +9516,7 @@ class WriteGetObjectResponseCommand extends smithy_client_1.Command {
             clientName,
             commandName,
             inputFilterSensitiveLog: models_1_1.WriteGetObjectResponseRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9761,9 +9687,9 @@ exports.defaultEndpointResolver = defaultEndpointResolver;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ruleSet = void 0;
-const bV = "required", bW = "type", bX = "rules", bY = "conditions", bZ = "fn", ca = "argv", cb = "ref", cc = "assign", cd = "url", ce = "properties", cf = "authSchemes", cg = "signingRegion", ch = "signingName", ci = "disableDoubleEncoding", cj = "headers";
-const a = false, b = true, c = "tree", d = "isSet", e = "substring", f = "hardwareType", g = "regionPrefix", h = "abbaSuffix", i = "outpostId", j = "aws.partition", k = "stringEquals", l = "isValidHostLabel", m = "not", n = "error", o = "parseURL", p = "s3-outposts", q = "endpoint", r = "booleanEquals", s = "aws.parseArn", t = "s3", u = "aws.isVirtualHostableS3Bucket", v = "getAttr", w = "name", x = "Host override cannot be combined with Dualstack, FIPS, or S3 Accelerate", y = "https://{Bucket}.s3.{partitionResult#dnsSuffix}", z = "bucketArn", A = "arnType", B = "", C = "s3-object-lambda", D = "accesspoint", E = "accessPointName", F = "{url#scheme}://{accessPointName}-{bucketArn#accountId}.{url#authority}{url#path}", G = "mrapPartition", H = "outpostType", I = "arnPrefix", J = "{url#scheme}://{url#authority}{url#path}", K = "https://s3.{partitionResult#dnsSuffix}", L = { [bV]: false, [bW]: "String" }, M = { [bV]: true, "default": false, [bW]: "Boolean" }, N = { [bV]: false, [bW]: "Boolean" }, O = { [bZ]: d, [ca]: [{ [cb]: "Bucket" }] }, P = { [cb]: "Bucket" }, Q = { [cb]: f }, R = { [bY]: [{ [bZ]: m, [ca]: [{ [bZ]: d, [ca]: [{ [cb]: "Endpoint" }] }] }], [n]: "Expected a endpoint to be specified but no endpoint was found", [bW]: n }, S = { [bZ]: m, [ca]: [{ [bZ]: d, [ca]: [{ [cb]: "Endpoint" }] }] }, T = { [bZ]: d, [ca]: [{ [cb]: "Endpoint" }] }, U = { [bZ]: o, [ca]: [{ [cb]: "Endpoint" }], [cc]: "url" }, V = { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: p, [ci]: true }] }, W = {}, X = { [cb]: "ForcePathStyle" }, Y = { [bY]: [{ [bZ]: "uriEncode", [ca]: [P], [cc]: "uri_encoded_bucket" }], [bW]: c, [bX]: [{ [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, T], [n]: "Cannot set dual-stack in combination with a custom endpoint.", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [{ [bZ]: j, [ca]: [{ [cb]: "Region" }], [cc]: "partitionResult" }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "Accelerate" }, false] }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3-fips.dualstack.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3-fips.dualstack.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, true] }], [bW]: c, [bX]: [{ [q]: { [cd]: "https://s3-fips.dualstack.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }] }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, false] }], [q]: { [cd]: "https://s3-fips.dualstack.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, T, U, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, T, U, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, T, U, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, true] }], [bW]: c, [bX]: [{ [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }] }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, T, U, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, false] }], [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3-fips.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3-fips.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, true] }], [bW]: c, [bX]: [{ [q]: { [cd]: "https://s3-fips.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }] }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, false] }], [q]: { [cd]: "https://s3-fips.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3.dualstack.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3.dualstack.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, true] }], [bW]: c, [bX]: [{ [q]: { [cd]: "https://s3.dualstack.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }] }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, false] }], [q]: { [cd]: "https://s3.dualstack.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, T, U, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, T, U, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, T, U, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, true] }], [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "us-east-1"] }], [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }] }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, T, U, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, false] }], [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, true] }], [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "us-east-1"] }], [q]: { [cd]: "https://s3.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, { [q]: { [cd]: "https://s3.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }] }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, false] }], [q]: { [cd]: "https://s3.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }] }] }, { [n]: "Path-style addressing cannot be used with S3 Accelerate", [bW]: n }] }] }, { [n]: "A valid partition could not be determined", [bW]: n }] }] }, Z = { [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, aa = { [bZ]: r, [ca]: [{ [cb]: "Accelerate" }, false] }, ab = { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, ac = { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, ad = { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, true] }, ae = { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: t, [ci]: true }] }, af = { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, false] }, ag = { [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, ah = { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, ai = { [n]: "A valid partition could not be determined", [bW]: n }, aj = { [bY]: [ab, { [bZ]: k, [ca]: [{ [bZ]: v, [ca]: [{ [cb]: "partitionResult" }, w] }, "aws-cn"] }], [n]: "Partition does not support FIPS", [bW]: n }, ak = { [bZ]: k, [ca]: [{ [bZ]: v, [ca]: [{ [cb]: "partitionResult" }, w] }, "aws-cn"] }, al = { [bZ]: r, [ca]: [{ [cb]: "Accelerate" }, true] }, am = { [bY]: [Z, ab, aa, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://{Bucket}.s3-fips.dualstack.us-east-1.{partitionResult#dnsSuffix}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, an = { [cd]: "https://{Bucket}.s3-fips.dualstack.{Region}.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, ao = { [bY]: [ag, ab, aa, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://{Bucket}.s3-fips.us-east-1.{partitionResult#dnsSuffix}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, ap = { [cd]: "https://{Bucket}.s3-fips.{Region}.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, aq = { [bY]: [Z, ah, al, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://{Bucket}.s3-accelerate.dualstack.us-east-1.{partitionResult#dnsSuffix}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, ar = { [cd]: "https://{Bucket}.s3-accelerate.dualstack.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, as = { [bY]: [Z, ah, aa, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://{Bucket}.s3.dualstack.us-east-1.{partitionResult#dnsSuffix}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, at = { [cd]: "https://{Bucket}.s3.dualstack.{Region}.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, au = { [bY]: [ag, ah, aa, T, U, { [bZ]: r, [ca]: [{ [bZ]: v, [ca]: [{ [cb]: "url" }, "isIp"] }, true] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{Bucket}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, av = { [bZ]: r, [ca]: [{ [bZ]: v, [ca]: [{ [cb]: "url" }, "isIp"] }, true] }, aw = { [cb]: "url" }, ax = { [bY]: [ag, ah, aa, T, U, { [bZ]: r, [ca]: [{ [bZ]: v, [ca]: [aw, "isIp"] }, false] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "{url#scheme}://{Bucket}.{url#authority}{url#path}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, ay = { [bZ]: r, [ca]: [{ [bZ]: v, [ca]: [aw, "isIp"] }, false] }, az = { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{Bucket}", [ce]: ae, [cj]: {} }, aA = { [cd]: "{url#scheme}://{Bucket}.{url#authority}{url#path}", [ce]: ae, [cj]: {} }, aB = { [q]: aA, [bW]: q }, aC = { [bY]: [ag, ah, al, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://{Bucket}.s3-accelerate.{partitionResult#dnsSuffix}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, aD = { [cd]: "https://{Bucket}.s3-accelerate.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, aE = { [bY]: [ag, ah, aa, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: y, [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, aF = { [cd]: "https://{Bucket}.s3.{Region}.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, aG = { [n]: "Invalid region: region was not a valid DNS name.", [bW]: n }, aH = { [cb]: z }, aI = { [cb]: A }, aJ = { [bZ]: v, [ca]: [aH, "service"] }, aK = { [cb]: E }, aL = { [bY]: [Z], [n]: "S3 Object Lambda does not support Dual-stack", [bW]: n }, aM = { [bY]: [al], [n]: "S3 Object Lambda does not support S3 Accelerate", [bW]: n }, aN = { [bY]: [{ [bZ]: d, [ca]: [{ [cb]: "DisableAccessPoints" }] }, { [bZ]: r, [ca]: [{ [cb]: "DisableAccessPoints" }, true] }], [n]: "Access points are not supported for this operation", [bW]: n }, aO = { [bY]: [{ [bZ]: d, [ca]: [{ [cb]: "UseArnRegion" }] }, { [bZ]: r, [ca]: [{ [cb]: "UseArnRegion" }, false] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [bZ]: v, [ca]: [aH, "region"] }, "{Region}"] }] }], [n]: "Invalid configuration: region from ARN `{bucketArn#region}` does not match client region `{Region}` and UseArnRegion is `false`", [bW]: n }, aP = { [bZ]: v, [ca]: [{ [cb]: "bucketPartition" }, w] }, aQ = { [bZ]: v, [ca]: [aH, "accountId"] }, aR = { [bY]: [ab, { [bZ]: k, [ca]: [aP, "aws-cn"] }], [n]: "Partition does not support FIPS", [bW]: n }, aS = { [cf]: [{ [w]: "sigv4", [cg]: "{bucketArn#region}", [ch]: C, [ci]: true }] }, aT = { [n]: "Invalid ARN: The access point name may only contain a-z, A-Z, 0-9 and `-`. Found: `{accessPointName}`", [bW]: n }, aU = { [n]: "Invalid ARN: The account id may only contain a-z, A-Z, 0-9 and `-`. Found: `{bucketArn#accountId}`", [bW]: n }, aV = { [n]: "Invalid region in ARN: `{bucketArn#region}` (invalid DNS name)", [bW]: n }, aW = { [n]: "Client was configured for partition `{partitionResult#name}` but ARN (`{Bucket}`) has `{bucketPartition#name}`", [bW]: n }, aX = { [n]: "Could not load partition for ARN region `{bucketArn#region}`", [bW]: n }, aY = { [n]: "Invalid ARN: The ARN may only contain a single resource component after `accesspoint`.", [bW]: n }, aZ = { [n]: "Invalid ARN: bucket ARN is missing a region", [bW]: n }, ba = { [n]: "Invalid ARN: Expected a resource of the format `accesspoint:<accesspoint name>` but no name was provided", [bW]: n }, bb = { [cf]: [{ [w]: "sigv4", [cg]: "{bucketArn#region}", [ch]: t, [ci]: true }] }, bc = { [cf]: [{ [w]: "sigv4", [cg]: "{bucketArn#region}", [ch]: p, [ci]: true }] }, bd = { [cb]: "UseObjectLambdaEndpoint" }, be = { [cf]: [{ [w]: "sigv4", [cg]: "{Region}", [ch]: C, [ci]: true }] }, bf = { [bY]: [ab, Z, T, U, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: J, [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, bg = { [q]: { [cd]: J, [ce]: ae, [cj]: {} }, [bW]: q }, bh = { [cd]: J, [ce]: ae, [cj]: {} }, bi = { [bY]: [ab, Z, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3-fips.dualstack.us-east-1.{partitionResult#dnsSuffix}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, bj = { [cd]: "https://s3-fips.dualstack.{Region}.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, bk = { [bY]: [ab, ag, T, U, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: J, [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, bl = { [bY]: [ab, ag, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3-fips.us-east-1.{partitionResult#dnsSuffix}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, bm = { [cd]: "https://s3-fips.{Region}.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, bn = { [bY]: [ah, Z, T, U, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: J, [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, bo = { [bY]: [ah, Z, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3.dualstack.us-east-1.{partitionResult#dnsSuffix}", [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, bp = { [cd]: "https://s3.dualstack.{Region}.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, bq = { [bY]: [ah, ag, T, U, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: J, [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, br = { [bY]: [ah, ag, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: K, [ce]: { [cf]: [{ [w]: "sigv4", [cg]: "us-east-1", [ch]: t, [ci]: true }] }, [cj]: {} }, [bW]: q }, bs = { [cd]: "https://s3.{Region}.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, bt = [{ [cb]: "Region" }], bu = [P], bv = [{ [bZ]: l, [ca]: [{ [cb]: i }, false] }], bw = [{ [bZ]: k, [ca]: [{ [cb]: g }, "beta"] }], bx = [{ [cb]: "Endpoint" }], by = [T, U], bz = [O], bA = [{ [bZ]: s, [ca]: [P] }], bB = [Z, T], bC = [{ [bZ]: j, [ca]: bt, [cc]: "partitionResult" }], bD = [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "us-east-1"] }], bE = [{ [bZ]: l, [ca]: [{ [cb]: "Region" }, false] }], bF = [{ [bZ]: k, [ca]: [aI, D] }], bG = [{ [bZ]: v, [ca]: [aH, "resourceId[1]"], [cc]: E }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [aK, B] }] }], bH = [aH, "resourceId[1]"], bI = [Z], bJ = [al], bK = [{ [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [bZ]: v, [ca]: [aH, "region"] }, B] }] }], bL = [{ [bZ]: m, [ca]: [{ [bZ]: d, [ca]: [{ [bZ]: v, [ca]: [aH, "resourceId[2]"] }] }] }], bM = [aH, "resourceId[2]"], bN = [{ [bZ]: j, [ca]: [{ [bZ]: v, [ca]: [aH, "region"] }], [cc]: "bucketPartition" }], bO = [{ [bZ]: k, [ca]: [aP, { [bZ]: v, [ca]: [{ [cb]: "partitionResult" }, w] }] }], bP = [{ [bZ]: l, [ca]: [{ [bZ]: v, [ca]: [aH, "region"] }, true] }], bQ = [{ [bZ]: l, [ca]: [aQ, false] }], bR = [{ [bZ]: l, [ca]: [aK, false] }], bS = [ab], bT = [{ [bZ]: l, [ca]: [{ [cb]: "Region" }, true] }], bU = [bg];
-const _data = { version: "1.0", parameters: { Bucket: L, Region: L, UseFIPS: M, UseDualStack: M, Endpoint: L, ForcePathStyle: N, Accelerate: M, UseGlobalEndpoint: M, UseObjectLambdaEndpoint: N, DisableAccessPoints: N, DisableMultiRegionAccessPoints: M, UseArnRegion: N }, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: d, [ca]: bt }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [O, { [bZ]: e, [ca]: [P, 49, 50, b], [cc]: f }, { [bZ]: e, [ca]: [P, 8, 12, b], [cc]: g }, { [bZ]: e, [ca]: [P, 0, 7, b], [cc]: h }, { [bZ]: e, [ca]: [P, 32, 49, b], [cc]: i }, { [bZ]: j, [ca]: bt, [cc]: "regionPartition" }, { [bZ]: k, [ca]: [{ [cb]: h }, "--op-s3"] }], [bW]: c, [bX]: [{ [bY]: bv, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [Q, "e"] }], [bW]: c, [bX]: [{ [bY]: bw, [bW]: c, [bX]: [R, { [bY]: by, endpoint: { [cd]: "https://{Bucket}.ec2.{url#authority}", [ce]: V, [cj]: W }, [bW]: q }] }, { endpoint: { [cd]: "https://{Bucket}.ec2.s3-outposts.{Region}.{regionPartition#dnsSuffix}", [ce]: V, [cj]: W }, [bW]: q }] }, { [bY]: [{ [bZ]: k, [ca]: [Q, "o"] }], [bW]: c, [bX]: [{ [bY]: bw, [bW]: c, [bX]: [R, { [bY]: by, endpoint: { [cd]: "https://{Bucket}.op-{outpostId}.{url#authority}", [ce]: V, [cj]: W }, [bW]: q }] }, { endpoint: { [cd]: "https://{Bucket}.op-{outpostId}.s3-outposts.{Region}.{regionPartition#dnsSuffix}", [ce]: V, [cj]: W }, [bW]: q }] }, { error: "Unrecognized hardware type: \"Expected hardware type o or e but got {hardwareType}\"", [bW]: n }] }] }, { error: "Invalid ARN: The outpost Id must only contain a-z, A-Z, 0-9 and `-`.", [bW]: n }] }, { [bY]: bz, [bW]: c, [bX]: [{ [bY]: [T, { [bZ]: m, [ca]: [{ [bZ]: d, [ca]: [{ [bZ]: o, [ca]: bx }] }] }], error: "Custom endpoint `{Endpoint}` was not a valid URI", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [{ [bZ]: d, [ca]: [X] }, { [bZ]: r, [ca]: [X, b] }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bA, error: "Path-style addressing cannot be used with ARN buckets", [bW]: n }, Y] }] }, { [bY]: [{ [bZ]: u, [ca]: [P, a] }], [bW]: c, [bX]: [{ [bY]: bC, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bE, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aj, { [bW]: c, [bX]: [{ [bY]: [al, ab], error: "Accelerate cannot be used with FIPS", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [al, ak], error: "S3 Accelerate cannot be used in this region", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [T, Z], error: x, [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [T, ab], error: x, [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [T, al], error: x, [bW]: n }, { [bW]: c, [bX]: [am, am, { [bY]: [Z, ab, aa, S, ac, ad], [bW]: c, [bX]: [{ endpoint: an, [bW]: q }] }, { [bY]: [Z, ab, aa, S, ac, af], endpoint: an, [bW]: q }, ao, ao, { [bY]: [ag, ab, aa, S, ac, ad], [bW]: c, [bX]: [{ endpoint: ap, [bW]: q }] }, { [bY]: [ag, ab, aa, S, ac, af], endpoint: ap, [bW]: q }, aq, aq, { [bY]: [Z, ah, al, S, ac, ad], [bW]: c, [bX]: [{ endpoint: ar, [bW]: q }] }, { [bY]: [Z, ah, al, S, ac, af], endpoint: ar, [bW]: q }, as, as, { [bY]: [Z, ah, aa, S, ac, ad], [bW]: c, [bX]: [{ endpoint: at, [bW]: q }] }, { [bY]: [Z, ah, aa, S, ac, af], endpoint: at, [bW]: q }, au, ax, au, ax, { [bY]: [ag, ah, aa, T, U, av, ac, ad], [bW]: c, [bX]: [{ [bY]: bD, endpoint: az, [bW]: q }, { endpoint: az, [bW]: q }] }, { [bY]: [ag, ah, aa, T, U, ay, ac, ad], [bW]: c, [bX]: [{ [bY]: bD, endpoint: aA, [bW]: q }, aB] }, { [bY]: [ag, ah, aa, T, U, av, ac, af], endpoint: az, [bW]: q }, { [bY]: [ag, ah, aa, T, U, ay, ac, af], endpoint: aA, [bW]: q }, aC, aC, { [bY]: [ag, ah, al, S, ac, ad], [bW]: c, [bX]: [{ [bY]: bD, endpoint: aD, [bW]: q }, { endpoint: aD, [bW]: q }] }, { [bY]: [ag, ah, al, S, ac, af], endpoint: aD, [bW]: q }, aE, aE, { [bY]: [ag, ah, aa, S, ac, ad], [bW]: c, [bX]: [{ [bY]: bD, endpoint: { [cd]: y, [ce]: ae, [cj]: W }, [bW]: q }, { endpoint: aF, [bW]: q }] }, { [bY]: [ag, ah, aa, S, ac, af], endpoint: aF, [bW]: q }] }] }] }] }] }] }] }] }, aG] }] }, ai] }, { [bY]: [T, U, { [bZ]: k, [ca]: [{ [bZ]: v, [ca]: [aw, "scheme"] }, "http"] }, { [bZ]: u, [ca]: [P, b] }, ah, ag, aa], [bW]: c, [bX]: [{ [bY]: bC, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bE, [bW]: c, [bX]: [aB] }, aG] }] }, ai] }, { [bY]: [{ [bZ]: s, [ca]: bu, [cc]: z }], [bW]: c, [bX]: [{ [bY]: [{ [bZ]: v, [ca]: [aH, "resourceId[0]"], [cc]: A }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [aI, B] }] }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [aJ, C] }], [bW]: c, [bX]: [{ [bY]: bF, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bG, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aL, { [bW]: c, [bX]: [aM, { [bW]: c, [bX]: [{ [bY]: bK, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aN, { [bW]: c, [bX]: [{ [bY]: bL, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aO, { [bW]: c, [bX]: [{ [bY]: bN, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bC, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bO, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bP, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [aQ, B] }], error: "Invalid ARN: Missing account id", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: bQ, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bR, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aR, { [bW]: c, [bX]: [{ [bY]: by, endpoint: { [cd]: F, [ce]: aS, [cj]: W }, [bW]: q }, { [bY]: bS, endpoint: { [cd]: "https://{accessPointName}-{bucketArn#accountId}.s3-object-lambda-fips.{bucketArn#region}.{bucketPartition#dnsSuffix}", [ce]: aS, [cj]: W }, [bW]: q }, { endpoint: { [cd]: "https://{accessPointName}-{bucketArn#accountId}.s3-object-lambda.{bucketArn#region}.{bucketPartition#dnsSuffix}", [ce]: aS, [cj]: W }, [bW]: q }] }] }] }, aT] }] }, aU] }] }] }, aV] }] }, aW] }] }, ai] }] }, aX] }] }] }, aY] }] }] }, aZ] }] }] }] }, ba] }] }, { error: "Invalid ARN: Object Lambda ARNs only support `accesspoint` arn types, but found: `{arnType}`", [bW]: n }] }, { [bY]: bF, [bW]: c, [bX]: [{ [bY]: bG, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bK, [bW]: c, [bX]: [{ [bY]: bF, [bW]: c, [bX]: [{ [bY]: bK, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aN, { [bW]: c, [bX]: [{ [bY]: bL, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aO, { [bW]: c, [bX]: [{ [bY]: bN, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bC, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [aP, "{partitionResult#name}"] }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bP, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [aJ, t] }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bQ, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bR, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bJ, error: "Access Points do not support S3 Accelerate", [bW]: n }, { [bW]: c, [bX]: [aR, { [bW]: c, [bX]: [{ [bY]: bB, error: "DualStack cannot be combined with a Host override (PrivateLink)", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [ab, Z], endpoint: { [cd]: "https://{accessPointName}-{bucketArn#accountId}.s3-accesspoint-fips.dualstack.{bucketArn#region}.{bucketPartition#dnsSuffix}", [ce]: bb, [cj]: W }, [bW]: q }, { [bY]: [ab, ag], endpoint: { [cd]: "https://{accessPointName}-{bucketArn#accountId}.s3-accesspoint-fips.{bucketArn#region}.{bucketPartition#dnsSuffix}", [ce]: bb, [cj]: W }, [bW]: q }, { [bY]: [ah, Z], endpoint: { [cd]: "https://{accessPointName}-{bucketArn#accountId}.s3-accesspoint.dualstack.{bucketArn#region}.{bucketPartition#dnsSuffix}", [ce]: bb, [cj]: W }, [bW]: q }, { [bY]: [ah, ag, T, U], endpoint: { [cd]: F, [ce]: bb, [cj]: W }, [bW]: q }, { [bY]: [ah, ag], endpoint: { [cd]: "https://{accessPointName}-{bucketArn#accountId}.s3-accesspoint.{bucketArn#region}.{bucketPartition#dnsSuffix}", [ce]: bb, [cj]: W }, [bW]: q }] }] }] }] }] }, aT] }] }, aU] }] }, { error: "Invalid ARN: The ARN was not for the S3 service, found: {bucketArn#service}", [bW]: n }] }] }, aV] }] }, aW] }] }, ai] }] }, aX] }] }] }, aY] }] }] }, aZ] }] }, { [bW]: c, [bX]: [{ [bY]: [{ [bZ]: l, [ca]: [aK, b] }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bI, error: "S3 MRAP does not support dual-stack", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: bS, error: "S3 MRAP does not support FIPS", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: bJ, error: "S3 MRAP does not support S3 Accelerate", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "DisableMultiRegionAccessPoints" }, b] }], error: "Invalid configuration: Multi-Region Access Point ARNs are disabled.", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [{ [bZ]: j, [ca]: bt, [cc]: G }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [{ [bZ]: v, [ca]: [{ [cb]: G }, w] }, { [bZ]: v, [ca]: [aH, "partition"] }] }], [bW]: c, [bX]: [{ endpoint: { [cd]: "https://{accessPointName}.accesspoint.s3-global.{mrapPartition#dnsSuffix}", [ce]: { [cf]: [{ name: "sigv4a", signingRegionSet: ["*"], [ch]: t, [ci]: b }] }, [cj]: W }, [bW]: q }] }, { error: "Client was configured for partition `{mrapPartition#name}` but bucket referred to partition `{bucketArn#partition}`", [bW]: n }] }] }, { error: "{Region} was not a valid region", [bW]: n }] }] }] }] }] }] }, { error: "Invalid Access Point Name", [bW]: n }] }] }] }, ba] }, { [bY]: [{ [bZ]: k, [ca]: [aJ, p] }], [bW]: c, [bX]: [{ [bY]: bI, error: "S3 Outposts does not support Dual-stack", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: bS, error: "S3 Outposts does not support FIPS", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: bJ, error: "S3 Outposts does not support S3 Accelerate", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [{ [bZ]: d, [ca]: [{ [bZ]: v, [ca]: [aH, "resourceId[4]"] }] }], error: "Invalid Arn: Outpost Access Point ARN contains sub resources", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [{ [bZ]: v, [ca]: bH, [cc]: i }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bv, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aO, { [bW]: c, [bX]: [{ [bY]: bN, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bC, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bO, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bP, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bQ, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: v, [ca]: bM, [cc]: H }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: v, [ca]: [aH, "resourceId[3]"], [cc]: E }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [{ [cb]: H }, D] }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: by, endpoint: { [cd]: "https://{accessPointName}-{bucketArn#accountId}.{outpostId}.{url#authority}", [ce]: bc, [cj]: W }, [bW]: q }, { endpoint: { [cd]: "https://{accessPointName}-{bucketArn#accountId}.{outpostId}.s3-outposts.{bucketArn#region}.{bucketPartition#dnsSuffix}", [ce]: bc, [cj]: W }, [bW]: q }] }] }, { error: "Expected an outpost type `accesspoint`, found {outpostType}", [bW]: n }] }] }, { error: "Invalid ARN: expected an access point name", [bW]: n }] }] }, { error: "Invalid ARN: Expected a 4-component resource", [bW]: n }] }] }, aU] }] }, aV] }] }, aW] }] }, ai] }] }, { error: "Could not load partition for ARN region {bucketArn#region}", [bW]: n }] }] }] }, { error: "Invalid ARN: The outpost Id may only contain a-z, A-Z, 0-9 and `-`. Found: `{outpostId}`", [bW]: n }] }] }, { error: "Invalid ARN: The Outpost Id was not set", [bW]: n }] }] }] }] }] }, { error: "Invalid ARN: Unrecognized format: {Bucket} (type: {arnType})", [bW]: n }] }] }, { error: "Invalid ARN: No ARN type specified", [bW]: n }] }, { [bY]: [{ [bZ]: e, [ca]: [P, 0, 4, a], [cc]: I }, { [bZ]: k, [ca]: [{ [cb]: I }, "arn:"] }, { [bZ]: m, [ca]: [{ [bZ]: d, [ca]: bA }] }], error: "Invalid ARN: `{Bucket}` was not a valid ARN", [bW]: n }, Y] }] }, { [bY]: [{ [bZ]: d, [ca]: [bd] }, { [bZ]: r, [ca]: [bd, b] }], [bW]: c, [bX]: [{ [bY]: bC, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bT, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aL, { [bW]: c, [bX]: [aM, { [bW]: c, [bX]: [aj, { [bW]: c, [bX]: [{ [bY]: by, endpoint: { [cd]: J, [ce]: be, [cj]: W }, [bW]: q }, { [bY]: bS, endpoint: { [cd]: "https://s3-object-lambda-fips.{Region}.{partitionResult#dnsSuffix}", [ce]: be, [cj]: W }, [bW]: q }, { endpoint: { [cd]: "https://s3-object-lambda.{Region}.{partitionResult#dnsSuffix}", [ce]: be, [cj]: W }, [bW]: q }] }] }] }] }] }, aG] }] }, ai] }, { [bY]: [{ [bZ]: m, [ca]: bz }], [bW]: c, [bX]: [{ [bY]: bC, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bT, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aj, { [bW]: c, [bX]: [bf, bf, { [bY]: [ab, Z, T, U, ac, ad], [bW]: c, [bX]: bU }, { [bY]: [ab, Z, T, U, ac, af], endpoint: bh, [bW]: q }, bi, bi, { [bY]: [ab, Z, S, ac, ad], [bW]: c, [bX]: [{ endpoint: bj, [bW]: q }] }, { [bY]: [ab, Z, S, ac, af], endpoint: bj, [bW]: q }, bk, bk, { [bY]: [ab, ag, T, U, ac, ad], [bW]: c, [bX]: bU }, { [bY]: [ab, ag, T, U, ac, af], endpoint: bh, [bW]: q }, bl, bl, { [bY]: [ab, ag, S, ac, ad], [bW]: c, [bX]: [{ endpoint: bm, [bW]: q }] }, { [bY]: [ab, ag, S, ac, af], endpoint: bm, [bW]: q }, bn, bn, { [bY]: [ah, Z, T, U, ac, ad], [bW]: c, [bX]: bU }, { [bY]: [ah, Z, T, U, ac, af], endpoint: bh, [bW]: q }, bo, bo, { [bY]: [ah, Z, S, ac, ad], [bW]: c, [bX]: [{ endpoint: bp, [bW]: q }] }, { [bY]: [ah, Z, S, ac, af], endpoint: bp, [bW]: q }, bq, bq, { [bY]: [ah, ag, T, U, ac, ad], [bW]: c, [bX]: [{ [bY]: bD, endpoint: bh, [bW]: q }, bg] }, { [bY]: [ah, ag, T, U, ac, af], endpoint: bh, [bW]: q }, br, br, { [bY]: [ah, ag, S, ac, ad], [bW]: c, [bX]: [{ [bY]: bD, endpoint: { [cd]: K, [ce]: ae, [cj]: W }, [bW]: q }, { endpoint: bs, [bW]: q }] }, { [bY]: [ah, ag, S, ac, af], endpoint: bs, [bW]: q }] }] }] }, aG] }] }, ai] }] }] }, { error: "A region must be set when sending requests to S3.", [bW]: n }] }] };
+const bV = "required", bW = "type", bX = "rules", bY = "conditions", bZ = "fn", ca = "argv", cb = "ref", cc = "assign", cd = "url", ce = "properties", cf = "authSchemes", cg = "disableDoubleEncoding", ch = "signingName", ci = "signingRegion", cj = "headers";
+const a = false, b = true, c = "tree", d = "isSet", e = "substring", f = "hardwareType", g = "regionPrefix", h = "abbaSuffix", i = "outpostId", j = "aws.partition", k = "stringEquals", l = "isValidHostLabel", m = "not", n = "error", o = "parseURL", p = "s3-outposts", q = "endpoint", r = "booleanEquals", s = "aws.parseArn", t = "s3", u = "aws.isVirtualHostableS3Bucket", v = "getAttr", w = "name", x = "Host override cannot be combined with Dualstack, FIPS, or S3 Accelerate", y = "https://{Bucket}.s3.{partitionResult#dnsSuffix}", z = "bucketArn", A = "arnType", B = "", C = "s3-object-lambda", D = "accesspoint", E = "accessPointName", F = "{url#scheme}://{accessPointName}-{bucketArn#accountId}.{url#authority}{url#path}", G = "mrapPartition", H = "outpostType", I = "arnPrefix", J = "{url#scheme}://{url#authority}{url#path}", K = "https://s3.{partitionResult#dnsSuffix}", L = { [bV]: false, [bW]: "String" }, M = { [bV]: true, "default": false, [bW]: "Boolean" }, N = { [bV]: false, [bW]: "Boolean" }, O = { [bZ]: d, [ca]: [{ [cb]: "Bucket" }] }, P = { [cb]: "Bucket" }, Q = { [cb]: f }, R = { [bY]: [{ [bZ]: m, [ca]: [{ [bZ]: d, [ca]: [{ [cb]: "Endpoint" }] }] }], [n]: "Expected a endpoint to be specified but no endpoint was found", [bW]: n }, S = { [bZ]: m, [ca]: [{ [bZ]: d, [ca]: [{ [cb]: "Endpoint" }] }] }, T = { [bZ]: d, [ca]: [{ [cb]: "Endpoint" }] }, U = { [bZ]: o, [ca]: [{ [cb]: "Endpoint" }], [cc]: "url" }, V = { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: p, [ci]: "{Region}" }] }, W = {}, X = { [cb]: "ForcePathStyle" }, Y = { [bY]: [{ [bZ]: "uriEncode", [ca]: [P], [cc]: "uri_encoded_bucket" }], [bW]: c, [bX]: [{ [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, T], [n]: "Cannot set dual-stack in combination with a custom endpoint.", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [{ [bZ]: j, [ca]: [{ [cb]: "Region" }], [cc]: "partitionResult" }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "Accelerate" }, false] }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3-fips.dualstack.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3-fips.dualstack.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, true] }], [bW]: c, [bX]: [{ [q]: { [cd]: "https://s3-fips.dualstack.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "{Region}" }] }, [cj]: {} }, [bW]: q }] }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, false] }], [q]: { [cd]: "https://s3-fips.dualstack.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "{Region}" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, T, U, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, T, U, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, T, U, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, true] }], [bW]: c, [bX]: [{ [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "{Region}" }] }, [cj]: {} }, [bW]: q }] }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, T, U, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, false] }], [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "{Region}" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3-fips.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3-fips.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, true] }], [bW]: c, [bX]: [{ [q]: { [cd]: "https://s3-fips.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "{Region}" }] }, [cj]: {} }, [bW]: q }] }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, false] }], [q]: { [cd]: "https://s3-fips.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "{Region}" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3.dualstack.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3.dualstack.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, true] }], [bW]: c, [bX]: [{ [q]: { [cd]: "https://s3.dualstack.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "{Region}" }] }, [cj]: {} }, [bW]: q }] }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, false] }], [q]: { [cd]: "https://s3.dualstack.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "{Region}" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, T, U, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, T, U, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, T, U, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, true] }], [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "us-east-1"] }], [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "{Region}" }] }, [cj]: {} }, [bW]: q }, { [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "{Region}" }] }, [cj]: {} }, [bW]: q }] }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, T, U, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, false] }], [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "{Region}" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, true] }], [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "us-east-1"] }], [q]: { [cd]: "https://s3.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "{Region}" }] }, [cj]: {} }, [bW]: q }, { [q]: { [cd]: "https://s3.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "{Region}" }] }, [cj]: {} }, [bW]: q }] }, { [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, S, { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, false] }], [q]: { [cd]: "https://s3.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "{Region}" }] }, [cj]: {} }, [bW]: q }] }] }, { [n]: "Path-style addressing cannot be used with S3 Accelerate", [bW]: n }] }] }, { [n]: "A valid partition could not be determined", [bW]: n }] }] }, Z = { [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, true] }, aa = { [bZ]: r, [ca]: [{ [cb]: "Accelerate" }, false] }, ab = { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, true] }, ac = { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }] }, ad = { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, true] }, ae = { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "{Region}" }] }, af = { [bZ]: r, [ca]: [{ [cb]: "UseGlobalEndpoint" }, false] }, ag = { [bZ]: r, [ca]: [{ [cb]: "UseDualStack" }, false] }, ah = { [bZ]: r, [ca]: [{ [cb]: "UseFIPS" }, false] }, ai = { [n]: "A valid partition could not be determined", [bW]: n }, aj = { [bY]: [ab, { [bZ]: k, [ca]: [{ [bZ]: v, [ca]: [{ [cb]: "partitionResult" }, w] }, "aws-cn"] }], [n]: "Partition does not support FIPS", [bW]: n }, ak = { [bZ]: k, [ca]: [{ [bZ]: v, [ca]: [{ [cb]: "partitionResult" }, w] }, "aws-cn"] }, al = { [bZ]: r, [ca]: [{ [cb]: "Accelerate" }, true] }, am = { [bY]: [Z, ab, aa, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://{Bucket}.s3-fips.dualstack.us-east-1.{partitionResult#dnsSuffix}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, an = { [cd]: "https://{Bucket}.s3-fips.dualstack.{Region}.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, ao = { [bY]: [ag, ab, aa, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://{Bucket}.s3-fips.us-east-1.{partitionResult#dnsSuffix}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, ap = { [cd]: "https://{Bucket}.s3-fips.{Region}.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, aq = { [bY]: [Z, ah, al, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://{Bucket}.s3-accelerate.dualstack.us-east-1.{partitionResult#dnsSuffix}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, ar = { [cd]: "https://{Bucket}.s3-accelerate.dualstack.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, as = { [bY]: [Z, ah, aa, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://{Bucket}.s3.dualstack.us-east-1.{partitionResult#dnsSuffix}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, at = { [cd]: "https://{Bucket}.s3.dualstack.{Region}.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, au = { [bY]: [ag, ah, aa, T, U, { [bZ]: r, [ca]: [{ [bZ]: v, [ca]: [{ [cb]: "url" }, "isIp"] }, true] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{Bucket}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, av = { [bZ]: r, [ca]: [{ [bZ]: v, [ca]: [{ [cb]: "url" }, "isIp"] }, true] }, aw = { [cb]: "url" }, ax = { [bY]: [ag, ah, aa, T, U, { [bZ]: r, [ca]: [{ [bZ]: v, [ca]: [aw, "isIp"] }, false] }, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "{url#scheme}://{Bucket}.{url#authority}{url#path}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, ay = { [bZ]: r, [ca]: [{ [bZ]: v, [ca]: [aw, "isIp"] }, false] }, az = { [cd]: "{url#scheme}://{url#authority}{url#normalizedPath}{Bucket}", [ce]: ae, [cj]: {} }, aA = { [cd]: "{url#scheme}://{Bucket}.{url#authority}{url#path}", [ce]: ae, [cj]: {} }, aB = { [q]: aA, [bW]: q }, aC = { [bY]: [ag, ah, al, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://{Bucket}.s3-accelerate.{partitionResult#dnsSuffix}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, aD = { [cd]: "https://{Bucket}.s3-accelerate.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, aE = { [bY]: [ag, ah, aa, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: y, [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, aF = { [cd]: "https://{Bucket}.s3.{Region}.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, aG = { [n]: "Invalid region: region was not a valid DNS name.", [bW]: n }, aH = { [cb]: z }, aI = { [cb]: A }, aJ = { [bZ]: v, [ca]: [aH, "service"] }, aK = { [cb]: E }, aL = { [bY]: [Z], [n]: "S3 Object Lambda does not support Dual-stack", [bW]: n }, aM = { [bY]: [al], [n]: "S3 Object Lambda does not support S3 Accelerate", [bW]: n }, aN = { [bY]: [{ [bZ]: d, [ca]: [{ [cb]: "DisableAccessPoints" }] }, { [bZ]: r, [ca]: [{ [cb]: "DisableAccessPoints" }, true] }], [n]: "Access points are not supported for this operation", [bW]: n }, aO = { [bY]: [{ [bZ]: d, [ca]: [{ [cb]: "UseArnRegion" }] }, { [bZ]: r, [ca]: [{ [cb]: "UseArnRegion" }, false] }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [bZ]: v, [ca]: [aH, "region"] }, "{Region}"] }] }], [n]: "Invalid configuration: region from ARN `{bucketArn#region}` does not match client region `{Region}` and UseArnRegion is `false`", [bW]: n }, aP = { [bZ]: v, [ca]: [{ [cb]: "bucketPartition" }, w] }, aQ = { [bZ]: v, [ca]: [aH, "accountId"] }, aR = { [bY]: [ab, { [bZ]: k, [ca]: [aP, "aws-cn"] }], [n]: "Partition does not support FIPS", [bW]: n }, aS = { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: C, [ci]: "{bucketArn#region}" }] }, aT = { [n]: "Invalid ARN: The access point name may only contain a-z, A-Z, 0-9 and `-`. Found: `{accessPointName}`", [bW]: n }, aU = { [n]: "Invalid ARN: The account id may only contain a-z, A-Z, 0-9 and `-`. Found: `{bucketArn#accountId}`", [bW]: n }, aV = { [n]: "Invalid region in ARN: `{bucketArn#region}` (invalid DNS name)", [bW]: n }, aW = { [n]: "Client was configured for partition `{partitionResult#name}` but ARN (`{Bucket}`) has `{bucketPartition#name}`", [bW]: n }, aX = { [n]: "Could not load partition for ARN region `{bucketArn#region}`", [bW]: n }, aY = { [n]: "Invalid ARN: The ARN may only contain a single resource component after `accesspoint`.", [bW]: n }, aZ = { [n]: "Invalid ARN: bucket ARN is missing a region", [bW]: n }, ba = { [n]: "Invalid ARN: Expected a resource of the format `accesspoint:<accesspoint name>` but no name was provided", [bW]: n }, bb = { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "{bucketArn#region}" }] }, bc = { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: p, [ci]: "{bucketArn#region}" }] }, bd = { [cb]: "UseObjectLambdaEndpoint" }, be = { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: C, [ci]: "{Region}" }] }, bf = { [bY]: [ab, Z, T, U, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: J, [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, bg = { [q]: { [cd]: J, [ce]: ae, [cj]: {} }, [bW]: q }, bh = { [cd]: J, [ce]: ae, [cj]: {} }, bi = { [bY]: [ab, Z, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3-fips.dualstack.us-east-1.{partitionResult#dnsSuffix}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, bj = { [cd]: "https://s3-fips.dualstack.{Region}.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, bk = { [bY]: [ab, ag, T, U, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: J, [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, bl = { [bY]: [ab, ag, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3-fips.us-east-1.{partitionResult#dnsSuffix}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, bm = { [cd]: "https://s3-fips.{Region}.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, bn = { [bY]: [ah, Z, T, U, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: J, [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, bo = { [bY]: [ah, Z, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: "https://s3.dualstack.us-east-1.{partitionResult#dnsSuffix}", [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, bp = { [cd]: "https://s3.dualstack.{Region}.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, bq = { [bY]: [ah, ag, T, U, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: J, [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, br = { [bY]: [ah, ag, S, { [bZ]: k, [ca]: [{ [cb]: "Region" }, "aws-global"] }], [q]: { [cd]: K, [ce]: { [cf]: [{ [cg]: true, [w]: "sigv4", [ch]: t, [ci]: "us-east-1" }] }, [cj]: {} }, [bW]: q }, bs = { [cd]: "https://s3.{Region}.{partitionResult#dnsSuffix}", [ce]: ae, [cj]: {} }, bt = [{ [cb]: "Region" }], bu = [P], bv = [{ [bZ]: l, [ca]: [{ [cb]: i }, false] }], bw = [{ [bZ]: k, [ca]: [{ [cb]: g }, "beta"] }], bx = [{ [cb]: "Endpoint" }], by = [T, U], bz = [O], bA = [{ [bZ]: s, [ca]: [P] }], bB = [Z, T], bC = [{ [bZ]: j, [ca]: bt, [cc]: "partitionResult" }], bD = [{ [bZ]: k, [ca]: [{ [cb]: "Region" }, "us-east-1"] }], bE = [{ [bZ]: l, [ca]: [{ [cb]: "Region" }, false] }], bF = [{ [bZ]: k, [ca]: [aI, D] }], bG = [{ [bZ]: v, [ca]: [aH, "resourceId[1]"], [cc]: E }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [aK, B] }] }], bH = [aH, "resourceId[1]"], bI = [Z], bJ = [al], bK = [{ [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [{ [bZ]: v, [ca]: [aH, "region"] }, B] }] }], bL = [{ [bZ]: m, [ca]: [{ [bZ]: d, [ca]: [{ [bZ]: v, [ca]: [aH, "resourceId[2]"] }] }] }], bM = [aH, "resourceId[2]"], bN = [{ [bZ]: j, [ca]: [{ [bZ]: v, [ca]: [aH, "region"] }], [cc]: "bucketPartition" }], bO = [{ [bZ]: k, [ca]: [aP, { [bZ]: v, [ca]: [{ [cb]: "partitionResult" }, w] }] }], bP = [{ [bZ]: l, [ca]: [{ [bZ]: v, [ca]: [aH, "region"] }, true] }], bQ = [{ [bZ]: l, [ca]: [aQ, false] }], bR = [{ [bZ]: l, [ca]: [aK, false] }], bS = [ab], bT = [{ [bZ]: l, [ca]: [{ [cb]: "Region" }, true] }], bU = [bg];
+const _data = { version: "1.0", parameters: { Bucket: L, Region: L, UseFIPS: M, UseDualStack: M, Endpoint: L, ForcePathStyle: N, Accelerate: M, UseGlobalEndpoint: M, UseObjectLambdaEndpoint: N, DisableAccessPoints: N, DisableMultiRegionAccessPoints: M, UseArnRegion: N }, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: d, [ca]: bt }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [O, { [bZ]: e, [ca]: [P, 49, 50, b], [cc]: f }, { [bZ]: e, [ca]: [P, 8, 12, b], [cc]: g }, { [bZ]: e, [ca]: [P, 0, 7, b], [cc]: h }, { [bZ]: e, [ca]: [P, 32, 49, b], [cc]: i }, { [bZ]: j, [ca]: bt, [cc]: "regionPartition" }, { [bZ]: k, [ca]: [{ [cb]: h }, "--op-s3"] }], [bW]: c, [bX]: [{ [bY]: bv, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [Q, "e"] }], [bW]: c, [bX]: [{ [bY]: bw, [bW]: c, [bX]: [R, { [bY]: by, endpoint: { [cd]: "https://{Bucket}.ec2.{url#authority}", [ce]: V, [cj]: W }, [bW]: q }] }, { endpoint: { [cd]: "https://{Bucket}.ec2.s3-outposts.{Region}.{regionPartition#dnsSuffix}", [ce]: V, [cj]: W }, [bW]: q }] }, { [bY]: [{ [bZ]: k, [ca]: [Q, "o"] }], [bW]: c, [bX]: [{ [bY]: bw, [bW]: c, [bX]: [R, { [bY]: by, endpoint: { [cd]: "https://{Bucket}.op-{outpostId}.{url#authority}", [ce]: V, [cj]: W }, [bW]: q }] }, { endpoint: { [cd]: "https://{Bucket}.op-{outpostId}.s3-outposts.{Region}.{regionPartition#dnsSuffix}", [ce]: V, [cj]: W }, [bW]: q }] }, { error: "Unrecognized hardware type: \"Expected hardware type o or e but got {hardwareType}\"", [bW]: n }] }] }, { error: "Invalid ARN: The outpost Id must only contain a-z, A-Z, 0-9 and `-`.", [bW]: n }] }, { [bY]: bz, [bW]: c, [bX]: [{ [bY]: [T, { [bZ]: m, [ca]: [{ [bZ]: d, [ca]: [{ [bZ]: o, [ca]: bx }] }] }], error: "Custom endpoint `{Endpoint}` was not a valid URI", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [{ [bZ]: d, [ca]: [X] }, { [bZ]: r, [ca]: [X, b] }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bA, error: "Path-style addressing cannot be used with ARN buckets", [bW]: n }, Y] }] }, { [bY]: [{ [bZ]: u, [ca]: [P, a] }], [bW]: c, [bX]: [{ [bY]: bC, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bE, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aj, { [bW]: c, [bX]: [{ [bY]: [al, ab], error: "Accelerate cannot be used with FIPS", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [al, ak], error: "S3 Accelerate cannot be used in this region", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [T, Z], error: x, [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [T, ab], error: x, [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [T, al], error: x, [bW]: n }, { [bW]: c, [bX]: [am, am, { [bY]: [Z, ab, aa, S, ac, ad], [bW]: c, [bX]: [{ endpoint: an, [bW]: q }] }, { [bY]: [Z, ab, aa, S, ac, af], endpoint: an, [bW]: q }, ao, ao, { [bY]: [ag, ab, aa, S, ac, ad], [bW]: c, [bX]: [{ endpoint: ap, [bW]: q }] }, { [bY]: [ag, ab, aa, S, ac, af], endpoint: ap, [bW]: q }, aq, aq, { [bY]: [Z, ah, al, S, ac, ad], [bW]: c, [bX]: [{ endpoint: ar, [bW]: q }] }, { [bY]: [Z, ah, al, S, ac, af], endpoint: ar, [bW]: q }, as, as, { [bY]: [Z, ah, aa, S, ac, ad], [bW]: c, [bX]: [{ endpoint: at, [bW]: q }] }, { [bY]: [Z, ah, aa, S, ac, af], endpoint: at, [bW]: q }, au, ax, au, ax, { [bY]: [ag, ah, aa, T, U, av, ac, ad], [bW]: c, [bX]: [{ [bY]: bD, endpoint: az, [bW]: q }, { endpoint: az, [bW]: q }] }, { [bY]: [ag, ah, aa, T, U, ay, ac, ad], [bW]: c, [bX]: [{ [bY]: bD, endpoint: aA, [bW]: q }, aB] }, { [bY]: [ag, ah, aa, T, U, av, ac, af], endpoint: az, [bW]: q }, { [bY]: [ag, ah, aa, T, U, ay, ac, af], endpoint: aA, [bW]: q }, aC, aC, { [bY]: [ag, ah, al, S, ac, ad], [bW]: c, [bX]: [{ [bY]: bD, endpoint: aD, [bW]: q }, { endpoint: aD, [bW]: q }] }, { [bY]: [ag, ah, al, S, ac, af], endpoint: aD, [bW]: q }, aE, aE, { [bY]: [ag, ah, aa, S, ac, ad], [bW]: c, [bX]: [{ [bY]: bD, endpoint: { [cd]: y, [ce]: ae, [cj]: W }, [bW]: q }, { endpoint: aF, [bW]: q }] }, { [bY]: [ag, ah, aa, S, ac, af], endpoint: aF, [bW]: q }] }] }] }] }] }] }] }] }, aG] }] }, ai] }, { [bY]: [T, U, { [bZ]: k, [ca]: [{ [bZ]: v, [ca]: [aw, "scheme"] }, "http"] }, { [bZ]: u, [ca]: [P, b] }, ah, ag, aa], [bW]: c, [bX]: [{ [bY]: bC, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bE, [bW]: c, [bX]: [aB] }, aG] }] }, ai] }, { [bY]: [{ [bZ]: s, [ca]: bu, [cc]: z }], [bW]: c, [bX]: [{ [bY]: [{ [bZ]: v, [ca]: [aH, "resourceId[0]"], [cc]: A }, { [bZ]: m, [ca]: [{ [bZ]: k, [ca]: [aI, B] }] }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [aJ, C] }], [bW]: c, [bX]: [{ [bY]: bF, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bG, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aL, { [bW]: c, [bX]: [aM, { [bW]: c, [bX]: [{ [bY]: bK, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aN, { [bW]: c, [bX]: [{ [bY]: bL, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aO, { [bW]: c, [bX]: [{ [bY]: bN, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bC, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bO, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bP, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [aQ, B] }], error: "Invalid ARN: Missing account id", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: bQ, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bR, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aR, { [bW]: c, [bX]: [{ [bY]: by, endpoint: { [cd]: F, [ce]: aS, [cj]: W }, [bW]: q }, { [bY]: bS, endpoint: { [cd]: "https://{accessPointName}-{bucketArn#accountId}.s3-object-lambda-fips.{bucketArn#region}.{bucketPartition#dnsSuffix}", [ce]: aS, [cj]: W }, [bW]: q }, { endpoint: { [cd]: "https://{accessPointName}-{bucketArn#accountId}.s3-object-lambda.{bucketArn#region}.{bucketPartition#dnsSuffix}", [ce]: aS, [cj]: W }, [bW]: q }] }] }] }, aT] }] }, aU] }] }] }, aV] }] }, aW] }] }, ai] }] }, aX] }] }] }, aY] }] }] }, aZ] }] }] }] }, ba] }] }, { error: "Invalid ARN: Object Lambda ARNs only support `accesspoint` arn types, but found: `{arnType}`", [bW]: n }] }, { [bY]: bF, [bW]: c, [bX]: [{ [bY]: bG, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bK, [bW]: c, [bX]: [{ [bY]: bF, [bW]: c, [bX]: [{ [bY]: bK, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aN, { [bW]: c, [bX]: [{ [bY]: bL, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aO, { [bW]: c, [bX]: [{ [bY]: bN, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bC, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [aP, "{partitionResult#name}"] }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bP, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [aJ, t] }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bQ, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bR, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bJ, error: "Access Points do not support S3 Accelerate", [bW]: n }, { [bW]: c, [bX]: [aR, { [bW]: c, [bX]: [{ [bY]: bB, error: "DualStack cannot be combined with a Host override (PrivateLink)", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [ab, Z], endpoint: { [cd]: "https://{accessPointName}-{bucketArn#accountId}.s3-accesspoint-fips.dualstack.{bucketArn#region}.{bucketPartition#dnsSuffix}", [ce]: bb, [cj]: W }, [bW]: q }, { [bY]: [ab, ag], endpoint: { [cd]: "https://{accessPointName}-{bucketArn#accountId}.s3-accesspoint-fips.{bucketArn#region}.{bucketPartition#dnsSuffix}", [ce]: bb, [cj]: W }, [bW]: q }, { [bY]: [ah, Z], endpoint: { [cd]: "https://{accessPointName}-{bucketArn#accountId}.s3-accesspoint.dualstack.{bucketArn#region}.{bucketPartition#dnsSuffix}", [ce]: bb, [cj]: W }, [bW]: q }, { [bY]: [ah, ag, T, U], endpoint: { [cd]: F, [ce]: bb, [cj]: W }, [bW]: q }, { [bY]: [ah, ag], endpoint: { [cd]: "https://{accessPointName}-{bucketArn#accountId}.s3-accesspoint.{bucketArn#region}.{bucketPartition#dnsSuffix}", [ce]: bb, [cj]: W }, [bW]: q }] }] }] }] }] }, aT] }] }, aU] }] }, { error: "Invalid ARN: The ARN was not for the S3 service, found: {bucketArn#service}", [bW]: n }] }] }, aV] }] }, aW] }] }, ai] }] }, aX] }] }] }, aY] }] }] }, aZ] }] }, { [bW]: c, [bX]: [{ [bY]: [{ [bZ]: l, [ca]: [aK, b] }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bI, error: "S3 MRAP does not support dual-stack", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: bS, error: "S3 MRAP does not support FIPS", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: bJ, error: "S3 MRAP does not support S3 Accelerate", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [{ [bZ]: r, [ca]: [{ [cb]: "DisableMultiRegionAccessPoints" }, b] }], error: "Invalid configuration: Multi-Region Access Point ARNs are disabled.", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [{ [bZ]: j, [ca]: bt, [cc]: G }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [{ [bZ]: v, [ca]: [{ [cb]: G }, w] }, { [bZ]: v, [ca]: [aH, "partition"] }] }], [bW]: c, [bX]: [{ endpoint: { [cd]: "https://{accessPointName}.accesspoint.s3-global.{mrapPartition#dnsSuffix}", [ce]: { [cf]: [{ [cg]: b, name: "sigv4a", [ch]: t, signingRegionSet: ["*"] }] }, [cj]: W }, [bW]: q }] }, { error: "Client was configured for partition `{mrapPartition#name}` but bucket referred to partition `{bucketArn#partition}`", [bW]: n }] }] }, { error: "{Region} was not a valid region", [bW]: n }] }] }] }] }] }] }, { error: "Invalid Access Point Name", [bW]: n }] }] }] }, ba] }, { [bY]: [{ [bZ]: k, [ca]: [aJ, p] }], [bW]: c, [bX]: [{ [bY]: bI, error: "S3 Outposts does not support Dual-stack", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: bS, error: "S3 Outposts does not support FIPS", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: bJ, error: "S3 Outposts does not support S3 Accelerate", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [{ [bZ]: d, [ca]: [{ [bZ]: v, [ca]: [aH, "resourceId[4]"] }] }], error: "Invalid Arn: Outpost Access Point ARN contains sub resources", [bW]: n }, { [bW]: c, [bX]: [{ [bY]: [{ [bZ]: v, [ca]: bH, [cc]: i }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bv, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aO, { [bW]: c, [bX]: [{ [bY]: bN, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bC, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bO, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bP, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bQ, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: v, [ca]: bM, [cc]: H }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: v, [ca]: [aH, "resourceId[3]"], [cc]: E }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: [{ [bZ]: k, [ca]: [{ [cb]: H }, D] }], [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: by, endpoint: { [cd]: "https://{accessPointName}-{bucketArn#accountId}.{outpostId}.{url#authority}", [ce]: bc, [cj]: W }, [bW]: q }, { endpoint: { [cd]: "https://{accessPointName}-{bucketArn#accountId}.{outpostId}.s3-outposts.{bucketArn#region}.{bucketPartition#dnsSuffix}", [ce]: bc, [cj]: W }, [bW]: q }] }] }, { error: "Expected an outpost type `accesspoint`, found {outpostType}", [bW]: n }] }] }, { error: "Invalid ARN: expected an access point name", [bW]: n }] }] }, { error: "Invalid ARN: Expected a 4-component resource", [bW]: n }] }] }, aU] }] }, aV] }] }, aW] }] }, ai] }] }, { error: "Could not load partition for ARN region {bucketArn#region}", [bW]: n }] }] }] }, { error: "Invalid ARN: The outpost Id may only contain a-z, A-Z, 0-9 and `-`. Found: `{outpostId}`", [bW]: n }] }] }, { error: "Invalid ARN: The Outpost Id was not set", [bW]: n }] }] }] }] }] }, { error: "Invalid ARN: Unrecognized format: {Bucket} (type: {arnType})", [bW]: n }] }] }, { error: "Invalid ARN: No ARN type specified", [bW]: n }] }, { [bY]: [{ [bZ]: e, [ca]: [P, 0, 4, a], [cc]: I }, { [bZ]: k, [ca]: [{ [cb]: I }, "arn:"] }, { [bZ]: m, [ca]: [{ [bZ]: d, [ca]: bA }] }], error: "Invalid ARN: `{Bucket}` was not a valid ARN", [bW]: n }, Y] }] }, { [bY]: [{ [bZ]: d, [ca]: [bd] }, { [bZ]: r, [ca]: [bd, b] }], [bW]: c, [bX]: [{ [bY]: bC, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bT, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aL, { [bW]: c, [bX]: [aM, { [bW]: c, [bX]: [aj, { [bW]: c, [bX]: [{ [bY]: by, endpoint: { [cd]: J, [ce]: be, [cj]: W }, [bW]: q }, { [bY]: bS, endpoint: { [cd]: "https://s3-object-lambda-fips.{Region}.{partitionResult#dnsSuffix}", [ce]: be, [cj]: W }, [bW]: q }, { endpoint: { [cd]: "https://s3-object-lambda.{Region}.{partitionResult#dnsSuffix}", [ce]: be, [cj]: W }, [bW]: q }] }] }] }] }] }, aG] }] }, ai] }, { [bY]: [{ [bZ]: m, [ca]: bz }], [bW]: c, [bX]: [{ [bY]: bC, [bW]: c, [bX]: [{ [bW]: c, [bX]: [{ [bY]: bT, [bW]: c, [bX]: [{ [bW]: c, [bX]: [aj, { [bW]: c, [bX]: [bf, bf, { [bY]: [ab, Z, T, U, ac, ad], [bW]: c, [bX]: bU }, { [bY]: [ab, Z, T, U, ac, af], endpoint: bh, [bW]: q }, bi, bi, { [bY]: [ab, Z, S, ac, ad], [bW]: c, [bX]: [{ endpoint: bj, [bW]: q }] }, { [bY]: [ab, Z, S, ac, af], endpoint: bj, [bW]: q }, bk, bk, { [bY]: [ab, ag, T, U, ac, ad], [bW]: c, [bX]: bU }, { [bY]: [ab, ag, T, U, ac, af], endpoint: bh, [bW]: q }, bl, bl, { [bY]: [ab, ag, S, ac, ad], [bW]: c, [bX]: [{ endpoint: bm, [bW]: q }] }, { [bY]: [ab, ag, S, ac, af], endpoint: bm, [bW]: q }, bn, bn, { [bY]: [ah, Z, T, U, ac, ad], [bW]: c, [bX]: bU }, { [bY]: [ah, Z, T, U, ac, af], endpoint: bh, [bW]: q }, bo, bo, { [bY]: [ah, Z, S, ac, ad], [bW]: c, [bX]: [{ endpoint: bp, [bW]: q }] }, { [bY]: [ah, Z, S, ac, af], endpoint: bp, [bW]: q }, bq, bq, { [bY]: [ah, ag, T, U, ac, ad], [bW]: c, [bX]: [{ [bY]: bD, endpoint: bh, [bW]: q }, bg] }, { [bY]: [ah, ag, T, U, ac, af], endpoint: bh, [bW]: q }, br, br, { [bY]: [ah, ag, S, ac, ad], [bW]: c, [bX]: [{ [bY]: bD, endpoint: { [cd]: K, [ce]: ae, [cj]: W }, [bW]: q }, { endpoint: bs, [bW]: q }] }, { [bY]: [ah, ag, S, ac, af], endpoint: bs, [bW]: q }] }] }] }, aG] }] }, ai] }] }] }, { error: "A region must be set when sending requests to S3.", [bW]: n }] }] };
 exports.ruleSet = _data;
 
 
@@ -9827,23 +9753,16 @@ tslib_1.__exportStar(__nccwpck_require__(6958), exports);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.ChecksumMode = exports.ReplicationStatus = exports.Protocol = exports.BucketVersioningStatus = exports.MFADeleteStatus = exports.Payer = exports.ReplicationRuleStatus = exports.SseKmsEncryptedObjectsStatus = exports.ReplicaModificationsStatus = exports.ReplicationRuleFilter = exports.ExistingObjectReplicationStatus = exports.ReplicationTimeStatus = exports.MetricsStatus = exports.DeleteMarkerReplicationStatus = exports.FilterRuleName = exports.MetricsFilter = exports.BucketLogsPermission = exports.ExpirationStatus = exports.TransitionStorageClass = exports.LifecycleRuleFilter = exports.InventoryFrequency = exports.InventoryOptionalField = exports.InventoryIncludedObjectVersions = exports.InventoryFormat = exports.IntelligentTieringAccessTier = exports.IntelligentTieringStatus = exports.StorageClassAnalysisSchemaVersion = exports.AnalyticsS3ExportFileFormat = exports.AnalyticsFilter = exports.ObjectOwnership = exports.BucketLocationConstraint = exports.BucketCannedACL = exports.BucketAlreadyOwnedByYou = exports.BucketAlreadyExists = exports.ObjectNotInActiveTierError = exports.TaggingDirective = exports.StorageClass = exports.ObjectLockMode = exports.ObjectLockLegalHoldStatus = exports.MetadataDirective = exports.ChecksumAlgorithm = exports.ObjectCannedACL = exports.ServerSideEncryption = exports.OwnerOverride = exports.Permission = exports.Type = exports.BucketAccelerateStatus = exports.NoSuchUpload = exports.RequestPayer = exports.RequestCharged = void 0;
-exports._ErrorFilterSensitiveLog = exports.DeletedObjectFilterSensitiveLog = exports.DeleteObjectRequestFilterSensitiveLog = exports.DeleteObjectOutputFilterSensitiveLog = exports.DeleteBucketWebsiteRequestFilterSensitiveLog = exports.DeleteBucketTaggingRequestFilterSensitiveLog = exports.DeleteBucketReplicationRequestFilterSensitiveLog = exports.DeleteBucketPolicyRequestFilterSensitiveLog = exports.DeleteBucketOwnershipControlsRequestFilterSensitiveLog = exports.DeleteBucketMetricsConfigurationRequestFilterSensitiveLog = exports.DeleteBucketLifecycleRequestFilterSensitiveLog = exports.DeleteBucketInventoryConfigurationRequestFilterSensitiveLog = exports.DeleteBucketIntelligentTieringConfigurationRequestFilterSensitiveLog = exports.DeleteBucketEncryptionRequestFilterSensitiveLog = exports.DeleteBucketCorsRequestFilterSensitiveLog = exports.DeleteBucketAnalyticsConfigurationRequestFilterSensitiveLog = exports.DeleteBucketRequestFilterSensitiveLog = exports.CreateMultipartUploadRequestFilterSensitiveLog = exports.CreateMultipartUploadOutputFilterSensitiveLog = exports.CreateBucketRequestFilterSensitiveLog = exports.CreateBucketConfigurationFilterSensitiveLog = exports.CreateBucketOutputFilterSensitiveLog = exports.CopyObjectRequestFilterSensitiveLog = exports.CopyObjectOutputFilterSensitiveLog = exports.CopyObjectResultFilterSensitiveLog = exports.CompleteMultipartUploadRequestFilterSensitiveLog = exports.CompletedMultipartUploadFilterSensitiveLog = exports.CompletedPartFilterSensitiveLog = exports.CompleteMultipartUploadOutputFilterSensitiveLog = exports.AccessControlTranslationFilterSensitiveLog = exports.AccessControlPolicyFilterSensitiveLog = exports.OwnerFilterSensitiveLog = exports.GrantFilterSensitiveLog = exports.GranteeFilterSensitiveLog = exports.AccelerateConfigurationFilterSensitiveLog = exports.AbortMultipartUploadRequestFilterSensitiveLog = exports.AbortMultipartUploadOutputFilterSensitiveLog = exports.AbortIncompleteMultipartUploadFilterSensitiveLog = exports.MFADelete = exports.ObjectVersionStorageClass = exports.NoSuchBucket = exports.ObjectStorageClass = exports.EncodingType = exports.ArchiveStatus = exports.NotFound = exports.ObjectLockRetentionMode = exports.ObjectLockEnabled = exports.ObjectAttributes = exports.NoSuchKey = exports.InvalidObjectState = void 0;
-exports.NoncurrentVersionTransitionFilterSensitiveLog = exports.NoncurrentVersionExpirationFilterSensitiveLog = exports.LifecycleRuleFilterFilterSensitiveLog = exports.LifecycleRuleAndOperatorFilterSensitiveLog = exports.LifecycleExpirationFilterSensitiveLog = exports.GetBucketInventoryConfigurationRequestFilterSensitiveLog = exports.GetBucketInventoryConfigurationOutputFilterSensitiveLog = exports.InventoryConfigurationFilterSensitiveLog = exports.InventoryScheduleFilterSensitiveLog = exports.InventoryFilterFilterSensitiveLog = exports.InventoryDestinationFilterSensitiveLog = exports.InventoryS3BucketDestinationFilterSensitiveLog = exports.InventoryEncryptionFilterSensitiveLog = exports.SSES3FilterSensitiveLog = exports.SSEKMSFilterSensitiveLog = exports.GetBucketIntelligentTieringConfigurationRequestFilterSensitiveLog = exports.GetBucketIntelligentTieringConfigurationOutputFilterSensitiveLog = exports.IntelligentTieringConfigurationFilterSensitiveLog = exports.TieringFilterSensitiveLog = exports.IntelligentTieringFilterFilterSensitiveLog = exports.IntelligentTieringAndOperatorFilterSensitiveLog = exports.GetBucketEncryptionRequestFilterSensitiveLog = exports.GetBucketEncryptionOutputFilterSensitiveLog = exports.ServerSideEncryptionConfigurationFilterSensitiveLog = exports.ServerSideEncryptionRuleFilterSensitiveLog = exports.ServerSideEncryptionByDefaultFilterSensitiveLog = exports.GetBucketCorsRequestFilterSensitiveLog = exports.GetBucketCorsOutputFilterSensitiveLog = exports.CORSRuleFilterSensitiveLog = exports.GetBucketAnalyticsConfigurationRequestFilterSensitiveLog = exports.GetBucketAnalyticsConfigurationOutputFilterSensitiveLog = exports.AnalyticsConfigurationFilterSensitiveLog = exports.StorageClassAnalysisFilterSensitiveLog = exports.StorageClassAnalysisDataExportFilterSensitiveLog = exports.AnalyticsExportDestinationFilterSensitiveLog = exports.AnalyticsS3BucketDestinationFilterSensitiveLog = exports.AnalyticsFilterFilterSensitiveLog = exports.AnalyticsAndOperatorFilterSensitiveLog = exports.TagFilterSensitiveLog = exports.GetBucketAclRequestFilterSensitiveLog = exports.GetBucketAclOutputFilterSensitiveLog = exports.GetBucketAccelerateConfigurationRequestFilterSensitiveLog = exports.GetBucketAccelerateConfigurationOutputFilterSensitiveLog = exports.DeletePublicAccessBlockRequestFilterSensitiveLog = exports.DeleteObjectTaggingRequestFilterSensitiveLog = exports.DeleteObjectTaggingOutputFilterSensitiveLog = exports.DeleteObjectsRequestFilterSensitiveLog = exports.DeleteFilterSensitiveLog = exports.ObjectIdentifierFilterSensitiveLog = exports.DeleteObjectsOutputFilterSensitiveLog = void 0;
-exports.GetBucketRequestPaymentOutputFilterSensitiveLog = exports.GetBucketReplicationRequestFilterSensitiveLog = exports.GetBucketReplicationOutputFilterSensitiveLog = exports.ReplicationConfigurationFilterSensitiveLog = exports.ReplicationRuleFilterSensitiveLog = exports.SourceSelectionCriteriaFilterSensitiveLog = exports.SseKmsEncryptedObjectsFilterSensitiveLog = exports.ReplicaModificationsFilterSensitiveLog = exports.ReplicationRuleFilterFilterSensitiveLog = exports.ReplicationRuleAndOperatorFilterSensitiveLog = exports.ExistingObjectReplicationFilterSensitiveLog = exports.DestinationFilterSensitiveLog = exports.ReplicationTimeFilterSensitiveLog = exports.MetricsFilterSensitiveLog = exports.ReplicationTimeValueFilterSensitiveLog = exports.EncryptionConfigurationFilterSensitiveLog = exports.DeleteMarkerReplicationFilterSensitiveLog = exports.GetBucketPolicyStatusRequestFilterSensitiveLog = exports.GetBucketPolicyStatusOutputFilterSensitiveLog = exports.PolicyStatusFilterSensitiveLog = exports.GetBucketPolicyRequestFilterSensitiveLog = exports.GetBucketPolicyOutputFilterSensitiveLog = exports.GetBucketOwnershipControlsRequestFilterSensitiveLog = exports.GetBucketOwnershipControlsOutputFilterSensitiveLog = exports.OwnershipControlsFilterSensitiveLog = exports.OwnershipControlsRuleFilterSensitiveLog = exports.NotificationConfigurationFilterSensitiveLog = exports.TopicConfigurationFilterSensitiveLog = exports.QueueConfigurationFilterSensitiveLog = exports.LambdaFunctionConfigurationFilterSensitiveLog = exports.NotificationConfigurationFilterFilterSensitiveLog = exports.S3KeyFilterFilterSensitiveLog = exports.FilterRuleFilterSensitiveLog = exports.EventBridgeConfigurationFilterSensitiveLog = exports.GetBucketNotificationConfigurationRequestFilterSensitiveLog = exports.GetBucketMetricsConfigurationRequestFilterSensitiveLog = exports.GetBucketMetricsConfigurationOutputFilterSensitiveLog = exports.MetricsConfigurationFilterSensitiveLog = exports.MetricsFilterFilterSensitiveLog = exports.MetricsAndOperatorFilterSensitiveLog = exports.GetBucketLoggingRequestFilterSensitiveLog = exports.GetBucketLoggingOutputFilterSensitiveLog = exports.LoggingEnabledFilterSensitiveLog = exports.TargetGrantFilterSensitiveLog = exports.GetBucketLocationRequestFilterSensitiveLog = exports.GetBucketLocationOutputFilterSensitiveLog = exports.GetBucketLifecycleConfigurationRequestFilterSensitiveLog = exports.GetBucketLifecycleConfigurationOutputFilterSensitiveLog = exports.LifecycleRuleFilterSensitiveLog = exports.TransitionFilterSensitiveLog = void 0;
-exports.ListBucketMetricsConfigurationsOutputFilterSensitiveLog = exports.ListBucketInventoryConfigurationsRequestFilterSensitiveLog = exports.ListBucketInventoryConfigurationsOutputFilterSensitiveLog = exports.ListBucketIntelligentTieringConfigurationsRequestFilterSensitiveLog = exports.ListBucketIntelligentTieringConfigurationsOutputFilterSensitiveLog = exports.ListBucketAnalyticsConfigurationsRequestFilterSensitiveLog = exports.ListBucketAnalyticsConfigurationsOutputFilterSensitiveLog = exports.HeadObjectRequestFilterSensitiveLog = exports.HeadObjectOutputFilterSensitiveLog = exports.HeadBucketRequestFilterSensitiveLog = exports.GetPublicAccessBlockRequestFilterSensitiveLog = exports.GetPublicAccessBlockOutputFilterSensitiveLog = exports.PublicAccessBlockConfigurationFilterSensitiveLog = exports.GetObjectTorrentRequestFilterSensitiveLog = exports.GetObjectTorrentOutputFilterSensitiveLog = exports.GetObjectTaggingRequestFilterSensitiveLog = exports.GetObjectTaggingOutputFilterSensitiveLog = exports.GetObjectRetentionRequestFilterSensitiveLog = exports.GetObjectRetentionOutputFilterSensitiveLog = exports.ObjectLockRetentionFilterSensitiveLog = exports.GetObjectLockConfigurationRequestFilterSensitiveLog = exports.GetObjectLockConfigurationOutputFilterSensitiveLog = exports.ObjectLockConfigurationFilterSensitiveLog = exports.ObjectLockRuleFilterSensitiveLog = exports.DefaultRetentionFilterSensitiveLog = exports.GetObjectLegalHoldRequestFilterSensitiveLog = exports.GetObjectLegalHoldOutputFilterSensitiveLog = exports.ObjectLockLegalHoldFilterSensitiveLog = exports.GetObjectAttributesRequestFilterSensitiveLog = exports.GetObjectAttributesOutputFilterSensitiveLog = exports.GetObjectAttributesPartsFilterSensitiveLog = exports.ObjectPartFilterSensitiveLog = exports.ChecksumFilterSensitiveLog = exports.GetObjectAclRequestFilterSensitiveLog = exports.GetObjectAclOutputFilterSensitiveLog = exports.GetObjectRequestFilterSensitiveLog = exports.GetObjectOutputFilterSensitiveLog = exports.GetBucketWebsiteRequestFilterSensitiveLog = exports.GetBucketWebsiteOutputFilterSensitiveLog = exports.RoutingRuleFilterSensitiveLog = exports.RedirectFilterSensitiveLog = exports.ConditionFilterSensitiveLog = exports.RedirectAllRequestsToFilterSensitiveLog = exports.IndexDocumentFilterSensitiveLog = exports.ErrorDocumentFilterSensitiveLog = exports.GetBucketVersioningRequestFilterSensitiveLog = exports.GetBucketVersioningOutputFilterSensitiveLog = exports.GetBucketTaggingRequestFilterSensitiveLog = exports.GetBucketTaggingOutputFilterSensitiveLog = exports.GetBucketRequestPaymentRequestFilterSensitiveLog = void 0;
-exports.PutObjectLegalHoldOutputFilterSensitiveLog = exports.PutObjectAclRequestFilterSensitiveLog = exports.PutObjectAclOutputFilterSensitiveLog = exports.PutObjectRequestFilterSensitiveLog = exports.PutObjectOutputFilterSensitiveLog = exports.PutBucketWebsiteRequestFilterSensitiveLog = exports.WebsiteConfigurationFilterSensitiveLog = exports.PutBucketVersioningRequestFilterSensitiveLog = exports.VersioningConfigurationFilterSensitiveLog = exports.PutBucketTaggingRequestFilterSensitiveLog = exports.TaggingFilterSensitiveLog = exports.PutBucketRequestPaymentRequestFilterSensitiveLog = exports.RequestPaymentConfigurationFilterSensitiveLog = exports.PutBucketReplicationRequestFilterSensitiveLog = exports.PutBucketPolicyRequestFilterSensitiveLog = exports.PutBucketOwnershipControlsRequestFilterSensitiveLog = exports.PutBucketNotificationConfigurationRequestFilterSensitiveLog = exports.PutBucketMetricsConfigurationRequestFilterSensitiveLog = exports.PutBucketLoggingRequestFilterSensitiveLog = exports.BucketLoggingStatusFilterSensitiveLog = exports.PutBucketLifecycleConfigurationRequestFilterSensitiveLog = exports.BucketLifecycleConfigurationFilterSensitiveLog = exports.PutBucketInventoryConfigurationRequestFilterSensitiveLog = exports.PutBucketIntelligentTieringConfigurationRequestFilterSensitiveLog = exports.PutBucketEncryptionRequestFilterSensitiveLog = exports.PutBucketCorsRequestFilterSensitiveLog = exports.CORSConfigurationFilterSensitiveLog = exports.PutBucketAnalyticsConfigurationRequestFilterSensitiveLog = exports.PutBucketAclRequestFilterSensitiveLog = exports.PutBucketAccelerateConfigurationRequestFilterSensitiveLog = exports.ListPartsRequestFilterSensitiveLog = exports.ListPartsOutputFilterSensitiveLog = exports.PartFilterSensitiveLog = exports.ListObjectVersionsRequestFilterSensitiveLog = exports.ListObjectVersionsOutputFilterSensitiveLog = exports.ObjectVersionFilterSensitiveLog = exports.DeleteMarkerEntryFilterSensitiveLog = exports.ListObjectsV2RequestFilterSensitiveLog = exports.ListObjectsV2OutputFilterSensitiveLog = exports.ListObjectsRequestFilterSensitiveLog = exports.ListObjectsOutputFilterSensitiveLog = exports._ObjectFilterSensitiveLog = exports.ListMultipartUploadsRequestFilterSensitiveLog = exports.ListMultipartUploadsOutputFilterSensitiveLog = exports.MultipartUploadFilterSensitiveLog = exports.InitiatorFilterSensitiveLog = exports.CommonPrefixFilterSensitiveLog = exports.ListBucketsOutputFilterSensitiveLog = exports.BucketFilterSensitiveLog = exports.ListBucketMetricsConfigurationsRequestFilterSensitiveLog = void 0;
-exports.PutObjectLockConfigurationRequestFilterSensitiveLog = exports.PutObjectLockConfigurationOutputFilterSensitiveLog = exports.PutObjectLegalHoldRequestFilterSensitiveLog = void 0;
+exports.ReplicationStatus = exports.Protocol = exports.BucketVersioningStatus = exports.MFADeleteStatus = exports.Payer = exports.ReplicationRuleStatus = exports.SseKmsEncryptedObjectsStatus = exports.ReplicaModificationsStatus = exports.ReplicationRuleFilter = exports.ExistingObjectReplicationStatus = exports.ReplicationTimeStatus = exports.MetricsStatus = exports.DeleteMarkerReplicationStatus = exports.FilterRuleName = exports.Event = exports.MetricsFilter = exports.BucketLogsPermission = exports.ExpirationStatus = exports.TransitionStorageClass = exports.LifecycleRuleFilter = exports.InventoryFrequency = exports.InventoryOptionalField = exports.InventoryIncludedObjectVersions = exports.InventoryFormat = exports.IntelligentTieringAccessTier = exports.IntelligentTieringStatus = exports.StorageClassAnalysisSchemaVersion = exports.AnalyticsS3ExportFileFormat = exports.AnalyticsFilter = exports.ObjectOwnership = exports.BucketLocationConstraint = exports.BucketCannedACL = exports.BucketAlreadyOwnedByYou = exports.BucketAlreadyExists = exports.ObjectNotInActiveTierError = exports.TaggingDirective = exports.StorageClass = exports.ObjectLockMode = exports.ObjectLockLegalHoldStatus = exports.MetadataDirective = exports.ChecksumAlgorithm = exports.ObjectCannedACL = exports.ServerSideEncryption = exports.OwnerOverride = exports.Permission = exports.Type = exports.BucketAccelerateStatus = exports.NoSuchUpload = exports.RequestPayer = exports.RequestCharged = void 0;
+exports.PutObjectRequestFilterSensitiveLog = exports.PutObjectOutputFilterSensitiveLog = exports.PutBucketInventoryConfigurationRequestFilterSensitiveLog = exports.PutBucketEncryptionRequestFilterSensitiveLog = exports.ListPartsRequestFilterSensitiveLog = exports.ListBucketInventoryConfigurationsOutputFilterSensitiveLog = exports.HeadObjectRequestFilterSensitiveLog = exports.HeadObjectOutputFilterSensitiveLog = exports.GetObjectTorrentOutputFilterSensitiveLog = exports.GetObjectAttributesRequestFilterSensitiveLog = exports.GetObjectRequestFilterSensitiveLog = exports.GetObjectOutputFilterSensitiveLog = exports.GetBucketInventoryConfigurationOutputFilterSensitiveLog = exports.InventoryConfigurationFilterSensitiveLog = exports.InventoryDestinationFilterSensitiveLog = exports.InventoryS3BucketDestinationFilterSensitiveLog = exports.InventoryEncryptionFilterSensitiveLog = exports.SSEKMSFilterSensitiveLog = exports.GetBucketEncryptionOutputFilterSensitiveLog = exports.ServerSideEncryptionConfigurationFilterSensitiveLog = exports.ServerSideEncryptionRuleFilterSensitiveLog = exports.ServerSideEncryptionByDefaultFilterSensitiveLog = exports.CreateMultipartUploadRequestFilterSensitiveLog = exports.CreateMultipartUploadOutputFilterSensitiveLog = exports.CopyObjectRequestFilterSensitiveLog = exports.CopyObjectOutputFilterSensitiveLog = exports.CompleteMultipartUploadRequestFilterSensitiveLog = exports.CompleteMultipartUploadOutputFilterSensitiveLog = exports.MFADelete = exports.ObjectVersionStorageClass = exports.NoSuchBucket = exports.ObjectStorageClass = exports.EncodingType = exports.ArchiveStatus = exports.NotFound = exports.ObjectLockRetentionMode = exports.ObjectLockEnabled = exports.ObjectAttributes = exports.NoSuchKey = exports.InvalidObjectState = exports.ChecksumMode = void 0;
 const smithy_client_1 = __nccwpck_require__(4963);
 const S3ServiceException_1 = __nccwpck_require__(37614);
-var RequestCharged;
-(function (RequestCharged) {
-    RequestCharged["requester"] = "requester";
-})(RequestCharged = exports.RequestCharged || (exports.RequestCharged = {}));
-var RequestPayer;
-(function (RequestPayer) {
-    RequestPayer["requester"] = "requester";
-})(RequestPayer = exports.RequestPayer || (exports.RequestPayer = {}));
+exports.RequestCharged = {
+    requester: "requester",
+};
+exports.RequestPayer = {
+    requester: "requester",
+};
 class NoSuchUpload extends S3ServiceException_1.S3ServiceException {
     constructor(opts) {
         super({
@@ -9857,83 +9776,71 @@ class NoSuchUpload extends S3ServiceException_1.S3ServiceException {
     }
 }
 exports.NoSuchUpload = NoSuchUpload;
-var BucketAccelerateStatus;
-(function (BucketAccelerateStatus) {
-    BucketAccelerateStatus["Enabled"] = "Enabled";
-    BucketAccelerateStatus["Suspended"] = "Suspended";
-})(BucketAccelerateStatus = exports.BucketAccelerateStatus || (exports.BucketAccelerateStatus = {}));
-var Type;
-(function (Type) {
-    Type["AmazonCustomerByEmail"] = "AmazonCustomerByEmail";
-    Type["CanonicalUser"] = "CanonicalUser";
-    Type["Group"] = "Group";
-})(Type = exports.Type || (exports.Type = {}));
-var Permission;
-(function (Permission) {
-    Permission["FULL_CONTROL"] = "FULL_CONTROL";
-    Permission["READ"] = "READ";
-    Permission["READ_ACP"] = "READ_ACP";
-    Permission["WRITE"] = "WRITE";
-    Permission["WRITE_ACP"] = "WRITE_ACP";
-})(Permission = exports.Permission || (exports.Permission = {}));
-var OwnerOverride;
-(function (OwnerOverride) {
-    OwnerOverride["Destination"] = "Destination";
-})(OwnerOverride = exports.OwnerOverride || (exports.OwnerOverride = {}));
-var ServerSideEncryption;
-(function (ServerSideEncryption) {
-    ServerSideEncryption["AES256"] = "AES256";
-    ServerSideEncryption["aws_kms"] = "aws:kms";
-})(ServerSideEncryption = exports.ServerSideEncryption || (exports.ServerSideEncryption = {}));
-var ObjectCannedACL;
-(function (ObjectCannedACL) {
-    ObjectCannedACL["authenticated_read"] = "authenticated-read";
-    ObjectCannedACL["aws_exec_read"] = "aws-exec-read";
-    ObjectCannedACL["bucket_owner_full_control"] = "bucket-owner-full-control";
-    ObjectCannedACL["bucket_owner_read"] = "bucket-owner-read";
-    ObjectCannedACL["private"] = "private";
-    ObjectCannedACL["public_read"] = "public-read";
-    ObjectCannedACL["public_read_write"] = "public-read-write";
-})(ObjectCannedACL = exports.ObjectCannedACL || (exports.ObjectCannedACL = {}));
-var ChecksumAlgorithm;
-(function (ChecksumAlgorithm) {
-    ChecksumAlgorithm["CRC32"] = "CRC32";
-    ChecksumAlgorithm["CRC32C"] = "CRC32C";
-    ChecksumAlgorithm["SHA1"] = "SHA1";
-    ChecksumAlgorithm["SHA256"] = "SHA256";
-})(ChecksumAlgorithm = exports.ChecksumAlgorithm || (exports.ChecksumAlgorithm = {}));
-var MetadataDirective;
-(function (MetadataDirective) {
-    MetadataDirective["COPY"] = "COPY";
-    MetadataDirective["REPLACE"] = "REPLACE";
-})(MetadataDirective = exports.MetadataDirective || (exports.MetadataDirective = {}));
-var ObjectLockLegalHoldStatus;
-(function (ObjectLockLegalHoldStatus) {
-    ObjectLockLegalHoldStatus["OFF"] = "OFF";
-    ObjectLockLegalHoldStatus["ON"] = "ON";
-})(ObjectLockLegalHoldStatus = exports.ObjectLockLegalHoldStatus || (exports.ObjectLockLegalHoldStatus = {}));
-var ObjectLockMode;
-(function (ObjectLockMode) {
-    ObjectLockMode["COMPLIANCE"] = "COMPLIANCE";
-    ObjectLockMode["GOVERNANCE"] = "GOVERNANCE";
-})(ObjectLockMode = exports.ObjectLockMode || (exports.ObjectLockMode = {}));
-var StorageClass;
-(function (StorageClass) {
-    StorageClass["DEEP_ARCHIVE"] = "DEEP_ARCHIVE";
-    StorageClass["GLACIER"] = "GLACIER";
-    StorageClass["GLACIER_IR"] = "GLACIER_IR";
-    StorageClass["INTELLIGENT_TIERING"] = "INTELLIGENT_TIERING";
-    StorageClass["ONEZONE_IA"] = "ONEZONE_IA";
-    StorageClass["OUTPOSTS"] = "OUTPOSTS";
-    StorageClass["REDUCED_REDUNDANCY"] = "REDUCED_REDUNDANCY";
-    StorageClass["STANDARD"] = "STANDARD";
-    StorageClass["STANDARD_IA"] = "STANDARD_IA";
-})(StorageClass = exports.StorageClass || (exports.StorageClass = {}));
-var TaggingDirective;
-(function (TaggingDirective) {
-    TaggingDirective["COPY"] = "COPY";
-    TaggingDirective["REPLACE"] = "REPLACE";
-})(TaggingDirective = exports.TaggingDirective || (exports.TaggingDirective = {}));
+exports.BucketAccelerateStatus = {
+    Enabled: "Enabled",
+    Suspended: "Suspended",
+};
+exports.Type = {
+    AmazonCustomerByEmail: "AmazonCustomerByEmail",
+    CanonicalUser: "CanonicalUser",
+    Group: "Group",
+};
+exports.Permission = {
+    FULL_CONTROL: "FULL_CONTROL",
+    READ: "READ",
+    READ_ACP: "READ_ACP",
+    WRITE: "WRITE",
+    WRITE_ACP: "WRITE_ACP",
+};
+exports.OwnerOverride = {
+    Destination: "Destination",
+};
+exports.ServerSideEncryption = {
+    AES256: "AES256",
+    aws_kms: "aws:kms",
+};
+exports.ObjectCannedACL = {
+    authenticated_read: "authenticated-read",
+    aws_exec_read: "aws-exec-read",
+    bucket_owner_full_control: "bucket-owner-full-control",
+    bucket_owner_read: "bucket-owner-read",
+    private: "private",
+    public_read: "public-read",
+    public_read_write: "public-read-write",
+};
+exports.ChecksumAlgorithm = {
+    CRC32: "CRC32",
+    CRC32C: "CRC32C",
+    SHA1: "SHA1",
+    SHA256: "SHA256",
+};
+exports.MetadataDirective = {
+    COPY: "COPY",
+    REPLACE: "REPLACE",
+};
+exports.ObjectLockLegalHoldStatus = {
+    OFF: "OFF",
+    ON: "ON",
+};
+exports.ObjectLockMode = {
+    COMPLIANCE: "COMPLIANCE",
+    GOVERNANCE: "GOVERNANCE",
+};
+exports.StorageClass = {
+    DEEP_ARCHIVE: "DEEP_ARCHIVE",
+    GLACIER: "GLACIER",
+    GLACIER_IR: "GLACIER_IR",
+    INTELLIGENT_TIERING: "INTELLIGENT_TIERING",
+    ONEZONE_IA: "ONEZONE_IA",
+    OUTPOSTS: "OUTPOSTS",
+    REDUCED_REDUNDANCY: "REDUCED_REDUNDANCY",
+    STANDARD: "STANDARD",
+    STANDARD_IA: "STANDARD_IA",
+};
+exports.TaggingDirective = {
+    COPY: "COPY",
+    REPLACE: "REPLACE",
+};
 class ObjectNotInActiveTierError extends S3ServiceException_1.S3ServiceException {
     constructor(opts) {
         super({
@@ -9973,48 +9880,45 @@ class BucketAlreadyOwnedByYou extends S3ServiceException_1.S3ServiceException {
     }
 }
 exports.BucketAlreadyOwnedByYou = BucketAlreadyOwnedByYou;
-var BucketCannedACL;
-(function (BucketCannedACL) {
-    BucketCannedACL["authenticated_read"] = "authenticated-read";
-    BucketCannedACL["private"] = "private";
-    BucketCannedACL["public_read"] = "public-read";
-    BucketCannedACL["public_read_write"] = "public-read-write";
-})(BucketCannedACL = exports.BucketCannedACL || (exports.BucketCannedACL = {}));
-var BucketLocationConstraint;
-(function (BucketLocationConstraint) {
-    BucketLocationConstraint["EU"] = "EU";
-    BucketLocationConstraint["af_south_1"] = "af-south-1";
-    BucketLocationConstraint["ap_east_1"] = "ap-east-1";
-    BucketLocationConstraint["ap_northeast_1"] = "ap-northeast-1";
-    BucketLocationConstraint["ap_northeast_2"] = "ap-northeast-2";
-    BucketLocationConstraint["ap_northeast_3"] = "ap-northeast-3";
-    BucketLocationConstraint["ap_south_1"] = "ap-south-1";
-    BucketLocationConstraint["ap_southeast_1"] = "ap-southeast-1";
-    BucketLocationConstraint["ap_southeast_2"] = "ap-southeast-2";
-    BucketLocationConstraint["ap_southeast_3"] = "ap-southeast-3";
-    BucketLocationConstraint["ca_central_1"] = "ca-central-1";
-    BucketLocationConstraint["cn_north_1"] = "cn-north-1";
-    BucketLocationConstraint["cn_northwest_1"] = "cn-northwest-1";
-    BucketLocationConstraint["eu_central_1"] = "eu-central-1";
-    BucketLocationConstraint["eu_north_1"] = "eu-north-1";
-    BucketLocationConstraint["eu_south_1"] = "eu-south-1";
-    BucketLocationConstraint["eu_west_1"] = "eu-west-1";
-    BucketLocationConstraint["eu_west_2"] = "eu-west-2";
-    BucketLocationConstraint["eu_west_3"] = "eu-west-3";
-    BucketLocationConstraint["me_south_1"] = "me-south-1";
-    BucketLocationConstraint["sa_east_1"] = "sa-east-1";
-    BucketLocationConstraint["us_east_2"] = "us-east-2";
-    BucketLocationConstraint["us_gov_east_1"] = "us-gov-east-1";
-    BucketLocationConstraint["us_gov_west_1"] = "us-gov-west-1";
-    BucketLocationConstraint["us_west_1"] = "us-west-1";
-    BucketLocationConstraint["us_west_2"] = "us-west-2";
-})(BucketLocationConstraint = exports.BucketLocationConstraint || (exports.BucketLocationConstraint = {}));
-var ObjectOwnership;
-(function (ObjectOwnership) {
-    ObjectOwnership["BucketOwnerEnforced"] = "BucketOwnerEnforced";
-    ObjectOwnership["BucketOwnerPreferred"] = "BucketOwnerPreferred";
-    ObjectOwnership["ObjectWriter"] = "ObjectWriter";
-})(ObjectOwnership = exports.ObjectOwnership || (exports.ObjectOwnership = {}));
+exports.BucketCannedACL = {
+    authenticated_read: "authenticated-read",
+    private: "private",
+    public_read: "public-read",
+    public_read_write: "public-read-write",
+};
+exports.BucketLocationConstraint = {
+    EU: "EU",
+    af_south_1: "af-south-1",
+    ap_east_1: "ap-east-1",
+    ap_northeast_1: "ap-northeast-1",
+    ap_northeast_2: "ap-northeast-2",
+    ap_northeast_3: "ap-northeast-3",
+    ap_south_1: "ap-south-1",
+    ap_southeast_1: "ap-southeast-1",
+    ap_southeast_2: "ap-southeast-2",
+    ap_southeast_3: "ap-southeast-3",
+    ca_central_1: "ca-central-1",
+    cn_north_1: "cn-north-1",
+    cn_northwest_1: "cn-northwest-1",
+    eu_central_1: "eu-central-1",
+    eu_north_1: "eu-north-1",
+    eu_south_1: "eu-south-1",
+    eu_west_1: "eu-west-1",
+    eu_west_2: "eu-west-2",
+    eu_west_3: "eu-west-3",
+    me_south_1: "me-south-1",
+    sa_east_1: "sa-east-1",
+    us_east_2: "us-east-2",
+    us_gov_east_1: "us-gov-east-1",
+    us_gov_west_1: "us-gov-west-1",
+    us_west_1: "us-west-1",
+    us_west_2: "us-west-2",
+};
+exports.ObjectOwnership = {
+    BucketOwnerEnforced: "BucketOwnerEnforced",
+    BucketOwnerPreferred: "BucketOwnerPreferred",
+    ObjectWriter: "ObjectWriter",
+};
 var AnalyticsFilter;
 (function (AnalyticsFilter) {
     AnalyticsFilter.visit = (value, visitor) => {
@@ -10027,56 +9931,48 @@ var AnalyticsFilter;
         return visitor._(value.$unknown[0], value.$unknown[1]);
     };
 })(AnalyticsFilter = exports.AnalyticsFilter || (exports.AnalyticsFilter = {}));
-var AnalyticsS3ExportFileFormat;
-(function (AnalyticsS3ExportFileFormat) {
-    AnalyticsS3ExportFileFormat["CSV"] = "CSV";
-})(AnalyticsS3ExportFileFormat = exports.AnalyticsS3ExportFileFormat || (exports.AnalyticsS3ExportFileFormat = {}));
-var StorageClassAnalysisSchemaVersion;
-(function (StorageClassAnalysisSchemaVersion) {
-    StorageClassAnalysisSchemaVersion["V_1"] = "V_1";
-})(StorageClassAnalysisSchemaVersion = exports.StorageClassAnalysisSchemaVersion || (exports.StorageClassAnalysisSchemaVersion = {}));
-var IntelligentTieringStatus;
-(function (IntelligentTieringStatus) {
-    IntelligentTieringStatus["Disabled"] = "Disabled";
-    IntelligentTieringStatus["Enabled"] = "Enabled";
-})(IntelligentTieringStatus = exports.IntelligentTieringStatus || (exports.IntelligentTieringStatus = {}));
-var IntelligentTieringAccessTier;
-(function (IntelligentTieringAccessTier) {
-    IntelligentTieringAccessTier["ARCHIVE_ACCESS"] = "ARCHIVE_ACCESS";
-    IntelligentTieringAccessTier["DEEP_ARCHIVE_ACCESS"] = "DEEP_ARCHIVE_ACCESS";
-})(IntelligentTieringAccessTier = exports.IntelligentTieringAccessTier || (exports.IntelligentTieringAccessTier = {}));
-var InventoryFormat;
-(function (InventoryFormat) {
-    InventoryFormat["CSV"] = "CSV";
-    InventoryFormat["ORC"] = "ORC";
-    InventoryFormat["Parquet"] = "Parquet";
-})(InventoryFormat = exports.InventoryFormat || (exports.InventoryFormat = {}));
-var InventoryIncludedObjectVersions;
-(function (InventoryIncludedObjectVersions) {
-    InventoryIncludedObjectVersions["All"] = "All";
-    InventoryIncludedObjectVersions["Current"] = "Current";
-})(InventoryIncludedObjectVersions = exports.InventoryIncludedObjectVersions || (exports.InventoryIncludedObjectVersions = {}));
-var InventoryOptionalField;
-(function (InventoryOptionalField) {
-    InventoryOptionalField["BucketKeyStatus"] = "BucketKeyStatus";
-    InventoryOptionalField["ChecksumAlgorithm"] = "ChecksumAlgorithm";
-    InventoryOptionalField["ETag"] = "ETag";
-    InventoryOptionalField["EncryptionStatus"] = "EncryptionStatus";
-    InventoryOptionalField["IntelligentTieringAccessTier"] = "IntelligentTieringAccessTier";
-    InventoryOptionalField["IsMultipartUploaded"] = "IsMultipartUploaded";
-    InventoryOptionalField["LastModifiedDate"] = "LastModifiedDate";
-    InventoryOptionalField["ObjectLockLegalHoldStatus"] = "ObjectLockLegalHoldStatus";
-    InventoryOptionalField["ObjectLockMode"] = "ObjectLockMode";
-    InventoryOptionalField["ObjectLockRetainUntilDate"] = "ObjectLockRetainUntilDate";
-    InventoryOptionalField["ReplicationStatus"] = "ReplicationStatus";
-    InventoryOptionalField["Size"] = "Size";
-    InventoryOptionalField["StorageClass"] = "StorageClass";
-})(InventoryOptionalField = exports.InventoryOptionalField || (exports.InventoryOptionalField = {}));
-var InventoryFrequency;
-(function (InventoryFrequency) {
-    InventoryFrequency["Daily"] = "Daily";
-    InventoryFrequency["Weekly"] = "Weekly";
-})(InventoryFrequency = exports.InventoryFrequency || (exports.InventoryFrequency = {}));
+exports.AnalyticsS3ExportFileFormat = {
+    CSV: "CSV",
+};
+exports.StorageClassAnalysisSchemaVersion = {
+    V_1: "V_1",
+};
+exports.IntelligentTieringStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+exports.IntelligentTieringAccessTier = {
+    ARCHIVE_ACCESS: "ARCHIVE_ACCESS",
+    DEEP_ARCHIVE_ACCESS: "DEEP_ARCHIVE_ACCESS",
+};
+exports.InventoryFormat = {
+    CSV: "CSV",
+    ORC: "ORC",
+    Parquet: "Parquet",
+};
+exports.InventoryIncludedObjectVersions = {
+    All: "All",
+    Current: "Current",
+};
+exports.InventoryOptionalField = {
+    BucketKeyStatus: "BucketKeyStatus",
+    ChecksumAlgorithm: "ChecksumAlgorithm",
+    ETag: "ETag",
+    EncryptionStatus: "EncryptionStatus",
+    IntelligentTieringAccessTier: "IntelligentTieringAccessTier",
+    IsMultipartUploaded: "IsMultipartUploaded",
+    LastModifiedDate: "LastModifiedDate",
+    ObjectLockLegalHoldStatus: "ObjectLockLegalHoldStatus",
+    ObjectLockMode: "ObjectLockMode",
+    ObjectLockRetainUntilDate: "ObjectLockRetainUntilDate",
+    ReplicationStatus: "ReplicationStatus",
+    Size: "Size",
+    StorageClass: "StorageClass",
+};
+exports.InventoryFrequency = {
+    Daily: "Daily",
+    Weekly: "Weekly",
+};
 var LifecycleRuleFilter;
 (function (LifecycleRuleFilter) {
     LifecycleRuleFilter.visit = (value, visitor) => {
@@ -10093,26 +9989,23 @@ var LifecycleRuleFilter;
         return visitor._(value.$unknown[0], value.$unknown[1]);
     };
 })(LifecycleRuleFilter = exports.LifecycleRuleFilter || (exports.LifecycleRuleFilter = {}));
-var TransitionStorageClass;
-(function (TransitionStorageClass) {
-    TransitionStorageClass["DEEP_ARCHIVE"] = "DEEP_ARCHIVE";
-    TransitionStorageClass["GLACIER"] = "GLACIER";
-    TransitionStorageClass["GLACIER_IR"] = "GLACIER_IR";
-    TransitionStorageClass["INTELLIGENT_TIERING"] = "INTELLIGENT_TIERING";
-    TransitionStorageClass["ONEZONE_IA"] = "ONEZONE_IA";
-    TransitionStorageClass["STANDARD_IA"] = "STANDARD_IA";
-})(TransitionStorageClass = exports.TransitionStorageClass || (exports.TransitionStorageClass = {}));
-var ExpirationStatus;
-(function (ExpirationStatus) {
-    ExpirationStatus["Disabled"] = "Disabled";
-    ExpirationStatus["Enabled"] = "Enabled";
-})(ExpirationStatus = exports.ExpirationStatus || (exports.ExpirationStatus = {}));
-var BucketLogsPermission;
-(function (BucketLogsPermission) {
-    BucketLogsPermission["FULL_CONTROL"] = "FULL_CONTROL";
-    BucketLogsPermission["READ"] = "READ";
-    BucketLogsPermission["WRITE"] = "WRITE";
-})(BucketLogsPermission = exports.BucketLogsPermission || (exports.BucketLogsPermission = {}));
+exports.TransitionStorageClass = {
+    DEEP_ARCHIVE: "DEEP_ARCHIVE",
+    GLACIER: "GLACIER",
+    GLACIER_IR: "GLACIER_IR",
+    INTELLIGENT_TIERING: "INTELLIGENT_TIERING",
+    ONEZONE_IA: "ONEZONE_IA",
+    STANDARD_IA: "STANDARD_IA",
+};
+exports.ExpirationStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+exports.BucketLogsPermission = {
+    FULL_CONTROL: "FULL_CONTROL",
+    READ: "READ",
+    WRITE: "WRITE",
+};
 var MetricsFilter;
 (function (MetricsFilter) {
     MetricsFilter.visit = (value, visitor) => {
@@ -10127,31 +10020,55 @@ var MetricsFilter;
         return visitor._(value.$unknown[0], value.$unknown[1]);
     };
 })(MetricsFilter = exports.MetricsFilter || (exports.MetricsFilter = {}));
-var FilterRuleName;
-(function (FilterRuleName) {
-    FilterRuleName["prefix"] = "prefix";
-    FilterRuleName["suffix"] = "suffix";
-})(FilterRuleName = exports.FilterRuleName || (exports.FilterRuleName = {}));
-var DeleteMarkerReplicationStatus;
-(function (DeleteMarkerReplicationStatus) {
-    DeleteMarkerReplicationStatus["Disabled"] = "Disabled";
-    DeleteMarkerReplicationStatus["Enabled"] = "Enabled";
-})(DeleteMarkerReplicationStatus = exports.DeleteMarkerReplicationStatus || (exports.DeleteMarkerReplicationStatus = {}));
-var MetricsStatus;
-(function (MetricsStatus) {
-    MetricsStatus["Disabled"] = "Disabled";
-    MetricsStatus["Enabled"] = "Enabled";
-})(MetricsStatus = exports.MetricsStatus || (exports.MetricsStatus = {}));
-var ReplicationTimeStatus;
-(function (ReplicationTimeStatus) {
-    ReplicationTimeStatus["Disabled"] = "Disabled";
-    ReplicationTimeStatus["Enabled"] = "Enabled";
-})(ReplicationTimeStatus = exports.ReplicationTimeStatus || (exports.ReplicationTimeStatus = {}));
-var ExistingObjectReplicationStatus;
-(function (ExistingObjectReplicationStatus) {
-    ExistingObjectReplicationStatus["Disabled"] = "Disabled";
-    ExistingObjectReplicationStatus["Enabled"] = "Enabled";
-})(ExistingObjectReplicationStatus = exports.ExistingObjectReplicationStatus || (exports.ExistingObjectReplicationStatus = {}));
+exports.Event = {
+    s3_IntelligentTiering: "s3:IntelligentTiering",
+    s3_LifecycleExpiration_: "s3:LifecycleExpiration:*",
+    s3_LifecycleExpiration_Delete: "s3:LifecycleExpiration:Delete",
+    s3_LifecycleExpiration_DeleteMarkerCreated: "s3:LifecycleExpiration:DeleteMarkerCreated",
+    s3_LifecycleTransition: "s3:LifecycleTransition",
+    s3_ObjectAcl_Put: "s3:ObjectAcl:Put",
+    s3_ObjectCreated_: "s3:ObjectCreated:*",
+    s3_ObjectCreated_CompleteMultipartUpload: "s3:ObjectCreated:CompleteMultipartUpload",
+    s3_ObjectCreated_Copy: "s3:ObjectCreated:Copy",
+    s3_ObjectCreated_Post: "s3:ObjectCreated:Post",
+    s3_ObjectCreated_Put: "s3:ObjectCreated:Put",
+    s3_ObjectRemoved_: "s3:ObjectRemoved:*",
+    s3_ObjectRemoved_Delete: "s3:ObjectRemoved:Delete",
+    s3_ObjectRemoved_DeleteMarkerCreated: "s3:ObjectRemoved:DeleteMarkerCreated",
+    s3_ObjectRestore_: "s3:ObjectRestore:*",
+    s3_ObjectRestore_Completed: "s3:ObjectRestore:Completed",
+    s3_ObjectRestore_Delete: "s3:ObjectRestore:Delete",
+    s3_ObjectRestore_Post: "s3:ObjectRestore:Post",
+    s3_ObjectTagging_: "s3:ObjectTagging:*",
+    s3_ObjectTagging_Delete: "s3:ObjectTagging:Delete",
+    s3_ObjectTagging_Put: "s3:ObjectTagging:Put",
+    s3_ReducedRedundancyLostObject: "s3:ReducedRedundancyLostObject",
+    s3_Replication_: "s3:Replication:*",
+    s3_Replication_OperationFailedReplication: "s3:Replication:OperationFailedReplication",
+    s3_Replication_OperationMissedThreshold: "s3:Replication:OperationMissedThreshold",
+    s3_Replication_OperationNotTracked: "s3:Replication:OperationNotTracked",
+    s3_Replication_OperationReplicatedAfterThreshold: "s3:Replication:OperationReplicatedAfterThreshold",
+};
+exports.FilterRuleName = {
+    prefix: "prefix",
+    suffix: "suffix",
+};
+exports.DeleteMarkerReplicationStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+exports.MetricsStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+exports.ReplicationTimeStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+exports.ExistingObjectReplicationStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
 var ReplicationRuleFilter;
 (function (ReplicationRuleFilter) {
     ReplicationRuleFilter.visit = (value, visitor) => {
@@ -10164,52 +10081,43 @@ var ReplicationRuleFilter;
         return visitor._(value.$unknown[0], value.$unknown[1]);
     };
 })(ReplicationRuleFilter = exports.ReplicationRuleFilter || (exports.ReplicationRuleFilter = {}));
-var ReplicaModificationsStatus;
-(function (ReplicaModificationsStatus) {
-    ReplicaModificationsStatus["Disabled"] = "Disabled";
-    ReplicaModificationsStatus["Enabled"] = "Enabled";
-})(ReplicaModificationsStatus = exports.ReplicaModificationsStatus || (exports.ReplicaModificationsStatus = {}));
-var SseKmsEncryptedObjectsStatus;
-(function (SseKmsEncryptedObjectsStatus) {
-    SseKmsEncryptedObjectsStatus["Disabled"] = "Disabled";
-    SseKmsEncryptedObjectsStatus["Enabled"] = "Enabled";
-})(SseKmsEncryptedObjectsStatus = exports.SseKmsEncryptedObjectsStatus || (exports.SseKmsEncryptedObjectsStatus = {}));
-var ReplicationRuleStatus;
-(function (ReplicationRuleStatus) {
-    ReplicationRuleStatus["Disabled"] = "Disabled";
-    ReplicationRuleStatus["Enabled"] = "Enabled";
-})(ReplicationRuleStatus = exports.ReplicationRuleStatus || (exports.ReplicationRuleStatus = {}));
-var Payer;
-(function (Payer) {
-    Payer["BucketOwner"] = "BucketOwner";
-    Payer["Requester"] = "Requester";
-})(Payer = exports.Payer || (exports.Payer = {}));
-var MFADeleteStatus;
-(function (MFADeleteStatus) {
-    MFADeleteStatus["Disabled"] = "Disabled";
-    MFADeleteStatus["Enabled"] = "Enabled";
-})(MFADeleteStatus = exports.MFADeleteStatus || (exports.MFADeleteStatus = {}));
-var BucketVersioningStatus;
-(function (BucketVersioningStatus) {
-    BucketVersioningStatus["Enabled"] = "Enabled";
-    BucketVersioningStatus["Suspended"] = "Suspended";
-})(BucketVersioningStatus = exports.BucketVersioningStatus || (exports.BucketVersioningStatus = {}));
-var Protocol;
-(function (Protocol) {
-    Protocol["http"] = "http";
-    Protocol["https"] = "https";
-})(Protocol = exports.Protocol || (exports.Protocol = {}));
-var ReplicationStatus;
-(function (ReplicationStatus) {
-    ReplicationStatus["COMPLETE"] = "COMPLETE";
-    ReplicationStatus["FAILED"] = "FAILED";
-    ReplicationStatus["PENDING"] = "PENDING";
-    ReplicationStatus["REPLICA"] = "REPLICA";
-})(ReplicationStatus = exports.ReplicationStatus || (exports.ReplicationStatus = {}));
-var ChecksumMode;
-(function (ChecksumMode) {
-    ChecksumMode["ENABLED"] = "ENABLED";
-})(ChecksumMode = exports.ChecksumMode || (exports.ChecksumMode = {}));
+exports.ReplicaModificationsStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+exports.SseKmsEncryptedObjectsStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+exports.ReplicationRuleStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+exports.Payer = {
+    BucketOwner: "BucketOwner",
+    Requester: "Requester",
+};
+exports.MFADeleteStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+exports.BucketVersioningStatus = {
+    Enabled: "Enabled",
+    Suspended: "Suspended",
+};
+exports.Protocol = {
+    http: "http",
+    https: "https",
+};
+exports.ReplicationStatus = {
+    COMPLETE: "COMPLETE",
+    FAILED: "FAILED",
+    PENDING: "PENDING",
+    REPLICA: "REPLICA",
+};
+exports.ChecksumMode = {
+    ENABLED: "ENABLED",
+};
 class InvalidObjectState extends S3ServiceException_1.S3ServiceException {
     constructor(opts) {
         super({
@@ -10238,23 +10146,20 @@ class NoSuchKey extends S3ServiceException_1.S3ServiceException {
     }
 }
 exports.NoSuchKey = NoSuchKey;
-var ObjectAttributes;
-(function (ObjectAttributes) {
-    ObjectAttributes["CHECKSUM"] = "Checksum";
-    ObjectAttributes["ETAG"] = "ETag";
-    ObjectAttributes["OBJECT_PARTS"] = "ObjectParts";
-    ObjectAttributes["OBJECT_SIZE"] = "ObjectSize";
-    ObjectAttributes["STORAGE_CLASS"] = "StorageClass";
-})(ObjectAttributes = exports.ObjectAttributes || (exports.ObjectAttributes = {}));
-var ObjectLockEnabled;
-(function (ObjectLockEnabled) {
-    ObjectLockEnabled["Enabled"] = "Enabled";
-})(ObjectLockEnabled = exports.ObjectLockEnabled || (exports.ObjectLockEnabled = {}));
-var ObjectLockRetentionMode;
-(function (ObjectLockRetentionMode) {
-    ObjectLockRetentionMode["COMPLIANCE"] = "COMPLIANCE";
-    ObjectLockRetentionMode["GOVERNANCE"] = "GOVERNANCE";
-})(ObjectLockRetentionMode = exports.ObjectLockRetentionMode || (exports.ObjectLockRetentionMode = {}));
+exports.ObjectAttributes = {
+    CHECKSUM: "Checksum",
+    ETAG: "ETag",
+    OBJECT_PARTS: "ObjectParts",
+    OBJECT_SIZE: "ObjectSize",
+    STORAGE_CLASS: "StorageClass",
+};
+exports.ObjectLockEnabled = {
+    Enabled: "Enabled",
+};
+exports.ObjectLockRetentionMode = {
+    COMPLIANCE: "COMPLIANCE",
+    GOVERNANCE: "GOVERNANCE",
+};
 class NotFound extends S3ServiceException_1.S3ServiceException {
     constructor(opts) {
         super({
@@ -10268,27 +10173,24 @@ class NotFound extends S3ServiceException_1.S3ServiceException {
     }
 }
 exports.NotFound = NotFound;
-var ArchiveStatus;
-(function (ArchiveStatus) {
-    ArchiveStatus["ARCHIVE_ACCESS"] = "ARCHIVE_ACCESS";
-    ArchiveStatus["DEEP_ARCHIVE_ACCESS"] = "DEEP_ARCHIVE_ACCESS";
-})(ArchiveStatus = exports.ArchiveStatus || (exports.ArchiveStatus = {}));
-var EncodingType;
-(function (EncodingType) {
-    EncodingType["url"] = "url";
-})(EncodingType = exports.EncodingType || (exports.EncodingType = {}));
-var ObjectStorageClass;
-(function (ObjectStorageClass) {
-    ObjectStorageClass["DEEP_ARCHIVE"] = "DEEP_ARCHIVE";
-    ObjectStorageClass["GLACIER"] = "GLACIER";
-    ObjectStorageClass["GLACIER_IR"] = "GLACIER_IR";
-    ObjectStorageClass["INTELLIGENT_TIERING"] = "INTELLIGENT_TIERING";
-    ObjectStorageClass["ONEZONE_IA"] = "ONEZONE_IA";
-    ObjectStorageClass["OUTPOSTS"] = "OUTPOSTS";
-    ObjectStorageClass["REDUCED_REDUNDANCY"] = "REDUCED_REDUNDANCY";
-    ObjectStorageClass["STANDARD"] = "STANDARD";
-    ObjectStorageClass["STANDARD_IA"] = "STANDARD_IA";
-})(ObjectStorageClass = exports.ObjectStorageClass || (exports.ObjectStorageClass = {}));
+exports.ArchiveStatus = {
+    ARCHIVE_ACCESS: "ARCHIVE_ACCESS",
+    DEEP_ARCHIVE_ACCESS: "DEEP_ARCHIVE_ACCESS",
+};
+exports.EncodingType = {
+    url: "url",
+};
+exports.ObjectStorageClass = {
+    DEEP_ARCHIVE: "DEEP_ARCHIVE",
+    GLACIER: "GLACIER",
+    GLACIER_IR: "GLACIER_IR",
+    INTELLIGENT_TIERING: "INTELLIGENT_TIERING",
+    ONEZONE_IA: "ONEZONE_IA",
+    OUTPOSTS: "OUTPOSTS",
+    REDUCED_REDUNDANCY: "REDUCED_REDUNDANCY",
+    STANDARD: "STANDARD",
+    STANDARD_IA: "STANDARD_IA",
+};
 class NoSuchBucket extends S3ServiceException_1.S3ServiceException {
     constructor(opts) {
         super({
@@ -10302,73 +10204,23 @@ class NoSuchBucket extends S3ServiceException_1.S3ServiceException {
     }
 }
 exports.NoSuchBucket = NoSuchBucket;
-var ObjectVersionStorageClass;
-(function (ObjectVersionStorageClass) {
-    ObjectVersionStorageClass["STANDARD"] = "STANDARD";
-})(ObjectVersionStorageClass = exports.ObjectVersionStorageClass || (exports.ObjectVersionStorageClass = {}));
-var MFADelete;
-(function (MFADelete) {
-    MFADelete["Disabled"] = "Disabled";
-    MFADelete["Enabled"] = "Enabled";
-})(MFADelete = exports.MFADelete || (exports.MFADelete = {}));
-const AbortIncompleteMultipartUploadFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AbortIncompleteMultipartUploadFilterSensitiveLog = AbortIncompleteMultipartUploadFilterSensitiveLog;
-const AbortMultipartUploadOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AbortMultipartUploadOutputFilterSensitiveLog = AbortMultipartUploadOutputFilterSensitiveLog;
-const AbortMultipartUploadRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AbortMultipartUploadRequestFilterSensitiveLog = AbortMultipartUploadRequestFilterSensitiveLog;
-const AccelerateConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AccelerateConfigurationFilterSensitiveLog = AccelerateConfigurationFilterSensitiveLog;
-const GranteeFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GranteeFilterSensitiveLog = GranteeFilterSensitiveLog;
-const GrantFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GrantFilterSensitiveLog = GrantFilterSensitiveLog;
-const OwnerFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OwnerFilterSensitiveLog = OwnerFilterSensitiveLog;
-const AccessControlPolicyFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AccessControlPolicyFilterSensitiveLog = AccessControlPolicyFilterSensitiveLog;
-const AccessControlTranslationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AccessControlTranslationFilterSensitiveLog = AccessControlTranslationFilterSensitiveLog;
+exports.ObjectVersionStorageClass = {
+    STANDARD: "STANDARD",
+};
+exports.MFADelete = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
 const CompleteMultipartUploadOutputFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.SSEKMSKeyId && { SSEKMSKeyId: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.CompleteMultipartUploadOutputFilterSensitiveLog = CompleteMultipartUploadOutputFilterSensitiveLog;
-const CompletedPartFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CompletedPartFilterSensitiveLog = CompletedPartFilterSensitiveLog;
-const CompletedMultipartUploadFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CompletedMultipartUploadFilterSensitiveLog = CompletedMultipartUploadFilterSensitiveLog;
 const CompleteMultipartUploadRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.SSECustomerKey && { SSECustomerKey: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.CompleteMultipartUploadRequestFilterSensitiveLog = CompleteMultipartUploadRequestFilterSensitiveLog;
-const CopyObjectResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CopyObjectResultFilterSensitiveLog = CopyObjectResultFilterSensitiveLog;
 const CopyObjectOutputFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.SSEKMSKeyId && { SSEKMSKeyId: smithy_client_1.SENSITIVE_STRING }),
@@ -10383,18 +10235,6 @@ const CopyObjectRequestFilterSensitiveLog = (obj) => ({
     ...(obj.CopySourceSSECustomerKey && { CopySourceSSECustomerKey: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.CopyObjectRequestFilterSensitiveLog = CopyObjectRequestFilterSensitiveLog;
-const CreateBucketOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateBucketOutputFilterSensitiveLog = CreateBucketOutputFilterSensitiveLog;
-const CreateBucketConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateBucketConfigurationFilterSensitiveLog = CreateBucketConfigurationFilterSensitiveLog;
-const CreateBucketRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateBucketRequestFilterSensitiveLog = CreateBucketRequestFilterSensitiveLog;
 const CreateMultipartUploadOutputFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.SSEKMSKeyId && { SSEKMSKeyId: smithy_client_1.SENSITIVE_STRING }),
@@ -10408,181 +10248,6 @@ const CreateMultipartUploadRequestFilterSensitiveLog = (obj) => ({
     ...(obj.SSEKMSEncryptionContext && { SSEKMSEncryptionContext: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.CreateMultipartUploadRequestFilterSensitiveLog = CreateMultipartUploadRequestFilterSensitiveLog;
-const DeleteBucketRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteBucketRequestFilterSensitiveLog = DeleteBucketRequestFilterSensitiveLog;
-const DeleteBucketAnalyticsConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteBucketAnalyticsConfigurationRequestFilterSensitiveLog = DeleteBucketAnalyticsConfigurationRequestFilterSensitiveLog;
-const DeleteBucketCorsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteBucketCorsRequestFilterSensitiveLog = DeleteBucketCorsRequestFilterSensitiveLog;
-const DeleteBucketEncryptionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteBucketEncryptionRequestFilterSensitiveLog = DeleteBucketEncryptionRequestFilterSensitiveLog;
-const DeleteBucketIntelligentTieringConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteBucketIntelligentTieringConfigurationRequestFilterSensitiveLog = DeleteBucketIntelligentTieringConfigurationRequestFilterSensitiveLog;
-const DeleteBucketInventoryConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteBucketInventoryConfigurationRequestFilterSensitiveLog = DeleteBucketInventoryConfigurationRequestFilterSensitiveLog;
-const DeleteBucketLifecycleRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteBucketLifecycleRequestFilterSensitiveLog = DeleteBucketLifecycleRequestFilterSensitiveLog;
-const DeleteBucketMetricsConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteBucketMetricsConfigurationRequestFilterSensitiveLog = DeleteBucketMetricsConfigurationRequestFilterSensitiveLog;
-const DeleteBucketOwnershipControlsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteBucketOwnershipControlsRequestFilterSensitiveLog = DeleteBucketOwnershipControlsRequestFilterSensitiveLog;
-const DeleteBucketPolicyRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteBucketPolicyRequestFilterSensitiveLog = DeleteBucketPolicyRequestFilterSensitiveLog;
-const DeleteBucketReplicationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteBucketReplicationRequestFilterSensitiveLog = DeleteBucketReplicationRequestFilterSensitiveLog;
-const DeleteBucketTaggingRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteBucketTaggingRequestFilterSensitiveLog = DeleteBucketTaggingRequestFilterSensitiveLog;
-const DeleteBucketWebsiteRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteBucketWebsiteRequestFilterSensitiveLog = DeleteBucketWebsiteRequestFilterSensitiveLog;
-const DeleteObjectOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteObjectOutputFilterSensitiveLog = DeleteObjectOutputFilterSensitiveLog;
-const DeleteObjectRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteObjectRequestFilterSensitiveLog = DeleteObjectRequestFilterSensitiveLog;
-const DeletedObjectFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeletedObjectFilterSensitiveLog = DeletedObjectFilterSensitiveLog;
-const _ErrorFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports._ErrorFilterSensitiveLog = _ErrorFilterSensitiveLog;
-const DeleteObjectsOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteObjectsOutputFilterSensitiveLog = DeleteObjectsOutputFilterSensitiveLog;
-const ObjectIdentifierFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ObjectIdentifierFilterSensitiveLog = ObjectIdentifierFilterSensitiveLog;
-const DeleteFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteFilterSensitiveLog = DeleteFilterSensitiveLog;
-const DeleteObjectsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteObjectsRequestFilterSensitiveLog = DeleteObjectsRequestFilterSensitiveLog;
-const DeleteObjectTaggingOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteObjectTaggingOutputFilterSensitiveLog = DeleteObjectTaggingOutputFilterSensitiveLog;
-const DeleteObjectTaggingRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteObjectTaggingRequestFilterSensitiveLog = DeleteObjectTaggingRequestFilterSensitiveLog;
-const DeletePublicAccessBlockRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeletePublicAccessBlockRequestFilterSensitiveLog = DeletePublicAccessBlockRequestFilterSensitiveLog;
-const GetBucketAccelerateConfigurationOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketAccelerateConfigurationOutputFilterSensitiveLog = GetBucketAccelerateConfigurationOutputFilterSensitiveLog;
-const GetBucketAccelerateConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketAccelerateConfigurationRequestFilterSensitiveLog = GetBucketAccelerateConfigurationRequestFilterSensitiveLog;
-const GetBucketAclOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketAclOutputFilterSensitiveLog = GetBucketAclOutputFilterSensitiveLog;
-const GetBucketAclRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketAclRequestFilterSensitiveLog = GetBucketAclRequestFilterSensitiveLog;
-const TagFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.TagFilterSensitiveLog = TagFilterSensitiveLog;
-const AnalyticsAndOperatorFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AnalyticsAndOperatorFilterSensitiveLog = AnalyticsAndOperatorFilterSensitiveLog;
-const AnalyticsFilterFilterSensitiveLog = (obj) => {
-    if (obj.Prefix !== undefined)
-        return { Prefix: obj.Prefix };
-    if (obj.Tag !== undefined)
-        return { Tag: (0, exports.TagFilterSensitiveLog)(obj.Tag) };
-    if (obj.And !== undefined)
-        return { And: (0, exports.AnalyticsAndOperatorFilterSensitiveLog)(obj.And) };
-    if (obj.$unknown !== undefined)
-        return { [obj.$unknown[0]]: "UNKNOWN" };
-};
-exports.AnalyticsFilterFilterSensitiveLog = AnalyticsFilterFilterSensitiveLog;
-const AnalyticsS3BucketDestinationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AnalyticsS3BucketDestinationFilterSensitiveLog = AnalyticsS3BucketDestinationFilterSensitiveLog;
-const AnalyticsExportDestinationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AnalyticsExportDestinationFilterSensitiveLog = AnalyticsExportDestinationFilterSensitiveLog;
-const StorageClassAnalysisDataExportFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StorageClassAnalysisDataExportFilterSensitiveLog = StorageClassAnalysisDataExportFilterSensitiveLog;
-const StorageClassAnalysisFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StorageClassAnalysisFilterSensitiveLog = StorageClassAnalysisFilterSensitiveLog;
-const AnalyticsConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-    ...(obj.Filter && { Filter: (0, exports.AnalyticsFilterFilterSensitiveLog)(obj.Filter) }),
-});
-exports.AnalyticsConfigurationFilterSensitiveLog = AnalyticsConfigurationFilterSensitiveLog;
-const GetBucketAnalyticsConfigurationOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-    ...(obj.AnalyticsConfiguration && {
-        AnalyticsConfiguration: (0, exports.AnalyticsConfigurationFilterSensitiveLog)(obj.AnalyticsConfiguration),
-    }),
-});
-exports.GetBucketAnalyticsConfigurationOutputFilterSensitiveLog = GetBucketAnalyticsConfigurationOutputFilterSensitiveLog;
-const GetBucketAnalyticsConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketAnalyticsConfigurationRequestFilterSensitiveLog = GetBucketAnalyticsConfigurationRequestFilterSensitiveLog;
-const CORSRuleFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CORSRuleFilterSensitiveLog = CORSRuleFilterSensitiveLog;
-const GetBucketCorsOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketCorsOutputFilterSensitiveLog = GetBucketCorsOutputFilterSensitiveLog;
-const GetBucketCorsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketCorsRequestFilterSensitiveLog = GetBucketCorsRequestFilterSensitiveLog;
 const ServerSideEncryptionByDefaultFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.KMSMasterKeyID && { KMSMasterKeyID: smithy_client_1.SENSITIVE_STRING }),
@@ -10607,43 +10272,11 @@ const GetBucketEncryptionOutputFilterSensitiveLog = (obj) => ({
     }),
 });
 exports.GetBucketEncryptionOutputFilterSensitiveLog = GetBucketEncryptionOutputFilterSensitiveLog;
-const GetBucketEncryptionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketEncryptionRequestFilterSensitiveLog = GetBucketEncryptionRequestFilterSensitiveLog;
-const IntelligentTieringAndOperatorFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.IntelligentTieringAndOperatorFilterSensitiveLog = IntelligentTieringAndOperatorFilterSensitiveLog;
-const IntelligentTieringFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.IntelligentTieringFilterFilterSensitiveLog = IntelligentTieringFilterFilterSensitiveLog;
-const TieringFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.TieringFilterSensitiveLog = TieringFilterSensitiveLog;
-const IntelligentTieringConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.IntelligentTieringConfigurationFilterSensitiveLog = IntelligentTieringConfigurationFilterSensitiveLog;
-const GetBucketIntelligentTieringConfigurationOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketIntelligentTieringConfigurationOutputFilterSensitiveLog = GetBucketIntelligentTieringConfigurationOutputFilterSensitiveLog;
-const GetBucketIntelligentTieringConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketIntelligentTieringConfigurationRequestFilterSensitiveLog = GetBucketIntelligentTieringConfigurationRequestFilterSensitiveLog;
 const SSEKMSFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.KeyId && { KeyId: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.SSEKMSFilterSensitiveLog = SSEKMSFilterSensitiveLog;
-const SSES3FilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.SSES3FilterSensitiveLog = SSES3FilterSensitiveLog;
 const InventoryEncryptionFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.SSEKMS && { SSEKMS: (0, exports.SSEKMSFilterSensitiveLog)(obj.SSEKMS) }),
@@ -10661,14 +10294,6 @@ const InventoryDestinationFilterSensitiveLog = (obj) => ({
     }),
 });
 exports.InventoryDestinationFilterSensitiveLog = InventoryDestinationFilterSensitiveLog;
-const InventoryFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InventoryFilterFilterSensitiveLog = InventoryFilterFilterSensitiveLog;
-const InventoryScheduleFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InventoryScheduleFilterSensitiveLog = InventoryScheduleFilterSensitiveLog;
 const InventoryConfigurationFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Destination && { Destination: (0, exports.InventoryDestinationFilterSensitiveLog)(obj.Destination) }),
@@ -10681,320 +10306,6 @@ const GetBucketInventoryConfigurationOutputFilterSensitiveLog = (obj) => ({
     }),
 });
 exports.GetBucketInventoryConfigurationOutputFilterSensitiveLog = GetBucketInventoryConfigurationOutputFilterSensitiveLog;
-const GetBucketInventoryConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketInventoryConfigurationRequestFilterSensitiveLog = GetBucketInventoryConfigurationRequestFilterSensitiveLog;
-const LifecycleExpirationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.LifecycleExpirationFilterSensitiveLog = LifecycleExpirationFilterSensitiveLog;
-const LifecycleRuleAndOperatorFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.LifecycleRuleAndOperatorFilterSensitiveLog = LifecycleRuleAndOperatorFilterSensitiveLog;
-const LifecycleRuleFilterFilterSensitiveLog = (obj) => {
-    if (obj.Prefix !== undefined)
-        return { Prefix: obj.Prefix };
-    if (obj.Tag !== undefined)
-        return { Tag: (0, exports.TagFilterSensitiveLog)(obj.Tag) };
-    if (obj.ObjectSizeGreaterThan !== undefined)
-        return { ObjectSizeGreaterThan: obj.ObjectSizeGreaterThan };
-    if (obj.ObjectSizeLessThan !== undefined)
-        return { ObjectSizeLessThan: obj.ObjectSizeLessThan };
-    if (obj.And !== undefined)
-        return { And: (0, exports.LifecycleRuleAndOperatorFilterSensitiveLog)(obj.And) };
-    if (obj.$unknown !== undefined)
-        return { [obj.$unknown[0]]: "UNKNOWN" };
-};
-exports.LifecycleRuleFilterFilterSensitiveLog = LifecycleRuleFilterFilterSensitiveLog;
-const NoncurrentVersionExpirationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.NoncurrentVersionExpirationFilterSensitiveLog = NoncurrentVersionExpirationFilterSensitiveLog;
-const NoncurrentVersionTransitionFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.NoncurrentVersionTransitionFilterSensitiveLog = NoncurrentVersionTransitionFilterSensitiveLog;
-const TransitionFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.TransitionFilterSensitiveLog = TransitionFilterSensitiveLog;
-const LifecycleRuleFilterSensitiveLog = (obj) => ({
-    ...obj,
-    ...(obj.Filter && { Filter: (0, exports.LifecycleRuleFilterFilterSensitiveLog)(obj.Filter) }),
-});
-exports.LifecycleRuleFilterSensitiveLog = LifecycleRuleFilterSensitiveLog;
-const GetBucketLifecycleConfigurationOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-    ...(obj.Rules && { Rules: obj.Rules.map((item) => (0, exports.LifecycleRuleFilterSensitiveLog)(item)) }),
-});
-exports.GetBucketLifecycleConfigurationOutputFilterSensitiveLog = GetBucketLifecycleConfigurationOutputFilterSensitiveLog;
-const GetBucketLifecycleConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketLifecycleConfigurationRequestFilterSensitiveLog = GetBucketLifecycleConfigurationRequestFilterSensitiveLog;
-const GetBucketLocationOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketLocationOutputFilterSensitiveLog = GetBucketLocationOutputFilterSensitiveLog;
-const GetBucketLocationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketLocationRequestFilterSensitiveLog = GetBucketLocationRequestFilterSensitiveLog;
-const TargetGrantFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.TargetGrantFilterSensitiveLog = TargetGrantFilterSensitiveLog;
-const LoggingEnabledFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.LoggingEnabledFilterSensitiveLog = LoggingEnabledFilterSensitiveLog;
-const GetBucketLoggingOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketLoggingOutputFilterSensitiveLog = GetBucketLoggingOutputFilterSensitiveLog;
-const GetBucketLoggingRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketLoggingRequestFilterSensitiveLog = GetBucketLoggingRequestFilterSensitiveLog;
-const MetricsAndOperatorFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.MetricsAndOperatorFilterSensitiveLog = MetricsAndOperatorFilterSensitiveLog;
-const MetricsFilterFilterSensitiveLog = (obj) => {
-    if (obj.Prefix !== undefined)
-        return { Prefix: obj.Prefix };
-    if (obj.Tag !== undefined)
-        return { Tag: (0, exports.TagFilterSensitiveLog)(obj.Tag) };
-    if (obj.AccessPointArn !== undefined)
-        return { AccessPointArn: obj.AccessPointArn };
-    if (obj.And !== undefined)
-        return { And: (0, exports.MetricsAndOperatorFilterSensitiveLog)(obj.And) };
-    if (obj.$unknown !== undefined)
-        return { [obj.$unknown[0]]: "UNKNOWN" };
-};
-exports.MetricsFilterFilterSensitiveLog = MetricsFilterFilterSensitiveLog;
-const MetricsConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-    ...(obj.Filter && { Filter: (0, exports.MetricsFilterFilterSensitiveLog)(obj.Filter) }),
-});
-exports.MetricsConfigurationFilterSensitiveLog = MetricsConfigurationFilterSensitiveLog;
-const GetBucketMetricsConfigurationOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-    ...(obj.MetricsConfiguration && {
-        MetricsConfiguration: (0, exports.MetricsConfigurationFilterSensitiveLog)(obj.MetricsConfiguration),
-    }),
-});
-exports.GetBucketMetricsConfigurationOutputFilterSensitiveLog = GetBucketMetricsConfigurationOutputFilterSensitiveLog;
-const GetBucketMetricsConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketMetricsConfigurationRequestFilterSensitiveLog = GetBucketMetricsConfigurationRequestFilterSensitiveLog;
-const GetBucketNotificationConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketNotificationConfigurationRequestFilterSensitiveLog = GetBucketNotificationConfigurationRequestFilterSensitiveLog;
-const EventBridgeConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.EventBridgeConfigurationFilterSensitiveLog = EventBridgeConfigurationFilterSensitiveLog;
-const FilterRuleFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.FilterRuleFilterSensitiveLog = FilterRuleFilterSensitiveLog;
-const S3KeyFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.S3KeyFilterFilterSensitiveLog = S3KeyFilterFilterSensitiveLog;
-const NotificationConfigurationFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.NotificationConfigurationFilterFilterSensitiveLog = NotificationConfigurationFilterFilterSensitiveLog;
-const LambdaFunctionConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.LambdaFunctionConfigurationFilterSensitiveLog = LambdaFunctionConfigurationFilterSensitiveLog;
-const QueueConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.QueueConfigurationFilterSensitiveLog = QueueConfigurationFilterSensitiveLog;
-const TopicConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.TopicConfigurationFilterSensitiveLog = TopicConfigurationFilterSensitiveLog;
-const NotificationConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.NotificationConfigurationFilterSensitiveLog = NotificationConfigurationFilterSensitiveLog;
-const OwnershipControlsRuleFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OwnershipControlsRuleFilterSensitiveLog = OwnershipControlsRuleFilterSensitiveLog;
-const OwnershipControlsFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OwnershipControlsFilterSensitiveLog = OwnershipControlsFilterSensitiveLog;
-const GetBucketOwnershipControlsOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketOwnershipControlsOutputFilterSensitiveLog = GetBucketOwnershipControlsOutputFilterSensitiveLog;
-const GetBucketOwnershipControlsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketOwnershipControlsRequestFilterSensitiveLog = GetBucketOwnershipControlsRequestFilterSensitiveLog;
-const GetBucketPolicyOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketPolicyOutputFilterSensitiveLog = GetBucketPolicyOutputFilterSensitiveLog;
-const GetBucketPolicyRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketPolicyRequestFilterSensitiveLog = GetBucketPolicyRequestFilterSensitiveLog;
-const PolicyStatusFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PolicyStatusFilterSensitiveLog = PolicyStatusFilterSensitiveLog;
-const GetBucketPolicyStatusOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketPolicyStatusOutputFilterSensitiveLog = GetBucketPolicyStatusOutputFilterSensitiveLog;
-const GetBucketPolicyStatusRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketPolicyStatusRequestFilterSensitiveLog = GetBucketPolicyStatusRequestFilterSensitiveLog;
-const DeleteMarkerReplicationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteMarkerReplicationFilterSensitiveLog = DeleteMarkerReplicationFilterSensitiveLog;
-const EncryptionConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.EncryptionConfigurationFilterSensitiveLog = EncryptionConfigurationFilterSensitiveLog;
-const ReplicationTimeValueFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ReplicationTimeValueFilterSensitiveLog = ReplicationTimeValueFilterSensitiveLog;
-const MetricsFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.MetricsFilterSensitiveLog = MetricsFilterSensitiveLog;
-const ReplicationTimeFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ReplicationTimeFilterSensitiveLog = ReplicationTimeFilterSensitiveLog;
-const DestinationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DestinationFilterSensitiveLog = DestinationFilterSensitiveLog;
-const ExistingObjectReplicationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ExistingObjectReplicationFilterSensitiveLog = ExistingObjectReplicationFilterSensitiveLog;
-const ReplicationRuleAndOperatorFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ReplicationRuleAndOperatorFilterSensitiveLog = ReplicationRuleAndOperatorFilterSensitiveLog;
-const ReplicationRuleFilterFilterSensitiveLog = (obj) => {
-    if (obj.Prefix !== undefined)
-        return { Prefix: obj.Prefix };
-    if (obj.Tag !== undefined)
-        return { Tag: (0, exports.TagFilterSensitiveLog)(obj.Tag) };
-    if (obj.And !== undefined)
-        return { And: (0, exports.ReplicationRuleAndOperatorFilterSensitiveLog)(obj.And) };
-    if (obj.$unknown !== undefined)
-        return { [obj.$unknown[0]]: "UNKNOWN" };
-};
-exports.ReplicationRuleFilterFilterSensitiveLog = ReplicationRuleFilterFilterSensitiveLog;
-const ReplicaModificationsFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ReplicaModificationsFilterSensitiveLog = ReplicaModificationsFilterSensitiveLog;
-const SseKmsEncryptedObjectsFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.SseKmsEncryptedObjectsFilterSensitiveLog = SseKmsEncryptedObjectsFilterSensitiveLog;
-const SourceSelectionCriteriaFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.SourceSelectionCriteriaFilterSensitiveLog = SourceSelectionCriteriaFilterSensitiveLog;
-const ReplicationRuleFilterSensitiveLog = (obj) => ({
-    ...obj,
-    ...(obj.Filter && { Filter: (0, exports.ReplicationRuleFilterFilterSensitiveLog)(obj.Filter) }),
-});
-exports.ReplicationRuleFilterSensitiveLog = ReplicationRuleFilterSensitiveLog;
-const ReplicationConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-    ...(obj.Rules && { Rules: obj.Rules.map((item) => (0, exports.ReplicationRuleFilterSensitiveLog)(item)) }),
-});
-exports.ReplicationConfigurationFilterSensitiveLog = ReplicationConfigurationFilterSensitiveLog;
-const GetBucketReplicationOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-    ...(obj.ReplicationConfiguration && {
-        ReplicationConfiguration: (0, exports.ReplicationConfigurationFilterSensitiveLog)(obj.ReplicationConfiguration),
-    }),
-});
-exports.GetBucketReplicationOutputFilterSensitiveLog = GetBucketReplicationOutputFilterSensitiveLog;
-const GetBucketReplicationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketReplicationRequestFilterSensitiveLog = GetBucketReplicationRequestFilterSensitiveLog;
-const GetBucketRequestPaymentOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketRequestPaymentOutputFilterSensitiveLog = GetBucketRequestPaymentOutputFilterSensitiveLog;
-const GetBucketRequestPaymentRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketRequestPaymentRequestFilterSensitiveLog = GetBucketRequestPaymentRequestFilterSensitiveLog;
-const GetBucketTaggingOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketTaggingOutputFilterSensitiveLog = GetBucketTaggingOutputFilterSensitiveLog;
-const GetBucketTaggingRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketTaggingRequestFilterSensitiveLog = GetBucketTaggingRequestFilterSensitiveLog;
-const GetBucketVersioningOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketVersioningOutputFilterSensitiveLog = GetBucketVersioningOutputFilterSensitiveLog;
-const GetBucketVersioningRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketVersioningRequestFilterSensitiveLog = GetBucketVersioningRequestFilterSensitiveLog;
-const ErrorDocumentFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ErrorDocumentFilterSensitiveLog = ErrorDocumentFilterSensitiveLog;
-const IndexDocumentFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.IndexDocumentFilterSensitiveLog = IndexDocumentFilterSensitiveLog;
-const RedirectAllRequestsToFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RedirectAllRequestsToFilterSensitiveLog = RedirectAllRequestsToFilterSensitiveLog;
-const ConditionFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ConditionFilterSensitiveLog = ConditionFilterSensitiveLog;
-const RedirectFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RedirectFilterSensitiveLog = RedirectFilterSensitiveLog;
-const RoutingRuleFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RoutingRuleFilterSensitiveLog = RoutingRuleFilterSensitiveLog;
-const GetBucketWebsiteOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketWebsiteOutputFilterSensitiveLog = GetBucketWebsiteOutputFilterSensitiveLog;
-const GetBucketWebsiteRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetBucketWebsiteRequestFilterSensitiveLog = GetBucketWebsiteRequestFilterSensitiveLog;
 const GetObjectOutputFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.SSEKMSKeyId && { SSEKMSKeyId: smithy_client_1.SENSITIVE_STRING }),
@@ -11005,111 +10316,15 @@ const GetObjectRequestFilterSensitiveLog = (obj) => ({
     ...(obj.SSECustomerKey && { SSECustomerKey: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.GetObjectRequestFilterSensitiveLog = GetObjectRequestFilterSensitiveLog;
-const GetObjectAclOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetObjectAclOutputFilterSensitiveLog = GetObjectAclOutputFilterSensitiveLog;
-const GetObjectAclRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetObjectAclRequestFilterSensitiveLog = GetObjectAclRequestFilterSensitiveLog;
-const ChecksumFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ChecksumFilterSensitiveLog = ChecksumFilterSensitiveLog;
-const ObjectPartFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ObjectPartFilterSensitiveLog = ObjectPartFilterSensitiveLog;
-const GetObjectAttributesPartsFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetObjectAttributesPartsFilterSensitiveLog = GetObjectAttributesPartsFilterSensitiveLog;
-const GetObjectAttributesOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetObjectAttributesOutputFilterSensitiveLog = GetObjectAttributesOutputFilterSensitiveLog;
 const GetObjectAttributesRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.SSECustomerKey && { SSECustomerKey: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.GetObjectAttributesRequestFilterSensitiveLog = GetObjectAttributesRequestFilterSensitiveLog;
-const ObjectLockLegalHoldFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ObjectLockLegalHoldFilterSensitiveLog = ObjectLockLegalHoldFilterSensitiveLog;
-const GetObjectLegalHoldOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetObjectLegalHoldOutputFilterSensitiveLog = GetObjectLegalHoldOutputFilterSensitiveLog;
-const GetObjectLegalHoldRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetObjectLegalHoldRequestFilterSensitiveLog = GetObjectLegalHoldRequestFilterSensitiveLog;
-const DefaultRetentionFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DefaultRetentionFilterSensitiveLog = DefaultRetentionFilterSensitiveLog;
-const ObjectLockRuleFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ObjectLockRuleFilterSensitiveLog = ObjectLockRuleFilterSensitiveLog;
-const ObjectLockConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ObjectLockConfigurationFilterSensitiveLog = ObjectLockConfigurationFilterSensitiveLog;
-const GetObjectLockConfigurationOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetObjectLockConfigurationOutputFilterSensitiveLog = GetObjectLockConfigurationOutputFilterSensitiveLog;
-const GetObjectLockConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetObjectLockConfigurationRequestFilterSensitiveLog = GetObjectLockConfigurationRequestFilterSensitiveLog;
-const ObjectLockRetentionFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ObjectLockRetentionFilterSensitiveLog = ObjectLockRetentionFilterSensitiveLog;
-const GetObjectRetentionOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetObjectRetentionOutputFilterSensitiveLog = GetObjectRetentionOutputFilterSensitiveLog;
-const GetObjectRetentionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetObjectRetentionRequestFilterSensitiveLog = GetObjectRetentionRequestFilterSensitiveLog;
-const GetObjectTaggingOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetObjectTaggingOutputFilterSensitiveLog = GetObjectTaggingOutputFilterSensitiveLog;
-const GetObjectTaggingRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetObjectTaggingRequestFilterSensitiveLog = GetObjectTaggingRequestFilterSensitiveLog;
 const GetObjectTorrentOutputFilterSensitiveLog = (obj) => ({
     ...obj,
 });
 exports.GetObjectTorrentOutputFilterSensitiveLog = GetObjectTorrentOutputFilterSensitiveLog;
-const GetObjectTorrentRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetObjectTorrentRequestFilterSensitiveLog = GetObjectTorrentRequestFilterSensitiveLog;
-const PublicAccessBlockConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PublicAccessBlockConfigurationFilterSensitiveLog = PublicAccessBlockConfigurationFilterSensitiveLog;
-const GetPublicAccessBlockOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetPublicAccessBlockOutputFilterSensitiveLog = GetPublicAccessBlockOutputFilterSensitiveLog;
-const GetPublicAccessBlockRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetPublicAccessBlockRequestFilterSensitiveLog = GetPublicAccessBlockRequestFilterSensitiveLog;
-const HeadBucketRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.HeadBucketRequestFilterSensitiveLog = HeadBucketRequestFilterSensitiveLog;
 const HeadObjectOutputFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.SSEKMSKeyId && { SSEKMSKeyId: smithy_client_1.SENSITIVE_STRING }),
@@ -11120,25 +10335,6 @@ const HeadObjectRequestFilterSensitiveLog = (obj) => ({
     ...(obj.SSECustomerKey && { SSECustomerKey: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.HeadObjectRequestFilterSensitiveLog = HeadObjectRequestFilterSensitiveLog;
-const ListBucketAnalyticsConfigurationsOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-    ...(obj.AnalyticsConfigurationList && {
-        AnalyticsConfigurationList: obj.AnalyticsConfigurationList.map((item) => (0, exports.AnalyticsConfigurationFilterSensitiveLog)(item)),
-    }),
-});
-exports.ListBucketAnalyticsConfigurationsOutputFilterSensitiveLog = ListBucketAnalyticsConfigurationsOutputFilterSensitiveLog;
-const ListBucketAnalyticsConfigurationsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListBucketAnalyticsConfigurationsRequestFilterSensitiveLog = ListBucketAnalyticsConfigurationsRequestFilterSensitiveLog;
-const ListBucketIntelligentTieringConfigurationsOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListBucketIntelligentTieringConfigurationsOutputFilterSensitiveLog = ListBucketIntelligentTieringConfigurationsOutputFilterSensitiveLog;
-const ListBucketIntelligentTieringConfigurationsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListBucketIntelligentTieringConfigurationsRequestFilterSensitiveLog = ListBucketIntelligentTieringConfigurationsRequestFilterSensitiveLog;
 const ListBucketInventoryConfigurationsOutputFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.InventoryConfigurationList && {
@@ -11146,121 +10342,11 @@ const ListBucketInventoryConfigurationsOutputFilterSensitiveLog = (obj) => ({
     }),
 });
 exports.ListBucketInventoryConfigurationsOutputFilterSensitiveLog = ListBucketInventoryConfigurationsOutputFilterSensitiveLog;
-const ListBucketInventoryConfigurationsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListBucketInventoryConfigurationsRequestFilterSensitiveLog = ListBucketInventoryConfigurationsRequestFilterSensitiveLog;
-const ListBucketMetricsConfigurationsOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-    ...(obj.MetricsConfigurationList && {
-        MetricsConfigurationList: obj.MetricsConfigurationList.map((item) => (0, exports.MetricsConfigurationFilterSensitiveLog)(item)),
-    }),
-});
-exports.ListBucketMetricsConfigurationsOutputFilterSensitiveLog = ListBucketMetricsConfigurationsOutputFilterSensitiveLog;
-const ListBucketMetricsConfigurationsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListBucketMetricsConfigurationsRequestFilterSensitiveLog = ListBucketMetricsConfigurationsRequestFilterSensitiveLog;
-const BucketFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.BucketFilterSensitiveLog = BucketFilterSensitiveLog;
-const ListBucketsOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListBucketsOutputFilterSensitiveLog = ListBucketsOutputFilterSensitiveLog;
-const CommonPrefixFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CommonPrefixFilterSensitiveLog = CommonPrefixFilterSensitiveLog;
-const InitiatorFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InitiatorFilterSensitiveLog = InitiatorFilterSensitiveLog;
-const MultipartUploadFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.MultipartUploadFilterSensitiveLog = MultipartUploadFilterSensitiveLog;
-const ListMultipartUploadsOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListMultipartUploadsOutputFilterSensitiveLog = ListMultipartUploadsOutputFilterSensitiveLog;
-const ListMultipartUploadsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListMultipartUploadsRequestFilterSensitiveLog = ListMultipartUploadsRequestFilterSensitiveLog;
-const _ObjectFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports._ObjectFilterSensitiveLog = _ObjectFilterSensitiveLog;
-const ListObjectsOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListObjectsOutputFilterSensitiveLog = ListObjectsOutputFilterSensitiveLog;
-const ListObjectsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListObjectsRequestFilterSensitiveLog = ListObjectsRequestFilterSensitiveLog;
-const ListObjectsV2OutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListObjectsV2OutputFilterSensitiveLog = ListObjectsV2OutputFilterSensitiveLog;
-const ListObjectsV2RequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListObjectsV2RequestFilterSensitiveLog = ListObjectsV2RequestFilterSensitiveLog;
-const DeleteMarkerEntryFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteMarkerEntryFilterSensitiveLog = DeleteMarkerEntryFilterSensitiveLog;
-const ObjectVersionFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ObjectVersionFilterSensitiveLog = ObjectVersionFilterSensitiveLog;
-const ListObjectVersionsOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListObjectVersionsOutputFilterSensitiveLog = ListObjectVersionsOutputFilterSensitiveLog;
-const ListObjectVersionsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListObjectVersionsRequestFilterSensitiveLog = ListObjectVersionsRequestFilterSensitiveLog;
-const PartFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PartFilterSensitiveLog = PartFilterSensitiveLog;
-const ListPartsOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListPartsOutputFilterSensitiveLog = ListPartsOutputFilterSensitiveLog;
 const ListPartsRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.SSECustomerKey && { SSECustomerKey: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.ListPartsRequestFilterSensitiveLog = ListPartsRequestFilterSensitiveLog;
-const PutBucketAccelerateConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutBucketAccelerateConfigurationRequestFilterSensitiveLog = PutBucketAccelerateConfigurationRequestFilterSensitiveLog;
-const PutBucketAclRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutBucketAclRequestFilterSensitiveLog = PutBucketAclRequestFilterSensitiveLog;
-const PutBucketAnalyticsConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-    ...(obj.AnalyticsConfiguration && {
-        AnalyticsConfiguration: (0, exports.AnalyticsConfigurationFilterSensitiveLog)(obj.AnalyticsConfiguration),
-    }),
-});
-exports.PutBucketAnalyticsConfigurationRequestFilterSensitiveLog = PutBucketAnalyticsConfigurationRequestFilterSensitiveLog;
-const CORSConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CORSConfigurationFilterSensitiveLog = CORSConfigurationFilterSensitiveLog;
-const PutBucketCorsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutBucketCorsRequestFilterSensitiveLog = PutBucketCorsRequestFilterSensitiveLog;
 const PutBucketEncryptionRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.ServerSideEncryptionConfiguration && {
@@ -11268,10 +10354,6 @@ const PutBucketEncryptionRequestFilterSensitiveLog = (obj) => ({
     }),
 });
 exports.PutBucketEncryptionRequestFilterSensitiveLog = PutBucketEncryptionRequestFilterSensitiveLog;
-const PutBucketIntelligentTieringConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutBucketIntelligentTieringConfigurationRequestFilterSensitiveLog = PutBucketIntelligentTieringConfigurationRequestFilterSensitiveLog;
 const PutBucketInventoryConfigurationRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.InventoryConfiguration && {
@@ -11279,84 +10361,6 @@ const PutBucketInventoryConfigurationRequestFilterSensitiveLog = (obj) => ({
     }),
 });
 exports.PutBucketInventoryConfigurationRequestFilterSensitiveLog = PutBucketInventoryConfigurationRequestFilterSensitiveLog;
-const BucketLifecycleConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-    ...(obj.Rules && { Rules: obj.Rules.map((item) => (0, exports.LifecycleRuleFilterSensitiveLog)(item)) }),
-});
-exports.BucketLifecycleConfigurationFilterSensitiveLog = BucketLifecycleConfigurationFilterSensitiveLog;
-const PutBucketLifecycleConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-    ...(obj.LifecycleConfiguration && {
-        LifecycleConfiguration: (0, exports.BucketLifecycleConfigurationFilterSensitiveLog)(obj.LifecycleConfiguration),
-    }),
-});
-exports.PutBucketLifecycleConfigurationRequestFilterSensitiveLog = PutBucketLifecycleConfigurationRequestFilterSensitiveLog;
-const BucketLoggingStatusFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.BucketLoggingStatusFilterSensitiveLog = BucketLoggingStatusFilterSensitiveLog;
-const PutBucketLoggingRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutBucketLoggingRequestFilterSensitiveLog = PutBucketLoggingRequestFilterSensitiveLog;
-const PutBucketMetricsConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-    ...(obj.MetricsConfiguration && {
-        MetricsConfiguration: (0, exports.MetricsConfigurationFilterSensitiveLog)(obj.MetricsConfiguration),
-    }),
-});
-exports.PutBucketMetricsConfigurationRequestFilterSensitiveLog = PutBucketMetricsConfigurationRequestFilterSensitiveLog;
-const PutBucketNotificationConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutBucketNotificationConfigurationRequestFilterSensitiveLog = PutBucketNotificationConfigurationRequestFilterSensitiveLog;
-const PutBucketOwnershipControlsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutBucketOwnershipControlsRequestFilterSensitiveLog = PutBucketOwnershipControlsRequestFilterSensitiveLog;
-const PutBucketPolicyRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutBucketPolicyRequestFilterSensitiveLog = PutBucketPolicyRequestFilterSensitiveLog;
-const PutBucketReplicationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-    ...(obj.ReplicationConfiguration && {
-        ReplicationConfiguration: (0, exports.ReplicationConfigurationFilterSensitiveLog)(obj.ReplicationConfiguration),
-    }),
-});
-exports.PutBucketReplicationRequestFilterSensitiveLog = PutBucketReplicationRequestFilterSensitiveLog;
-const RequestPaymentConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RequestPaymentConfigurationFilterSensitiveLog = RequestPaymentConfigurationFilterSensitiveLog;
-const PutBucketRequestPaymentRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutBucketRequestPaymentRequestFilterSensitiveLog = PutBucketRequestPaymentRequestFilterSensitiveLog;
-const TaggingFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.TaggingFilterSensitiveLog = TaggingFilterSensitiveLog;
-const PutBucketTaggingRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutBucketTaggingRequestFilterSensitiveLog = PutBucketTaggingRequestFilterSensitiveLog;
-const VersioningConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.VersioningConfigurationFilterSensitiveLog = VersioningConfigurationFilterSensitiveLog;
-const PutBucketVersioningRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutBucketVersioningRequestFilterSensitiveLog = PutBucketVersioningRequestFilterSensitiveLog;
-const WebsiteConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.WebsiteConfigurationFilterSensitiveLog = WebsiteConfigurationFilterSensitiveLog;
-const PutBucketWebsiteRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutBucketWebsiteRequestFilterSensitiveLog = PutBucketWebsiteRequestFilterSensitiveLog;
 const PutObjectOutputFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.SSEKMSKeyId && { SSEKMSKeyId: smithy_client_1.SENSITIVE_STRING }),
@@ -11370,30 +10374,6 @@ const PutObjectRequestFilterSensitiveLog = (obj) => ({
     ...(obj.SSEKMSEncryptionContext && { SSEKMSEncryptionContext: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.PutObjectRequestFilterSensitiveLog = PutObjectRequestFilterSensitiveLog;
-const PutObjectAclOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutObjectAclOutputFilterSensitiveLog = PutObjectAclOutputFilterSensitiveLog;
-const PutObjectAclRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutObjectAclRequestFilterSensitiveLog = PutObjectAclRequestFilterSensitiveLog;
-const PutObjectLegalHoldOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutObjectLegalHoldOutputFilterSensitiveLog = PutObjectLegalHoldOutputFilterSensitiveLog;
-const PutObjectLegalHoldRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutObjectLegalHoldRequestFilterSensitiveLog = PutObjectLegalHoldRequestFilterSensitiveLog;
-const PutObjectLockConfigurationOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutObjectLockConfigurationOutputFilterSensitiveLog = PutObjectLockConfigurationOutputFilterSensitiveLog;
-const PutObjectLockConfigurationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutObjectLockConfigurationRequestFilterSensitiveLog = PutObjectLockConfigurationRequestFilterSensitiveLog;
 
 
 /***/ }),
@@ -11404,7 +10384,7 @@ exports.PutObjectLockConfigurationRequestFilterSensitiveLog = PutObjectLockConfi
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.WriteGetObjectResponseRequestFilterSensitiveLog = exports.UploadPartCopyRequestFilterSensitiveLog = exports.UploadPartCopyOutputFilterSensitiveLog = exports.CopyPartResultFilterSensitiveLog = exports.UploadPartRequestFilterSensitiveLog = exports.UploadPartOutputFilterSensitiveLog = exports.SelectObjectContentRequestFilterSensitiveLog = exports.ScanRangeFilterSensitiveLog = exports.RequestProgressFilterSensitiveLog = exports.SelectObjectContentOutputFilterSensitiveLog = exports.SelectObjectContentEventStreamFilterSensitiveLog = exports.StatsEventFilterSensitiveLog = exports.StatsFilterSensitiveLog = exports.RecordsEventFilterSensitiveLog = exports.ProgressEventFilterSensitiveLog = exports.ProgressFilterSensitiveLog = exports.EndEventFilterSensitiveLog = exports.ContinuationEventFilterSensitiveLog = exports.RestoreObjectRequestFilterSensitiveLog = exports.RestoreRequestFilterSensitiveLog = exports.SelectParametersFilterSensitiveLog = exports.OutputSerializationFilterSensitiveLog = exports.JSONOutputFilterSensitiveLog = exports.CSVOutputFilterSensitiveLog = exports.InputSerializationFilterSensitiveLog = exports.ParquetInputFilterSensitiveLog = exports.JSONInputFilterSensitiveLog = exports.CSVInputFilterSensitiveLog = exports.OutputLocationFilterSensitiveLog = exports.S3LocationFilterSensitiveLog = exports.MetadataEntryFilterSensitiveLog = exports.EncryptionFilterSensitiveLog = exports.GlacierJobParametersFilterSensitiveLog = exports.RestoreObjectOutputFilterSensitiveLog = exports.PutPublicAccessBlockRequestFilterSensitiveLog = exports.PutObjectTaggingRequestFilterSensitiveLog = exports.PutObjectTaggingOutputFilterSensitiveLog = exports.PutObjectRetentionRequestFilterSensitiveLog = exports.PutObjectRetentionOutputFilterSensitiveLog = exports.SelectObjectContentEventStream = exports.RestoreRequestType = exports.QuoteFields = exports.JSONType = exports.FileHeaderInfo = exports.CompressionType = exports.ExpressionType = exports.Tier = exports.ObjectAlreadyInActiveTierError = void 0;
+exports.WriteGetObjectResponseRequestFilterSensitiveLog = exports.UploadPartCopyRequestFilterSensitiveLog = exports.UploadPartCopyOutputFilterSensitiveLog = exports.UploadPartRequestFilterSensitiveLog = exports.UploadPartOutputFilterSensitiveLog = exports.SelectObjectContentRequestFilterSensitiveLog = exports.SelectObjectContentOutputFilterSensitiveLog = exports.SelectObjectContentEventStreamFilterSensitiveLog = exports.RestoreObjectRequestFilterSensitiveLog = exports.RestoreRequestFilterSensitiveLog = exports.OutputLocationFilterSensitiveLog = exports.S3LocationFilterSensitiveLog = exports.EncryptionFilterSensitiveLog = exports.SelectObjectContentEventStream = exports.RestoreRequestType = exports.QuoteFields = exports.JSONType = exports.FileHeaderInfo = exports.CompressionType = exports.ExpressionType = exports.Tier = exports.ObjectAlreadyInActiveTierError = void 0;
 const smithy_client_1 = __nccwpck_require__(4963);
 const S3ServiceException_1 = __nccwpck_require__(37614);
 class ObjectAlreadyInActiveTierError extends S3ServiceException_1.S3ServiceException {
@@ -11420,42 +10400,35 @@ class ObjectAlreadyInActiveTierError extends S3ServiceException_1.S3ServiceExcep
     }
 }
 exports.ObjectAlreadyInActiveTierError = ObjectAlreadyInActiveTierError;
-var Tier;
-(function (Tier) {
-    Tier["Bulk"] = "Bulk";
-    Tier["Expedited"] = "Expedited";
-    Tier["Standard"] = "Standard";
-})(Tier = exports.Tier || (exports.Tier = {}));
-var ExpressionType;
-(function (ExpressionType) {
-    ExpressionType["SQL"] = "SQL";
-})(ExpressionType = exports.ExpressionType || (exports.ExpressionType = {}));
-var CompressionType;
-(function (CompressionType) {
-    CompressionType["BZIP2"] = "BZIP2";
-    CompressionType["GZIP"] = "GZIP";
-    CompressionType["NONE"] = "NONE";
-})(CompressionType = exports.CompressionType || (exports.CompressionType = {}));
-var FileHeaderInfo;
-(function (FileHeaderInfo) {
-    FileHeaderInfo["IGNORE"] = "IGNORE";
-    FileHeaderInfo["NONE"] = "NONE";
-    FileHeaderInfo["USE"] = "USE";
-})(FileHeaderInfo = exports.FileHeaderInfo || (exports.FileHeaderInfo = {}));
-var JSONType;
-(function (JSONType) {
-    JSONType["DOCUMENT"] = "DOCUMENT";
-    JSONType["LINES"] = "LINES";
-})(JSONType = exports.JSONType || (exports.JSONType = {}));
-var QuoteFields;
-(function (QuoteFields) {
-    QuoteFields["ALWAYS"] = "ALWAYS";
-    QuoteFields["ASNEEDED"] = "ASNEEDED";
-})(QuoteFields = exports.QuoteFields || (exports.QuoteFields = {}));
-var RestoreRequestType;
-(function (RestoreRequestType) {
-    RestoreRequestType["SELECT"] = "SELECT";
-})(RestoreRequestType = exports.RestoreRequestType || (exports.RestoreRequestType = {}));
+exports.Tier = {
+    Bulk: "Bulk",
+    Expedited: "Expedited",
+    Standard: "Standard",
+};
+exports.ExpressionType = {
+    SQL: "SQL",
+};
+exports.CompressionType = {
+    BZIP2: "BZIP2",
+    GZIP: "GZIP",
+    NONE: "NONE",
+};
+exports.FileHeaderInfo = {
+    IGNORE: "IGNORE",
+    NONE: "NONE",
+    USE: "USE",
+};
+exports.JSONType = {
+    DOCUMENT: "DOCUMENT",
+    LINES: "LINES",
+};
+exports.QuoteFields = {
+    ALWAYS: "ALWAYS",
+    ASNEEDED: "ASNEEDED",
+};
+exports.RestoreRequestType = {
+    SELECT: "SELECT",
+};
 var SelectObjectContentEventStream;
 (function (SelectObjectContentEventStream) {
     SelectObjectContentEventStream.visit = (value, visitor) => {
@@ -11472,43 +10445,11 @@ var SelectObjectContentEventStream;
         return visitor._(value.$unknown[0], value.$unknown[1]);
     };
 })(SelectObjectContentEventStream = exports.SelectObjectContentEventStream || (exports.SelectObjectContentEventStream = {}));
-const PutObjectRetentionOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutObjectRetentionOutputFilterSensitiveLog = PutObjectRetentionOutputFilterSensitiveLog;
-const PutObjectRetentionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutObjectRetentionRequestFilterSensitiveLog = PutObjectRetentionRequestFilterSensitiveLog;
-const PutObjectTaggingOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutObjectTaggingOutputFilterSensitiveLog = PutObjectTaggingOutputFilterSensitiveLog;
-const PutObjectTaggingRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutObjectTaggingRequestFilterSensitiveLog = PutObjectTaggingRequestFilterSensitiveLog;
-const PutPublicAccessBlockRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutPublicAccessBlockRequestFilterSensitiveLog = PutPublicAccessBlockRequestFilterSensitiveLog;
-const RestoreObjectOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RestoreObjectOutputFilterSensitiveLog = RestoreObjectOutputFilterSensitiveLog;
-const GlacierJobParametersFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GlacierJobParametersFilterSensitiveLog = GlacierJobParametersFilterSensitiveLog;
 const EncryptionFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.KMSKeyId && { KMSKeyId: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.EncryptionFilterSensitiveLog = EncryptionFilterSensitiveLog;
-const MetadataEntryFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.MetadataEntryFilterSensitiveLog = MetadataEntryFilterSensitiveLog;
 const S3LocationFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Encryption && { Encryption: (0, exports.EncryptionFilterSensitiveLog)(obj.Encryption) }),
@@ -11519,38 +10460,6 @@ const OutputLocationFilterSensitiveLog = (obj) => ({
     ...(obj.S3 && { S3: (0, exports.S3LocationFilterSensitiveLog)(obj.S3) }),
 });
 exports.OutputLocationFilterSensitiveLog = OutputLocationFilterSensitiveLog;
-const CSVInputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CSVInputFilterSensitiveLog = CSVInputFilterSensitiveLog;
-const JSONInputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.JSONInputFilterSensitiveLog = JSONInputFilterSensitiveLog;
-const ParquetInputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ParquetInputFilterSensitiveLog = ParquetInputFilterSensitiveLog;
-const InputSerializationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InputSerializationFilterSensitiveLog = InputSerializationFilterSensitiveLog;
-const CSVOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CSVOutputFilterSensitiveLog = CSVOutputFilterSensitiveLog;
-const JSONOutputFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.JSONOutputFilterSensitiveLog = JSONOutputFilterSensitiveLog;
-const OutputSerializationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OutputSerializationFilterSensitiveLog = OutputSerializationFilterSensitiveLog;
-const SelectParametersFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.SelectParametersFilterSensitiveLog = SelectParametersFilterSensitiveLog;
 const RestoreRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.OutputLocation && { OutputLocation: (0, exports.OutputLocationFilterSensitiveLog)(obj.OutputLocation) }),
@@ -11561,45 +10470,17 @@ const RestoreObjectRequestFilterSensitiveLog = (obj) => ({
     ...(obj.RestoreRequest && { RestoreRequest: (0, exports.RestoreRequestFilterSensitiveLog)(obj.RestoreRequest) }),
 });
 exports.RestoreObjectRequestFilterSensitiveLog = RestoreObjectRequestFilterSensitiveLog;
-const ContinuationEventFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ContinuationEventFilterSensitiveLog = ContinuationEventFilterSensitiveLog;
-const EndEventFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.EndEventFilterSensitiveLog = EndEventFilterSensitiveLog;
-const ProgressFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ProgressFilterSensitiveLog = ProgressFilterSensitiveLog;
-const ProgressEventFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ProgressEventFilterSensitiveLog = ProgressEventFilterSensitiveLog;
-const RecordsEventFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RecordsEventFilterSensitiveLog = RecordsEventFilterSensitiveLog;
-const StatsFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StatsFilterSensitiveLog = StatsFilterSensitiveLog;
-const StatsEventFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StatsEventFilterSensitiveLog = StatsEventFilterSensitiveLog;
 const SelectObjectContentEventStreamFilterSensitiveLog = (obj) => {
     if (obj.Records !== undefined)
-        return { Records: (0, exports.RecordsEventFilterSensitiveLog)(obj.Records) };
+        return { Records: obj.Records };
     if (obj.Stats !== undefined)
-        return { Stats: (0, exports.StatsEventFilterSensitiveLog)(obj.Stats) };
+        return { Stats: obj.Stats };
     if (obj.Progress !== undefined)
-        return { Progress: (0, exports.ProgressEventFilterSensitiveLog)(obj.Progress) };
+        return { Progress: obj.Progress };
     if (obj.Cont !== undefined)
-        return { Cont: (0, exports.ContinuationEventFilterSensitiveLog)(obj.Cont) };
+        return { Cont: obj.Cont };
     if (obj.End !== undefined)
-        return { End: (0, exports.EndEventFilterSensitiveLog)(obj.End) };
+        return { End: obj.End };
     if (obj.$unknown !== undefined)
         return { [obj.$unknown[0]]: "UNKNOWN" };
 };
@@ -11609,14 +10490,6 @@ const SelectObjectContentOutputFilterSensitiveLog = (obj) => ({
     ...(obj.Payload && { Payload: "STREAMING_CONTENT" }),
 });
 exports.SelectObjectContentOutputFilterSensitiveLog = SelectObjectContentOutputFilterSensitiveLog;
-const RequestProgressFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RequestProgressFilterSensitiveLog = RequestProgressFilterSensitiveLog;
-const ScanRangeFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ScanRangeFilterSensitiveLog = ScanRangeFilterSensitiveLog;
 const SelectObjectContentRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.SSECustomerKey && { SSECustomerKey: smithy_client_1.SENSITIVE_STRING }),
@@ -11632,10 +10505,6 @@ const UploadPartRequestFilterSensitiveLog = (obj) => ({
     ...(obj.SSECustomerKey && { SSECustomerKey: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.UploadPartRequestFilterSensitiveLog = UploadPartRequestFilterSensitiveLog;
-const CopyPartResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CopyPartResultFilterSensitiveLog = CopyPartResultFilterSensitiveLog;
 const UploadPartCopyOutputFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.SSEKMSKeyId && { SSEKMSKeyId: smithy_client_1.SENSITIVE_STRING }),
@@ -19881,18 +18750,14 @@ const serializeAws_restXmlWebsiteConfiguration = (input, context) => {
     return bodyNode;
 };
 const deserializeAws_restXmlAbortIncompleteMultipartUpload = (output, context) => {
-    const contents = {
-        DaysAfterInitiation: undefined,
-    };
+    const contents = {};
     if (output["DaysAfterInitiation"] !== undefined) {
         contents.DaysAfterInitiation = (0, smithy_client_1.strictParseInt32)(output["DaysAfterInitiation"]);
     }
     return contents;
 };
 const deserializeAws_restXmlAccessControlTranslation = (output, context) => {
-    const contents = {
-        Owner: undefined,
-    };
+    const contents = {};
     if (output["Owner"] !== undefined) {
         contents.Owner = (0, smithy_client_1.expectString)(output["Owner"]);
     }
@@ -19920,10 +18785,7 @@ const deserializeAws_restXmlAllowedOrigins = (output, context) => {
     });
 };
 const deserializeAws_restXmlAnalyticsAndOperator = (output, context) => {
-    const contents = {
-        Prefix: undefined,
-        Tags: undefined,
-    };
+    const contents = {};
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
     }
@@ -19936,11 +18798,7 @@ const deserializeAws_restXmlAnalyticsAndOperator = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlAnalyticsConfiguration = (output, context) => {
-    const contents = {
-        Id: undefined,
-        Filter: undefined,
-        StorageClassAnalysis: undefined,
-    };
+    const contents = {};
     if (output["Id"] !== undefined) {
         contents.Id = (0, smithy_client_1.expectString)(output["Id"]);
     }
@@ -19962,9 +18820,7 @@ const deserializeAws_restXmlAnalyticsConfigurationList = (output, context) => {
     });
 };
 const deserializeAws_restXmlAnalyticsExportDestination = (output, context) => {
-    const contents = {
-        S3BucketDestination: undefined,
-    };
+    const contents = {};
     if (output["S3BucketDestination"] !== undefined) {
         contents.S3BucketDestination = deserializeAws_restXmlAnalyticsS3BucketDestination(output["S3BucketDestination"], context);
     }
@@ -19989,12 +18845,7 @@ const deserializeAws_restXmlAnalyticsFilter = (output, context) => {
     return { $unknown: Object.entries(output)[0] };
 };
 const deserializeAws_restXmlAnalyticsS3BucketDestination = (output, context) => {
-    const contents = {
-        Format: undefined,
-        BucketAccountId: undefined,
-        Bucket: undefined,
-        Prefix: undefined,
-    };
+    const contents = {};
     if (output["Format"] !== undefined) {
         contents.Format = (0, smithy_client_1.expectString)(output["Format"]);
     }
@@ -20010,10 +18861,7 @@ const deserializeAws_restXmlAnalyticsS3BucketDestination = (output, context) => 
     return contents;
 };
 const deserializeAws_restXmlBucket = (output, context) => {
-    const contents = {
-        Name: undefined,
-        CreationDate: undefined,
-    };
+    const contents = {};
     if (output["Name"] !== undefined) {
         contents.Name = (0, smithy_client_1.expectString)(output["Name"]);
     }
@@ -20030,12 +18878,7 @@ const deserializeAws_restXmlBuckets = (output, context) => {
     });
 };
 const deserializeAws_restXmlChecksum = (output, context) => {
-    const contents = {
-        ChecksumCRC32: undefined,
-        ChecksumCRC32C: undefined,
-        ChecksumSHA1: undefined,
-        ChecksumSHA256: undefined,
-    };
+    const contents = {};
     if (output["ChecksumCRC32"] !== undefined) {
         contents.ChecksumCRC32 = (0, smithy_client_1.expectString)(output["ChecksumCRC32"]);
     }
@@ -20058,9 +18901,7 @@ const deserializeAws_restXmlChecksumAlgorithmList = (output, context) => {
     });
 };
 const deserializeAws_restXmlCommonPrefix = (output, context) => {
-    const contents = {
-        Prefix: undefined,
-    };
+    const contents = {};
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
     }
@@ -20074,10 +18915,7 @@ const deserializeAws_restXmlCommonPrefixList = (output, context) => {
     });
 };
 const deserializeAws_restXmlCondition = (output, context) => {
-    const contents = {
-        HttpErrorCodeReturnedEquals: undefined,
-        KeyPrefixEquals: undefined,
-    };
+    const contents = {};
     if (output["HttpErrorCodeReturnedEquals"] !== undefined) {
         contents.HttpErrorCodeReturnedEquals = (0, smithy_client_1.expectString)(output["HttpErrorCodeReturnedEquals"]);
     }
@@ -20091,14 +18929,7 @@ const deserializeAws_restXmlContinuationEvent = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlCopyObjectResult = (output, context) => {
-    const contents = {
-        ETag: undefined,
-        LastModified: undefined,
-        ChecksumCRC32: undefined,
-        ChecksumCRC32C: undefined,
-        ChecksumSHA1: undefined,
-        ChecksumSHA256: undefined,
-    };
+    const contents = {};
     if (output["ETag"] !== undefined) {
         contents.ETag = (0, smithy_client_1.expectString)(output["ETag"]);
     }
@@ -20120,14 +18951,7 @@ const deserializeAws_restXmlCopyObjectResult = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlCopyPartResult = (output, context) => {
-    const contents = {
-        ETag: undefined,
-        LastModified: undefined,
-        ChecksumCRC32: undefined,
-        ChecksumCRC32C: undefined,
-        ChecksumSHA1: undefined,
-        ChecksumSHA256: undefined,
-    };
+    const contents = {};
     if (output["ETag"] !== undefined) {
         contents.ETag = (0, smithy_client_1.expectString)(output["ETag"]);
     }
@@ -20149,14 +18973,7 @@ const deserializeAws_restXmlCopyPartResult = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlCORSRule = (output, context) => {
-    const contents = {
-        ID: undefined,
-        AllowedHeaders: undefined,
-        AllowedMethods: undefined,
-        AllowedOrigins: undefined,
-        ExposeHeaders: undefined,
-        MaxAgeSeconds: undefined,
-    };
+    const contents = {};
     if (output["ID"] !== undefined) {
         contents.ID = (0, smithy_client_1.expectString)(output["ID"]);
     }
@@ -20197,11 +19014,7 @@ const deserializeAws_restXmlCORSRules = (output, context) => {
     });
 };
 const deserializeAws_restXmlDefaultRetention = (output, context) => {
-    const contents = {
-        Mode: undefined,
-        Days: undefined,
-        Years: undefined,
-    };
+    const contents = {};
     if (output["Mode"] !== undefined) {
         contents.Mode = (0, smithy_client_1.expectString)(output["Mode"]);
     }
@@ -20214,12 +19027,7 @@ const deserializeAws_restXmlDefaultRetention = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlDeletedObject = (output, context) => {
-    const contents = {
-        Key: undefined,
-        VersionId: undefined,
-        DeleteMarker: undefined,
-        DeleteMarkerVersionId: undefined,
-    };
+    const contents = {};
     if (output["Key"] !== undefined) {
         contents.Key = (0, smithy_client_1.expectString)(output["Key"]);
     }
@@ -20242,13 +19050,7 @@ const deserializeAws_restXmlDeletedObjects = (output, context) => {
     });
 };
 const deserializeAws_restXmlDeleteMarkerEntry = (output, context) => {
-    const contents = {
-        Owner: undefined,
-        Key: undefined,
-        VersionId: undefined,
-        IsLatest: undefined,
-        LastModified: undefined,
-    };
+    const contents = {};
     if (output["Owner"] !== undefined) {
         contents.Owner = deserializeAws_restXmlOwner(output["Owner"], context);
     }
@@ -20267,9 +19069,7 @@ const deserializeAws_restXmlDeleteMarkerEntry = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlDeleteMarkerReplication = (output, context) => {
-    const contents = {
-        Status: undefined,
-    };
+    const contents = {};
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
     }
@@ -20283,15 +19083,7 @@ const deserializeAws_restXmlDeleteMarkers = (output, context) => {
     });
 };
 const deserializeAws_restXmlDestination = (output, context) => {
-    const contents = {
-        Bucket: undefined,
-        Account: undefined,
-        StorageClass: undefined,
-        AccessControlTranslation: undefined,
-        EncryptionConfiguration: undefined,
-        ReplicationTime: undefined,
-        Metrics: undefined,
-    };
+    const contents = {};
     if (output["Bucket"] !== undefined) {
         contents.Bucket = (0, smithy_client_1.expectString)(output["Bucket"]);
     }
@@ -20316,9 +19108,7 @@ const deserializeAws_restXmlDestination = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlEncryptionConfiguration = (output, context) => {
-    const contents = {
-        ReplicaKmsKeyID: undefined,
-    };
+    const contents = {};
     if (output["ReplicaKmsKeyID"] !== undefined) {
         contents.ReplicaKmsKeyID = (0, smithy_client_1.expectString)(output["ReplicaKmsKeyID"]);
     }
@@ -20329,12 +19119,7 @@ const deserializeAws_restXmlEndEvent = (output, context) => {
     return contents;
 };
 const deserializeAws_restXml_Error = (output, context) => {
-    const contents = {
-        Key: undefined,
-        VersionId: undefined,
-        Code: undefined,
-        Message: undefined,
-    };
+    const contents = {};
     if (output["Key"] !== undefined) {
         contents.Key = (0, smithy_client_1.expectString)(output["Key"]);
     }
@@ -20350,9 +19135,7 @@ const deserializeAws_restXml_Error = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlErrorDocument = (output, context) => {
-    const contents = {
-        Key: undefined,
-    };
+    const contents = {};
     if (output["Key"] !== undefined) {
         contents.Key = (0, smithy_client_1.expectString)(output["Key"]);
     }
@@ -20377,9 +19160,7 @@ const deserializeAws_restXmlEventList = (output, context) => {
     });
 };
 const deserializeAws_restXmlExistingObjectReplication = (output, context) => {
-    const contents = {
-        Status: undefined,
-    };
+    const contents = {};
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
     }
@@ -20393,10 +19174,7 @@ const deserializeAws_restXmlExposeHeaders = (output, context) => {
     });
 };
 const deserializeAws_restXmlFilterRule = (output, context) => {
-    const contents = {
-        Name: undefined,
-        Value: undefined,
-    };
+    const contents = {};
     if (output["Name"] !== undefined) {
         contents.Name = (0, smithy_client_1.expectString)(output["Name"]);
     }
@@ -20413,14 +19191,7 @@ const deserializeAws_restXmlFilterRuleList = (output, context) => {
     });
 };
 const deserializeAws_restXmlGetObjectAttributesParts = (output, context) => {
-    const contents = {
-        TotalPartsCount: undefined,
-        PartNumberMarker: undefined,
-        NextPartNumberMarker: undefined,
-        MaxParts: undefined,
-        IsTruncated: undefined,
-        Parts: undefined,
-    };
+    const contents = {};
     if (output["PartsCount"] !== undefined) {
         contents.TotalPartsCount = (0, smithy_client_1.strictParseInt32)(output["PartsCount"]);
     }
@@ -20445,10 +19216,7 @@ const deserializeAws_restXmlGetObjectAttributesParts = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlGrant = (output, context) => {
-    const contents = {
-        Grantee: undefined,
-        Permission: undefined,
-    };
+    const contents = {};
     if (output["Grantee"] !== undefined) {
         contents.Grantee = deserializeAws_restXmlGrantee(output["Grantee"], context);
     }
@@ -20458,13 +19226,7 @@ const deserializeAws_restXmlGrant = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlGrantee = (output, context) => {
-    const contents = {
-        DisplayName: undefined,
-        EmailAddress: undefined,
-        ID: undefined,
-        URI: undefined,
-        Type: undefined,
-    };
+    const contents = {};
     if (output["DisplayName"] !== undefined) {
         contents.DisplayName = (0, smithy_client_1.expectString)(output["DisplayName"]);
     }
@@ -20490,19 +19252,14 @@ const deserializeAws_restXmlGrants = (output, context) => {
     });
 };
 const deserializeAws_restXmlIndexDocument = (output, context) => {
-    const contents = {
-        Suffix: undefined,
-    };
+    const contents = {};
     if (output["Suffix"] !== undefined) {
         contents.Suffix = (0, smithy_client_1.expectString)(output["Suffix"]);
     }
     return contents;
 };
 const deserializeAws_restXmlInitiator = (output, context) => {
-    const contents = {
-        ID: undefined,
-        DisplayName: undefined,
-    };
+    const contents = {};
     if (output["ID"] !== undefined) {
         contents.ID = (0, smithy_client_1.expectString)(output["ID"]);
     }
@@ -20512,10 +19269,7 @@ const deserializeAws_restXmlInitiator = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlIntelligentTieringAndOperator = (output, context) => {
-    const contents = {
-        Prefix: undefined,
-        Tags: undefined,
-    };
+    const contents = {};
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
     }
@@ -20528,12 +19282,7 @@ const deserializeAws_restXmlIntelligentTieringAndOperator = (output, context) =>
     return contents;
 };
 const deserializeAws_restXmlIntelligentTieringConfiguration = (output, context) => {
-    const contents = {
-        Id: undefined,
-        Filter: undefined,
-        Status: undefined,
-        Tierings: undefined,
-    };
+    const contents = {};
     if (output["Id"] !== undefined) {
         contents.Id = (0, smithy_client_1.expectString)(output["Id"]);
     }
@@ -20559,11 +19308,7 @@ const deserializeAws_restXmlIntelligentTieringConfigurationList = (output, conte
     });
 };
 const deserializeAws_restXmlIntelligentTieringFilter = (output, context) => {
-    const contents = {
-        Prefix: undefined,
-        Tag: undefined,
-        And: undefined,
-    };
+    const contents = {};
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
     }
@@ -20576,15 +19321,7 @@ const deserializeAws_restXmlIntelligentTieringFilter = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlInventoryConfiguration = (output, context) => {
-    const contents = {
-        Destination: undefined,
-        IsEnabled: undefined,
-        Filter: undefined,
-        Id: undefined,
-        IncludedObjectVersions: undefined,
-        OptionalFields: undefined,
-        Schedule: undefined,
-    };
+    const contents = {};
     if (output["Destination"] !== undefined) {
         contents.Destination = deserializeAws_restXmlInventoryDestination(output["Destination"], context);
     }
@@ -20619,19 +19356,14 @@ const deserializeAws_restXmlInventoryConfigurationList = (output, context) => {
     });
 };
 const deserializeAws_restXmlInventoryDestination = (output, context) => {
-    const contents = {
-        S3BucketDestination: undefined,
-    };
+    const contents = {};
     if (output["S3BucketDestination"] !== undefined) {
         contents.S3BucketDestination = deserializeAws_restXmlInventoryS3BucketDestination(output["S3BucketDestination"], context);
     }
     return contents;
 };
 const deserializeAws_restXmlInventoryEncryption = (output, context) => {
-    const contents = {
-        SSES3: undefined,
-        SSEKMS: undefined,
-    };
+    const contents = {};
     if (output["SSE-S3"] !== undefined) {
         contents.SSES3 = deserializeAws_restXmlSSES3(output["SSE-S3"], context);
     }
@@ -20641,9 +19373,7 @@ const deserializeAws_restXmlInventoryEncryption = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlInventoryFilter = (output, context) => {
-    const contents = {
-        Prefix: undefined,
-    };
+    const contents = {};
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
     }
@@ -20657,13 +19387,7 @@ const deserializeAws_restXmlInventoryOptionalFields = (output, context) => {
     });
 };
 const deserializeAws_restXmlInventoryS3BucketDestination = (output, context) => {
-    const contents = {
-        AccountId: undefined,
-        Bucket: undefined,
-        Format: undefined,
-        Prefix: undefined,
-        Encryption: undefined,
-    };
+    const contents = {};
     if (output["AccountId"] !== undefined) {
         contents.AccountId = (0, smithy_client_1.expectString)(output["AccountId"]);
     }
@@ -20682,21 +19406,14 @@ const deserializeAws_restXmlInventoryS3BucketDestination = (output, context) => 
     return contents;
 };
 const deserializeAws_restXmlInventorySchedule = (output, context) => {
-    const contents = {
-        Frequency: undefined,
-    };
+    const contents = {};
     if (output["Frequency"] !== undefined) {
         contents.Frequency = (0, smithy_client_1.expectString)(output["Frequency"]);
     }
     return contents;
 };
 const deserializeAws_restXmlLambdaFunctionConfiguration = (output, context) => {
-    const contents = {
-        Id: undefined,
-        LambdaFunctionArn: undefined,
-        Events: undefined,
-        Filter: undefined,
-    };
+    const contents = {};
     if (output["Id"] !== undefined) {
         contents.Id = (0, smithy_client_1.expectString)(output["Id"]);
     }
@@ -20722,11 +19439,7 @@ const deserializeAws_restXmlLambdaFunctionConfigurationList = (output, context) 
     });
 };
 const deserializeAws_restXmlLifecycleExpiration = (output, context) => {
-    const contents = {
-        Date: undefined,
-        Days: undefined,
-        ExpiredObjectDeleteMarker: undefined,
-    };
+    const contents = {};
     if (output["Date"] !== undefined) {
         contents.Date = (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseRfc3339DateTimeWithOffset)(output["Date"]));
     }
@@ -20739,17 +19452,7 @@ const deserializeAws_restXmlLifecycleExpiration = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlLifecycleRule = (output, context) => {
-    const contents = {
-        Expiration: undefined,
-        ID: undefined,
-        Prefix: undefined,
-        Filter: undefined,
-        Status: undefined,
-        Transitions: undefined,
-        NoncurrentVersionTransitions: undefined,
-        NoncurrentVersionExpiration: undefined,
-        AbortIncompleteMultipartUpload: undefined,
-    };
+    const contents = {};
     if (output["Expiration"] !== undefined) {
         contents.Expiration = deserializeAws_restXmlLifecycleExpiration(output["Expiration"], context);
     }
@@ -20788,12 +19491,7 @@ const deserializeAws_restXmlLifecycleRule = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlLifecycleRuleAndOperator = (output, context) => {
-    const contents = {
-        Prefix: undefined,
-        Tags: undefined,
-        ObjectSizeGreaterThan: undefined,
-        ObjectSizeLessThan: undefined,
-    };
+    const contents = {};
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
     }
@@ -20847,11 +19545,7 @@ const deserializeAws_restXmlLifecycleRules = (output, context) => {
     });
 };
 const deserializeAws_restXmlLoggingEnabled = (output, context) => {
-    const contents = {
-        TargetBucket: undefined,
-        TargetGrants: undefined,
-        TargetPrefix: undefined,
-    };
+    const contents = {};
     if (output["TargetBucket"] !== undefined) {
         contents.TargetBucket = (0, smithy_client_1.expectString)(output["TargetBucket"]);
     }
@@ -20867,10 +19561,7 @@ const deserializeAws_restXmlLoggingEnabled = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlMetrics = (output, context) => {
-    const contents = {
-        Status: undefined,
-        EventThreshold: undefined,
-    };
+    const contents = {};
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
     }
@@ -20880,11 +19571,7 @@ const deserializeAws_restXmlMetrics = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlMetricsAndOperator = (output, context) => {
-    const contents = {
-        Prefix: undefined,
-        Tags: undefined,
-        AccessPointArn: undefined,
-    };
+    const contents = {};
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
     }
@@ -20900,10 +19587,7 @@ const deserializeAws_restXmlMetricsAndOperator = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlMetricsConfiguration = (output, context) => {
-    const contents = {
-        Id: undefined,
-        Filter: undefined,
-    };
+    const contents = {};
     if (output["Id"] !== undefined) {
         contents.Id = (0, smithy_client_1.expectString)(output["Id"]);
     }
@@ -20945,15 +19629,7 @@ const deserializeAws_restXmlMetricsFilter = (output, context) => {
     return { $unknown: Object.entries(output)[0] };
 };
 const deserializeAws_restXmlMultipartUpload = (output, context) => {
-    const contents = {
-        UploadId: undefined,
-        Key: undefined,
-        Initiated: undefined,
-        StorageClass: undefined,
-        Owner: undefined,
-        Initiator: undefined,
-        ChecksumAlgorithm: undefined,
-    };
+    const contents = {};
     if (output["UploadId"] !== undefined) {
         contents.UploadId = (0, smithy_client_1.expectString)(output["UploadId"]);
     }
@@ -20985,10 +19661,7 @@ const deserializeAws_restXmlMultipartUploadList = (output, context) => {
     });
 };
 const deserializeAws_restXmlNoncurrentVersionExpiration = (output, context) => {
-    const contents = {
-        NoncurrentDays: undefined,
-        NewerNoncurrentVersions: undefined,
-    };
+    const contents = {};
     if (output["NoncurrentDays"] !== undefined) {
         contents.NoncurrentDays = (0, smithy_client_1.strictParseInt32)(output["NoncurrentDays"]);
     }
@@ -20998,11 +19671,7 @@ const deserializeAws_restXmlNoncurrentVersionExpiration = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlNoncurrentVersionTransition = (output, context) => {
-    const contents = {
-        NoncurrentDays: undefined,
-        StorageClass: undefined,
-        NewerNoncurrentVersions: undefined,
-    };
+    const contents = {};
     if (output["NoncurrentDays"] !== undefined) {
         contents.NoncurrentDays = (0, smithy_client_1.strictParseInt32)(output["NoncurrentDays"]);
     }
@@ -21022,24 +19691,14 @@ const deserializeAws_restXmlNoncurrentVersionTransitionList = (output, context) 
     });
 };
 const deserializeAws_restXmlNotificationConfigurationFilter = (output, context) => {
-    const contents = {
-        Key: undefined,
-    };
+    const contents = {};
     if (output["S3Key"] !== undefined) {
         contents.Key = deserializeAws_restXmlS3KeyFilter(output["S3Key"], context);
     }
     return contents;
 };
 const deserializeAws_restXml_Object = (output, context) => {
-    const contents = {
-        Key: undefined,
-        LastModified: undefined,
-        ETag: undefined,
-        ChecksumAlgorithm: undefined,
-        Size: undefined,
-        StorageClass: undefined,
-        Owner: undefined,
-    };
+    const contents = {};
     if (output["Key"] !== undefined) {
         contents.Key = (0, smithy_client_1.expectString)(output["Key"]);
     }
@@ -21074,10 +19733,7 @@ const deserializeAws_restXmlObjectList = (output, context) => {
     });
 };
 const deserializeAws_restXmlObjectLockConfiguration = (output, context) => {
-    const contents = {
-        ObjectLockEnabled: undefined,
-        Rule: undefined,
-    };
+    const contents = {};
     if (output["ObjectLockEnabled"] !== undefined) {
         contents.ObjectLockEnabled = (0, smithy_client_1.expectString)(output["ObjectLockEnabled"]);
     }
@@ -21087,19 +19743,14 @@ const deserializeAws_restXmlObjectLockConfiguration = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlObjectLockLegalHold = (output, context) => {
-    const contents = {
-        Status: undefined,
-    };
+    const contents = {};
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
     }
     return contents;
 };
 const deserializeAws_restXmlObjectLockRetention = (output, context) => {
-    const contents = {
-        Mode: undefined,
-        RetainUntilDate: undefined,
-    };
+    const contents = {};
     if (output["Mode"] !== undefined) {
         contents.Mode = (0, smithy_client_1.expectString)(output["Mode"]);
     }
@@ -21109,23 +19760,14 @@ const deserializeAws_restXmlObjectLockRetention = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlObjectLockRule = (output, context) => {
-    const contents = {
-        DefaultRetention: undefined,
-    };
+    const contents = {};
     if (output["DefaultRetention"] !== undefined) {
         contents.DefaultRetention = deserializeAws_restXmlDefaultRetention(output["DefaultRetention"], context);
     }
     return contents;
 };
 const deserializeAws_restXmlObjectPart = (output, context) => {
-    const contents = {
-        PartNumber: undefined,
-        Size: undefined,
-        ChecksumCRC32: undefined,
-        ChecksumCRC32C: undefined,
-        ChecksumSHA1: undefined,
-        ChecksumSHA256: undefined,
-    };
+    const contents = {};
     if (output["PartNumber"] !== undefined) {
         contents.PartNumber = (0, smithy_client_1.strictParseInt32)(output["PartNumber"]);
     }
@@ -21147,17 +19789,7 @@ const deserializeAws_restXmlObjectPart = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlObjectVersion = (output, context) => {
-    const contents = {
-        ETag: undefined,
-        ChecksumAlgorithm: undefined,
-        Size: undefined,
-        StorageClass: undefined,
-        Key: undefined,
-        VersionId: undefined,
-        IsLatest: undefined,
-        LastModified: undefined,
-        Owner: undefined,
-    };
+    const contents = {};
     if (output["ETag"] !== undefined) {
         contents.ETag = (0, smithy_client_1.expectString)(output["ETag"]);
     }
@@ -21198,10 +19830,7 @@ const deserializeAws_restXmlObjectVersionList = (output, context) => {
     });
 };
 const deserializeAws_restXmlOwner = (output, context) => {
-    const contents = {
-        DisplayName: undefined,
-        ID: undefined,
-    };
+    const contents = {};
     if (output["DisplayName"] !== undefined) {
         contents.DisplayName = (0, smithy_client_1.expectString)(output["DisplayName"]);
     }
@@ -21211,9 +19840,7 @@ const deserializeAws_restXmlOwner = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlOwnershipControls = (output, context) => {
-    const contents = {
-        Rules: undefined,
-    };
+    const contents = {};
     if (output.Rule === "") {
         contents.Rules = [];
     }
@@ -21223,9 +19850,7 @@ const deserializeAws_restXmlOwnershipControls = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlOwnershipControlsRule = (output, context) => {
-    const contents = {
-        ObjectOwnership: undefined,
-    };
+    const contents = {};
     if (output["ObjectOwnership"] !== undefined) {
         contents.ObjectOwnership = (0, smithy_client_1.expectString)(output["ObjectOwnership"]);
     }
@@ -21239,16 +19864,7 @@ const deserializeAws_restXmlOwnershipControlsRules = (output, context) => {
     });
 };
 const deserializeAws_restXmlPart = (output, context) => {
-    const contents = {
-        PartNumber: undefined,
-        LastModified: undefined,
-        ETag: undefined,
-        Size: undefined,
-        ChecksumCRC32: undefined,
-        ChecksumCRC32C: undefined,
-        ChecksumSHA1: undefined,
-        ChecksumSHA256: undefined,
-    };
+    const contents = {};
     if (output["PartNumber"] !== undefined) {
         contents.PartNumber = (0, smithy_client_1.strictParseInt32)(output["PartNumber"]);
     }
@@ -21290,20 +19906,14 @@ const deserializeAws_restXmlPartsList = (output, context) => {
     });
 };
 const deserializeAws_restXmlPolicyStatus = (output, context) => {
-    const contents = {
-        IsPublic: undefined,
-    };
+    const contents = {};
     if (output["IsPublic"] !== undefined) {
         contents.IsPublic = (0, smithy_client_1.parseBoolean)(output["IsPublic"]);
     }
     return contents;
 };
 const deserializeAws_restXmlProgress = (output, context) => {
-    const contents = {
-        BytesScanned: undefined,
-        BytesProcessed: undefined,
-        BytesReturned: undefined,
-    };
+    const contents = {};
     if (output["BytesScanned"] !== undefined) {
         contents.BytesScanned = (0, smithy_client_1.strictParseLong)(output["BytesScanned"]);
     }
@@ -21316,12 +19926,7 @@ const deserializeAws_restXmlProgress = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlPublicAccessBlockConfiguration = (output, context) => {
-    const contents = {
-        BlockPublicAcls: undefined,
-        IgnorePublicAcls: undefined,
-        BlockPublicPolicy: undefined,
-        RestrictPublicBuckets: undefined,
-    };
+    const contents = {};
     if (output["BlockPublicAcls"] !== undefined) {
         contents.BlockPublicAcls = (0, smithy_client_1.parseBoolean)(output["BlockPublicAcls"]);
     }
@@ -21337,12 +19942,7 @@ const deserializeAws_restXmlPublicAccessBlockConfiguration = (output, context) =
     return contents;
 };
 const deserializeAws_restXmlQueueConfiguration = (output, context) => {
-    const contents = {
-        Id: undefined,
-        QueueArn: undefined,
-        Events: undefined,
-        Filter: undefined,
-    };
+    const contents = {};
     if (output["Id"] !== undefined) {
         contents.Id = (0, smithy_client_1.expectString)(output["Id"]);
     }
@@ -21368,13 +19968,7 @@ const deserializeAws_restXmlQueueConfigurationList = (output, context) => {
     });
 };
 const deserializeAws_restXmlRedirect = (output, context) => {
-    const contents = {
-        HostName: undefined,
-        HttpRedirectCode: undefined,
-        Protocol: undefined,
-        ReplaceKeyPrefixWith: undefined,
-        ReplaceKeyWith: undefined,
-    };
+    const contents = {};
     if (output["HostName"] !== undefined) {
         contents.HostName = (0, smithy_client_1.expectString)(output["HostName"]);
     }
@@ -21393,10 +19987,7 @@ const deserializeAws_restXmlRedirect = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlRedirectAllRequestsTo = (output, context) => {
-    const contents = {
-        HostName: undefined,
-        Protocol: undefined,
-    };
+    const contents = {};
     if (output["HostName"] !== undefined) {
         contents.HostName = (0, smithy_client_1.expectString)(output["HostName"]);
     }
@@ -21406,19 +19997,14 @@ const deserializeAws_restXmlRedirectAllRequestsTo = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlReplicaModifications = (output, context) => {
-    const contents = {
-        Status: undefined,
-    };
+    const contents = {};
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
     }
     return contents;
 };
 const deserializeAws_restXmlReplicationConfiguration = (output, context) => {
-    const contents = {
-        Role: undefined,
-        Rules: undefined,
-    };
+    const contents = {};
     if (output["Role"] !== undefined) {
         contents.Role = (0, smithy_client_1.expectString)(output["Role"]);
     }
@@ -21431,17 +20017,7 @@ const deserializeAws_restXmlReplicationConfiguration = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlReplicationRule = (output, context) => {
-    const contents = {
-        ID: undefined,
-        Priority: undefined,
-        Prefix: undefined,
-        Filter: undefined,
-        Status: undefined,
-        SourceSelectionCriteria: undefined,
-        ExistingObjectReplication: undefined,
-        Destination: undefined,
-        DeleteMarkerReplication: undefined,
-    };
+    const contents = {};
     if (output["ID"] !== undefined) {
         contents.ID = (0, smithy_client_1.expectString)(output["ID"]);
     }
@@ -21474,10 +20050,7 @@ const deserializeAws_restXmlReplicationRule = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlReplicationRuleAndOperator = (output, context) => {
-    const contents = {
-        Prefix: undefined,
-        Tags: undefined,
-    };
+    const contents = {};
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
     }
@@ -21515,10 +20088,7 @@ const deserializeAws_restXmlReplicationRules = (output, context) => {
     });
 };
 const deserializeAws_restXmlReplicationTime = (output, context) => {
-    const contents = {
-        Status: undefined,
-        Time: undefined,
-    };
+    const contents = {};
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
     }
@@ -21528,19 +20098,14 @@ const deserializeAws_restXmlReplicationTime = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlReplicationTimeValue = (output, context) => {
-    const contents = {
-        Minutes: undefined,
-    };
+    const contents = {};
     if (output["Minutes"] !== undefined) {
         contents.Minutes = (0, smithy_client_1.strictParseInt32)(output["Minutes"]);
     }
     return contents;
 };
 const deserializeAws_restXmlRoutingRule = (output, context) => {
-    const contents = {
-        Condition: undefined,
-        Redirect: undefined,
-    };
+    const contents = {};
     if (output["Condition"] !== undefined) {
         contents.Condition = deserializeAws_restXmlCondition(output["Condition"], context);
     }
@@ -21557,9 +20122,7 @@ const deserializeAws_restXmlRoutingRules = (output, context) => {
     });
 };
 const deserializeAws_restXmlS3KeyFilter = (output, context) => {
-    const contents = {
-        FilterRules: undefined,
-    };
+    const contents = {};
     if (output.FilterRule === "") {
         contents.FilterRules = [];
     }
@@ -21569,10 +20132,7 @@ const deserializeAws_restXmlS3KeyFilter = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlServerSideEncryptionByDefault = (output, context) => {
-    const contents = {
-        SSEAlgorithm: undefined,
-        KMSMasterKeyID: undefined,
-    };
+    const contents = {};
     if (output["SSEAlgorithm"] !== undefined) {
         contents.SSEAlgorithm = (0, smithy_client_1.expectString)(output["SSEAlgorithm"]);
     }
@@ -21582,9 +20142,7 @@ const deserializeAws_restXmlServerSideEncryptionByDefault = (output, context) =>
     return contents;
 };
 const deserializeAws_restXmlServerSideEncryptionConfiguration = (output, context) => {
-    const contents = {
-        Rules: undefined,
-    };
+    const contents = {};
     if (output.Rule === "") {
         contents.Rules = [];
     }
@@ -21594,10 +20152,7 @@ const deserializeAws_restXmlServerSideEncryptionConfiguration = (output, context
     return contents;
 };
 const deserializeAws_restXmlServerSideEncryptionRule = (output, context) => {
-    const contents = {
-        ApplyServerSideEncryptionByDefault: undefined,
-        BucketKeyEnabled: undefined,
-    };
+    const contents = {};
     if (output["ApplyServerSideEncryptionByDefault"] !== undefined) {
         contents.ApplyServerSideEncryptionByDefault = deserializeAws_restXmlServerSideEncryptionByDefault(output["ApplyServerSideEncryptionByDefault"], context);
     }
@@ -21614,10 +20169,7 @@ const deserializeAws_restXmlServerSideEncryptionRules = (output, context) => {
     });
 };
 const deserializeAws_restXmlSourceSelectionCriteria = (output, context) => {
-    const contents = {
-        SseKmsEncryptedObjects: undefined,
-        ReplicaModifications: undefined,
-    };
+    const contents = {};
     if (output["SseKmsEncryptedObjects"] !== undefined) {
         contents.SseKmsEncryptedObjects = deserializeAws_restXmlSseKmsEncryptedObjects(output["SseKmsEncryptedObjects"], context);
     }
@@ -21627,18 +20179,14 @@ const deserializeAws_restXmlSourceSelectionCriteria = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlSSEKMS = (output, context) => {
-    const contents = {
-        KeyId: undefined,
-    };
+    const contents = {};
     if (output["KeyId"] !== undefined) {
         contents.KeyId = (0, smithy_client_1.expectString)(output["KeyId"]);
     }
     return contents;
 };
 const deserializeAws_restXmlSseKmsEncryptedObjects = (output, context) => {
-    const contents = {
-        Status: undefined,
-    };
+    const contents = {};
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
     }
@@ -21649,11 +20197,7 @@ const deserializeAws_restXmlSSES3 = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlStats = (output, context) => {
-    const contents = {
-        BytesScanned: undefined,
-        BytesProcessed: undefined,
-        BytesReturned: undefined,
-    };
+    const contents = {};
     if (output["BytesScanned"] !== undefined) {
         contents.BytesScanned = (0, smithy_client_1.strictParseLong)(output["BytesScanned"]);
     }
@@ -21666,19 +20210,14 @@ const deserializeAws_restXmlStats = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlStorageClassAnalysis = (output, context) => {
-    const contents = {
-        DataExport: undefined,
-    };
+    const contents = {};
     if (output["DataExport"] !== undefined) {
         contents.DataExport = deserializeAws_restXmlStorageClassAnalysisDataExport(output["DataExport"], context);
     }
     return contents;
 };
 const deserializeAws_restXmlStorageClassAnalysisDataExport = (output, context) => {
-    const contents = {
-        OutputSchemaVersion: undefined,
-        Destination: undefined,
-    };
+    const contents = {};
     if (output["OutputSchemaVersion"] !== undefined) {
         contents.OutputSchemaVersion = (0, smithy_client_1.expectString)(output["OutputSchemaVersion"]);
     }
@@ -21688,10 +20227,7 @@ const deserializeAws_restXmlStorageClassAnalysisDataExport = (output, context) =
     return contents;
 };
 const deserializeAws_restXmlTag = (output, context) => {
-    const contents = {
-        Key: undefined,
-        Value: undefined,
-    };
+    const contents = {};
     if (output["Key"] !== undefined) {
         contents.Key = (0, smithy_client_1.expectString)(output["Key"]);
     }
@@ -21708,10 +20244,7 @@ const deserializeAws_restXmlTagSet = (output, context) => {
     });
 };
 const deserializeAws_restXmlTargetGrant = (output, context) => {
-    const contents = {
-        Grantee: undefined,
-        Permission: undefined,
-    };
+    const contents = {};
     if (output["Grantee"] !== undefined) {
         contents.Grantee = deserializeAws_restXmlGrantee(output["Grantee"], context);
     }
@@ -21728,10 +20261,7 @@ const deserializeAws_restXmlTargetGrants = (output, context) => {
     });
 };
 const deserializeAws_restXmlTiering = (output, context) => {
-    const contents = {
-        Days: undefined,
-        AccessTier: undefined,
-    };
+    const contents = {};
     if (output["Days"] !== undefined) {
         contents.Days = (0, smithy_client_1.strictParseInt32)(output["Days"]);
     }
@@ -21748,12 +20278,7 @@ const deserializeAws_restXmlTieringList = (output, context) => {
     });
 };
 const deserializeAws_restXmlTopicConfiguration = (output, context) => {
-    const contents = {
-        Id: undefined,
-        TopicArn: undefined,
-        Events: undefined,
-        Filter: undefined,
-    };
+    const contents = {};
     if (output["Id"] !== undefined) {
         contents.Id = (0, smithy_client_1.expectString)(output["Id"]);
     }
@@ -21779,11 +20304,7 @@ const deserializeAws_restXmlTopicConfigurationList = (output, context) => {
     });
 };
 const deserializeAws_restXmlTransition = (output, context) => {
-    const contents = {
-        Date: undefined,
-        Days: undefined,
-        StorageClass: undefined,
-    };
+    const contents = {};
     if (output["Date"] !== undefined) {
         contents.Date = (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseRfc3339DateTimeWithOffset)(output["Date"]));
     }
@@ -22625,13 +21146,8 @@ exports.CreateTokenCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(69374);
 const Aws_restJson1_1 = __nccwpck_require__(21518);
 class CreateTokenCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -22639,6 +21155,10 @@ class CreateTokenCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -22651,8 +21171,8 @@ class CreateTokenCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CreateTokenRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreateTokenResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -22679,13 +21199,8 @@ exports.RegisterClientCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(69374);
 const Aws_restJson1_1 = __nccwpck_require__(21518);
 class RegisterClientCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -22693,6 +21208,10 @@ class RegisterClientCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -22705,8 +21224,8 @@ class RegisterClientCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.RegisterClientRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.RegisterClientResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -22733,13 +21252,8 @@ exports.StartDeviceAuthorizationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(69374);
 const Aws_restJson1_1 = __nccwpck_require__(21518);
 class StartDeviceAuthorizationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -22747,6 +21261,10 @@ class StartDeviceAuthorizationCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -22759,8 +21277,8 @@ class StartDeviceAuthorizationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.StartDeviceAuthorizationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.StartDeviceAuthorizationResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -22901,7 +21419,7 @@ tslib_1.__exportStar(__nccwpck_require__(69374), exports);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.StartDeviceAuthorizationResponseFilterSensitiveLog = exports.StartDeviceAuthorizationRequestFilterSensitiveLog = exports.RegisterClientResponseFilterSensitiveLog = exports.RegisterClientRequestFilterSensitiveLog = exports.CreateTokenResponseFilterSensitiveLog = exports.CreateTokenRequestFilterSensitiveLog = exports.InvalidClientMetadataException = exports.UnsupportedGrantTypeException = exports.UnauthorizedClientException = exports.SlowDownException = exports.InvalidScopeException = exports.InvalidRequestException = exports.InvalidGrantException = exports.InvalidClientException = exports.InternalServerException = exports.ExpiredTokenException = exports.AuthorizationPendingException = exports.AccessDeniedException = void 0;
+exports.InvalidClientMetadataException = exports.UnsupportedGrantTypeException = exports.UnauthorizedClientException = exports.SlowDownException = exports.InvalidScopeException = exports.InvalidRequestException = exports.InvalidGrantException = exports.InvalidClientException = exports.InternalServerException = exports.ExpiredTokenException = exports.AuthorizationPendingException = exports.AccessDeniedException = void 0;
 const SSOOIDCServiceException_1 = __nccwpck_require__(43026);
 class AccessDeniedException extends SSOOIDCServiceException_1.SSOOIDCServiceException {
     constructor(opts) {
@@ -23083,30 +21601,6 @@ class InvalidClientMetadataException extends SSOOIDCServiceException_1.SSOOIDCSe
     }
 }
 exports.InvalidClientMetadataException = InvalidClientMetadataException;
-const CreateTokenRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateTokenRequestFilterSensitiveLog = CreateTokenRequestFilterSensitiveLog;
-const CreateTokenResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateTokenResponseFilterSensitiveLog = CreateTokenResponseFilterSensitiveLog;
-const RegisterClientRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RegisterClientRequestFilterSensitiveLog = RegisterClientRequestFilterSensitiveLog;
-const RegisterClientResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RegisterClientResponseFilterSensitiveLog = RegisterClientResponseFilterSensitiveLog;
-const StartDeviceAuthorizationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StartDeviceAuthorizationRequestFilterSensitiveLog = StartDeviceAuthorizationRequestFilterSensitiveLog;
-const StartDeviceAuthorizationResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StartDeviceAuthorizationResponseFilterSensitiveLog = StartDeviceAuthorizationResponseFilterSensitiveLog;
 
 
 /***/ }),
@@ -24233,10 +22727,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(66390);
 const Aws_restJson1_1 = __nccwpck_require__(98507);
 class GetRoleCredentialsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -24244,6 +22734,10 @@ class GetRoleCredentialsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -24287,10 +22781,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(66390);
 const Aws_restJson1_1 = __nccwpck_require__(98507);
 class ListAccountRolesCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -24298,6 +22788,10 @@ class ListAccountRolesCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -24311,7 +22805,7 @@ class ListAccountRolesCommand extends smithy_client_1.Command {
             clientName,
             commandName,
             inputFilterSensitiveLog: models_0_1.ListAccountRolesRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListAccountRolesResponseFilterSensitiveLog,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -24341,10 +22835,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(66390);
 const Aws_restJson1_1 = __nccwpck_require__(98507);
 class ListAccountsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -24352,6 +22842,10 @@ class ListAccountsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -24365,7 +22859,7 @@ class ListAccountsCommand extends smithy_client_1.Command {
             clientName,
             commandName,
             inputFilterSensitiveLog: models_0_1.ListAccountsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListAccountsResponseFilterSensitiveLog,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -24395,10 +22889,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(66390);
 const Aws_restJson1_1 = __nccwpck_require__(98507);
 class LogoutCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -24406,6 +22896,10 @@ class LogoutCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -24419,7 +22913,7 @@ class LogoutCommand extends smithy_client_1.Command {
             clientName,
             commandName,
             inputFilterSensitiveLog: models_0_1.LogoutRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -24562,7 +23056,7 @@ tslib_1.__exportStar(__nccwpck_require__(66390), exports);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.LogoutRequestFilterSensitiveLog = exports.ListAccountsResponseFilterSensitiveLog = exports.ListAccountsRequestFilterSensitiveLog = exports.ListAccountRolesResponseFilterSensitiveLog = exports.RoleInfoFilterSensitiveLog = exports.ListAccountRolesRequestFilterSensitiveLog = exports.GetRoleCredentialsResponseFilterSensitiveLog = exports.RoleCredentialsFilterSensitiveLog = exports.GetRoleCredentialsRequestFilterSensitiveLog = exports.AccountInfoFilterSensitiveLog = exports.UnauthorizedException = exports.TooManyRequestsException = exports.ResourceNotFoundException = exports.InvalidRequestException = void 0;
+exports.LogoutRequestFilterSensitiveLog = exports.ListAccountsRequestFilterSensitiveLog = exports.ListAccountRolesRequestFilterSensitiveLog = exports.GetRoleCredentialsResponseFilterSensitiveLog = exports.RoleCredentialsFilterSensitiveLog = exports.GetRoleCredentialsRequestFilterSensitiveLog = exports.UnauthorizedException = exports.TooManyRequestsException = exports.ResourceNotFoundException = exports.InvalidRequestException = void 0;
 const smithy_client_1 = __nccwpck_require__(4963);
 const SSOServiceException_1 = __nccwpck_require__(81517);
 class InvalidRequestException extends SSOServiceException_1.SSOServiceException {
@@ -24617,10 +23111,6 @@ class UnauthorizedException extends SSOServiceException_1.SSOServiceException {
     }
 }
 exports.UnauthorizedException = UnauthorizedException;
-const AccountInfoFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AccountInfoFilterSensitiveLog = AccountInfoFilterSensitiveLog;
 const GetRoleCredentialsRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.accessToken && { accessToken: smithy_client_1.SENSITIVE_STRING }),
@@ -24642,23 +23132,11 @@ const ListAccountRolesRequestFilterSensitiveLog = (obj) => ({
     ...(obj.accessToken && { accessToken: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.ListAccountRolesRequestFilterSensitiveLog = ListAccountRolesRequestFilterSensitiveLog;
-const RoleInfoFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RoleInfoFilterSensitiveLog = RoleInfoFilterSensitiveLog;
-const ListAccountRolesResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListAccountRolesResponseFilterSensitiveLog = ListAccountRolesResponseFilterSensitiveLog;
 const ListAccountsRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.accessToken && { accessToken: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.ListAccountsRequestFilterSensitiveLog = ListAccountsRequestFilterSensitiveLog;
-const ListAccountsResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListAccountsResponseFilterSensitiveLog = ListAccountsResponseFilterSensitiveLog;
 const LogoutRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.accessToken && { accessToken: smithy_client_1.SENSITIVE_STRING }),
@@ -25843,13 +24321,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const middleware_signing_1 = __nccwpck_require__(14935);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class AssumeRoleCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -25858,6 +24331,10 @@ class AssumeRoleCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -25871,8 +24348,8 @@ class AssumeRoleCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.AssumeRoleRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.AssumeRoleResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -25899,13 +24376,8 @@ exports.AssumeRoleWithSAMLCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class AssumeRoleWithSAMLCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -25914,6 +24386,10 @@ class AssumeRoleWithSAMLCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -25926,8 +24402,8 @@ class AssumeRoleWithSAMLCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.AssumeRoleWithSAMLRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.AssumeRoleWithSAMLResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -25954,13 +24430,8 @@ exports.AssumeRoleWithWebIdentityCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class AssumeRoleWithWebIdentityCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -25969,6 +24440,10 @@ class AssumeRoleWithWebIdentityCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -25981,8 +24456,8 @@ class AssumeRoleWithWebIdentityCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.AssumeRoleWithWebIdentityRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.AssumeRoleWithWebIdentityResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -26010,13 +24485,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const middleware_signing_1 = __nccwpck_require__(14935);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class DecodeAuthorizationMessageCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -26025,6 +24495,10 @@ class DecodeAuthorizationMessageCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -26038,8 +24512,8 @@ class DecodeAuthorizationMessageCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DecodeAuthorizationMessageRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DecodeAuthorizationMessageResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -26067,13 +24541,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const middleware_signing_1 = __nccwpck_require__(14935);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class GetAccessKeyInfoCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -26082,6 +24551,10 @@ class GetAccessKeyInfoCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -26095,8 +24568,8 @@ class GetAccessKeyInfoCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetAccessKeyInfoRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetAccessKeyInfoResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -26124,13 +24597,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const middleware_signing_1 = __nccwpck_require__(14935);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class GetCallerIdentityCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -26139,6 +24607,10 @@ class GetCallerIdentityCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -26152,8 +24624,8 @@ class GetCallerIdentityCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetCallerIdentityRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetCallerIdentityResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -26181,13 +24653,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const middleware_signing_1 = __nccwpck_require__(14935);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class GetFederationTokenCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -26196,6 +24663,10 @@ class GetFederationTokenCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -26209,8 +24680,8 @@ class GetFederationTokenCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetFederationTokenRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetFederationTokenResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -26238,13 +24709,8 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const middleware_signing_1 = __nccwpck_require__(14935);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class GetSessionTokenCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -26253,6 +24719,10 @@ class GetSessionTokenCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -26266,8 +24736,8 @@ class GetSessionTokenCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetSessionTokenRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetSessionTokenResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -26535,7 +25005,7 @@ tslib_1.__exportStar(__nccwpck_require__(21780), exports);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.GetSessionTokenResponseFilterSensitiveLog = exports.GetSessionTokenRequestFilterSensitiveLog = exports.GetFederationTokenResponseFilterSensitiveLog = exports.FederatedUserFilterSensitiveLog = exports.GetFederationTokenRequestFilterSensitiveLog = exports.GetCallerIdentityResponseFilterSensitiveLog = exports.GetCallerIdentityRequestFilterSensitiveLog = exports.GetAccessKeyInfoResponseFilterSensitiveLog = exports.GetAccessKeyInfoRequestFilterSensitiveLog = exports.DecodeAuthorizationMessageResponseFilterSensitiveLog = exports.DecodeAuthorizationMessageRequestFilterSensitiveLog = exports.AssumeRoleWithWebIdentityResponseFilterSensitiveLog = exports.AssumeRoleWithWebIdentityRequestFilterSensitiveLog = exports.AssumeRoleWithSAMLResponseFilterSensitiveLog = exports.AssumeRoleWithSAMLRequestFilterSensitiveLog = exports.AssumeRoleResponseFilterSensitiveLog = exports.CredentialsFilterSensitiveLog = exports.AssumeRoleRequestFilterSensitiveLog = exports.TagFilterSensitiveLog = exports.PolicyDescriptorTypeFilterSensitiveLog = exports.AssumedRoleUserFilterSensitiveLog = exports.InvalidAuthorizationMessageException = exports.IDPCommunicationErrorException = exports.InvalidIdentityTokenException = exports.IDPRejectedClaimException = exports.RegionDisabledException = exports.PackedPolicyTooLargeException = exports.MalformedPolicyDocumentException = exports.ExpiredTokenException = void 0;
+exports.InvalidAuthorizationMessageException = exports.IDPCommunicationErrorException = exports.InvalidIdentityTokenException = exports.IDPRejectedClaimException = exports.RegionDisabledException = exports.PackedPolicyTooLargeException = exports.MalformedPolicyDocumentException = exports.ExpiredTokenException = void 0;
 const STSServiceException_1 = __nccwpck_require__(26450);
 class ExpiredTokenException extends STSServiceException_1.STSServiceException {
     constructor(opts) {
@@ -26641,90 +25111,6 @@ class InvalidAuthorizationMessageException extends STSServiceException_1.STSServ
     }
 }
 exports.InvalidAuthorizationMessageException = InvalidAuthorizationMessageException;
-const AssumedRoleUserFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssumedRoleUserFilterSensitiveLog = AssumedRoleUserFilterSensitiveLog;
-const PolicyDescriptorTypeFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PolicyDescriptorTypeFilterSensitiveLog = PolicyDescriptorTypeFilterSensitiveLog;
-const TagFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.TagFilterSensitiveLog = TagFilterSensitiveLog;
-const AssumeRoleRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssumeRoleRequestFilterSensitiveLog = AssumeRoleRequestFilterSensitiveLog;
-const CredentialsFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CredentialsFilterSensitiveLog = CredentialsFilterSensitiveLog;
-const AssumeRoleResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssumeRoleResponseFilterSensitiveLog = AssumeRoleResponseFilterSensitiveLog;
-const AssumeRoleWithSAMLRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssumeRoleWithSAMLRequestFilterSensitiveLog = AssumeRoleWithSAMLRequestFilterSensitiveLog;
-const AssumeRoleWithSAMLResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssumeRoleWithSAMLResponseFilterSensitiveLog = AssumeRoleWithSAMLResponseFilterSensitiveLog;
-const AssumeRoleWithWebIdentityRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssumeRoleWithWebIdentityRequestFilterSensitiveLog = AssumeRoleWithWebIdentityRequestFilterSensitiveLog;
-const AssumeRoleWithWebIdentityResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssumeRoleWithWebIdentityResponseFilterSensitiveLog = AssumeRoleWithWebIdentityResponseFilterSensitiveLog;
-const DecodeAuthorizationMessageRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DecodeAuthorizationMessageRequestFilterSensitiveLog = DecodeAuthorizationMessageRequestFilterSensitiveLog;
-const DecodeAuthorizationMessageResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DecodeAuthorizationMessageResponseFilterSensitiveLog = DecodeAuthorizationMessageResponseFilterSensitiveLog;
-const GetAccessKeyInfoRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetAccessKeyInfoRequestFilterSensitiveLog = GetAccessKeyInfoRequestFilterSensitiveLog;
-const GetAccessKeyInfoResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetAccessKeyInfoResponseFilterSensitiveLog = GetAccessKeyInfoResponseFilterSensitiveLog;
-const GetCallerIdentityRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetCallerIdentityRequestFilterSensitiveLog = GetCallerIdentityRequestFilterSensitiveLog;
-const GetCallerIdentityResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetCallerIdentityResponseFilterSensitiveLog = GetCallerIdentityResponseFilterSensitiveLog;
-const GetFederationTokenRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetFederationTokenRequestFilterSensitiveLog = GetFederationTokenRequestFilterSensitiveLog;
-const FederatedUserFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.FederatedUserFilterSensitiveLog = FederatedUserFilterSensitiveLog;
-const GetFederationTokenResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetFederationTokenResponseFilterSensitiveLog = GetFederationTokenResponseFilterSensitiveLog;
-const GetSessionTokenRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetSessionTokenRequestFilterSensitiveLog = GetSessionTokenRequestFilterSensitiveLog;
-const GetSessionTokenResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetSessionTokenResponseFilterSensitiveLog = GetSessionTokenResponseFilterSensitiveLog;
 
 
 /***/ }),
@@ -27468,10 +25854,7 @@ const serializeAws_querytagListType = (input, context) => {
     return entries;
 };
 const deserializeAws_queryAssumedRoleUser = (output, context) => {
-    const contents = {
-        AssumedRoleId: undefined,
-        Arn: undefined,
-    };
+    const contents = {};
     if (output["AssumedRoleId"] !== undefined) {
         contents.AssumedRoleId = (0, smithy_client_1.expectString)(output["AssumedRoleId"]);
     }
@@ -27481,12 +25864,7 @@ const deserializeAws_queryAssumedRoleUser = (output, context) => {
     return contents;
 };
 const deserializeAws_queryAssumeRoleResponse = (output, context) => {
-    const contents = {
-        Credentials: undefined,
-        AssumedRoleUser: undefined,
-        PackedPolicySize: undefined,
-        SourceIdentity: undefined,
-    };
+    const contents = {};
     if (output["Credentials"] !== undefined) {
         contents.Credentials = deserializeAws_queryCredentials(output["Credentials"], context);
     }
@@ -27502,17 +25880,7 @@ const deserializeAws_queryAssumeRoleResponse = (output, context) => {
     return contents;
 };
 const deserializeAws_queryAssumeRoleWithSAMLResponse = (output, context) => {
-    const contents = {
-        Credentials: undefined,
-        AssumedRoleUser: undefined,
-        PackedPolicySize: undefined,
-        Subject: undefined,
-        SubjectType: undefined,
-        Issuer: undefined,
-        Audience: undefined,
-        NameQualifier: undefined,
-        SourceIdentity: undefined,
-    };
+    const contents = {};
     if (output["Credentials"] !== undefined) {
         contents.Credentials = deserializeAws_queryCredentials(output["Credentials"], context);
     }
@@ -27543,15 +25911,7 @@ const deserializeAws_queryAssumeRoleWithSAMLResponse = (output, context) => {
     return contents;
 };
 const deserializeAws_queryAssumeRoleWithWebIdentityResponse = (output, context) => {
-    const contents = {
-        Credentials: undefined,
-        SubjectFromWebIdentityToken: undefined,
-        AssumedRoleUser: undefined,
-        PackedPolicySize: undefined,
-        Provider: undefined,
-        Audience: undefined,
-        SourceIdentity: undefined,
-    };
+    const contents = {};
     if (output["Credentials"] !== undefined) {
         contents.Credentials = deserializeAws_queryCredentials(output["Credentials"], context);
     }
@@ -27576,12 +25936,7 @@ const deserializeAws_queryAssumeRoleWithWebIdentityResponse = (output, context) 
     return contents;
 };
 const deserializeAws_queryCredentials = (output, context) => {
-    const contents = {
-        AccessKeyId: undefined,
-        SecretAccessKey: undefined,
-        SessionToken: undefined,
-        Expiration: undefined,
-    };
+    const contents = {};
     if (output["AccessKeyId"] !== undefined) {
         contents.AccessKeyId = (0, smithy_client_1.expectString)(output["AccessKeyId"]);
     }
@@ -27597,28 +25952,21 @@ const deserializeAws_queryCredentials = (output, context) => {
     return contents;
 };
 const deserializeAws_queryDecodeAuthorizationMessageResponse = (output, context) => {
-    const contents = {
-        DecodedMessage: undefined,
-    };
+    const contents = {};
     if (output["DecodedMessage"] !== undefined) {
         contents.DecodedMessage = (0, smithy_client_1.expectString)(output["DecodedMessage"]);
     }
     return contents;
 };
 const deserializeAws_queryExpiredTokenException = (output, context) => {
-    const contents = {
-        message: undefined,
-    };
+    const contents = {};
     if (output["message"] !== undefined) {
         contents.message = (0, smithy_client_1.expectString)(output["message"]);
     }
     return contents;
 };
 const deserializeAws_queryFederatedUser = (output, context) => {
-    const contents = {
-        FederatedUserId: undefined,
-        Arn: undefined,
-    };
+    const contents = {};
     if (output["FederatedUserId"] !== undefined) {
         contents.FederatedUserId = (0, smithy_client_1.expectString)(output["FederatedUserId"]);
     }
@@ -27628,20 +25976,14 @@ const deserializeAws_queryFederatedUser = (output, context) => {
     return contents;
 };
 const deserializeAws_queryGetAccessKeyInfoResponse = (output, context) => {
-    const contents = {
-        Account: undefined,
-    };
+    const contents = {};
     if (output["Account"] !== undefined) {
         contents.Account = (0, smithy_client_1.expectString)(output["Account"]);
     }
     return contents;
 };
 const deserializeAws_queryGetCallerIdentityResponse = (output, context) => {
-    const contents = {
-        UserId: undefined,
-        Account: undefined,
-        Arn: undefined,
-    };
+    const contents = {};
     if (output["UserId"] !== undefined) {
         contents.UserId = (0, smithy_client_1.expectString)(output["UserId"]);
     }
@@ -27654,11 +25996,7 @@ const deserializeAws_queryGetCallerIdentityResponse = (output, context) => {
     return contents;
 };
 const deserializeAws_queryGetFederationTokenResponse = (output, context) => {
-    const contents = {
-        Credentials: undefined,
-        FederatedUser: undefined,
-        PackedPolicySize: undefined,
-    };
+    const contents = {};
     if (output["Credentials"] !== undefined) {
         contents.Credentials = deserializeAws_queryCredentials(output["Credentials"], context);
     }
@@ -27671,72 +26009,56 @@ const deserializeAws_queryGetFederationTokenResponse = (output, context) => {
     return contents;
 };
 const deserializeAws_queryGetSessionTokenResponse = (output, context) => {
-    const contents = {
-        Credentials: undefined,
-    };
+    const contents = {};
     if (output["Credentials"] !== undefined) {
         contents.Credentials = deserializeAws_queryCredentials(output["Credentials"], context);
     }
     return contents;
 };
 const deserializeAws_queryIDPCommunicationErrorException = (output, context) => {
-    const contents = {
-        message: undefined,
-    };
+    const contents = {};
     if (output["message"] !== undefined) {
         contents.message = (0, smithy_client_1.expectString)(output["message"]);
     }
     return contents;
 };
 const deserializeAws_queryIDPRejectedClaimException = (output, context) => {
-    const contents = {
-        message: undefined,
-    };
+    const contents = {};
     if (output["message"] !== undefined) {
         contents.message = (0, smithy_client_1.expectString)(output["message"]);
     }
     return contents;
 };
 const deserializeAws_queryInvalidAuthorizationMessageException = (output, context) => {
-    const contents = {
-        message: undefined,
-    };
+    const contents = {};
     if (output["message"] !== undefined) {
         contents.message = (0, smithy_client_1.expectString)(output["message"]);
     }
     return contents;
 };
 const deserializeAws_queryInvalidIdentityTokenException = (output, context) => {
-    const contents = {
-        message: undefined,
-    };
+    const contents = {};
     if (output["message"] !== undefined) {
         contents.message = (0, smithy_client_1.expectString)(output["message"]);
     }
     return contents;
 };
 const deserializeAws_queryMalformedPolicyDocumentException = (output, context) => {
-    const contents = {
-        message: undefined,
-    };
+    const contents = {};
     if (output["message"] !== undefined) {
         contents.message = (0, smithy_client_1.expectString)(output["message"]);
     }
     return contents;
 };
 const deserializeAws_queryPackedPolicyTooLargeException = (output, context) => {
-    const contents = {
-        message: undefined,
-    };
+    const contents = {};
     if (output["message"] !== undefined) {
         contents.message = (0, smithy_client_1.expectString)(output["message"]);
     }
     return contents;
 };
 const deserializeAws_queryRegionDisabledException = (output, context) => {
-    const contents = {
-        message: undefined,
-    };
+    const contents = {};
     if (output["message"] !== undefined) {
         contents.message = (0, smithy_client_1.expectString)(output["message"]);
     }
@@ -30468,9 +28790,7 @@ exports.resolveCredentialSource = resolveCredentialSource;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveProcessCredentials = exports.isProcessProfile = void 0;
 const credential_provider_process_1 = __nccwpck_require__(89969);
-const isProcessProfile = (arg) => Boolean(arg) &&
-    typeof arg === "object" &&
-    typeof arg.credential_process === "string";
+const isProcessProfile = (arg) => Boolean(arg) && typeof arg === "object" && typeof arg.credential_process === "string";
 exports.isProcessProfile = isProcessProfile;
 const resolveProcessCredentials = async (options, profile) => (0, credential_provider_process_1.fromProcess)({
     ...options,
@@ -40025,6 +38345,10 @@ const deserializerMiddleware = (options, deserializer) => (next, context) => asy
         Object.defineProperty(error, "$response", {
             value: response,
         });
+        if (!('$metadata' in error)) {
+            const hint = `Deserialization error: to see the raw response, inspect the hidden field {error}.$response on this object.`;
+            error.message += "\n  " + hint;
+        }
         throw error;
     }
 };
@@ -42806,16 +41130,15 @@ tslib_1.__exportStar(__nccwpck_require__(72198), exports);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.NodeHttpHandler = void 0;
+exports.NodeHttpHandler = exports.DEFAULT_REQUEST_TIMEOUT = void 0;
 const protocol_http_1 = __nccwpck_require__(70223);
 const querystring_builder_1 = __nccwpck_require__(43402);
 const http_1 = __nccwpck_require__(13685);
 const https_1 = __nccwpck_require__(95687);
 const constants_1 = __nccwpck_require__(33647);
 const get_transformed_headers_1 = __nccwpck_require__(96225);
-const set_connection_timeout_1 = __nccwpck_require__(63598);
-const set_socket_timeout_1 = __nccwpck_require__(44751);
 const write_request_body_1 = __nccwpck_require__(5248);
+exports.DEFAULT_REQUEST_TIMEOUT = 0;
 class NodeHttpHandler {
     constructor(options) {
         this.metadata = { handlerProtocol: "http/1.1" };
@@ -42833,12 +41156,14 @@ class NodeHttpHandler {
         });
     }
     resolveDefaultConfig(options) {
-        const { connectionTimeout, socketTimeout, httpAgent, httpsAgent } = options || {};
+        var _a, _b;
+        const { requestTimeout, connectionTimeout, socketTimeout, httpAgent, httpsAgent } = options || {};
         const keepAlive = true;
         const maxSockets = 50;
         return {
             connectionTimeout,
             socketTimeout,
+            requestTimeout: (_b = (_a = requestTimeout !== null && requestTimeout !== void 0 ? requestTimeout : connectionTimeout) !== null && _a !== void 0 ? _a : socketTimeout) !== null && _b !== void 0 ? _b : exports.DEFAULT_REQUEST_TIMEOUT,
             httpAgent: httpAgent || new http_1.Agent({ keepAlive, maxSockets }),
             httpsAgent: httpsAgent || new https_1.Agent({ keepAlive, maxSockets }),
         };
@@ -42853,6 +41178,7 @@ class NodeHttpHandler {
             this.config = await this.configProvider;
         }
         return new Promise((resolve, reject) => {
+            var _a, _b;
             if (!this.config) {
                 throw new Error("Node HTTP request handler config is not resolved");
             }
@@ -42889,8 +41215,11 @@ class NodeHttpHandler {
                     reject(err);
                 }
             });
-            (0, set_connection_timeout_1.setConnectionTimeout)(req, reject, this.config.connectionTimeout);
-            (0, set_socket_timeout_1.setSocketTimeout)(req, reject, this.config.socketTimeout);
+            const timeout = (_b = (_a = this.config) === null || _a === void 0 ? void 0 : _a.requestTimeout) !== null && _b !== void 0 ? _b : exports.DEFAULT_REQUEST_TIMEOUT;
+            req.setTimeout(timeout, () => {
+                req.destroy();
+                reject(Object.assign(new Error(`Connection timed out after ${timeout} ms`), { name: "TimeoutError" }));
+            });
             if (abortSignal) {
                 abortSignal.onabort = () => {
                     req.abort();
@@ -42908,6 +41237,150 @@ exports.NodeHttpHandler = NodeHttpHandler;
 
 /***/ }),
 
+/***/ 36675:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.NodeHttp2ConnectionManager = void 0;
+const tslib_1 = __nccwpck_require__(56495);
+const http2_1 = tslib_1.__importDefault(__nccwpck_require__(85158));
+const node_http2_connection_pool_1 = __nccwpck_require__(74368);
+class NodeHttp2ConnectionManager {
+    constructor(config) {
+        this.sessionCache = new Map();
+        this.config = config;
+        if (this.config.maxConcurrency && this.config.maxConcurrency <= 0) {
+            throw new RangeError("maxConcurrency must be greater than zero.");
+        }
+    }
+    lease(requestContext, connectionConfiguration) {
+        const url = this.getUrlString(requestContext);
+        const existingPool = this.sessionCache.get(url);
+        if (existingPool) {
+            const existingSession = existingPool.poll();
+            if (existingSession && !this.config.disableConcurrency) {
+                return existingSession;
+            }
+        }
+        const session = http2_1.default.connect(url);
+        if (this.config.maxConcurrency) {
+            session.settings({ maxConcurrentStreams: this.config.maxConcurrency }, (err) => {
+                if (err) {
+                    throw new Error("Fail to set maxConcurrentStreams to " +
+                        this.config.maxConcurrency +
+                        "when creating new session for " +
+                        requestContext.destination.toString());
+                }
+            });
+        }
+        session.unref();
+        const destroySessionCb = () => {
+            session.destroy();
+            this.deleteSession(url, session);
+        };
+        session.on("goaway", destroySessionCb);
+        session.on("error", destroySessionCb);
+        session.on("frameError", destroySessionCb);
+        session.on("close", () => this.deleteSession(url, session));
+        if (connectionConfiguration.requestTimeout) {
+            session.setTimeout(connectionConfiguration.requestTimeout, destroySessionCb);
+        }
+        const connectionPool = this.sessionCache.get(url) || new node_http2_connection_pool_1.NodeHttp2ConnectionPool();
+        connectionPool.offerLast(session);
+        this.sessionCache.set(url, connectionPool);
+        return session;
+    }
+    deleteSession(authority, session) {
+        const existingConnectionPool = this.sessionCache.get(authority);
+        if (!existingConnectionPool) {
+            return;
+        }
+        if (!existingConnectionPool.contains(session)) {
+            return;
+        }
+        existingConnectionPool.remove(session);
+        this.sessionCache.set(authority, existingConnectionPool);
+    }
+    release(requestContext, session) {
+        var _a;
+        const cacheKey = this.getUrlString(requestContext);
+        (_a = this.sessionCache.get(cacheKey)) === null || _a === void 0 ? void 0 : _a.offerLast(session);
+    }
+    destroy() {
+        for (const [key, connectionPool] of this.sessionCache) {
+            for (const session of connectionPool) {
+                if (!session.destroyed) {
+                    session.destroy();
+                }
+                connectionPool.remove(session);
+            }
+            this.sessionCache.delete(key);
+        }
+    }
+    setMaxConcurrentStreams(maxConcurrentStreams) {
+        if (this.config.maxConcurrency && this.config.maxConcurrency <= 0) {
+            throw new RangeError("maxConcurrentStreams must be greater than zero.");
+        }
+        this.config.maxConcurrency = maxConcurrentStreams;
+    }
+    setDisableConcurrentStreams(disableConcurrentStreams) {
+        this.config.disableConcurrency = disableConcurrentStreams;
+    }
+    getUrlString(request) {
+        return request.destination.toString();
+    }
+}
+exports.NodeHttp2ConnectionManager = NodeHttp2ConnectionManager;
+
+
+/***/ }),
+
+/***/ 74368:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.NodeHttp2ConnectionPool = void 0;
+class NodeHttp2ConnectionPool {
+    constructor(sessions) {
+        this.sessions = [];
+        this.sessions = sessions !== null && sessions !== void 0 ? sessions : [];
+    }
+    poll() {
+        if (this.sessions.length > 0) {
+            return this.sessions.shift();
+        }
+    }
+    offerLast(session) {
+        this.sessions.push(session);
+    }
+    contains(session) {
+        return this.sessions.includes(session);
+    }
+    remove(session) {
+        this.sessions = this.sessions.filter((s) => s !== session);
+    }
+    [Symbol.iterator]() {
+        return this.sessions[Symbol.iterator]();
+    }
+    destroy(connection) {
+        for (const session of this.sessions) {
+            if (session === connection) {
+                if (!session.destroyed) {
+                    session.destroy();
+                }
+            }
+        }
+    }
+}
+exports.NodeHttp2ConnectionPool = NodeHttp2ConnectionPool;
+
+
+/***/ }),
+
 /***/ 92533:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
@@ -42919,10 +41392,12 @@ const protocol_http_1 = __nccwpck_require__(70223);
 const querystring_builder_1 = __nccwpck_require__(43402);
 const http2_1 = __nccwpck_require__(85158);
 const get_transformed_headers_1 = __nccwpck_require__(96225);
+const node_http2_connection_manager_1 = __nccwpck_require__(36675);
 const write_request_body_1 = __nccwpck_require__(5248);
 class NodeHttp2Handler {
     constructor(options) {
         this.metadata = { handlerProtocol: "h2" };
+        this.connectionManager = new node_http2_connection_manager_1.NodeHttp2ConnectionManager({});
         this.configProvider = new Promise((resolve, reject) => {
             if (typeof options === "function") {
                 options()
@@ -42935,20 +41410,21 @@ class NodeHttp2Handler {
                 resolve(options || {});
             }
         });
-        this.sessionCache = new Map();
     }
     destroy() {
-        for (const sessions of this.sessionCache.values()) {
-            sessions.forEach((session) => this.destroySession(session));
-        }
-        this.sessionCache.clear();
+        this.connectionManager.destroy();
     }
     async handle(request, { abortSignal } = {}) {
         if (!this.config) {
             this.config = await this.configProvider;
+            this.connectionManager.setDisableConcurrentStreams(this.config.disableConcurrentStreams || false);
+            if (this.config.maxConcurrentStreams) {
+                this.connectionManager.setMaxConcurrentStreams(this.config.maxConcurrentStreams);
+            }
         }
         const { requestTimeout, disableConcurrentStreams } = this.config;
         return new Promise((resolve, rejectOriginal) => {
+            var _a;
             let fulfilled = false;
             if (abortSignal === null || abortSignal === void 0 ? void 0 : abortSignal.aborted) {
                 fulfilled = true;
@@ -42959,7 +41435,11 @@ class NodeHttp2Handler {
             }
             const { hostname, method, port, protocol, path, query } = request;
             const authority = `${protocol}//${hostname}${port ? `:${port}` : ""}`;
-            const session = this.getSession(authority, disableConcurrentStreams || false);
+            const requestContext = { destination: new URL(authority) };
+            const session = this.connectionManager.lease(requestContext, {
+                requestTimeout: (_a = this.config) === null || _a === void 0 ? void 0 : _a.sessionTimeout,
+                disableConcurrentStreams: disableConcurrentStreams || false,
+            });
             const reject = (err) => {
                 if (disableConcurrentStreams) {
                     this.destroySession(session);
@@ -42984,7 +41464,7 @@ class NodeHttp2Handler {
                 resolve({ response: httpResponse });
                 if (disableConcurrentStreams) {
                     session.close();
-                    this.deleteSessionFromCache(authority, session);
+                    this.connectionManager.deleteSession(authority, session);
                 }
             });
             if (requestTimeout) {
@@ -43022,91 +41502,13 @@ class NodeHttp2Handler {
             (0, write_request_body_1.writeRequestBody)(req, request);
         });
     }
-    getSession(authority, disableConcurrentStreams) {
-        var _a;
-        const sessionCache = this.sessionCache;
-        const existingSessions = sessionCache.get(authority) || [];
-        if (existingSessions.length > 0 && !disableConcurrentStreams)
-            return existingSessions[0];
-        const newSession = (0, http2_1.connect)(authority);
-        newSession.unref();
-        const destroySessionCb = () => {
-            this.destroySession(newSession);
-            this.deleteSessionFromCache(authority, newSession);
-        };
-        newSession.on("goaway", destroySessionCb);
-        newSession.on("error", destroySessionCb);
-        newSession.on("frameError", destroySessionCb);
-        newSession.on("close", () => this.deleteSessionFromCache(authority, newSession));
-        if ((_a = this.config) === null || _a === void 0 ? void 0 : _a.sessionTimeout) {
-            newSession.setTimeout(this.config.sessionTimeout, destroySessionCb);
-        }
-        existingSessions.push(newSession);
-        sessionCache.set(authority, existingSessions);
-        return newSession;
-    }
     destroySession(session) {
         if (!session.destroyed) {
             session.destroy();
         }
     }
-    deleteSessionFromCache(authority, session) {
-        const existingSessions = this.sessionCache.get(authority) || [];
-        if (!existingSessions.includes(session)) {
-            return;
-        }
-        this.sessionCache.set(authority, existingSessions.filter((s) => s !== session));
-    }
 }
 exports.NodeHttp2Handler = NodeHttp2Handler;
-
-
-/***/ }),
-
-/***/ 63598:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.setConnectionTimeout = void 0;
-const setConnectionTimeout = (request, reject, timeoutInMs = 0) => {
-    if (!timeoutInMs) {
-        return;
-    }
-    request.on("socket", (socket) => {
-        if (socket.connecting) {
-            const timeoutId = setTimeout(() => {
-                request.destroy();
-                reject(Object.assign(new Error(`Socket timed out without establishing a connection within ${timeoutInMs} ms`), {
-                    name: "TimeoutError",
-                }));
-            }, timeoutInMs);
-            socket.on("connect", () => {
-                clearTimeout(timeoutId);
-            });
-        }
-    });
-};
-exports.setConnectionTimeout = setConnectionTimeout;
-
-
-/***/ }),
-
-/***/ 44751:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.setSocketTimeout = void 0;
-const setSocketTimeout = (request, reject, timeoutInMs = 0) => {
-    request.setTimeout(timeoutInMs, () => {
-        request.destroy();
-        reject(Object.assign(new Error(`Connection timed out after ${timeoutInMs} ms`), { name: "TimeoutError" }));
-    });
-};
-exports.setSocketTimeout = setSocketTimeout;
 
 
 /***/ }),
@@ -45087,6 +43489,32 @@ exports.loadSsoSessionData = loadSsoSessionData;
 
 /***/ }),
 
+/***/ 81224:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.mergeConfigFiles = void 0;
+const mergeConfigFiles = (...files) => {
+    const merged = {};
+    for (const file of files) {
+        for (const [key, values] of Object.entries(file)) {
+            if (merged[key] !== undefined) {
+                Object.assign(merged[key], values);
+            }
+            else {
+                merged[key] = values;
+            }
+        }
+    }
+    return merged;
+};
+exports.mergeConfigFiles = mergeConfigFiles;
+
+
+/***/ }),
+
 /***/ 82806:
 /***/ ((__unused_webpack_module, exports) => {
 
@@ -45137,12 +43565,10 @@ exports.parseIni = parseIni;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseKnownFiles = void 0;
 const loadSharedConfigFiles_1 = __nccwpck_require__(57871);
+const mergeConfigFiles_1 = __nccwpck_require__(81224);
 const parseKnownFiles = async (init) => {
     const parsedFiles = await (0, loadSharedConfigFiles_1.loadSharedConfigFiles)(init);
-    return {
-        ...parsedFiles.configFile,
-        ...parsedFiles.credentialsFile,
-    };
+    return (0, mergeConfigFiles_1.mergeConfigFiles)(parsedFiles.configFile, parsedFiles.credentialsFile);
 };
 exports.parseKnownFiles = parseKnownFiles;
 
@@ -48980,6 +47406,50 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 /***/ }),
 
+/***/ 23213:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 30820:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const tslib_1 = __nccwpck_require__(94333);
+tslib_1.__exportStar(__nccwpck_require__(23213), exports);
+tslib_1.__exportStar(__nccwpck_require__(76781), exports);
+tslib_1.__exportStar(__nccwpck_require__(14515), exports);
+
+
+/***/ }),
+
+/***/ 76781:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
+/***/ 14515:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+
 /***/ 67736:
 /***/ ((__unused_webpack_module, exports) => {
 
@@ -49130,6 +47600,7 @@ tslib_1.__exportStar(__nccwpck_require__(26913), exports);
 tslib_1.__exportStar(__nccwpck_require__(65861), exports);
 tslib_1.__exportStar(__nccwpck_require__(76527), exports);
 tslib_1.__exportStar(__nccwpck_require__(48470), exports);
+tslib_1.__exportStar(__nccwpck_require__(30820), exports);
 tslib_1.__exportStar(__nccwpck_require__(67736), exports);
 tslib_1.__exportStar(__nccwpck_require__(13268), exports);
 tslib_1.__exportStar(__nccwpck_require__(90142), exports);
@@ -49282,6 +47753,13 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.RequestHandlerProtocol = void 0;
+var RequestHandlerProtocol;
+(function (RequestHandlerProtocol) {
+    RequestHandlerProtocol["HTTP_0_9"] = "http/0.9";
+    RequestHandlerProtocol["HTTP_1_0"] = "http/1.0";
+    RequestHandlerProtocol["TDS_8_0"] = "tds/8.0";
+})(RequestHandlerProtocol = exports.RequestHandlerProtocol || (exports.RequestHandlerProtocol = {}));
 
 
 /***/ }),
@@ -56213,11 +54691,6 @@ exports.XmlNode = void 0;
 const escape_attribute_1 = __nccwpck_require__(16508);
 const XmlText_1 = __nccwpck_require__(82656);
 class XmlNode {
-    constructor(name, children = []) {
-        this.name = name;
-        this.children = children;
-        this.attributes = {};
-    }
     static of(name, childText, withName) {
         const node = new XmlNode(name);
         if (childText !== undefined) {
@@ -56227,6 +54700,11 @@ class XmlNode {
             node.withName(withName);
         }
         return node;
+    }
+    constructor(name, children = []) {
+        this.name = name;
+        this.children = children;
+        this.attributes = {};
     }
     withName(name) {
         this.name = name;
@@ -67425,7 +65903,7 @@ module.exports = require("util");
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.294.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo s3","test":"yarn test:unit","test:e2e":"ts-mocha test/**/*.ispec.ts && karma start karma.conf.js","test:unit":"ts-mocha test/**/*.spec.ts"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha1-browser":"3.0.0","@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.294.0","@aws-sdk/config-resolver":"3.292.0","@aws-sdk/credential-provider-node":"3.294.0","@aws-sdk/eventstream-serde-browser":"3.292.0","@aws-sdk/eventstream-serde-config-resolver":"3.292.0","@aws-sdk/eventstream-serde-node":"3.292.0","@aws-sdk/fetch-http-handler":"3.292.0","@aws-sdk/hash-blob-browser":"3.292.0","@aws-sdk/hash-node":"3.292.0","@aws-sdk/hash-stream-node":"3.292.0","@aws-sdk/invalid-dependency":"3.292.0","@aws-sdk/md5-js":"3.292.0","@aws-sdk/middleware-bucket-endpoint":"3.292.0","@aws-sdk/middleware-content-length":"3.292.0","@aws-sdk/middleware-endpoint":"3.292.0","@aws-sdk/middleware-expect-continue":"3.292.0","@aws-sdk/middleware-flexible-checksums":"3.292.0","@aws-sdk/middleware-host-header":"3.292.0","@aws-sdk/middleware-location-constraint":"3.292.0","@aws-sdk/middleware-logger":"3.292.0","@aws-sdk/middleware-recursion-detection":"3.292.0","@aws-sdk/middleware-retry":"3.293.0","@aws-sdk/middleware-sdk-s3":"3.292.0","@aws-sdk/middleware-serde":"3.292.0","@aws-sdk/middleware-signing":"3.292.0","@aws-sdk/middleware-ssec":"3.292.0","@aws-sdk/middleware-stack":"3.292.0","@aws-sdk/middleware-user-agent":"3.293.0","@aws-sdk/node-config-provider":"3.292.0","@aws-sdk/node-http-handler":"3.292.0","@aws-sdk/protocol-http":"3.292.0","@aws-sdk/signature-v4-multi-region":"3.292.0","@aws-sdk/smithy-client":"3.292.0","@aws-sdk/types":"3.292.0","@aws-sdk/url-parser":"3.292.0","@aws-sdk/util-base64":"3.292.0","@aws-sdk/util-body-length-browser":"3.292.0","@aws-sdk/util-body-length-node":"3.292.0","@aws-sdk/util-defaults-mode-browser":"3.292.0","@aws-sdk/util-defaults-mode-node":"3.292.0","@aws-sdk/util-endpoints":"3.293.0","@aws-sdk/util-retry":"3.292.0","@aws-sdk/util-stream-browser":"3.292.0","@aws-sdk/util-stream-node":"3.292.0","@aws-sdk/util-user-agent-browser":"3.292.0","@aws-sdk/util-user-agent-node":"3.292.0","@aws-sdk/util-utf8":"3.292.0","@aws-sdk/util-waiter":"3.292.0","@aws-sdk/xml-builder":"3.292.0","fast-xml-parser":"4.1.2","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.293.0","@tsconfig/node14":"1.0.3","@types/chai":"^4.2.11","@types/mocha":"^8.0.4","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.6.2"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.306.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo s3","test":"yarn test:unit","test:e2e":"ts-mocha test/**/*.ispec.ts && karma start karma.conf.js","test:unit":"ts-mocha test/**/*.spec.ts"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha1-browser":"3.0.0","@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.306.0","@aws-sdk/config-resolver":"3.306.0","@aws-sdk/credential-provider-node":"3.306.0","@aws-sdk/eventstream-serde-browser":"3.306.0","@aws-sdk/eventstream-serde-config-resolver":"3.306.0","@aws-sdk/eventstream-serde-node":"3.306.0","@aws-sdk/fetch-http-handler":"3.306.0","@aws-sdk/hash-blob-browser":"3.306.0","@aws-sdk/hash-node":"3.306.0","@aws-sdk/hash-stream-node":"3.306.0","@aws-sdk/invalid-dependency":"3.306.0","@aws-sdk/md5-js":"3.306.0","@aws-sdk/middleware-bucket-endpoint":"3.306.0","@aws-sdk/middleware-content-length":"3.306.0","@aws-sdk/middleware-endpoint":"3.306.0","@aws-sdk/middleware-expect-continue":"3.306.0","@aws-sdk/middleware-flexible-checksums":"3.306.0","@aws-sdk/middleware-host-header":"3.306.0","@aws-sdk/middleware-location-constraint":"3.306.0","@aws-sdk/middleware-logger":"3.306.0","@aws-sdk/middleware-recursion-detection":"3.306.0","@aws-sdk/middleware-retry":"3.306.0","@aws-sdk/middleware-sdk-s3":"3.306.0","@aws-sdk/middleware-serde":"3.306.0","@aws-sdk/middleware-signing":"3.306.0","@aws-sdk/middleware-ssec":"3.306.0","@aws-sdk/middleware-stack":"3.306.0","@aws-sdk/middleware-user-agent":"3.306.0","@aws-sdk/node-config-provider":"3.306.0","@aws-sdk/node-http-handler":"3.306.0","@aws-sdk/protocol-http":"3.306.0","@aws-sdk/signature-v4-multi-region":"3.306.0","@aws-sdk/smithy-client":"3.306.0","@aws-sdk/types":"3.306.0","@aws-sdk/url-parser":"3.306.0","@aws-sdk/util-base64":"3.303.0","@aws-sdk/util-body-length-browser":"3.303.0","@aws-sdk/util-body-length-node":"3.303.0","@aws-sdk/util-defaults-mode-browser":"3.306.0","@aws-sdk/util-defaults-mode-node":"3.306.0","@aws-sdk/util-endpoints":"3.306.0","@aws-sdk/util-retry":"3.306.0","@aws-sdk/util-stream-browser":"3.306.0","@aws-sdk/util-stream-node":"3.306.0","@aws-sdk/util-user-agent-browser":"3.306.0","@aws-sdk/util-user-agent-node":"3.306.0","@aws-sdk/util-utf8":"3.303.0","@aws-sdk/util-waiter":"3.306.0","@aws-sdk/xml-builder":"3.303.0","fast-xml-parser":"4.1.2","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.303.0","@tsconfig/node14":"1.0.3","@types/chai":"^4.2.11","@types/mocha":"^8.0.4","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
 
 /***/ }),
 
@@ -67433,7 +65911,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"AWS SDK for JavaScript Sso Oidc Client for Node.js, Browser and React Native","version":"3.294.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sso-oidc"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.292.0","@aws-sdk/fetch-http-handler":"3.292.0","@aws-sdk/hash-node":"3.292.0","@aws-sdk/invalid-dependency":"3.292.0","@aws-sdk/middleware-content-length":"3.292.0","@aws-sdk/middleware-endpoint":"3.292.0","@aws-sdk/middleware-host-header":"3.292.0","@aws-sdk/middleware-logger":"3.292.0","@aws-sdk/middleware-recursion-detection":"3.292.0","@aws-sdk/middleware-retry":"3.293.0","@aws-sdk/middleware-serde":"3.292.0","@aws-sdk/middleware-stack":"3.292.0","@aws-sdk/middleware-user-agent":"3.293.0","@aws-sdk/node-config-provider":"3.292.0","@aws-sdk/node-http-handler":"3.292.0","@aws-sdk/protocol-http":"3.292.0","@aws-sdk/smithy-client":"3.292.0","@aws-sdk/types":"3.292.0","@aws-sdk/url-parser":"3.292.0","@aws-sdk/util-base64":"3.292.0","@aws-sdk/util-body-length-browser":"3.292.0","@aws-sdk/util-body-length-node":"3.292.0","@aws-sdk/util-defaults-mode-browser":"3.292.0","@aws-sdk/util-defaults-mode-node":"3.292.0","@aws-sdk/util-endpoints":"3.293.0","@aws-sdk/util-retry":"3.292.0","@aws-sdk/util-user-agent-browser":"3.292.0","@aws-sdk/util-user-agent-node":"3.292.0","@aws-sdk/util-utf8":"3.292.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.293.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.6.2"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso-oidc","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso-oidc"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"AWS SDK for JavaScript Sso Oidc Client for Node.js, Browser and React Native","version":"3.306.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sso-oidc"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.306.0","@aws-sdk/fetch-http-handler":"3.306.0","@aws-sdk/hash-node":"3.306.0","@aws-sdk/invalid-dependency":"3.306.0","@aws-sdk/middleware-content-length":"3.306.0","@aws-sdk/middleware-endpoint":"3.306.0","@aws-sdk/middleware-host-header":"3.306.0","@aws-sdk/middleware-logger":"3.306.0","@aws-sdk/middleware-recursion-detection":"3.306.0","@aws-sdk/middleware-retry":"3.306.0","@aws-sdk/middleware-serde":"3.306.0","@aws-sdk/middleware-stack":"3.306.0","@aws-sdk/middleware-user-agent":"3.306.0","@aws-sdk/node-config-provider":"3.306.0","@aws-sdk/node-http-handler":"3.306.0","@aws-sdk/protocol-http":"3.306.0","@aws-sdk/smithy-client":"3.306.0","@aws-sdk/types":"3.306.0","@aws-sdk/url-parser":"3.306.0","@aws-sdk/util-base64":"3.303.0","@aws-sdk/util-body-length-browser":"3.303.0","@aws-sdk/util-body-length-node":"3.303.0","@aws-sdk/util-defaults-mode-browser":"3.306.0","@aws-sdk/util-defaults-mode-node":"3.306.0","@aws-sdk/util-endpoints":"3.306.0","@aws-sdk/util-retry":"3.306.0","@aws-sdk/util-user-agent-browser":"3.306.0","@aws-sdk/util-user-agent-node":"3.306.0","@aws-sdk/util-utf8":"3.303.0","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.303.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso-oidc","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso-oidc"}}');
 
 /***/ }),
 
@@ -67441,7 +65919,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"A
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.294.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sso"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.292.0","@aws-sdk/fetch-http-handler":"3.292.0","@aws-sdk/hash-node":"3.292.0","@aws-sdk/invalid-dependency":"3.292.0","@aws-sdk/middleware-content-length":"3.292.0","@aws-sdk/middleware-endpoint":"3.292.0","@aws-sdk/middleware-host-header":"3.292.0","@aws-sdk/middleware-logger":"3.292.0","@aws-sdk/middleware-recursion-detection":"3.292.0","@aws-sdk/middleware-retry":"3.293.0","@aws-sdk/middleware-serde":"3.292.0","@aws-sdk/middleware-stack":"3.292.0","@aws-sdk/middleware-user-agent":"3.293.0","@aws-sdk/node-config-provider":"3.292.0","@aws-sdk/node-http-handler":"3.292.0","@aws-sdk/protocol-http":"3.292.0","@aws-sdk/smithy-client":"3.292.0","@aws-sdk/types":"3.292.0","@aws-sdk/url-parser":"3.292.0","@aws-sdk/util-base64":"3.292.0","@aws-sdk/util-body-length-browser":"3.292.0","@aws-sdk/util-body-length-node":"3.292.0","@aws-sdk/util-defaults-mode-browser":"3.292.0","@aws-sdk/util-defaults-mode-node":"3.292.0","@aws-sdk/util-endpoints":"3.293.0","@aws-sdk/util-retry":"3.292.0","@aws-sdk/util-user-agent-browser":"3.292.0","@aws-sdk/util-user-agent-node":"3.292.0","@aws-sdk/util-utf8":"3.292.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.293.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.6.2"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.306.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sso"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.306.0","@aws-sdk/fetch-http-handler":"3.306.0","@aws-sdk/hash-node":"3.306.0","@aws-sdk/invalid-dependency":"3.306.0","@aws-sdk/middleware-content-length":"3.306.0","@aws-sdk/middleware-endpoint":"3.306.0","@aws-sdk/middleware-host-header":"3.306.0","@aws-sdk/middleware-logger":"3.306.0","@aws-sdk/middleware-recursion-detection":"3.306.0","@aws-sdk/middleware-retry":"3.306.0","@aws-sdk/middleware-serde":"3.306.0","@aws-sdk/middleware-stack":"3.306.0","@aws-sdk/middleware-user-agent":"3.306.0","@aws-sdk/node-config-provider":"3.306.0","@aws-sdk/node-http-handler":"3.306.0","@aws-sdk/protocol-http":"3.306.0","@aws-sdk/smithy-client":"3.306.0","@aws-sdk/types":"3.306.0","@aws-sdk/url-parser":"3.306.0","@aws-sdk/util-base64":"3.303.0","@aws-sdk/util-body-length-browser":"3.303.0","@aws-sdk/util-body-length-node":"3.303.0","@aws-sdk/util-defaults-mode-browser":"3.306.0","@aws-sdk/util-defaults-mode-node":"3.306.0","@aws-sdk/util-endpoints":"3.306.0","@aws-sdk/util-retry":"3.306.0","@aws-sdk/util-user-agent-browser":"3.306.0","@aws-sdk/util-user-agent-node":"3.306.0","@aws-sdk/util-utf8":"3.303.0","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.303.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
 
 /***/ }),
 
@@ -67449,7 +65927,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.294.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sts","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.292.0","@aws-sdk/credential-provider-node":"3.294.0","@aws-sdk/fetch-http-handler":"3.292.0","@aws-sdk/hash-node":"3.292.0","@aws-sdk/invalid-dependency":"3.292.0","@aws-sdk/middleware-content-length":"3.292.0","@aws-sdk/middleware-endpoint":"3.292.0","@aws-sdk/middleware-host-header":"3.292.0","@aws-sdk/middleware-logger":"3.292.0","@aws-sdk/middleware-recursion-detection":"3.292.0","@aws-sdk/middleware-retry":"3.293.0","@aws-sdk/middleware-sdk-sts":"3.292.0","@aws-sdk/middleware-serde":"3.292.0","@aws-sdk/middleware-signing":"3.292.0","@aws-sdk/middleware-stack":"3.292.0","@aws-sdk/middleware-user-agent":"3.293.0","@aws-sdk/node-config-provider":"3.292.0","@aws-sdk/node-http-handler":"3.292.0","@aws-sdk/protocol-http":"3.292.0","@aws-sdk/smithy-client":"3.292.0","@aws-sdk/types":"3.292.0","@aws-sdk/url-parser":"3.292.0","@aws-sdk/util-base64":"3.292.0","@aws-sdk/util-body-length-browser":"3.292.0","@aws-sdk/util-body-length-node":"3.292.0","@aws-sdk/util-defaults-mode-browser":"3.292.0","@aws-sdk/util-defaults-mode-node":"3.292.0","@aws-sdk/util-endpoints":"3.293.0","@aws-sdk/util-retry":"3.292.0","@aws-sdk/util-user-agent-browser":"3.292.0","@aws-sdk/util-user-agent-node":"3.292.0","@aws-sdk/util-utf8":"3.292.0","fast-xml-parser":"4.1.2","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.293.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.6.2"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.306.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sts","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.306.0","@aws-sdk/credential-provider-node":"3.306.0","@aws-sdk/fetch-http-handler":"3.306.0","@aws-sdk/hash-node":"3.306.0","@aws-sdk/invalid-dependency":"3.306.0","@aws-sdk/middleware-content-length":"3.306.0","@aws-sdk/middleware-endpoint":"3.306.0","@aws-sdk/middleware-host-header":"3.306.0","@aws-sdk/middleware-logger":"3.306.0","@aws-sdk/middleware-recursion-detection":"3.306.0","@aws-sdk/middleware-retry":"3.306.0","@aws-sdk/middleware-sdk-sts":"3.306.0","@aws-sdk/middleware-serde":"3.306.0","@aws-sdk/middleware-signing":"3.306.0","@aws-sdk/middleware-stack":"3.306.0","@aws-sdk/middleware-user-agent":"3.306.0","@aws-sdk/node-config-provider":"3.306.0","@aws-sdk/node-http-handler":"3.306.0","@aws-sdk/protocol-http":"3.306.0","@aws-sdk/smithy-client":"3.306.0","@aws-sdk/types":"3.306.0","@aws-sdk/url-parser":"3.306.0","@aws-sdk/util-base64":"3.303.0","@aws-sdk/util-body-length-browser":"3.303.0","@aws-sdk/util-body-length-node":"3.303.0","@aws-sdk/util-defaults-mode-browser":"3.306.0","@aws-sdk/util-defaults-mode-node":"3.306.0","@aws-sdk/util-endpoints":"3.306.0","@aws-sdk/util-retry":"3.306.0","@aws-sdk/util-user-agent-browser":"3.306.0","@aws-sdk/util-user-agent-node":"3.306.0","@aws-sdk/util-utf8":"3.303.0","fast-xml-parser":"4.1.2","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.303.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
 
 /***/ }),
 
