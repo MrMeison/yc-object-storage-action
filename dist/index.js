@@ -3902,10 +3902,10 @@ class AbortMultipartUploadCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlAbortMultipartUploadCommand)(input, context);
+        return (0, Aws_restXml_1.se_AbortMultipartUploadCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlAbortMultipartUploadCommand)(output, context);
+        return (0, Aws_restXml_1.de_AbortMultipartUploadCommand)(output, context);
     }
 }
 exports.AbortMultipartUploadCommand = AbortMultipartUploadCommand;
@@ -3966,10 +3966,10 @@ class CompleteMultipartUploadCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlCompleteMultipartUploadCommand)(input, context);
+        return (0, Aws_restXml_1.se_CompleteMultipartUploadCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlCompleteMultipartUploadCommand)(output, context);
+        return (0, Aws_restXml_1.de_CompleteMultipartUploadCommand)(output, context);
     }
 }
 exports.CompleteMultipartUploadCommand = CompleteMultipartUploadCommand;
@@ -4030,10 +4030,10 @@ class CopyObjectCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlCopyObjectCommand)(input, context);
+        return (0, Aws_restXml_1.se_CopyObjectCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlCopyObjectCommand)(output, context);
+        return (0, Aws_restXml_1.de_CopyObjectCommand)(output, context);
     }
 }
 exports.CopyObjectCommand = CopyObjectCommand;
@@ -4092,10 +4092,10 @@ class CreateBucketCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlCreateBucketCommand)(input, context);
+        return (0, Aws_restXml_1.se_CreateBucketCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlCreateBucketCommand)(output, context);
+        return (0, Aws_restXml_1.de_CreateBucketCommand)(output, context);
     }
 }
 exports.CreateBucketCommand = CreateBucketCommand;
@@ -4154,10 +4154,10 @@ class CreateMultipartUploadCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlCreateMultipartUploadCommand)(input, context);
+        return (0, Aws_restXml_1.se_CreateMultipartUploadCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlCreateMultipartUploadCommand)(output, context);
+        return (0, Aws_restXml_1.de_CreateMultipartUploadCommand)(output, context);
     }
 }
 exports.CreateMultipartUploadCommand = CreateMultipartUploadCommand;
@@ -4213,10 +4213,10 @@ class DeleteBucketAnalyticsConfigurationCommand extends smithy_client_1.Command 
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeleteBucketAnalyticsConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeleteBucketAnalyticsConfigurationCommand)(output, context);
     }
 }
 exports.DeleteBucketAnalyticsConfigurationCommand = DeleteBucketAnalyticsConfigurationCommand;
@@ -4272,10 +4272,10 @@ class DeleteBucketCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeleteBucketCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeleteBucketCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeleteBucketCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeleteBucketCommand)(output, context);
     }
 }
 exports.DeleteBucketCommand = DeleteBucketCommand;
@@ -4331,10 +4331,10 @@ class DeleteBucketCorsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeleteBucketCorsCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeleteBucketCorsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeleteBucketCorsCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeleteBucketCorsCommand)(output, context);
     }
 }
 exports.DeleteBucketCorsCommand = DeleteBucketCorsCommand;
@@ -4390,10 +4390,10 @@ class DeleteBucketEncryptionCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeleteBucketEncryptionCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeleteBucketEncryptionCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeleteBucketEncryptionCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeleteBucketEncryptionCommand)(output, context);
     }
 }
 exports.DeleteBucketEncryptionCommand = DeleteBucketEncryptionCommand;
@@ -4449,10 +4449,10 @@ class DeleteBucketIntelligentTieringConfigurationCommand extends smithy_client_1
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeleteBucketIntelligentTieringConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeleteBucketIntelligentTieringConfigurationCommand)(output, context);
     }
 }
 exports.DeleteBucketIntelligentTieringConfigurationCommand = DeleteBucketIntelligentTieringConfigurationCommand;
@@ -4508,10 +4508,10 @@ class DeleteBucketInventoryConfigurationCommand extends smithy_client_1.Command 
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeleteBucketInventoryConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeleteBucketInventoryConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeleteBucketInventoryConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeleteBucketInventoryConfigurationCommand)(output, context);
     }
 }
 exports.DeleteBucketInventoryConfigurationCommand = DeleteBucketInventoryConfigurationCommand;
@@ -4567,10 +4567,10 @@ class DeleteBucketLifecycleCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeleteBucketLifecycleCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeleteBucketLifecycleCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeleteBucketLifecycleCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeleteBucketLifecycleCommand)(output, context);
     }
 }
 exports.DeleteBucketLifecycleCommand = DeleteBucketLifecycleCommand;
@@ -4626,10 +4626,10 @@ class DeleteBucketMetricsConfigurationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeleteBucketMetricsConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeleteBucketMetricsConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeleteBucketMetricsConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeleteBucketMetricsConfigurationCommand)(output, context);
     }
 }
 exports.DeleteBucketMetricsConfigurationCommand = DeleteBucketMetricsConfigurationCommand;
@@ -4685,10 +4685,10 @@ class DeleteBucketOwnershipControlsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeleteBucketOwnershipControlsCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeleteBucketOwnershipControlsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeleteBucketOwnershipControlsCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeleteBucketOwnershipControlsCommand)(output, context);
     }
 }
 exports.DeleteBucketOwnershipControlsCommand = DeleteBucketOwnershipControlsCommand;
@@ -4744,10 +4744,10 @@ class DeleteBucketPolicyCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeleteBucketPolicyCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeleteBucketPolicyCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeleteBucketPolicyCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeleteBucketPolicyCommand)(output, context);
     }
 }
 exports.DeleteBucketPolicyCommand = DeleteBucketPolicyCommand;
@@ -4803,10 +4803,10 @@ class DeleteBucketReplicationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeleteBucketReplicationCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeleteBucketReplicationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeleteBucketReplicationCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeleteBucketReplicationCommand)(output, context);
     }
 }
 exports.DeleteBucketReplicationCommand = DeleteBucketReplicationCommand;
@@ -4862,10 +4862,10 @@ class DeleteBucketTaggingCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeleteBucketTaggingCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeleteBucketTaggingCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeleteBucketTaggingCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeleteBucketTaggingCommand)(output, context);
     }
 }
 exports.DeleteBucketTaggingCommand = DeleteBucketTaggingCommand;
@@ -4921,10 +4921,10 @@ class DeleteBucketWebsiteCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeleteBucketWebsiteCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeleteBucketWebsiteCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeleteBucketWebsiteCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeleteBucketWebsiteCommand)(output, context);
     }
 }
 exports.DeleteBucketWebsiteCommand = DeleteBucketWebsiteCommand;
@@ -4980,10 +4980,10 @@ class DeleteObjectCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeleteObjectCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeleteObjectCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeleteObjectCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeleteObjectCommand)(output, context);
     }
 }
 exports.DeleteObjectCommand = DeleteObjectCommand;
@@ -5039,10 +5039,10 @@ class DeleteObjectTaggingCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeleteObjectTaggingCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeleteObjectTaggingCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeleteObjectTaggingCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeleteObjectTaggingCommand)(output, context);
     }
 }
 exports.DeleteObjectTaggingCommand = DeleteObjectTaggingCommand;
@@ -5104,10 +5104,10 @@ class DeleteObjectsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeleteObjectsCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeleteObjectsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeleteObjectsCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeleteObjectsCommand)(output, context);
     }
 }
 exports.DeleteObjectsCommand = DeleteObjectsCommand;
@@ -5163,10 +5163,10 @@ class DeletePublicAccessBlockCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlDeletePublicAccessBlockCommand)(input, context);
+        return (0, Aws_restXml_1.se_DeletePublicAccessBlockCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlDeletePublicAccessBlockCommand)(output, context);
+        return (0, Aws_restXml_1.de_DeletePublicAccessBlockCommand)(output, context);
     }
 }
 exports.DeletePublicAccessBlockCommand = DeletePublicAccessBlockCommand;
@@ -5222,10 +5222,10 @@ class GetBucketAccelerateConfigurationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketAccelerateConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketAccelerateConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketAccelerateConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketAccelerateConfigurationCommand)(output, context);
     }
 }
 exports.GetBucketAccelerateConfigurationCommand = GetBucketAccelerateConfigurationCommand;
@@ -5281,10 +5281,10 @@ class GetBucketAclCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketAclCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketAclCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketAclCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketAclCommand)(output, context);
     }
 }
 exports.GetBucketAclCommand = GetBucketAclCommand;
@@ -5340,10 +5340,10 @@ class GetBucketAnalyticsConfigurationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketAnalyticsConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketAnalyticsConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketAnalyticsConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketAnalyticsConfigurationCommand)(output, context);
     }
 }
 exports.GetBucketAnalyticsConfigurationCommand = GetBucketAnalyticsConfigurationCommand;
@@ -5399,10 +5399,10 @@ class GetBucketCorsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketCorsCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketCorsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketCorsCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketCorsCommand)(output, context);
     }
 }
 exports.GetBucketCorsCommand = GetBucketCorsCommand;
@@ -5459,10 +5459,10 @@ class GetBucketEncryptionCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketEncryptionCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketEncryptionCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketEncryptionCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketEncryptionCommand)(output, context);
     }
 }
 exports.GetBucketEncryptionCommand = GetBucketEncryptionCommand;
@@ -5518,10 +5518,10 @@ class GetBucketIntelligentTieringConfigurationCommand extends smithy_client_1.Co
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketIntelligentTieringConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketIntelligentTieringConfigurationCommand)(output, context);
     }
 }
 exports.GetBucketIntelligentTieringConfigurationCommand = GetBucketIntelligentTieringConfigurationCommand;
@@ -5578,10 +5578,10 @@ class GetBucketInventoryConfigurationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketInventoryConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketInventoryConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketInventoryConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketInventoryConfigurationCommand)(output, context);
     }
 }
 exports.GetBucketInventoryConfigurationCommand = GetBucketInventoryConfigurationCommand;
@@ -5637,10 +5637,10 @@ class GetBucketLifecycleConfigurationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketLifecycleConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketLifecycleConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketLifecycleConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketLifecycleConfigurationCommand)(output, context);
     }
 }
 exports.GetBucketLifecycleConfigurationCommand = GetBucketLifecycleConfigurationCommand;
@@ -5696,10 +5696,10 @@ class GetBucketLocationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketLocationCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketLocationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketLocationCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketLocationCommand)(output, context);
     }
 }
 exports.GetBucketLocationCommand = GetBucketLocationCommand;
@@ -5755,10 +5755,10 @@ class GetBucketLoggingCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketLoggingCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketLoggingCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketLoggingCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketLoggingCommand)(output, context);
     }
 }
 exports.GetBucketLoggingCommand = GetBucketLoggingCommand;
@@ -5814,10 +5814,10 @@ class GetBucketMetricsConfigurationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketMetricsConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketMetricsConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketMetricsConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketMetricsConfigurationCommand)(output, context);
     }
 }
 exports.GetBucketMetricsConfigurationCommand = GetBucketMetricsConfigurationCommand;
@@ -5873,10 +5873,10 @@ class GetBucketNotificationConfigurationCommand extends smithy_client_1.Command 
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketNotificationConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketNotificationConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketNotificationConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketNotificationConfigurationCommand)(output, context);
     }
 }
 exports.GetBucketNotificationConfigurationCommand = GetBucketNotificationConfigurationCommand;
@@ -5932,10 +5932,10 @@ class GetBucketOwnershipControlsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketOwnershipControlsCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketOwnershipControlsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketOwnershipControlsCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketOwnershipControlsCommand)(output, context);
     }
 }
 exports.GetBucketOwnershipControlsCommand = GetBucketOwnershipControlsCommand;
@@ -5991,10 +5991,10 @@ class GetBucketPolicyCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketPolicyCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketPolicyCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketPolicyCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketPolicyCommand)(output, context);
     }
 }
 exports.GetBucketPolicyCommand = GetBucketPolicyCommand;
@@ -6050,10 +6050,10 @@ class GetBucketPolicyStatusCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketPolicyStatusCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketPolicyStatusCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketPolicyStatusCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketPolicyStatusCommand)(output, context);
     }
 }
 exports.GetBucketPolicyStatusCommand = GetBucketPolicyStatusCommand;
@@ -6109,10 +6109,10 @@ class GetBucketReplicationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketReplicationCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketReplicationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketReplicationCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketReplicationCommand)(output, context);
     }
 }
 exports.GetBucketReplicationCommand = GetBucketReplicationCommand;
@@ -6168,10 +6168,10 @@ class GetBucketRequestPaymentCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketRequestPaymentCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketRequestPaymentCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketRequestPaymentCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketRequestPaymentCommand)(output, context);
     }
 }
 exports.GetBucketRequestPaymentCommand = GetBucketRequestPaymentCommand;
@@ -6227,10 +6227,10 @@ class GetBucketTaggingCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketTaggingCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketTaggingCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketTaggingCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketTaggingCommand)(output, context);
     }
 }
 exports.GetBucketTaggingCommand = GetBucketTaggingCommand;
@@ -6286,10 +6286,10 @@ class GetBucketVersioningCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketVersioningCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketVersioningCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketVersioningCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketVersioningCommand)(output, context);
     }
 }
 exports.GetBucketVersioningCommand = GetBucketVersioningCommand;
@@ -6345,10 +6345,10 @@ class GetBucketWebsiteCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetBucketWebsiteCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetBucketWebsiteCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetBucketWebsiteCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetBucketWebsiteCommand)(output, context);
     }
 }
 exports.GetBucketWebsiteCommand = GetBucketWebsiteCommand;
@@ -6404,10 +6404,10 @@ class GetObjectAclCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetObjectAclCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetObjectAclCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetObjectAclCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetObjectAclCommand)(output, context);
     }
 }
 exports.GetObjectAclCommand = GetObjectAclCommand;
@@ -6466,10 +6466,10 @@ class GetObjectAttributesCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetObjectAttributesCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetObjectAttributesCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetObjectAttributesCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetObjectAttributesCommand)(output, context);
     }
 }
 exports.GetObjectAttributesCommand = GetObjectAttributesCommand;
@@ -6535,10 +6535,10 @@ class GetObjectCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetObjectCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetObjectCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetObjectCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetObjectCommand)(output, context);
     }
 }
 exports.GetObjectCommand = GetObjectCommand;
@@ -6594,10 +6594,10 @@ class GetObjectLegalHoldCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetObjectLegalHoldCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetObjectLegalHoldCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetObjectLegalHoldCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetObjectLegalHoldCommand)(output, context);
     }
 }
 exports.GetObjectLegalHoldCommand = GetObjectLegalHoldCommand;
@@ -6653,10 +6653,10 @@ class GetObjectLockConfigurationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetObjectLockConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetObjectLockConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetObjectLockConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetObjectLockConfigurationCommand)(output, context);
     }
 }
 exports.GetObjectLockConfigurationCommand = GetObjectLockConfigurationCommand;
@@ -6712,10 +6712,10 @@ class GetObjectRetentionCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetObjectRetentionCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetObjectRetentionCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetObjectRetentionCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetObjectRetentionCommand)(output, context);
     }
 }
 exports.GetObjectRetentionCommand = GetObjectRetentionCommand;
@@ -6771,10 +6771,10 @@ class GetObjectTaggingCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetObjectTaggingCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetObjectTaggingCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetObjectTaggingCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetObjectTaggingCommand)(output, context);
     }
 }
 exports.GetObjectTaggingCommand = GetObjectTaggingCommand;
@@ -6831,10 +6831,10 @@ class GetObjectTorrentCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetObjectTorrentCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetObjectTorrentCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetObjectTorrentCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetObjectTorrentCommand)(output, context);
     }
 }
 exports.GetObjectTorrentCommand = GetObjectTorrentCommand;
@@ -6890,10 +6890,10 @@ class GetPublicAccessBlockCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlGetPublicAccessBlockCommand)(input, context);
+        return (0, Aws_restXml_1.se_GetPublicAccessBlockCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlGetPublicAccessBlockCommand)(output, context);
+        return (0, Aws_restXml_1.de_GetPublicAccessBlockCommand)(output, context);
     }
 }
 exports.GetPublicAccessBlockCommand = GetPublicAccessBlockCommand;
@@ -6949,10 +6949,10 @@ class HeadBucketCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlHeadBucketCommand)(input, context);
+        return (0, Aws_restXml_1.se_HeadBucketCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlHeadBucketCommand)(output, context);
+        return (0, Aws_restXml_1.de_HeadBucketCommand)(output, context);
     }
 }
 exports.HeadBucketCommand = HeadBucketCommand;
@@ -7011,10 +7011,10 @@ class HeadObjectCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlHeadObjectCommand)(input, context);
+        return (0, Aws_restXml_1.se_HeadObjectCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlHeadObjectCommand)(output, context);
+        return (0, Aws_restXml_1.de_HeadObjectCommand)(output, context);
     }
 }
 exports.HeadObjectCommand = HeadObjectCommand;
@@ -7070,10 +7070,10 @@ class ListBucketAnalyticsConfigurationsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlListBucketAnalyticsConfigurationsCommand)(input, context);
+        return (0, Aws_restXml_1.se_ListBucketAnalyticsConfigurationsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlListBucketAnalyticsConfigurationsCommand)(output, context);
+        return (0, Aws_restXml_1.de_ListBucketAnalyticsConfigurationsCommand)(output, context);
     }
 }
 exports.ListBucketAnalyticsConfigurationsCommand = ListBucketAnalyticsConfigurationsCommand;
@@ -7129,10 +7129,10 @@ class ListBucketIntelligentTieringConfigurationsCommand extends smithy_client_1.
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand)(input, context);
+        return (0, Aws_restXml_1.se_ListBucketIntelligentTieringConfigurationsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand)(output, context);
+        return (0, Aws_restXml_1.de_ListBucketIntelligentTieringConfigurationsCommand)(output, context);
     }
 }
 exports.ListBucketIntelligentTieringConfigurationsCommand = ListBucketIntelligentTieringConfigurationsCommand;
@@ -7189,10 +7189,10 @@ class ListBucketInventoryConfigurationsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlListBucketInventoryConfigurationsCommand)(input, context);
+        return (0, Aws_restXml_1.se_ListBucketInventoryConfigurationsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlListBucketInventoryConfigurationsCommand)(output, context);
+        return (0, Aws_restXml_1.de_ListBucketInventoryConfigurationsCommand)(output, context);
     }
 }
 exports.ListBucketInventoryConfigurationsCommand = ListBucketInventoryConfigurationsCommand;
@@ -7248,10 +7248,10 @@ class ListBucketMetricsConfigurationsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlListBucketMetricsConfigurationsCommand)(input, context);
+        return (0, Aws_restXml_1.se_ListBucketMetricsConfigurationsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlListBucketMetricsConfigurationsCommand)(output, context);
+        return (0, Aws_restXml_1.de_ListBucketMetricsConfigurationsCommand)(output, context);
     }
 }
 exports.ListBucketMetricsConfigurationsCommand = ListBucketMetricsConfigurationsCommand;
@@ -7306,10 +7306,10 @@ class ListBucketsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlListBucketsCommand)(input, context);
+        return (0, Aws_restXml_1.se_ListBucketsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlListBucketsCommand)(output, context);
+        return (0, Aws_restXml_1.de_ListBucketsCommand)(output, context);
     }
 }
 exports.ListBucketsCommand = ListBucketsCommand;
@@ -7365,10 +7365,10 @@ class ListMultipartUploadsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlListMultipartUploadsCommand)(input, context);
+        return (0, Aws_restXml_1.se_ListMultipartUploadsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlListMultipartUploadsCommand)(output, context);
+        return (0, Aws_restXml_1.de_ListMultipartUploadsCommand)(output, context);
     }
 }
 exports.ListMultipartUploadsCommand = ListMultipartUploadsCommand;
@@ -7424,10 +7424,10 @@ class ListObjectVersionsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlListObjectVersionsCommand)(input, context);
+        return (0, Aws_restXml_1.se_ListObjectVersionsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlListObjectVersionsCommand)(output, context);
+        return (0, Aws_restXml_1.de_ListObjectVersionsCommand)(output, context);
     }
 }
 exports.ListObjectVersionsCommand = ListObjectVersionsCommand;
@@ -7483,10 +7483,10 @@ class ListObjectsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlListObjectsCommand)(input, context);
+        return (0, Aws_restXml_1.se_ListObjectsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlListObjectsCommand)(output, context);
+        return (0, Aws_restXml_1.de_ListObjectsCommand)(output, context);
     }
 }
 exports.ListObjectsCommand = ListObjectsCommand;
@@ -7542,10 +7542,10 @@ class ListObjectsV2Command extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlListObjectsV2Command)(input, context);
+        return (0, Aws_restXml_1.se_ListObjectsV2Command)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlListObjectsV2Command)(output, context);
+        return (0, Aws_restXml_1.de_ListObjectsV2Command)(output, context);
     }
 }
 exports.ListObjectsV2Command = ListObjectsV2Command;
@@ -7604,10 +7604,10 @@ class ListPartsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlListPartsCommand)(input, context);
+        return (0, Aws_restXml_1.se_ListPartsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlListPartsCommand)(output, context);
+        return (0, Aws_restXml_1.de_ListPartsCommand)(output, context);
     }
 }
 exports.ListPartsCommand = ListPartsCommand;
@@ -7669,10 +7669,10 @@ class PutBucketAccelerateConfigurationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketAccelerateConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketAccelerateConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketAccelerateConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketAccelerateConfigurationCommand)(output, context);
     }
 }
 exports.PutBucketAccelerateConfigurationCommand = PutBucketAccelerateConfigurationCommand;
@@ -7734,10 +7734,10 @@ class PutBucketAclCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketAclCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketAclCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketAclCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketAclCommand)(output, context);
     }
 }
 exports.PutBucketAclCommand = PutBucketAclCommand;
@@ -7793,10 +7793,10 @@ class PutBucketAnalyticsConfigurationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketAnalyticsConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketAnalyticsConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketAnalyticsConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketAnalyticsConfigurationCommand)(output, context);
     }
 }
 exports.PutBucketAnalyticsConfigurationCommand = PutBucketAnalyticsConfigurationCommand;
@@ -7858,10 +7858,10 @@ class PutBucketCorsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketCorsCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketCorsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketCorsCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketCorsCommand)(output, context);
     }
 }
 exports.PutBucketCorsCommand = PutBucketCorsCommand;
@@ -7924,10 +7924,10 @@ class PutBucketEncryptionCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketEncryptionCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketEncryptionCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketEncryptionCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketEncryptionCommand)(output, context);
     }
 }
 exports.PutBucketEncryptionCommand = PutBucketEncryptionCommand;
@@ -7983,10 +7983,10 @@ class PutBucketIntelligentTieringConfigurationCommand extends smithy_client_1.Co
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketIntelligentTieringConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketIntelligentTieringConfigurationCommand)(output, context);
     }
 }
 exports.PutBucketIntelligentTieringConfigurationCommand = PutBucketIntelligentTieringConfigurationCommand;
@@ -8043,10 +8043,10 @@ class PutBucketInventoryConfigurationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketInventoryConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketInventoryConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketInventoryConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketInventoryConfigurationCommand)(output, context);
     }
 }
 exports.PutBucketInventoryConfigurationCommand = PutBucketInventoryConfigurationCommand;
@@ -8108,10 +8108,10 @@ class PutBucketLifecycleConfigurationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketLifecycleConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketLifecycleConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketLifecycleConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketLifecycleConfigurationCommand)(output, context);
     }
 }
 exports.PutBucketLifecycleConfigurationCommand = PutBucketLifecycleConfigurationCommand;
@@ -8173,10 +8173,10 @@ class PutBucketLoggingCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketLoggingCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketLoggingCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketLoggingCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketLoggingCommand)(output, context);
     }
 }
 exports.PutBucketLoggingCommand = PutBucketLoggingCommand;
@@ -8232,10 +8232,10 @@ class PutBucketMetricsConfigurationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketMetricsConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketMetricsConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketMetricsConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketMetricsConfigurationCommand)(output, context);
     }
 }
 exports.PutBucketMetricsConfigurationCommand = PutBucketMetricsConfigurationCommand;
@@ -8291,10 +8291,10 @@ class PutBucketNotificationConfigurationCommand extends smithy_client_1.Command 
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketNotificationConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketNotificationConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketNotificationConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketNotificationConfigurationCommand)(output, context);
     }
 }
 exports.PutBucketNotificationConfigurationCommand = PutBucketNotificationConfigurationCommand;
@@ -8352,10 +8352,10 @@ class PutBucketOwnershipControlsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketOwnershipControlsCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketOwnershipControlsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketOwnershipControlsCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketOwnershipControlsCommand)(output, context);
     }
 }
 exports.PutBucketOwnershipControlsCommand = PutBucketOwnershipControlsCommand;
@@ -8417,10 +8417,10 @@ class PutBucketPolicyCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketPolicyCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketPolicyCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketPolicyCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketPolicyCommand)(output, context);
     }
 }
 exports.PutBucketPolicyCommand = PutBucketPolicyCommand;
@@ -8482,10 +8482,10 @@ class PutBucketReplicationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketReplicationCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketReplicationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketReplicationCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketReplicationCommand)(output, context);
     }
 }
 exports.PutBucketReplicationCommand = PutBucketReplicationCommand;
@@ -8547,10 +8547,10 @@ class PutBucketRequestPaymentCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketRequestPaymentCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketRequestPaymentCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketRequestPaymentCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketRequestPaymentCommand)(output, context);
     }
 }
 exports.PutBucketRequestPaymentCommand = PutBucketRequestPaymentCommand;
@@ -8612,10 +8612,10 @@ class PutBucketTaggingCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketTaggingCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketTaggingCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketTaggingCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketTaggingCommand)(output, context);
     }
 }
 exports.PutBucketTaggingCommand = PutBucketTaggingCommand;
@@ -8677,10 +8677,10 @@ class PutBucketVersioningCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketVersioningCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketVersioningCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketVersioningCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketVersioningCommand)(output, context);
     }
 }
 exports.PutBucketVersioningCommand = PutBucketVersioningCommand;
@@ -8742,10 +8742,10 @@ class PutBucketWebsiteCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutBucketWebsiteCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutBucketWebsiteCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutBucketWebsiteCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutBucketWebsiteCommand)(output, context);
     }
 }
 exports.PutBucketWebsiteCommand = PutBucketWebsiteCommand;
@@ -8807,10 +8807,10 @@ class PutObjectAclCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutObjectAclCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutObjectAclCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutObjectAclCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutObjectAclCommand)(output, context);
     }
 }
 exports.PutObjectAclCommand = PutObjectAclCommand;
@@ -8877,10 +8877,10 @@ class PutObjectCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutObjectCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutObjectCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutObjectCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutObjectCommand)(output, context);
     }
 }
 exports.PutObjectCommand = PutObjectCommand;
@@ -8942,10 +8942,10 @@ class PutObjectLegalHoldCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutObjectLegalHoldCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutObjectLegalHoldCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutObjectLegalHoldCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutObjectLegalHoldCommand)(output, context);
     }
 }
 exports.PutObjectLegalHoldCommand = PutObjectLegalHoldCommand;
@@ -9007,10 +9007,10 @@ class PutObjectLockConfigurationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutObjectLockConfigurationCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutObjectLockConfigurationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutObjectLockConfigurationCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutObjectLockConfigurationCommand)(output, context);
     }
 }
 exports.PutObjectLockConfigurationCommand = PutObjectLockConfigurationCommand;
@@ -9072,10 +9072,10 @@ class PutObjectRetentionCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutObjectRetentionCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutObjectRetentionCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutObjectRetentionCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutObjectRetentionCommand)(output, context);
     }
 }
 exports.PutObjectRetentionCommand = PutObjectRetentionCommand;
@@ -9137,10 +9137,10 @@ class PutObjectTaggingCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutObjectTaggingCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutObjectTaggingCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutObjectTaggingCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutObjectTaggingCommand)(output, context);
     }
 }
 exports.PutObjectTaggingCommand = PutObjectTaggingCommand;
@@ -9202,10 +9202,10 @@ class PutPublicAccessBlockCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlPutPublicAccessBlockCommand)(input, context);
+        return (0, Aws_restXml_1.se_PutPublicAccessBlockCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlPutPublicAccessBlockCommand)(output, context);
+        return (0, Aws_restXml_1.de_PutPublicAccessBlockCommand)(output, context);
     }
 }
 exports.PutPublicAccessBlockCommand = PutPublicAccessBlockCommand;
@@ -9268,10 +9268,10 @@ class RestoreObjectCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlRestoreObjectCommand)(input, context);
+        return (0, Aws_restXml_1.se_RestoreObjectCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlRestoreObjectCommand)(output, context);
+        return (0, Aws_restXml_1.de_RestoreObjectCommand)(output, context);
     }
 }
 exports.RestoreObjectCommand = RestoreObjectCommand;
@@ -9330,10 +9330,10 @@ class SelectObjectContentCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlSelectObjectContentCommand)(input, context);
+        return (0, Aws_restXml_1.se_SelectObjectContentCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlSelectObjectContentCommand)(output, context);
+        return (0, Aws_restXml_1.de_SelectObjectContentCommand)(output, context);
     }
 }
 exports.SelectObjectContentCommand = SelectObjectContentCommand;
@@ -9398,10 +9398,10 @@ class UploadPartCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlUploadPartCommand)(input, context);
+        return (0, Aws_restXml_1.se_UploadPartCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlUploadPartCommand)(output, context);
+        return (0, Aws_restXml_1.de_UploadPartCommand)(output, context);
     }
 }
 exports.UploadPartCommand = UploadPartCommand;
@@ -9462,10 +9462,10 @@ class UploadPartCopyCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlUploadPartCopyCommand)(input, context);
+        return (0, Aws_restXml_1.se_UploadPartCopyCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlUploadPartCopyCommand)(output, context);
+        return (0, Aws_restXml_1.de_UploadPartCopyCommand)(output, context);
     }
 }
 exports.UploadPartCopyCommand = UploadPartCopyCommand;
@@ -9522,10 +9522,10 @@ class WriteGetObjectResponseCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restXml_1.serializeAws_restXmlWriteGetObjectResponseCommand)(input, context);
+        return (0, Aws_restXml_1.se_WriteGetObjectResponseCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restXml_1.deserializeAws_restXmlWriteGetObjectResponseCommand)(output, context);
+        return (0, Aws_restXml_1.de_WriteGetObjectResponseCommand)(output, context);
     }
 }
 exports.WriteGetObjectResponseCommand = WriteGetObjectResponseCommand;
@@ -10629,10 +10629,10 @@ tslib_1.__exportStar(__nccwpck_require__(82064), exports);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.serializeAws_restXmlGetObjectTorrentCommand = exports.serializeAws_restXmlGetObjectTaggingCommand = exports.serializeAws_restXmlGetObjectRetentionCommand = exports.serializeAws_restXmlGetObjectLockConfigurationCommand = exports.serializeAws_restXmlGetObjectLegalHoldCommand = exports.serializeAws_restXmlGetObjectAttributesCommand = exports.serializeAws_restXmlGetObjectAclCommand = exports.serializeAws_restXmlGetObjectCommand = exports.serializeAws_restXmlGetBucketWebsiteCommand = exports.serializeAws_restXmlGetBucketVersioningCommand = exports.serializeAws_restXmlGetBucketTaggingCommand = exports.serializeAws_restXmlGetBucketRequestPaymentCommand = exports.serializeAws_restXmlGetBucketReplicationCommand = exports.serializeAws_restXmlGetBucketPolicyStatusCommand = exports.serializeAws_restXmlGetBucketPolicyCommand = exports.serializeAws_restXmlGetBucketOwnershipControlsCommand = exports.serializeAws_restXmlGetBucketNotificationConfigurationCommand = exports.serializeAws_restXmlGetBucketMetricsConfigurationCommand = exports.serializeAws_restXmlGetBucketLoggingCommand = exports.serializeAws_restXmlGetBucketLocationCommand = exports.serializeAws_restXmlGetBucketLifecycleConfigurationCommand = exports.serializeAws_restXmlGetBucketInventoryConfigurationCommand = exports.serializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand = exports.serializeAws_restXmlGetBucketEncryptionCommand = exports.serializeAws_restXmlGetBucketCorsCommand = exports.serializeAws_restXmlGetBucketAnalyticsConfigurationCommand = exports.serializeAws_restXmlGetBucketAclCommand = exports.serializeAws_restXmlGetBucketAccelerateConfigurationCommand = exports.serializeAws_restXmlDeletePublicAccessBlockCommand = exports.serializeAws_restXmlDeleteObjectTaggingCommand = exports.serializeAws_restXmlDeleteObjectsCommand = exports.serializeAws_restXmlDeleteObjectCommand = exports.serializeAws_restXmlDeleteBucketWebsiteCommand = exports.serializeAws_restXmlDeleteBucketTaggingCommand = exports.serializeAws_restXmlDeleteBucketReplicationCommand = exports.serializeAws_restXmlDeleteBucketPolicyCommand = exports.serializeAws_restXmlDeleteBucketOwnershipControlsCommand = exports.serializeAws_restXmlDeleteBucketMetricsConfigurationCommand = exports.serializeAws_restXmlDeleteBucketLifecycleCommand = exports.serializeAws_restXmlDeleteBucketInventoryConfigurationCommand = exports.serializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand = exports.serializeAws_restXmlDeleteBucketEncryptionCommand = exports.serializeAws_restXmlDeleteBucketCorsCommand = exports.serializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand = exports.serializeAws_restXmlDeleteBucketCommand = exports.serializeAws_restXmlCreateMultipartUploadCommand = exports.serializeAws_restXmlCreateBucketCommand = exports.serializeAws_restXmlCopyObjectCommand = exports.serializeAws_restXmlCompleteMultipartUploadCommand = exports.serializeAws_restXmlAbortMultipartUploadCommand = void 0;
-exports.deserializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand = exports.deserializeAws_restXmlDeleteBucketCommand = exports.deserializeAws_restXmlCreateMultipartUploadCommand = exports.deserializeAws_restXmlCreateBucketCommand = exports.deserializeAws_restXmlCopyObjectCommand = exports.deserializeAws_restXmlCompleteMultipartUploadCommand = exports.deserializeAws_restXmlAbortMultipartUploadCommand = exports.serializeAws_restXmlWriteGetObjectResponseCommand = exports.serializeAws_restXmlUploadPartCopyCommand = exports.serializeAws_restXmlUploadPartCommand = exports.serializeAws_restXmlSelectObjectContentCommand = exports.serializeAws_restXmlRestoreObjectCommand = exports.serializeAws_restXmlPutPublicAccessBlockCommand = exports.serializeAws_restXmlPutObjectTaggingCommand = exports.serializeAws_restXmlPutObjectRetentionCommand = exports.serializeAws_restXmlPutObjectLockConfigurationCommand = exports.serializeAws_restXmlPutObjectLegalHoldCommand = exports.serializeAws_restXmlPutObjectAclCommand = exports.serializeAws_restXmlPutObjectCommand = exports.serializeAws_restXmlPutBucketWebsiteCommand = exports.serializeAws_restXmlPutBucketVersioningCommand = exports.serializeAws_restXmlPutBucketTaggingCommand = exports.serializeAws_restXmlPutBucketRequestPaymentCommand = exports.serializeAws_restXmlPutBucketReplicationCommand = exports.serializeAws_restXmlPutBucketPolicyCommand = exports.serializeAws_restXmlPutBucketOwnershipControlsCommand = exports.serializeAws_restXmlPutBucketNotificationConfigurationCommand = exports.serializeAws_restXmlPutBucketMetricsConfigurationCommand = exports.serializeAws_restXmlPutBucketLoggingCommand = exports.serializeAws_restXmlPutBucketLifecycleConfigurationCommand = exports.serializeAws_restXmlPutBucketInventoryConfigurationCommand = exports.serializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = exports.serializeAws_restXmlPutBucketEncryptionCommand = exports.serializeAws_restXmlPutBucketCorsCommand = exports.serializeAws_restXmlPutBucketAnalyticsConfigurationCommand = exports.serializeAws_restXmlPutBucketAclCommand = exports.serializeAws_restXmlPutBucketAccelerateConfigurationCommand = exports.serializeAws_restXmlListPartsCommand = exports.serializeAws_restXmlListObjectVersionsCommand = exports.serializeAws_restXmlListObjectsV2Command = exports.serializeAws_restXmlListObjectsCommand = exports.serializeAws_restXmlListMultipartUploadsCommand = exports.serializeAws_restXmlListBucketsCommand = exports.serializeAws_restXmlListBucketMetricsConfigurationsCommand = exports.serializeAws_restXmlListBucketInventoryConfigurationsCommand = exports.serializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = exports.serializeAws_restXmlListBucketAnalyticsConfigurationsCommand = exports.serializeAws_restXmlHeadObjectCommand = exports.serializeAws_restXmlHeadBucketCommand = exports.serializeAws_restXmlGetPublicAccessBlockCommand = void 0;
-exports.deserializeAws_restXmlListBucketMetricsConfigurationsCommand = exports.deserializeAws_restXmlListBucketInventoryConfigurationsCommand = exports.deserializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = exports.deserializeAws_restXmlListBucketAnalyticsConfigurationsCommand = exports.deserializeAws_restXmlHeadObjectCommand = exports.deserializeAws_restXmlHeadBucketCommand = exports.deserializeAws_restXmlGetPublicAccessBlockCommand = exports.deserializeAws_restXmlGetObjectTorrentCommand = exports.deserializeAws_restXmlGetObjectTaggingCommand = exports.deserializeAws_restXmlGetObjectRetentionCommand = exports.deserializeAws_restXmlGetObjectLockConfigurationCommand = exports.deserializeAws_restXmlGetObjectLegalHoldCommand = exports.deserializeAws_restXmlGetObjectAttributesCommand = exports.deserializeAws_restXmlGetObjectAclCommand = exports.deserializeAws_restXmlGetObjectCommand = exports.deserializeAws_restXmlGetBucketWebsiteCommand = exports.deserializeAws_restXmlGetBucketVersioningCommand = exports.deserializeAws_restXmlGetBucketTaggingCommand = exports.deserializeAws_restXmlGetBucketRequestPaymentCommand = exports.deserializeAws_restXmlGetBucketReplicationCommand = exports.deserializeAws_restXmlGetBucketPolicyStatusCommand = exports.deserializeAws_restXmlGetBucketPolicyCommand = exports.deserializeAws_restXmlGetBucketOwnershipControlsCommand = exports.deserializeAws_restXmlGetBucketNotificationConfigurationCommand = exports.deserializeAws_restXmlGetBucketMetricsConfigurationCommand = exports.deserializeAws_restXmlGetBucketLoggingCommand = exports.deserializeAws_restXmlGetBucketLocationCommand = exports.deserializeAws_restXmlGetBucketLifecycleConfigurationCommand = exports.deserializeAws_restXmlGetBucketInventoryConfigurationCommand = exports.deserializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand = exports.deserializeAws_restXmlGetBucketEncryptionCommand = exports.deserializeAws_restXmlGetBucketCorsCommand = exports.deserializeAws_restXmlGetBucketAnalyticsConfigurationCommand = exports.deserializeAws_restXmlGetBucketAclCommand = exports.deserializeAws_restXmlGetBucketAccelerateConfigurationCommand = exports.deserializeAws_restXmlDeletePublicAccessBlockCommand = exports.deserializeAws_restXmlDeleteObjectTaggingCommand = exports.deserializeAws_restXmlDeleteObjectsCommand = exports.deserializeAws_restXmlDeleteObjectCommand = exports.deserializeAws_restXmlDeleteBucketWebsiteCommand = exports.deserializeAws_restXmlDeleteBucketTaggingCommand = exports.deserializeAws_restXmlDeleteBucketReplicationCommand = exports.deserializeAws_restXmlDeleteBucketPolicyCommand = exports.deserializeAws_restXmlDeleteBucketOwnershipControlsCommand = exports.deserializeAws_restXmlDeleteBucketMetricsConfigurationCommand = exports.deserializeAws_restXmlDeleteBucketLifecycleCommand = exports.deserializeAws_restXmlDeleteBucketInventoryConfigurationCommand = exports.deserializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand = exports.deserializeAws_restXmlDeleteBucketEncryptionCommand = exports.deserializeAws_restXmlDeleteBucketCorsCommand = void 0;
-exports.deserializeAws_restXmlWriteGetObjectResponseCommand = exports.deserializeAws_restXmlUploadPartCopyCommand = exports.deserializeAws_restXmlUploadPartCommand = exports.deserializeAws_restXmlSelectObjectContentCommand = exports.deserializeAws_restXmlRestoreObjectCommand = exports.deserializeAws_restXmlPutPublicAccessBlockCommand = exports.deserializeAws_restXmlPutObjectTaggingCommand = exports.deserializeAws_restXmlPutObjectRetentionCommand = exports.deserializeAws_restXmlPutObjectLockConfigurationCommand = exports.deserializeAws_restXmlPutObjectLegalHoldCommand = exports.deserializeAws_restXmlPutObjectAclCommand = exports.deserializeAws_restXmlPutObjectCommand = exports.deserializeAws_restXmlPutBucketWebsiteCommand = exports.deserializeAws_restXmlPutBucketVersioningCommand = exports.deserializeAws_restXmlPutBucketTaggingCommand = exports.deserializeAws_restXmlPutBucketRequestPaymentCommand = exports.deserializeAws_restXmlPutBucketReplicationCommand = exports.deserializeAws_restXmlPutBucketPolicyCommand = exports.deserializeAws_restXmlPutBucketOwnershipControlsCommand = exports.deserializeAws_restXmlPutBucketNotificationConfigurationCommand = exports.deserializeAws_restXmlPutBucketMetricsConfigurationCommand = exports.deserializeAws_restXmlPutBucketLoggingCommand = exports.deserializeAws_restXmlPutBucketLifecycleConfigurationCommand = exports.deserializeAws_restXmlPutBucketInventoryConfigurationCommand = exports.deserializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = exports.deserializeAws_restXmlPutBucketEncryptionCommand = exports.deserializeAws_restXmlPutBucketCorsCommand = exports.deserializeAws_restXmlPutBucketAnalyticsConfigurationCommand = exports.deserializeAws_restXmlPutBucketAclCommand = exports.deserializeAws_restXmlPutBucketAccelerateConfigurationCommand = exports.deserializeAws_restXmlListPartsCommand = exports.deserializeAws_restXmlListObjectVersionsCommand = exports.deserializeAws_restXmlListObjectsV2Command = exports.deserializeAws_restXmlListObjectsCommand = exports.deserializeAws_restXmlListMultipartUploadsCommand = exports.deserializeAws_restXmlListBucketsCommand = void 0;
+exports.se_GetObjectTorrentCommand = exports.se_GetObjectTaggingCommand = exports.se_GetObjectRetentionCommand = exports.se_GetObjectLockConfigurationCommand = exports.se_GetObjectLegalHoldCommand = exports.se_GetObjectAttributesCommand = exports.se_GetObjectAclCommand = exports.se_GetObjectCommand = exports.se_GetBucketWebsiteCommand = exports.se_GetBucketVersioningCommand = exports.se_GetBucketTaggingCommand = exports.se_GetBucketRequestPaymentCommand = exports.se_GetBucketReplicationCommand = exports.se_GetBucketPolicyStatusCommand = exports.se_GetBucketPolicyCommand = exports.se_GetBucketOwnershipControlsCommand = exports.se_GetBucketNotificationConfigurationCommand = exports.se_GetBucketMetricsConfigurationCommand = exports.se_GetBucketLoggingCommand = exports.se_GetBucketLocationCommand = exports.se_GetBucketLifecycleConfigurationCommand = exports.se_GetBucketInventoryConfigurationCommand = exports.se_GetBucketIntelligentTieringConfigurationCommand = exports.se_GetBucketEncryptionCommand = exports.se_GetBucketCorsCommand = exports.se_GetBucketAnalyticsConfigurationCommand = exports.se_GetBucketAclCommand = exports.se_GetBucketAccelerateConfigurationCommand = exports.se_DeletePublicAccessBlockCommand = exports.se_DeleteObjectTaggingCommand = exports.se_DeleteObjectsCommand = exports.se_DeleteObjectCommand = exports.se_DeleteBucketWebsiteCommand = exports.se_DeleteBucketTaggingCommand = exports.se_DeleteBucketReplicationCommand = exports.se_DeleteBucketPolicyCommand = exports.se_DeleteBucketOwnershipControlsCommand = exports.se_DeleteBucketMetricsConfigurationCommand = exports.se_DeleteBucketLifecycleCommand = exports.se_DeleteBucketInventoryConfigurationCommand = exports.se_DeleteBucketIntelligentTieringConfigurationCommand = exports.se_DeleteBucketEncryptionCommand = exports.se_DeleteBucketCorsCommand = exports.se_DeleteBucketAnalyticsConfigurationCommand = exports.se_DeleteBucketCommand = exports.se_CreateMultipartUploadCommand = exports.se_CreateBucketCommand = exports.se_CopyObjectCommand = exports.se_CompleteMultipartUploadCommand = exports.se_AbortMultipartUploadCommand = void 0;
+exports.de_DeleteBucketAnalyticsConfigurationCommand = exports.de_DeleteBucketCommand = exports.de_CreateMultipartUploadCommand = exports.de_CreateBucketCommand = exports.de_CopyObjectCommand = exports.de_CompleteMultipartUploadCommand = exports.de_AbortMultipartUploadCommand = exports.se_WriteGetObjectResponseCommand = exports.se_UploadPartCopyCommand = exports.se_UploadPartCommand = exports.se_SelectObjectContentCommand = exports.se_RestoreObjectCommand = exports.se_PutPublicAccessBlockCommand = exports.se_PutObjectTaggingCommand = exports.se_PutObjectRetentionCommand = exports.se_PutObjectLockConfigurationCommand = exports.se_PutObjectLegalHoldCommand = exports.se_PutObjectAclCommand = exports.se_PutObjectCommand = exports.se_PutBucketWebsiteCommand = exports.se_PutBucketVersioningCommand = exports.se_PutBucketTaggingCommand = exports.se_PutBucketRequestPaymentCommand = exports.se_PutBucketReplicationCommand = exports.se_PutBucketPolicyCommand = exports.se_PutBucketOwnershipControlsCommand = exports.se_PutBucketNotificationConfigurationCommand = exports.se_PutBucketMetricsConfigurationCommand = exports.se_PutBucketLoggingCommand = exports.se_PutBucketLifecycleConfigurationCommand = exports.se_PutBucketInventoryConfigurationCommand = exports.se_PutBucketIntelligentTieringConfigurationCommand = exports.se_PutBucketEncryptionCommand = exports.se_PutBucketCorsCommand = exports.se_PutBucketAnalyticsConfigurationCommand = exports.se_PutBucketAclCommand = exports.se_PutBucketAccelerateConfigurationCommand = exports.se_ListPartsCommand = exports.se_ListObjectVersionsCommand = exports.se_ListObjectsV2Command = exports.se_ListObjectsCommand = exports.se_ListMultipartUploadsCommand = exports.se_ListBucketsCommand = exports.se_ListBucketMetricsConfigurationsCommand = exports.se_ListBucketInventoryConfigurationsCommand = exports.se_ListBucketIntelligentTieringConfigurationsCommand = exports.se_ListBucketAnalyticsConfigurationsCommand = exports.se_HeadObjectCommand = exports.se_HeadBucketCommand = exports.se_GetPublicAccessBlockCommand = void 0;
+exports.de_ListBucketMetricsConfigurationsCommand = exports.de_ListBucketInventoryConfigurationsCommand = exports.de_ListBucketIntelligentTieringConfigurationsCommand = exports.de_ListBucketAnalyticsConfigurationsCommand = exports.de_HeadObjectCommand = exports.de_HeadBucketCommand = exports.de_GetPublicAccessBlockCommand = exports.de_GetObjectTorrentCommand = exports.de_GetObjectTaggingCommand = exports.de_GetObjectRetentionCommand = exports.de_GetObjectLockConfigurationCommand = exports.de_GetObjectLegalHoldCommand = exports.de_GetObjectAttributesCommand = exports.de_GetObjectAclCommand = exports.de_GetObjectCommand = exports.de_GetBucketWebsiteCommand = exports.de_GetBucketVersioningCommand = exports.de_GetBucketTaggingCommand = exports.de_GetBucketRequestPaymentCommand = exports.de_GetBucketReplicationCommand = exports.de_GetBucketPolicyStatusCommand = exports.de_GetBucketPolicyCommand = exports.de_GetBucketOwnershipControlsCommand = exports.de_GetBucketNotificationConfigurationCommand = exports.de_GetBucketMetricsConfigurationCommand = exports.de_GetBucketLoggingCommand = exports.de_GetBucketLocationCommand = exports.de_GetBucketLifecycleConfigurationCommand = exports.de_GetBucketInventoryConfigurationCommand = exports.de_GetBucketIntelligentTieringConfigurationCommand = exports.de_GetBucketEncryptionCommand = exports.de_GetBucketCorsCommand = exports.de_GetBucketAnalyticsConfigurationCommand = exports.de_GetBucketAclCommand = exports.de_GetBucketAccelerateConfigurationCommand = exports.de_DeletePublicAccessBlockCommand = exports.de_DeleteObjectTaggingCommand = exports.de_DeleteObjectsCommand = exports.de_DeleteObjectCommand = exports.de_DeleteBucketWebsiteCommand = exports.de_DeleteBucketTaggingCommand = exports.de_DeleteBucketReplicationCommand = exports.de_DeleteBucketPolicyCommand = exports.de_DeleteBucketOwnershipControlsCommand = exports.de_DeleteBucketMetricsConfigurationCommand = exports.de_DeleteBucketLifecycleCommand = exports.de_DeleteBucketInventoryConfigurationCommand = exports.de_DeleteBucketIntelligentTieringConfigurationCommand = exports.de_DeleteBucketEncryptionCommand = exports.de_DeleteBucketCorsCommand = void 0;
+exports.de_WriteGetObjectResponseCommand = exports.de_UploadPartCopyCommand = exports.de_UploadPartCommand = exports.de_SelectObjectContentCommand = exports.de_RestoreObjectCommand = exports.de_PutPublicAccessBlockCommand = exports.de_PutObjectTaggingCommand = exports.de_PutObjectRetentionCommand = exports.de_PutObjectLockConfigurationCommand = exports.de_PutObjectLegalHoldCommand = exports.de_PutObjectAclCommand = exports.de_PutObjectCommand = exports.de_PutBucketWebsiteCommand = exports.de_PutBucketVersioningCommand = exports.de_PutBucketTaggingCommand = exports.de_PutBucketRequestPaymentCommand = exports.de_PutBucketReplicationCommand = exports.de_PutBucketPolicyCommand = exports.de_PutBucketOwnershipControlsCommand = exports.de_PutBucketNotificationConfigurationCommand = exports.de_PutBucketMetricsConfigurationCommand = exports.de_PutBucketLoggingCommand = exports.de_PutBucketLifecycleConfigurationCommand = exports.de_PutBucketInventoryConfigurationCommand = exports.de_PutBucketIntelligentTieringConfigurationCommand = exports.de_PutBucketEncryptionCommand = exports.de_PutBucketCorsCommand = exports.de_PutBucketAnalyticsConfigurationCommand = exports.de_PutBucketAclCommand = exports.de_PutBucketAccelerateConfigurationCommand = exports.de_ListPartsCommand = exports.de_ListObjectVersionsCommand = exports.de_ListObjectsV2Command = exports.de_ListObjectsCommand = exports.de_ListMultipartUploadsCommand = exports.de_ListBucketsCommand = void 0;
 const protocol_http_1 = __nccwpck_require__(70223);
 const smithy_client_1 = __nccwpck_require__(4963);
 const xml_builder_1 = __nccwpck_require__(42329);
@@ -10640,7 +10640,7 @@ const fast_xml_parser_1 = __nccwpck_require__(12603);
 const models_0_1 = __nccwpck_require__(51628);
 const models_1_1 = __nccwpck_require__(6958);
 const S3ServiceException_1 = __nccwpck_require__(37614);
-const serializeAws_restXmlAbortMultipartUploadCommand = async (input, context) => {
+const se_AbortMultipartUploadCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-request-payer": input.RequestPayer,
@@ -10665,8 +10665,8 @@ const serializeAws_restXmlAbortMultipartUploadCommand = async (input, context) =
         body,
     });
 };
-exports.serializeAws_restXmlAbortMultipartUploadCommand = serializeAws_restXmlAbortMultipartUploadCommand;
-const serializeAws_restXmlCompleteMultipartUploadCommand = async (input, context) => {
+exports.se_AbortMultipartUploadCommand = se_AbortMultipartUploadCommand;
+const se_CompleteMultipartUploadCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -10689,11 +10689,11 @@ const serializeAws_restXmlCompleteMultipartUploadCommand = async (input, context
     });
     let body;
     if (input.MultipartUpload !== undefined) {
-        body = serializeAws_restXmlCompletedMultipartUpload(input.MultipartUpload, context);
+        body = se_CompletedMultipartUpload(input.MultipartUpload, context);
     }
     let contents;
     if (input.MultipartUpload !== undefined) {
-        contents = serializeAws_restXmlCompletedMultipartUpload(input.MultipartUpload, context);
+        contents = se_CompletedMultipartUpload(input.MultipartUpload, context);
         contents = contents.withName("CompleteMultipartUpload");
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
@@ -10710,8 +10710,8 @@ const serializeAws_restXmlCompleteMultipartUploadCommand = async (input, context
         body,
     });
 };
-exports.serializeAws_restXmlCompleteMultipartUploadCommand = serializeAws_restXmlCompleteMultipartUploadCommand;
-const serializeAws_restXmlCopyObjectCommand = async (input, context) => {
+exports.se_CompleteMultipartUploadCommand = se_CompleteMultipartUploadCommand;
+const se_CopyObjectCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-acl": input.ACL,
@@ -10788,8 +10788,8 @@ const serializeAws_restXmlCopyObjectCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlCopyObjectCommand = serializeAws_restXmlCopyObjectCommand;
-const serializeAws_restXmlCreateBucketCommand = async (input, context) => {
+exports.se_CopyObjectCommand = se_CopyObjectCommand;
+const se_CreateBucketCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -10809,11 +10809,11 @@ const serializeAws_restXmlCreateBucketCommand = async (input, context) => {
     resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, "Bucket", () => input.Bucket, "{Bucket}", false);
     let body;
     if (input.CreateBucketConfiguration !== undefined) {
-        body = serializeAws_restXmlCreateBucketConfiguration(input.CreateBucketConfiguration, context);
+        body = se_CreateBucketConfiguration(input.CreateBucketConfiguration, context);
     }
     let contents;
     if (input.CreateBucketConfiguration !== undefined) {
-        contents = serializeAws_restXmlCreateBucketConfiguration(input.CreateBucketConfiguration, context);
+        contents = se_CreateBucketConfiguration(input.CreateBucketConfiguration, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -10828,8 +10828,8 @@ const serializeAws_restXmlCreateBucketCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlCreateBucketCommand = serializeAws_restXmlCreateBucketCommand;
-const serializeAws_restXmlCreateMultipartUploadCommand = async (input, context) => {
+exports.se_CreateBucketCommand = se_CreateBucketCommand;
+const se_CreateMultipartUploadCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-acl": input.ACL,
@@ -10890,8 +10890,8 @@ const serializeAws_restXmlCreateMultipartUploadCommand = async (input, context) 
         body,
     });
 };
-exports.serializeAws_restXmlCreateMultipartUploadCommand = serializeAws_restXmlCreateMultipartUploadCommand;
-const serializeAws_restXmlDeleteBucketCommand = async (input, context) => {
+exports.se_CreateMultipartUploadCommand = se_CreateMultipartUploadCommand;
+const se_DeleteBucketCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -10909,8 +10909,8 @@ const serializeAws_restXmlDeleteBucketCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlDeleteBucketCommand = serializeAws_restXmlDeleteBucketCommand;
-const serializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand = async (input, context) => {
+exports.se_DeleteBucketCommand = se_DeleteBucketCommand;
+const se_DeleteBucketAnalyticsConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -10933,8 +10933,8 @@ const serializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand = async (inp
         body,
     });
 };
-exports.serializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand = serializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand;
-const serializeAws_restXmlDeleteBucketCorsCommand = async (input, context) => {
+exports.se_DeleteBucketAnalyticsConfigurationCommand = se_DeleteBucketAnalyticsConfigurationCommand;
+const se_DeleteBucketCorsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -10956,8 +10956,8 @@ const serializeAws_restXmlDeleteBucketCorsCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlDeleteBucketCorsCommand = serializeAws_restXmlDeleteBucketCorsCommand;
-const serializeAws_restXmlDeleteBucketEncryptionCommand = async (input, context) => {
+exports.se_DeleteBucketCorsCommand = se_DeleteBucketCorsCommand;
+const se_DeleteBucketEncryptionCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -10979,8 +10979,8 @@ const serializeAws_restXmlDeleteBucketEncryptionCommand = async (input, context)
         body,
     });
 };
-exports.serializeAws_restXmlDeleteBucketEncryptionCommand = serializeAws_restXmlDeleteBucketEncryptionCommand;
-const serializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand = async (input, context) => {
+exports.se_DeleteBucketEncryptionCommand = se_DeleteBucketEncryptionCommand;
+const se_DeleteBucketIntelligentTieringConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {};
     let resolvedPath = `${basePath?.endsWith("/") ? basePath.slice(0, -1) : basePath || ""}` + "/";
@@ -11001,8 +11001,8 @@ const serializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand = a
         body,
     });
 };
-exports.serializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand = serializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand;
-const serializeAws_restXmlDeleteBucketInventoryConfigurationCommand = async (input, context) => {
+exports.se_DeleteBucketIntelligentTieringConfigurationCommand = se_DeleteBucketIntelligentTieringConfigurationCommand;
+const se_DeleteBucketInventoryConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11025,8 +11025,8 @@ const serializeAws_restXmlDeleteBucketInventoryConfigurationCommand = async (inp
         body,
     });
 };
-exports.serializeAws_restXmlDeleteBucketInventoryConfigurationCommand = serializeAws_restXmlDeleteBucketInventoryConfigurationCommand;
-const serializeAws_restXmlDeleteBucketLifecycleCommand = async (input, context) => {
+exports.se_DeleteBucketInventoryConfigurationCommand = se_DeleteBucketInventoryConfigurationCommand;
+const se_DeleteBucketLifecycleCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11048,8 +11048,8 @@ const serializeAws_restXmlDeleteBucketLifecycleCommand = async (input, context) 
         body,
     });
 };
-exports.serializeAws_restXmlDeleteBucketLifecycleCommand = serializeAws_restXmlDeleteBucketLifecycleCommand;
-const serializeAws_restXmlDeleteBucketMetricsConfigurationCommand = async (input, context) => {
+exports.se_DeleteBucketLifecycleCommand = se_DeleteBucketLifecycleCommand;
+const se_DeleteBucketMetricsConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11072,8 +11072,8 @@ const serializeAws_restXmlDeleteBucketMetricsConfigurationCommand = async (input
         body,
     });
 };
-exports.serializeAws_restXmlDeleteBucketMetricsConfigurationCommand = serializeAws_restXmlDeleteBucketMetricsConfigurationCommand;
-const serializeAws_restXmlDeleteBucketOwnershipControlsCommand = async (input, context) => {
+exports.se_DeleteBucketMetricsConfigurationCommand = se_DeleteBucketMetricsConfigurationCommand;
+const se_DeleteBucketOwnershipControlsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11095,8 +11095,8 @@ const serializeAws_restXmlDeleteBucketOwnershipControlsCommand = async (input, c
         body,
     });
 };
-exports.serializeAws_restXmlDeleteBucketOwnershipControlsCommand = serializeAws_restXmlDeleteBucketOwnershipControlsCommand;
-const serializeAws_restXmlDeleteBucketPolicyCommand = async (input, context) => {
+exports.se_DeleteBucketOwnershipControlsCommand = se_DeleteBucketOwnershipControlsCommand;
+const se_DeleteBucketPolicyCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11118,8 +11118,8 @@ const serializeAws_restXmlDeleteBucketPolicyCommand = async (input, context) => 
         body,
     });
 };
-exports.serializeAws_restXmlDeleteBucketPolicyCommand = serializeAws_restXmlDeleteBucketPolicyCommand;
-const serializeAws_restXmlDeleteBucketReplicationCommand = async (input, context) => {
+exports.se_DeleteBucketPolicyCommand = se_DeleteBucketPolicyCommand;
+const se_DeleteBucketReplicationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11141,8 +11141,8 @@ const serializeAws_restXmlDeleteBucketReplicationCommand = async (input, context
         body,
     });
 };
-exports.serializeAws_restXmlDeleteBucketReplicationCommand = serializeAws_restXmlDeleteBucketReplicationCommand;
-const serializeAws_restXmlDeleteBucketTaggingCommand = async (input, context) => {
+exports.se_DeleteBucketReplicationCommand = se_DeleteBucketReplicationCommand;
+const se_DeleteBucketTaggingCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11164,8 +11164,8 @@ const serializeAws_restXmlDeleteBucketTaggingCommand = async (input, context) =>
         body,
     });
 };
-exports.serializeAws_restXmlDeleteBucketTaggingCommand = serializeAws_restXmlDeleteBucketTaggingCommand;
-const serializeAws_restXmlDeleteBucketWebsiteCommand = async (input, context) => {
+exports.se_DeleteBucketTaggingCommand = se_DeleteBucketTaggingCommand;
+const se_DeleteBucketWebsiteCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11187,8 +11187,8 @@ const serializeAws_restXmlDeleteBucketWebsiteCommand = async (input, context) =>
         body,
     });
 };
-exports.serializeAws_restXmlDeleteBucketWebsiteCommand = serializeAws_restXmlDeleteBucketWebsiteCommand;
-const serializeAws_restXmlDeleteObjectCommand = async (input, context) => {
+exports.se_DeleteBucketWebsiteCommand = se_DeleteBucketWebsiteCommand;
+const se_DeleteObjectCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-mfa": input.MFA,
@@ -11218,8 +11218,8 @@ const serializeAws_restXmlDeleteObjectCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlDeleteObjectCommand = serializeAws_restXmlDeleteObjectCommand;
-const serializeAws_restXmlDeleteObjectsCommand = async (input, context) => {
+exports.se_DeleteObjectCommand = se_DeleteObjectCommand;
+const se_DeleteObjectsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -11240,11 +11240,11 @@ const serializeAws_restXmlDeleteObjectsCommand = async (input, context) => {
     });
     let body;
     if (input.Delete !== undefined) {
-        body = serializeAws_restXmlDelete(input.Delete, context);
+        body = se_Delete(input.Delete, context);
     }
     let contents;
     if (input.Delete !== undefined) {
-        contents = serializeAws_restXmlDelete(input.Delete, context);
+        contents = se_Delete(input.Delete, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -11260,8 +11260,8 @@ const serializeAws_restXmlDeleteObjectsCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlDeleteObjectsCommand = serializeAws_restXmlDeleteObjectsCommand;
-const serializeAws_restXmlDeleteObjectTaggingCommand = async (input, context) => {
+exports.se_DeleteObjectsCommand = se_DeleteObjectsCommand;
+const se_DeleteObjectTaggingCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11285,8 +11285,8 @@ const serializeAws_restXmlDeleteObjectTaggingCommand = async (input, context) =>
         body,
     });
 };
-exports.serializeAws_restXmlDeleteObjectTaggingCommand = serializeAws_restXmlDeleteObjectTaggingCommand;
-const serializeAws_restXmlDeletePublicAccessBlockCommand = async (input, context) => {
+exports.se_DeleteObjectTaggingCommand = se_DeleteObjectTaggingCommand;
+const se_DeletePublicAccessBlockCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11308,8 +11308,8 @@ const serializeAws_restXmlDeletePublicAccessBlockCommand = async (input, context
         body,
     });
 };
-exports.serializeAws_restXmlDeletePublicAccessBlockCommand = serializeAws_restXmlDeletePublicAccessBlockCommand;
-const serializeAws_restXmlGetBucketAccelerateConfigurationCommand = async (input, context) => {
+exports.se_DeletePublicAccessBlockCommand = se_DeletePublicAccessBlockCommand;
+const se_GetBucketAccelerateConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11331,8 +11331,8 @@ const serializeAws_restXmlGetBucketAccelerateConfigurationCommand = async (input
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketAccelerateConfigurationCommand = serializeAws_restXmlGetBucketAccelerateConfigurationCommand;
-const serializeAws_restXmlGetBucketAclCommand = async (input, context) => {
+exports.se_GetBucketAccelerateConfigurationCommand = se_GetBucketAccelerateConfigurationCommand;
+const se_GetBucketAclCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11354,8 +11354,8 @@ const serializeAws_restXmlGetBucketAclCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketAclCommand = serializeAws_restXmlGetBucketAclCommand;
-const serializeAws_restXmlGetBucketAnalyticsConfigurationCommand = async (input, context) => {
+exports.se_GetBucketAclCommand = se_GetBucketAclCommand;
+const se_GetBucketAnalyticsConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11379,8 +11379,8 @@ const serializeAws_restXmlGetBucketAnalyticsConfigurationCommand = async (input,
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketAnalyticsConfigurationCommand = serializeAws_restXmlGetBucketAnalyticsConfigurationCommand;
-const serializeAws_restXmlGetBucketCorsCommand = async (input, context) => {
+exports.se_GetBucketAnalyticsConfigurationCommand = se_GetBucketAnalyticsConfigurationCommand;
+const se_GetBucketCorsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11402,8 +11402,8 @@ const serializeAws_restXmlGetBucketCorsCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketCorsCommand = serializeAws_restXmlGetBucketCorsCommand;
-const serializeAws_restXmlGetBucketEncryptionCommand = async (input, context) => {
+exports.se_GetBucketCorsCommand = se_GetBucketCorsCommand;
+const se_GetBucketEncryptionCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11425,8 +11425,8 @@ const serializeAws_restXmlGetBucketEncryptionCommand = async (input, context) =>
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketEncryptionCommand = serializeAws_restXmlGetBucketEncryptionCommand;
-const serializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand = async (input, context) => {
+exports.se_GetBucketEncryptionCommand = se_GetBucketEncryptionCommand;
+const se_GetBucketIntelligentTieringConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {};
     let resolvedPath = `${basePath?.endsWith("/") ? basePath.slice(0, -1) : basePath || ""}` + "/";
@@ -11448,8 +11448,8 @@ const serializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand = asyn
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand = serializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand;
-const serializeAws_restXmlGetBucketInventoryConfigurationCommand = async (input, context) => {
+exports.se_GetBucketIntelligentTieringConfigurationCommand = se_GetBucketIntelligentTieringConfigurationCommand;
+const se_GetBucketInventoryConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11473,8 +11473,8 @@ const serializeAws_restXmlGetBucketInventoryConfigurationCommand = async (input,
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketInventoryConfigurationCommand = serializeAws_restXmlGetBucketInventoryConfigurationCommand;
-const serializeAws_restXmlGetBucketLifecycleConfigurationCommand = async (input, context) => {
+exports.se_GetBucketInventoryConfigurationCommand = se_GetBucketInventoryConfigurationCommand;
+const se_GetBucketLifecycleConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11496,8 +11496,8 @@ const serializeAws_restXmlGetBucketLifecycleConfigurationCommand = async (input,
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketLifecycleConfigurationCommand = serializeAws_restXmlGetBucketLifecycleConfigurationCommand;
-const serializeAws_restXmlGetBucketLocationCommand = async (input, context) => {
+exports.se_GetBucketLifecycleConfigurationCommand = se_GetBucketLifecycleConfigurationCommand;
+const se_GetBucketLocationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11519,8 +11519,8 @@ const serializeAws_restXmlGetBucketLocationCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketLocationCommand = serializeAws_restXmlGetBucketLocationCommand;
-const serializeAws_restXmlGetBucketLoggingCommand = async (input, context) => {
+exports.se_GetBucketLocationCommand = se_GetBucketLocationCommand;
+const se_GetBucketLoggingCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11542,8 +11542,8 @@ const serializeAws_restXmlGetBucketLoggingCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketLoggingCommand = serializeAws_restXmlGetBucketLoggingCommand;
-const serializeAws_restXmlGetBucketMetricsConfigurationCommand = async (input, context) => {
+exports.se_GetBucketLoggingCommand = se_GetBucketLoggingCommand;
+const se_GetBucketMetricsConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11567,8 +11567,8 @@ const serializeAws_restXmlGetBucketMetricsConfigurationCommand = async (input, c
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketMetricsConfigurationCommand = serializeAws_restXmlGetBucketMetricsConfigurationCommand;
-const serializeAws_restXmlGetBucketNotificationConfigurationCommand = async (input, context) => {
+exports.se_GetBucketMetricsConfigurationCommand = se_GetBucketMetricsConfigurationCommand;
+const se_GetBucketNotificationConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11590,8 +11590,8 @@ const serializeAws_restXmlGetBucketNotificationConfigurationCommand = async (inp
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketNotificationConfigurationCommand = serializeAws_restXmlGetBucketNotificationConfigurationCommand;
-const serializeAws_restXmlGetBucketOwnershipControlsCommand = async (input, context) => {
+exports.se_GetBucketNotificationConfigurationCommand = se_GetBucketNotificationConfigurationCommand;
+const se_GetBucketOwnershipControlsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11613,8 +11613,8 @@ const serializeAws_restXmlGetBucketOwnershipControlsCommand = async (input, cont
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketOwnershipControlsCommand = serializeAws_restXmlGetBucketOwnershipControlsCommand;
-const serializeAws_restXmlGetBucketPolicyCommand = async (input, context) => {
+exports.se_GetBucketOwnershipControlsCommand = se_GetBucketOwnershipControlsCommand;
+const se_GetBucketPolicyCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11636,8 +11636,8 @@ const serializeAws_restXmlGetBucketPolicyCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketPolicyCommand = serializeAws_restXmlGetBucketPolicyCommand;
-const serializeAws_restXmlGetBucketPolicyStatusCommand = async (input, context) => {
+exports.se_GetBucketPolicyCommand = se_GetBucketPolicyCommand;
+const se_GetBucketPolicyStatusCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11659,8 +11659,8 @@ const serializeAws_restXmlGetBucketPolicyStatusCommand = async (input, context) 
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketPolicyStatusCommand = serializeAws_restXmlGetBucketPolicyStatusCommand;
-const serializeAws_restXmlGetBucketReplicationCommand = async (input, context) => {
+exports.se_GetBucketPolicyStatusCommand = se_GetBucketPolicyStatusCommand;
+const se_GetBucketReplicationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11682,8 +11682,8 @@ const serializeAws_restXmlGetBucketReplicationCommand = async (input, context) =
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketReplicationCommand = serializeAws_restXmlGetBucketReplicationCommand;
-const serializeAws_restXmlGetBucketRequestPaymentCommand = async (input, context) => {
+exports.se_GetBucketReplicationCommand = se_GetBucketReplicationCommand;
+const se_GetBucketRequestPaymentCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11705,8 +11705,8 @@ const serializeAws_restXmlGetBucketRequestPaymentCommand = async (input, context
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketRequestPaymentCommand = serializeAws_restXmlGetBucketRequestPaymentCommand;
-const serializeAws_restXmlGetBucketTaggingCommand = async (input, context) => {
+exports.se_GetBucketRequestPaymentCommand = se_GetBucketRequestPaymentCommand;
+const se_GetBucketTaggingCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11728,8 +11728,8 @@ const serializeAws_restXmlGetBucketTaggingCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketTaggingCommand = serializeAws_restXmlGetBucketTaggingCommand;
-const serializeAws_restXmlGetBucketVersioningCommand = async (input, context) => {
+exports.se_GetBucketTaggingCommand = se_GetBucketTaggingCommand;
+const se_GetBucketVersioningCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11751,8 +11751,8 @@ const serializeAws_restXmlGetBucketVersioningCommand = async (input, context) =>
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketVersioningCommand = serializeAws_restXmlGetBucketVersioningCommand;
-const serializeAws_restXmlGetBucketWebsiteCommand = async (input, context) => {
+exports.se_GetBucketVersioningCommand = se_GetBucketVersioningCommand;
+const se_GetBucketWebsiteCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11774,8 +11774,8 @@ const serializeAws_restXmlGetBucketWebsiteCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlGetBucketWebsiteCommand = serializeAws_restXmlGetBucketWebsiteCommand;
-const serializeAws_restXmlGetObjectCommand = async (input, context) => {
+exports.se_GetBucketWebsiteCommand = se_GetBucketWebsiteCommand;
+const se_GetObjectCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "if-match": input.IfMatch,
@@ -11825,8 +11825,8 @@ const serializeAws_restXmlGetObjectCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlGetObjectCommand = serializeAws_restXmlGetObjectCommand;
-const serializeAws_restXmlGetObjectAclCommand = async (input, context) => {
+exports.se_GetObjectCommand = se_GetObjectCommand;
+const se_GetObjectAclCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-request-payer": input.RequestPayer,
@@ -11851,8 +11851,8 @@ const serializeAws_restXmlGetObjectAclCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlGetObjectAclCommand = serializeAws_restXmlGetObjectAclCommand;
-const serializeAws_restXmlGetObjectAttributesCommand = async (input, context) => {
+exports.se_GetObjectAclCommand = se_GetObjectAclCommand;
+const se_GetObjectAttributesCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-max-parts": [() => isSerializableHeaderValue(input.MaxParts), () => input.MaxParts.toString()],
@@ -11886,8 +11886,8 @@ const serializeAws_restXmlGetObjectAttributesCommand = async (input, context) =>
         body,
     });
 };
-exports.serializeAws_restXmlGetObjectAttributesCommand = serializeAws_restXmlGetObjectAttributesCommand;
-const serializeAws_restXmlGetObjectLegalHoldCommand = async (input, context) => {
+exports.se_GetObjectAttributesCommand = se_GetObjectAttributesCommand;
+const se_GetObjectLegalHoldCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-request-payer": input.RequestPayer,
@@ -11912,8 +11912,8 @@ const serializeAws_restXmlGetObjectLegalHoldCommand = async (input, context) => 
         body,
     });
 };
-exports.serializeAws_restXmlGetObjectLegalHoldCommand = serializeAws_restXmlGetObjectLegalHoldCommand;
-const serializeAws_restXmlGetObjectLockConfigurationCommand = async (input, context) => {
+exports.se_GetObjectLegalHoldCommand = se_GetObjectLegalHoldCommand;
+const se_GetObjectLockConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11935,8 +11935,8 @@ const serializeAws_restXmlGetObjectLockConfigurationCommand = async (input, cont
         body,
     });
 };
-exports.serializeAws_restXmlGetObjectLockConfigurationCommand = serializeAws_restXmlGetObjectLockConfigurationCommand;
-const serializeAws_restXmlGetObjectRetentionCommand = async (input, context) => {
+exports.se_GetObjectLockConfigurationCommand = se_GetObjectLockConfigurationCommand;
+const se_GetObjectRetentionCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-request-payer": input.RequestPayer,
@@ -11961,8 +11961,8 @@ const serializeAws_restXmlGetObjectRetentionCommand = async (input, context) => 
         body,
     });
 };
-exports.serializeAws_restXmlGetObjectRetentionCommand = serializeAws_restXmlGetObjectRetentionCommand;
-const serializeAws_restXmlGetObjectTaggingCommand = async (input, context) => {
+exports.se_GetObjectRetentionCommand = se_GetObjectRetentionCommand;
+const se_GetObjectTaggingCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -11987,8 +11987,8 @@ const serializeAws_restXmlGetObjectTaggingCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlGetObjectTaggingCommand = serializeAws_restXmlGetObjectTaggingCommand;
-const serializeAws_restXmlGetObjectTorrentCommand = async (input, context) => {
+exports.se_GetObjectTaggingCommand = se_GetObjectTaggingCommand;
+const se_GetObjectTorrentCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-request-payer": input.RequestPayer,
@@ -12012,8 +12012,8 @@ const serializeAws_restXmlGetObjectTorrentCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlGetObjectTorrentCommand = serializeAws_restXmlGetObjectTorrentCommand;
-const serializeAws_restXmlGetPublicAccessBlockCommand = async (input, context) => {
+exports.se_GetObjectTorrentCommand = se_GetObjectTorrentCommand;
+const se_GetPublicAccessBlockCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -12035,8 +12035,8 @@ const serializeAws_restXmlGetPublicAccessBlockCommand = async (input, context) =
         body,
     });
 };
-exports.serializeAws_restXmlGetPublicAccessBlockCommand = serializeAws_restXmlGetPublicAccessBlockCommand;
-const serializeAws_restXmlHeadBucketCommand = async (input, context) => {
+exports.se_GetPublicAccessBlockCommand = se_GetPublicAccessBlockCommand;
+const se_HeadBucketCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -12054,8 +12054,8 @@ const serializeAws_restXmlHeadBucketCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlHeadBucketCommand = serializeAws_restXmlHeadBucketCommand;
-const serializeAws_restXmlHeadObjectCommand = async (input, context) => {
+exports.se_HeadBucketCommand = se_HeadBucketCommand;
+const se_HeadObjectCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "if-match": input.IfMatch,
@@ -12095,8 +12095,8 @@ const serializeAws_restXmlHeadObjectCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlHeadObjectCommand = serializeAws_restXmlHeadObjectCommand;
-const serializeAws_restXmlListBucketAnalyticsConfigurationsCommand = async (input, context) => {
+exports.se_HeadObjectCommand = se_HeadObjectCommand;
+const se_ListBucketAnalyticsConfigurationsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -12120,8 +12120,8 @@ const serializeAws_restXmlListBucketAnalyticsConfigurationsCommand = async (inpu
         body,
     });
 };
-exports.serializeAws_restXmlListBucketAnalyticsConfigurationsCommand = serializeAws_restXmlListBucketAnalyticsConfigurationsCommand;
-const serializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = async (input, context) => {
+exports.se_ListBucketAnalyticsConfigurationsCommand = se_ListBucketAnalyticsConfigurationsCommand;
+const se_ListBucketIntelligentTieringConfigurationsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {};
     let resolvedPath = `${basePath?.endsWith("/") ? basePath.slice(0, -1) : basePath || ""}` + "/";
@@ -12143,8 +12143,8 @@ const serializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = as
         body,
     });
 };
-exports.serializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = serializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand;
-const serializeAws_restXmlListBucketInventoryConfigurationsCommand = async (input, context) => {
+exports.se_ListBucketIntelligentTieringConfigurationsCommand = se_ListBucketIntelligentTieringConfigurationsCommand;
+const se_ListBucketInventoryConfigurationsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -12168,8 +12168,8 @@ const serializeAws_restXmlListBucketInventoryConfigurationsCommand = async (inpu
         body,
     });
 };
-exports.serializeAws_restXmlListBucketInventoryConfigurationsCommand = serializeAws_restXmlListBucketInventoryConfigurationsCommand;
-const serializeAws_restXmlListBucketMetricsConfigurationsCommand = async (input, context) => {
+exports.se_ListBucketInventoryConfigurationsCommand = se_ListBucketInventoryConfigurationsCommand;
+const se_ListBucketMetricsConfigurationsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -12193,8 +12193,8 @@ const serializeAws_restXmlListBucketMetricsConfigurationsCommand = async (input,
         body,
     });
 };
-exports.serializeAws_restXmlListBucketMetricsConfigurationsCommand = serializeAws_restXmlListBucketMetricsConfigurationsCommand;
-const serializeAws_restXmlListBucketsCommand = async (input, context) => {
+exports.se_ListBucketMetricsConfigurationsCommand = se_ListBucketMetricsConfigurationsCommand;
+const se_ListBucketsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {
         "content-type": "application/xml",
@@ -12212,8 +12212,8 @@ const serializeAws_restXmlListBucketsCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlListBucketsCommand = serializeAws_restXmlListBucketsCommand;
-const serializeAws_restXmlListMultipartUploadsCommand = async (input, context) => {
+exports.se_ListBucketsCommand = se_ListBucketsCommand;
+const se_ListMultipartUploadsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -12241,8 +12241,8 @@ const serializeAws_restXmlListMultipartUploadsCommand = async (input, context) =
         body,
     });
 };
-exports.serializeAws_restXmlListMultipartUploadsCommand = serializeAws_restXmlListMultipartUploadsCommand;
-const serializeAws_restXmlListObjectsCommand = async (input, context) => {
+exports.se_ListMultipartUploadsCommand = se_ListMultipartUploadsCommand;
+const se_ListObjectsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-request-payer": input.RequestPayer,
@@ -12269,8 +12269,8 @@ const serializeAws_restXmlListObjectsCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlListObjectsCommand = serializeAws_restXmlListObjectsCommand;
-const serializeAws_restXmlListObjectsV2Command = async (input, context) => {
+exports.se_ListObjectsCommand = se_ListObjectsCommand;
+const se_ListObjectsV2Command = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-request-payer": input.RequestPayer,
@@ -12300,8 +12300,8 @@ const serializeAws_restXmlListObjectsV2Command = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlListObjectsV2Command = serializeAws_restXmlListObjectsV2Command;
-const serializeAws_restXmlListObjectVersionsCommand = async (input, context) => {
+exports.se_ListObjectsV2Command = se_ListObjectsV2Command;
+const se_ListObjectVersionsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -12329,8 +12329,8 @@ const serializeAws_restXmlListObjectVersionsCommand = async (input, context) => 
         body,
     });
 };
-exports.serializeAws_restXmlListObjectVersionsCommand = serializeAws_restXmlListObjectVersionsCommand;
-const serializeAws_restXmlListPartsCommand = async (input, context) => {
+exports.se_ListObjectVersionsCommand = se_ListObjectVersionsCommand;
+const se_ListPartsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-request-payer": input.RequestPayer,
@@ -12360,8 +12360,8 @@ const serializeAws_restXmlListPartsCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlListPartsCommand = serializeAws_restXmlListPartsCommand;
-const serializeAws_restXmlPutBucketAccelerateConfigurationCommand = async (input, context) => {
+exports.se_ListPartsCommand = se_ListPartsCommand;
+const se_PutBucketAccelerateConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -12375,11 +12375,11 @@ const serializeAws_restXmlPutBucketAccelerateConfigurationCommand = async (input
     });
     let body;
     if (input.AccelerateConfiguration !== undefined) {
-        body = serializeAws_restXmlAccelerateConfiguration(input.AccelerateConfiguration, context);
+        body = se_AccelerateConfiguration(input.AccelerateConfiguration, context);
     }
     let contents;
     if (input.AccelerateConfiguration !== undefined) {
-        contents = serializeAws_restXmlAccelerateConfiguration(input.AccelerateConfiguration, context);
+        contents = se_AccelerateConfiguration(input.AccelerateConfiguration, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -12395,8 +12395,8 @@ const serializeAws_restXmlPutBucketAccelerateConfigurationCommand = async (input
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketAccelerateConfigurationCommand = serializeAws_restXmlPutBucketAccelerateConfigurationCommand;
-const serializeAws_restXmlPutBucketAclCommand = async (input, context) => {
+exports.se_PutBucketAccelerateConfigurationCommand = se_PutBucketAccelerateConfigurationCommand;
+const se_PutBucketAclCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -12417,11 +12417,11 @@ const serializeAws_restXmlPutBucketAclCommand = async (input, context) => {
     });
     let body;
     if (input.AccessControlPolicy !== undefined) {
-        body = serializeAws_restXmlAccessControlPolicy(input.AccessControlPolicy, context);
+        body = se_AccessControlPolicy(input.AccessControlPolicy, context);
     }
     let contents;
     if (input.AccessControlPolicy !== undefined) {
-        contents = serializeAws_restXmlAccessControlPolicy(input.AccessControlPolicy, context);
+        contents = se_AccessControlPolicy(input.AccessControlPolicy, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -12437,8 +12437,8 @@ const serializeAws_restXmlPutBucketAclCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketAclCommand = serializeAws_restXmlPutBucketAclCommand;
-const serializeAws_restXmlPutBucketAnalyticsConfigurationCommand = async (input, context) => {
+exports.se_PutBucketAclCommand = se_PutBucketAclCommand;
+const se_PutBucketAnalyticsConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -12452,11 +12452,11 @@ const serializeAws_restXmlPutBucketAnalyticsConfigurationCommand = async (input,
     });
     let body;
     if (input.AnalyticsConfiguration !== undefined) {
-        body = serializeAws_restXmlAnalyticsConfiguration(input.AnalyticsConfiguration, context);
+        body = se_AnalyticsConfiguration(input.AnalyticsConfiguration, context);
     }
     let contents;
     if (input.AnalyticsConfiguration !== undefined) {
-        contents = serializeAws_restXmlAnalyticsConfiguration(input.AnalyticsConfiguration, context);
+        contents = se_AnalyticsConfiguration(input.AnalyticsConfiguration, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -12472,8 +12472,8 @@ const serializeAws_restXmlPutBucketAnalyticsConfigurationCommand = async (input,
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketAnalyticsConfigurationCommand = serializeAws_restXmlPutBucketAnalyticsConfigurationCommand;
-const serializeAws_restXmlPutBucketCorsCommand = async (input, context) => {
+exports.se_PutBucketAnalyticsConfigurationCommand = se_PutBucketAnalyticsConfigurationCommand;
+const se_PutBucketCorsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -12488,11 +12488,11 @@ const serializeAws_restXmlPutBucketCorsCommand = async (input, context) => {
     });
     let body;
     if (input.CORSConfiguration !== undefined) {
-        body = serializeAws_restXmlCORSConfiguration(input.CORSConfiguration, context);
+        body = se_CORSConfiguration(input.CORSConfiguration, context);
     }
     let contents;
     if (input.CORSConfiguration !== undefined) {
-        contents = serializeAws_restXmlCORSConfiguration(input.CORSConfiguration, context);
+        contents = se_CORSConfiguration(input.CORSConfiguration, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -12508,8 +12508,8 @@ const serializeAws_restXmlPutBucketCorsCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketCorsCommand = serializeAws_restXmlPutBucketCorsCommand;
-const serializeAws_restXmlPutBucketEncryptionCommand = async (input, context) => {
+exports.se_PutBucketCorsCommand = se_PutBucketCorsCommand;
+const se_PutBucketEncryptionCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -12524,11 +12524,11 @@ const serializeAws_restXmlPutBucketEncryptionCommand = async (input, context) =>
     });
     let body;
     if (input.ServerSideEncryptionConfiguration !== undefined) {
-        body = serializeAws_restXmlServerSideEncryptionConfiguration(input.ServerSideEncryptionConfiguration, context);
+        body = se_ServerSideEncryptionConfiguration(input.ServerSideEncryptionConfiguration, context);
     }
     let contents;
     if (input.ServerSideEncryptionConfiguration !== undefined) {
-        contents = serializeAws_restXmlServerSideEncryptionConfiguration(input.ServerSideEncryptionConfiguration, context);
+        contents = se_ServerSideEncryptionConfiguration(input.ServerSideEncryptionConfiguration, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -12544,8 +12544,8 @@ const serializeAws_restXmlPutBucketEncryptionCommand = async (input, context) =>
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketEncryptionCommand = serializeAws_restXmlPutBucketEncryptionCommand;
-const serializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = async (input, context) => {
+exports.se_PutBucketEncryptionCommand = se_PutBucketEncryptionCommand;
+const se_PutBucketIntelligentTieringConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {
         "content-type": "application/xml",
@@ -12558,11 +12558,11 @@ const serializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = asyn
     });
     let body;
     if (input.IntelligentTieringConfiguration !== undefined) {
-        body = serializeAws_restXmlIntelligentTieringConfiguration(input.IntelligentTieringConfiguration, context);
+        body = se_IntelligentTieringConfiguration(input.IntelligentTieringConfiguration, context);
     }
     let contents;
     if (input.IntelligentTieringConfiguration !== undefined) {
-        contents = serializeAws_restXmlIntelligentTieringConfiguration(input.IntelligentTieringConfiguration, context);
+        contents = se_IntelligentTieringConfiguration(input.IntelligentTieringConfiguration, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -12578,8 +12578,8 @@ const serializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = asyn
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = serializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand;
-const serializeAws_restXmlPutBucketInventoryConfigurationCommand = async (input, context) => {
+exports.se_PutBucketIntelligentTieringConfigurationCommand = se_PutBucketIntelligentTieringConfigurationCommand;
+const se_PutBucketInventoryConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -12593,11 +12593,11 @@ const serializeAws_restXmlPutBucketInventoryConfigurationCommand = async (input,
     });
     let body;
     if (input.InventoryConfiguration !== undefined) {
-        body = serializeAws_restXmlInventoryConfiguration(input.InventoryConfiguration, context);
+        body = se_InventoryConfiguration(input.InventoryConfiguration, context);
     }
     let contents;
     if (input.InventoryConfiguration !== undefined) {
-        contents = serializeAws_restXmlInventoryConfiguration(input.InventoryConfiguration, context);
+        contents = se_InventoryConfiguration(input.InventoryConfiguration, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -12613,8 +12613,8 @@ const serializeAws_restXmlPutBucketInventoryConfigurationCommand = async (input,
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketInventoryConfigurationCommand = serializeAws_restXmlPutBucketInventoryConfigurationCommand;
-const serializeAws_restXmlPutBucketLifecycleConfigurationCommand = async (input, context) => {
+exports.se_PutBucketInventoryConfigurationCommand = se_PutBucketInventoryConfigurationCommand;
+const se_PutBucketLifecycleConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -12628,11 +12628,11 @@ const serializeAws_restXmlPutBucketLifecycleConfigurationCommand = async (input,
     });
     let body;
     if (input.LifecycleConfiguration !== undefined) {
-        body = serializeAws_restXmlBucketLifecycleConfiguration(input.LifecycleConfiguration, context);
+        body = se_BucketLifecycleConfiguration(input.LifecycleConfiguration, context);
     }
     let contents;
     if (input.LifecycleConfiguration !== undefined) {
-        contents = serializeAws_restXmlBucketLifecycleConfiguration(input.LifecycleConfiguration, context);
+        contents = se_BucketLifecycleConfiguration(input.LifecycleConfiguration, context);
         contents = contents.withName("LifecycleConfiguration");
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
@@ -12649,8 +12649,8 @@ const serializeAws_restXmlPutBucketLifecycleConfigurationCommand = async (input,
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketLifecycleConfigurationCommand = serializeAws_restXmlPutBucketLifecycleConfigurationCommand;
-const serializeAws_restXmlPutBucketLoggingCommand = async (input, context) => {
+exports.se_PutBucketLifecycleConfigurationCommand = se_PutBucketLifecycleConfigurationCommand;
+const se_PutBucketLoggingCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -12665,11 +12665,11 @@ const serializeAws_restXmlPutBucketLoggingCommand = async (input, context) => {
     });
     let body;
     if (input.BucketLoggingStatus !== undefined) {
-        body = serializeAws_restXmlBucketLoggingStatus(input.BucketLoggingStatus, context);
+        body = se_BucketLoggingStatus(input.BucketLoggingStatus, context);
     }
     let contents;
     if (input.BucketLoggingStatus !== undefined) {
-        contents = serializeAws_restXmlBucketLoggingStatus(input.BucketLoggingStatus, context);
+        contents = se_BucketLoggingStatus(input.BucketLoggingStatus, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -12685,8 +12685,8 @@ const serializeAws_restXmlPutBucketLoggingCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketLoggingCommand = serializeAws_restXmlPutBucketLoggingCommand;
-const serializeAws_restXmlPutBucketMetricsConfigurationCommand = async (input, context) => {
+exports.se_PutBucketLoggingCommand = se_PutBucketLoggingCommand;
+const se_PutBucketMetricsConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -12700,11 +12700,11 @@ const serializeAws_restXmlPutBucketMetricsConfigurationCommand = async (input, c
     });
     let body;
     if (input.MetricsConfiguration !== undefined) {
-        body = serializeAws_restXmlMetricsConfiguration(input.MetricsConfiguration, context);
+        body = se_MetricsConfiguration(input.MetricsConfiguration, context);
     }
     let contents;
     if (input.MetricsConfiguration !== undefined) {
-        contents = serializeAws_restXmlMetricsConfiguration(input.MetricsConfiguration, context);
+        contents = se_MetricsConfiguration(input.MetricsConfiguration, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -12720,8 +12720,8 @@ const serializeAws_restXmlPutBucketMetricsConfigurationCommand = async (input, c
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketMetricsConfigurationCommand = serializeAws_restXmlPutBucketMetricsConfigurationCommand;
-const serializeAws_restXmlPutBucketNotificationConfigurationCommand = async (input, context) => {
+exports.se_PutBucketMetricsConfigurationCommand = se_PutBucketMetricsConfigurationCommand;
+const se_PutBucketNotificationConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -12738,11 +12738,11 @@ const serializeAws_restXmlPutBucketNotificationConfigurationCommand = async (inp
     });
     let body;
     if (input.NotificationConfiguration !== undefined) {
-        body = serializeAws_restXmlNotificationConfiguration(input.NotificationConfiguration, context);
+        body = se_NotificationConfiguration(input.NotificationConfiguration, context);
     }
     let contents;
     if (input.NotificationConfiguration !== undefined) {
-        contents = serializeAws_restXmlNotificationConfiguration(input.NotificationConfiguration, context);
+        contents = se_NotificationConfiguration(input.NotificationConfiguration, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -12758,8 +12758,8 @@ const serializeAws_restXmlPutBucketNotificationConfigurationCommand = async (inp
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketNotificationConfigurationCommand = serializeAws_restXmlPutBucketNotificationConfigurationCommand;
-const serializeAws_restXmlPutBucketOwnershipControlsCommand = async (input, context) => {
+exports.se_PutBucketNotificationConfigurationCommand = se_PutBucketNotificationConfigurationCommand;
+const se_PutBucketOwnershipControlsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -12773,11 +12773,11 @@ const serializeAws_restXmlPutBucketOwnershipControlsCommand = async (input, cont
     });
     let body;
     if (input.OwnershipControls !== undefined) {
-        body = serializeAws_restXmlOwnershipControls(input.OwnershipControls, context);
+        body = se_OwnershipControls(input.OwnershipControls, context);
     }
     let contents;
     if (input.OwnershipControls !== undefined) {
-        contents = serializeAws_restXmlOwnershipControls(input.OwnershipControls, context);
+        contents = se_OwnershipControls(input.OwnershipControls, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -12793,8 +12793,8 @@ const serializeAws_restXmlPutBucketOwnershipControlsCommand = async (input, cont
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketOwnershipControlsCommand = serializeAws_restXmlPutBucketOwnershipControlsCommand;
-const serializeAws_restXmlPutBucketPolicyCommand = async (input, context) => {
+exports.se_PutBucketOwnershipControlsCommand = se_PutBucketOwnershipControlsCommand;
+const se_PutBucketPolicyCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "text/plain",
@@ -12831,8 +12831,8 @@ const serializeAws_restXmlPutBucketPolicyCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketPolicyCommand = serializeAws_restXmlPutBucketPolicyCommand;
-const serializeAws_restXmlPutBucketReplicationCommand = async (input, context) => {
+exports.se_PutBucketPolicyCommand = se_PutBucketPolicyCommand;
+const se_PutBucketReplicationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -12848,11 +12848,11 @@ const serializeAws_restXmlPutBucketReplicationCommand = async (input, context) =
     });
     let body;
     if (input.ReplicationConfiguration !== undefined) {
-        body = serializeAws_restXmlReplicationConfiguration(input.ReplicationConfiguration, context);
+        body = se_ReplicationConfiguration(input.ReplicationConfiguration, context);
     }
     let contents;
     if (input.ReplicationConfiguration !== undefined) {
-        contents = serializeAws_restXmlReplicationConfiguration(input.ReplicationConfiguration, context);
+        contents = se_ReplicationConfiguration(input.ReplicationConfiguration, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -12868,8 +12868,8 @@ const serializeAws_restXmlPutBucketReplicationCommand = async (input, context) =
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketReplicationCommand = serializeAws_restXmlPutBucketReplicationCommand;
-const serializeAws_restXmlPutBucketRequestPaymentCommand = async (input, context) => {
+exports.se_PutBucketReplicationCommand = se_PutBucketReplicationCommand;
+const se_PutBucketRequestPaymentCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -12884,11 +12884,11 @@ const serializeAws_restXmlPutBucketRequestPaymentCommand = async (input, context
     });
     let body;
     if (input.RequestPaymentConfiguration !== undefined) {
-        body = serializeAws_restXmlRequestPaymentConfiguration(input.RequestPaymentConfiguration, context);
+        body = se_RequestPaymentConfiguration(input.RequestPaymentConfiguration, context);
     }
     let contents;
     if (input.RequestPaymentConfiguration !== undefined) {
-        contents = serializeAws_restXmlRequestPaymentConfiguration(input.RequestPaymentConfiguration, context);
+        contents = se_RequestPaymentConfiguration(input.RequestPaymentConfiguration, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -12904,8 +12904,8 @@ const serializeAws_restXmlPutBucketRequestPaymentCommand = async (input, context
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketRequestPaymentCommand = serializeAws_restXmlPutBucketRequestPaymentCommand;
-const serializeAws_restXmlPutBucketTaggingCommand = async (input, context) => {
+exports.se_PutBucketRequestPaymentCommand = se_PutBucketRequestPaymentCommand;
+const se_PutBucketTaggingCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -12920,11 +12920,11 @@ const serializeAws_restXmlPutBucketTaggingCommand = async (input, context) => {
     });
     let body;
     if (input.Tagging !== undefined) {
-        body = serializeAws_restXmlTagging(input.Tagging, context);
+        body = se_Tagging(input.Tagging, context);
     }
     let contents;
     if (input.Tagging !== undefined) {
-        contents = serializeAws_restXmlTagging(input.Tagging, context);
+        contents = se_Tagging(input.Tagging, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -12940,8 +12940,8 @@ const serializeAws_restXmlPutBucketTaggingCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketTaggingCommand = serializeAws_restXmlPutBucketTaggingCommand;
-const serializeAws_restXmlPutBucketVersioningCommand = async (input, context) => {
+exports.se_PutBucketTaggingCommand = se_PutBucketTaggingCommand;
+const se_PutBucketVersioningCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -12957,11 +12957,11 @@ const serializeAws_restXmlPutBucketVersioningCommand = async (input, context) =>
     });
     let body;
     if (input.VersioningConfiguration !== undefined) {
-        body = serializeAws_restXmlVersioningConfiguration(input.VersioningConfiguration, context);
+        body = se_VersioningConfiguration(input.VersioningConfiguration, context);
     }
     let contents;
     if (input.VersioningConfiguration !== undefined) {
-        contents = serializeAws_restXmlVersioningConfiguration(input.VersioningConfiguration, context);
+        contents = se_VersioningConfiguration(input.VersioningConfiguration, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -12977,8 +12977,8 @@ const serializeAws_restXmlPutBucketVersioningCommand = async (input, context) =>
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketVersioningCommand = serializeAws_restXmlPutBucketVersioningCommand;
-const serializeAws_restXmlPutBucketWebsiteCommand = async (input, context) => {
+exports.se_PutBucketVersioningCommand = se_PutBucketVersioningCommand;
+const se_PutBucketWebsiteCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -12993,11 +12993,11 @@ const serializeAws_restXmlPutBucketWebsiteCommand = async (input, context) => {
     });
     let body;
     if (input.WebsiteConfiguration !== undefined) {
-        body = serializeAws_restXmlWebsiteConfiguration(input.WebsiteConfiguration, context);
+        body = se_WebsiteConfiguration(input.WebsiteConfiguration, context);
     }
     let contents;
     if (input.WebsiteConfiguration !== undefined) {
-        contents = serializeAws_restXmlWebsiteConfiguration(input.WebsiteConfiguration, context);
+        contents = se_WebsiteConfiguration(input.WebsiteConfiguration, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -13013,8 +13013,8 @@ const serializeAws_restXmlPutBucketWebsiteCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlPutBucketWebsiteCommand = serializeAws_restXmlPutBucketWebsiteCommand;
-const serializeAws_restXmlPutObjectCommand = async (input, context) => {
+exports.se_PutBucketWebsiteCommand = se_PutBucketWebsiteCommand;
+const se_PutObjectCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": input.ContentType || "application/octet-stream",
@@ -13088,8 +13088,8 @@ const serializeAws_restXmlPutObjectCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlPutObjectCommand = serializeAws_restXmlPutObjectCommand;
-const serializeAws_restXmlPutObjectAclCommand = async (input, context) => {
+exports.se_PutObjectCommand = se_PutObjectCommand;
+const se_PutObjectAclCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -13113,11 +13113,11 @@ const serializeAws_restXmlPutObjectAclCommand = async (input, context) => {
     });
     let body;
     if (input.AccessControlPolicy !== undefined) {
-        body = serializeAws_restXmlAccessControlPolicy(input.AccessControlPolicy, context);
+        body = se_AccessControlPolicy(input.AccessControlPolicy, context);
     }
     let contents;
     if (input.AccessControlPolicy !== undefined) {
-        contents = serializeAws_restXmlAccessControlPolicy(input.AccessControlPolicy, context);
+        contents = se_AccessControlPolicy(input.AccessControlPolicy, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -13133,8 +13133,8 @@ const serializeAws_restXmlPutObjectAclCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlPutObjectAclCommand = serializeAws_restXmlPutObjectAclCommand;
-const serializeAws_restXmlPutObjectLegalHoldCommand = async (input, context) => {
+exports.se_PutObjectAclCommand = se_PutObjectAclCommand;
+const se_PutObjectLegalHoldCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -13152,11 +13152,11 @@ const serializeAws_restXmlPutObjectLegalHoldCommand = async (input, context) => 
     });
     let body;
     if (input.LegalHold !== undefined) {
-        body = serializeAws_restXmlObjectLockLegalHold(input.LegalHold, context);
+        body = se_ObjectLockLegalHold(input.LegalHold, context);
     }
     let contents;
     if (input.LegalHold !== undefined) {
-        contents = serializeAws_restXmlObjectLockLegalHold(input.LegalHold, context);
+        contents = se_ObjectLockLegalHold(input.LegalHold, context);
         contents = contents.withName("LegalHold");
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
@@ -13173,8 +13173,8 @@ const serializeAws_restXmlPutObjectLegalHoldCommand = async (input, context) => 
         body,
     });
 };
-exports.serializeAws_restXmlPutObjectLegalHoldCommand = serializeAws_restXmlPutObjectLegalHoldCommand;
-const serializeAws_restXmlPutObjectLockConfigurationCommand = async (input, context) => {
+exports.se_PutObjectLegalHoldCommand = se_PutObjectLegalHoldCommand;
+const se_PutObjectLockConfigurationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -13191,11 +13191,11 @@ const serializeAws_restXmlPutObjectLockConfigurationCommand = async (input, cont
     });
     let body;
     if (input.ObjectLockConfiguration !== undefined) {
-        body = serializeAws_restXmlObjectLockConfiguration(input.ObjectLockConfiguration, context);
+        body = se_ObjectLockConfiguration(input.ObjectLockConfiguration, context);
     }
     let contents;
     if (input.ObjectLockConfiguration !== undefined) {
-        contents = serializeAws_restXmlObjectLockConfiguration(input.ObjectLockConfiguration, context);
+        contents = se_ObjectLockConfiguration(input.ObjectLockConfiguration, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -13211,8 +13211,8 @@ const serializeAws_restXmlPutObjectLockConfigurationCommand = async (input, cont
         body,
     });
 };
-exports.serializeAws_restXmlPutObjectLockConfigurationCommand = serializeAws_restXmlPutObjectLockConfigurationCommand;
-const serializeAws_restXmlPutObjectRetentionCommand = async (input, context) => {
+exports.se_PutObjectLockConfigurationCommand = se_PutObjectLockConfigurationCommand;
+const se_PutObjectRetentionCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -13234,11 +13234,11 @@ const serializeAws_restXmlPutObjectRetentionCommand = async (input, context) => 
     });
     let body;
     if (input.Retention !== undefined) {
-        body = serializeAws_restXmlObjectLockRetention(input.Retention, context);
+        body = se_ObjectLockRetention(input.Retention, context);
     }
     let contents;
     if (input.Retention !== undefined) {
-        contents = serializeAws_restXmlObjectLockRetention(input.Retention, context);
+        contents = se_ObjectLockRetention(input.Retention, context);
         contents = contents.withName("Retention");
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
@@ -13255,8 +13255,8 @@ const serializeAws_restXmlPutObjectRetentionCommand = async (input, context) => 
         body,
     });
 };
-exports.serializeAws_restXmlPutObjectRetentionCommand = serializeAws_restXmlPutObjectRetentionCommand;
-const serializeAws_restXmlPutObjectTaggingCommand = async (input, context) => {
+exports.se_PutObjectRetentionCommand = se_PutObjectRetentionCommand;
+const se_PutObjectTaggingCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -13274,11 +13274,11 @@ const serializeAws_restXmlPutObjectTaggingCommand = async (input, context) => {
     });
     let body;
     if (input.Tagging !== undefined) {
-        body = serializeAws_restXmlTagging(input.Tagging, context);
+        body = se_Tagging(input.Tagging, context);
     }
     let contents;
     if (input.Tagging !== undefined) {
-        contents = serializeAws_restXmlTagging(input.Tagging, context);
+        contents = se_Tagging(input.Tagging, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -13294,8 +13294,8 @@ const serializeAws_restXmlPutObjectTaggingCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlPutObjectTaggingCommand = serializeAws_restXmlPutObjectTaggingCommand;
-const serializeAws_restXmlPutPublicAccessBlockCommand = async (input, context) => {
+exports.se_PutObjectTaggingCommand = se_PutObjectTaggingCommand;
+const se_PutPublicAccessBlockCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -13310,11 +13310,11 @@ const serializeAws_restXmlPutPublicAccessBlockCommand = async (input, context) =
     });
     let body;
     if (input.PublicAccessBlockConfiguration !== undefined) {
-        body = serializeAws_restXmlPublicAccessBlockConfiguration(input.PublicAccessBlockConfiguration, context);
+        body = se_PublicAccessBlockConfiguration(input.PublicAccessBlockConfiguration, context);
     }
     let contents;
     if (input.PublicAccessBlockConfiguration !== undefined) {
-        contents = serializeAws_restXmlPublicAccessBlockConfiguration(input.PublicAccessBlockConfiguration, context);
+        contents = se_PublicAccessBlockConfiguration(input.PublicAccessBlockConfiguration, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -13330,8 +13330,8 @@ const serializeAws_restXmlPutPublicAccessBlockCommand = async (input, context) =
         body,
     });
 };
-exports.serializeAws_restXmlPutPublicAccessBlockCommand = serializeAws_restXmlPutPublicAccessBlockCommand;
-const serializeAws_restXmlRestoreObjectCommand = async (input, context) => {
+exports.se_PutPublicAccessBlockCommand = se_PutPublicAccessBlockCommand;
+const se_RestoreObjectCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -13349,11 +13349,11 @@ const serializeAws_restXmlRestoreObjectCommand = async (input, context) => {
     });
     let body;
     if (input.RestoreRequest !== undefined) {
-        body = serializeAws_restXmlRestoreRequest(input.RestoreRequest, context);
+        body = se_RestoreRequest(input.RestoreRequest, context);
     }
     let contents;
     if (input.RestoreRequest !== undefined) {
-        contents = serializeAws_restXmlRestoreRequest(input.RestoreRequest, context);
+        contents = se_RestoreRequest(input.RestoreRequest, context);
         body = '<?xml version="1.0" encoding="UTF-8"?>';
         contents.addAttribute("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
         body += contents.toString();
@@ -13369,8 +13369,8 @@ const serializeAws_restXmlRestoreObjectCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlRestoreObjectCommand = serializeAws_restXmlRestoreObjectCommand;
-const serializeAws_restXmlSelectObjectContentCommand = async (input, context) => {
+exports.se_RestoreObjectCommand = se_RestoreObjectCommand;
+const se_SelectObjectContentCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/xml",
@@ -13400,19 +13400,19 @@ const serializeAws_restXmlSelectObjectContentCommand = async (input, context) =>
         bodyNode.addChildNode(node);
     }
     if (input.InputSerialization !== undefined) {
-        const node = serializeAws_restXmlInputSerialization(input.InputSerialization, context).withName("InputSerialization");
+        const node = se_InputSerialization(input.InputSerialization, context).withName("InputSerialization");
         bodyNode.addChildNode(node);
     }
     if (input.OutputSerialization !== undefined) {
-        const node = serializeAws_restXmlOutputSerialization(input.OutputSerialization, context).withName("OutputSerialization");
+        const node = se_OutputSerialization(input.OutputSerialization, context).withName("OutputSerialization");
         bodyNode.addChildNode(node);
     }
     if (input.RequestProgress !== undefined) {
-        const node = serializeAws_restXmlRequestProgress(input.RequestProgress, context).withName("RequestProgress");
+        const node = se_RequestProgress(input.RequestProgress, context).withName("RequestProgress");
         bodyNode.addChildNode(node);
     }
     if (input.ScanRange !== undefined) {
-        const node = serializeAws_restXmlScanRange(input.ScanRange, context).withName("ScanRange");
+        const node = se_ScanRange(input.ScanRange, context).withName("ScanRange");
         bodyNode.addChildNode(node);
     }
     body += bodyNode.toString();
@@ -13427,8 +13427,8 @@ const serializeAws_restXmlSelectObjectContentCommand = async (input, context) =>
         body,
     });
 };
-exports.serializeAws_restXmlSelectObjectContentCommand = serializeAws_restXmlSelectObjectContentCommand;
-const serializeAws_restXmlUploadPartCommand = async (input, context) => {
+exports.se_SelectObjectContentCommand = se_SelectObjectContentCommand;
+const se_UploadPartCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "content-type": "application/octet-stream",
@@ -13473,8 +13473,8 @@ const serializeAws_restXmlUploadPartCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlUploadPartCommand = serializeAws_restXmlUploadPartCommand;
-const serializeAws_restXmlUploadPartCopyCommand = async (input, context) => {
+exports.se_UploadPartCommand = se_UploadPartCommand;
+const se_UploadPartCopyCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-copy-source": input.CopySource,
@@ -13519,8 +13519,8 @@ const serializeAws_restXmlUploadPartCopyCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restXmlUploadPartCopyCommand = serializeAws_restXmlUploadPartCopyCommand;
-const serializeAws_restXmlWriteGetObjectResponseCommand = async (input, context) => {
+exports.se_UploadPartCopyCommand = se_UploadPartCopyCommand;
+const se_WriteGetObjectResponseCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-content-sha256": "UNSIGNED-PAYLOAD",
@@ -13628,10 +13628,10 @@ const serializeAws_restXmlWriteGetObjectResponseCommand = async (input, context)
         body,
     });
 };
-exports.serializeAws_restXmlWriteGetObjectResponseCommand = serializeAws_restXmlWriteGetObjectResponseCommand;
-const deserializeAws_restXmlAbortMultipartUploadCommand = async (output, context) => {
+exports.se_WriteGetObjectResponseCommand = se_WriteGetObjectResponseCommand;
+const de_AbortMultipartUploadCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlAbortMultipartUploadCommandError(output, context);
+        return de_AbortMultipartUploadCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -13640,8 +13640,8 @@ const deserializeAws_restXmlAbortMultipartUploadCommand = async (output, context
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlAbortMultipartUploadCommand = deserializeAws_restXmlAbortMultipartUploadCommand;
-const deserializeAws_restXmlAbortMultipartUploadCommandError = async (output, context) => {
+exports.de_AbortMultipartUploadCommand = de_AbortMultipartUploadCommand;
+const de_AbortMultipartUploadCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -13650,7 +13650,7 @@ const deserializeAws_restXmlAbortMultipartUploadCommandError = async (output, co
     switch (errorCode) {
         case "NoSuchUpload":
         case "com.amazonaws.s3#NoSuchUpload":
-            throw await deserializeAws_restXmlNoSuchUploadResponse(parsedOutput, context);
+            throw await de_NoSuchUploadRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -13661,9 +13661,9 @@ const deserializeAws_restXmlAbortMultipartUploadCommandError = async (output, co
             });
     }
 };
-const deserializeAws_restXmlCompleteMultipartUploadCommand = async (output, context) => {
+const de_CompleteMultipartUploadCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlCompleteMultipartUploadCommandError(output, context);
+        return de_CompleteMultipartUploadCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -13704,8 +13704,8 @@ const deserializeAws_restXmlCompleteMultipartUploadCommand = async (output, cont
     }
     return contents;
 };
-exports.deserializeAws_restXmlCompleteMultipartUploadCommand = deserializeAws_restXmlCompleteMultipartUploadCommand;
-const deserializeAws_restXmlCompleteMultipartUploadCommandError = async (output, context) => {
+exports.de_CompleteMultipartUploadCommand = de_CompleteMultipartUploadCommand;
+const de_CompleteMultipartUploadCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -13719,9 +13719,9 @@ const deserializeAws_restXmlCompleteMultipartUploadCommandError = async (output,
         errorCode,
     });
 };
-const deserializeAws_restXmlCopyObjectCommand = async (output, context) => {
+const de_CopyObjectCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlCopyObjectCommandError(output, context);
+        return de_CopyObjectCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -13740,11 +13740,11 @@ const deserializeAws_restXmlCopyObjectCommand = async (output, context) => {
         RequestCharged: [, output.headers["x-amz-request-charged"]],
     });
     const data = (0, smithy_client_1.expectObject)(await parseBody(output.body, context));
-    contents.CopyObjectResult = deserializeAws_restXmlCopyObjectResult(data, context);
+    contents.CopyObjectResult = de_CopyObjectResult(data, context);
     return contents;
 };
-exports.deserializeAws_restXmlCopyObjectCommand = deserializeAws_restXmlCopyObjectCommand;
-const deserializeAws_restXmlCopyObjectCommandError = async (output, context) => {
+exports.de_CopyObjectCommand = de_CopyObjectCommand;
+const de_CopyObjectCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -13753,7 +13753,7 @@ const deserializeAws_restXmlCopyObjectCommandError = async (output, context) => 
     switch (errorCode) {
         case "ObjectNotInActiveTierError":
         case "com.amazonaws.s3#ObjectNotInActiveTierError":
-            throw await deserializeAws_restXmlObjectNotInActiveTierErrorResponse(parsedOutput, context);
+            throw await de_ObjectNotInActiveTierErrorRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -13764,9 +13764,9 @@ const deserializeAws_restXmlCopyObjectCommandError = async (output, context) => 
             });
     }
 };
-const deserializeAws_restXmlCreateBucketCommand = async (output, context) => {
+const de_CreateBucketCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlCreateBucketCommandError(output, context);
+        return de_CreateBucketCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -13775,8 +13775,8 @@ const deserializeAws_restXmlCreateBucketCommand = async (output, context) => {
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlCreateBucketCommand = deserializeAws_restXmlCreateBucketCommand;
-const deserializeAws_restXmlCreateBucketCommandError = async (output, context) => {
+exports.de_CreateBucketCommand = de_CreateBucketCommand;
+const de_CreateBucketCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -13785,10 +13785,10 @@ const deserializeAws_restXmlCreateBucketCommandError = async (output, context) =
     switch (errorCode) {
         case "BucketAlreadyExists":
         case "com.amazonaws.s3#BucketAlreadyExists":
-            throw await deserializeAws_restXmlBucketAlreadyExistsResponse(parsedOutput, context);
+            throw await de_BucketAlreadyExistsRes(parsedOutput, context);
         case "BucketAlreadyOwnedByYou":
         case "com.amazonaws.s3#BucketAlreadyOwnedByYou":
-            throw await deserializeAws_restXmlBucketAlreadyOwnedByYouResponse(parsedOutput, context);
+            throw await de_BucketAlreadyOwnedByYouRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -13799,9 +13799,9 @@ const deserializeAws_restXmlCreateBucketCommandError = async (output, context) =
             });
     }
 };
-const deserializeAws_restXmlCreateMultipartUploadCommand = async (output, context) => {
+const de_CreateMultipartUploadCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlCreateMultipartUploadCommandError(output, context);
+        return de_CreateMultipartUploadCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -13834,8 +13834,8 @@ const deserializeAws_restXmlCreateMultipartUploadCommand = async (output, contex
     }
     return contents;
 };
-exports.deserializeAws_restXmlCreateMultipartUploadCommand = deserializeAws_restXmlCreateMultipartUploadCommand;
-const deserializeAws_restXmlCreateMultipartUploadCommandError = async (output, context) => {
+exports.de_CreateMultipartUploadCommand = de_CreateMultipartUploadCommand;
+const de_CreateMultipartUploadCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -13849,9 +13849,9 @@ const deserializeAws_restXmlCreateMultipartUploadCommandError = async (output, c
         errorCode,
     });
 };
-const deserializeAws_restXmlDeleteBucketCommand = async (output, context) => {
+const de_DeleteBucketCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeleteBucketCommandError(output, context);
+        return de_DeleteBucketCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -13859,8 +13859,8 @@ const deserializeAws_restXmlDeleteBucketCommand = async (output, context) => {
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlDeleteBucketCommand = deserializeAws_restXmlDeleteBucketCommand;
-const deserializeAws_restXmlDeleteBucketCommandError = async (output, context) => {
+exports.de_DeleteBucketCommand = de_DeleteBucketCommand;
+const de_DeleteBucketCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -13874,9 +13874,9 @@ const deserializeAws_restXmlDeleteBucketCommandError = async (output, context) =
         errorCode,
     });
 };
-const deserializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand = async (output, context) => {
+const de_DeleteBucketAnalyticsConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeleteBucketAnalyticsConfigurationCommandError(output, context);
+        return de_DeleteBucketAnalyticsConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -13884,8 +13884,8 @@ const deserializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand = async (o
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand = deserializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand;
-const deserializeAws_restXmlDeleteBucketAnalyticsConfigurationCommandError = async (output, context) => {
+exports.de_DeleteBucketAnalyticsConfigurationCommand = de_DeleteBucketAnalyticsConfigurationCommand;
+const de_DeleteBucketAnalyticsConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -13899,9 +13899,9 @@ const deserializeAws_restXmlDeleteBucketAnalyticsConfigurationCommandError = asy
         errorCode,
     });
 };
-const deserializeAws_restXmlDeleteBucketCorsCommand = async (output, context) => {
+const de_DeleteBucketCorsCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeleteBucketCorsCommandError(output, context);
+        return de_DeleteBucketCorsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -13909,8 +13909,8 @@ const deserializeAws_restXmlDeleteBucketCorsCommand = async (output, context) =>
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlDeleteBucketCorsCommand = deserializeAws_restXmlDeleteBucketCorsCommand;
-const deserializeAws_restXmlDeleteBucketCorsCommandError = async (output, context) => {
+exports.de_DeleteBucketCorsCommand = de_DeleteBucketCorsCommand;
+const de_DeleteBucketCorsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -13924,9 +13924,9 @@ const deserializeAws_restXmlDeleteBucketCorsCommandError = async (output, contex
         errorCode,
     });
 };
-const deserializeAws_restXmlDeleteBucketEncryptionCommand = async (output, context) => {
+const de_DeleteBucketEncryptionCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeleteBucketEncryptionCommandError(output, context);
+        return de_DeleteBucketEncryptionCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -13934,8 +13934,8 @@ const deserializeAws_restXmlDeleteBucketEncryptionCommand = async (output, conte
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlDeleteBucketEncryptionCommand = deserializeAws_restXmlDeleteBucketEncryptionCommand;
-const deserializeAws_restXmlDeleteBucketEncryptionCommandError = async (output, context) => {
+exports.de_DeleteBucketEncryptionCommand = de_DeleteBucketEncryptionCommand;
+const de_DeleteBucketEncryptionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -13949,9 +13949,9 @@ const deserializeAws_restXmlDeleteBucketEncryptionCommandError = async (output, 
         errorCode,
     });
 };
-const deserializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand = async (output, context) => {
+const de_DeleteBucketIntelligentTieringConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommandError(output, context);
+        return de_DeleteBucketIntelligentTieringConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -13959,8 +13959,8 @@ const deserializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand =
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand = deserializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand;
-const deserializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommandError = async (output, context) => {
+exports.de_DeleteBucketIntelligentTieringConfigurationCommand = de_DeleteBucketIntelligentTieringConfigurationCommand;
+const de_DeleteBucketIntelligentTieringConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -13974,9 +13974,9 @@ const deserializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommandEr
         errorCode,
     });
 };
-const deserializeAws_restXmlDeleteBucketInventoryConfigurationCommand = async (output, context) => {
+const de_DeleteBucketInventoryConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeleteBucketInventoryConfigurationCommandError(output, context);
+        return de_DeleteBucketInventoryConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -13984,8 +13984,8 @@ const deserializeAws_restXmlDeleteBucketInventoryConfigurationCommand = async (o
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlDeleteBucketInventoryConfigurationCommand = deserializeAws_restXmlDeleteBucketInventoryConfigurationCommand;
-const deserializeAws_restXmlDeleteBucketInventoryConfigurationCommandError = async (output, context) => {
+exports.de_DeleteBucketInventoryConfigurationCommand = de_DeleteBucketInventoryConfigurationCommand;
+const de_DeleteBucketInventoryConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -13999,9 +13999,9 @@ const deserializeAws_restXmlDeleteBucketInventoryConfigurationCommandError = asy
         errorCode,
     });
 };
-const deserializeAws_restXmlDeleteBucketLifecycleCommand = async (output, context) => {
+const de_DeleteBucketLifecycleCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeleteBucketLifecycleCommandError(output, context);
+        return de_DeleteBucketLifecycleCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14009,8 +14009,8 @@ const deserializeAws_restXmlDeleteBucketLifecycleCommand = async (output, contex
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlDeleteBucketLifecycleCommand = deserializeAws_restXmlDeleteBucketLifecycleCommand;
-const deserializeAws_restXmlDeleteBucketLifecycleCommandError = async (output, context) => {
+exports.de_DeleteBucketLifecycleCommand = de_DeleteBucketLifecycleCommand;
+const de_DeleteBucketLifecycleCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14024,9 +14024,9 @@ const deserializeAws_restXmlDeleteBucketLifecycleCommandError = async (output, c
         errorCode,
     });
 };
-const deserializeAws_restXmlDeleteBucketMetricsConfigurationCommand = async (output, context) => {
+const de_DeleteBucketMetricsConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeleteBucketMetricsConfigurationCommandError(output, context);
+        return de_DeleteBucketMetricsConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14034,8 +14034,8 @@ const deserializeAws_restXmlDeleteBucketMetricsConfigurationCommand = async (out
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlDeleteBucketMetricsConfigurationCommand = deserializeAws_restXmlDeleteBucketMetricsConfigurationCommand;
-const deserializeAws_restXmlDeleteBucketMetricsConfigurationCommandError = async (output, context) => {
+exports.de_DeleteBucketMetricsConfigurationCommand = de_DeleteBucketMetricsConfigurationCommand;
+const de_DeleteBucketMetricsConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14049,9 +14049,9 @@ const deserializeAws_restXmlDeleteBucketMetricsConfigurationCommandError = async
         errorCode,
     });
 };
-const deserializeAws_restXmlDeleteBucketOwnershipControlsCommand = async (output, context) => {
+const de_DeleteBucketOwnershipControlsCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeleteBucketOwnershipControlsCommandError(output, context);
+        return de_DeleteBucketOwnershipControlsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14059,8 +14059,8 @@ const deserializeAws_restXmlDeleteBucketOwnershipControlsCommand = async (output
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlDeleteBucketOwnershipControlsCommand = deserializeAws_restXmlDeleteBucketOwnershipControlsCommand;
-const deserializeAws_restXmlDeleteBucketOwnershipControlsCommandError = async (output, context) => {
+exports.de_DeleteBucketOwnershipControlsCommand = de_DeleteBucketOwnershipControlsCommand;
+const de_DeleteBucketOwnershipControlsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14074,9 +14074,9 @@ const deserializeAws_restXmlDeleteBucketOwnershipControlsCommandError = async (o
         errorCode,
     });
 };
-const deserializeAws_restXmlDeleteBucketPolicyCommand = async (output, context) => {
+const de_DeleteBucketPolicyCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeleteBucketPolicyCommandError(output, context);
+        return de_DeleteBucketPolicyCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14084,8 +14084,8 @@ const deserializeAws_restXmlDeleteBucketPolicyCommand = async (output, context) 
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlDeleteBucketPolicyCommand = deserializeAws_restXmlDeleteBucketPolicyCommand;
-const deserializeAws_restXmlDeleteBucketPolicyCommandError = async (output, context) => {
+exports.de_DeleteBucketPolicyCommand = de_DeleteBucketPolicyCommand;
+const de_DeleteBucketPolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14099,9 +14099,9 @@ const deserializeAws_restXmlDeleteBucketPolicyCommandError = async (output, cont
         errorCode,
     });
 };
-const deserializeAws_restXmlDeleteBucketReplicationCommand = async (output, context) => {
+const de_DeleteBucketReplicationCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeleteBucketReplicationCommandError(output, context);
+        return de_DeleteBucketReplicationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14109,8 +14109,8 @@ const deserializeAws_restXmlDeleteBucketReplicationCommand = async (output, cont
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlDeleteBucketReplicationCommand = deserializeAws_restXmlDeleteBucketReplicationCommand;
-const deserializeAws_restXmlDeleteBucketReplicationCommandError = async (output, context) => {
+exports.de_DeleteBucketReplicationCommand = de_DeleteBucketReplicationCommand;
+const de_DeleteBucketReplicationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14124,9 +14124,9 @@ const deserializeAws_restXmlDeleteBucketReplicationCommandError = async (output,
         errorCode,
     });
 };
-const deserializeAws_restXmlDeleteBucketTaggingCommand = async (output, context) => {
+const de_DeleteBucketTaggingCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeleteBucketTaggingCommandError(output, context);
+        return de_DeleteBucketTaggingCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14134,8 +14134,8 @@ const deserializeAws_restXmlDeleteBucketTaggingCommand = async (output, context)
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlDeleteBucketTaggingCommand = deserializeAws_restXmlDeleteBucketTaggingCommand;
-const deserializeAws_restXmlDeleteBucketTaggingCommandError = async (output, context) => {
+exports.de_DeleteBucketTaggingCommand = de_DeleteBucketTaggingCommand;
+const de_DeleteBucketTaggingCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14149,9 +14149,9 @@ const deserializeAws_restXmlDeleteBucketTaggingCommandError = async (output, con
         errorCode,
     });
 };
-const deserializeAws_restXmlDeleteBucketWebsiteCommand = async (output, context) => {
+const de_DeleteBucketWebsiteCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeleteBucketWebsiteCommandError(output, context);
+        return de_DeleteBucketWebsiteCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14159,8 +14159,8 @@ const deserializeAws_restXmlDeleteBucketWebsiteCommand = async (output, context)
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlDeleteBucketWebsiteCommand = deserializeAws_restXmlDeleteBucketWebsiteCommand;
-const deserializeAws_restXmlDeleteBucketWebsiteCommandError = async (output, context) => {
+exports.de_DeleteBucketWebsiteCommand = de_DeleteBucketWebsiteCommand;
+const de_DeleteBucketWebsiteCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14174,9 +14174,9 @@ const deserializeAws_restXmlDeleteBucketWebsiteCommandError = async (output, con
         errorCode,
     });
 };
-const deserializeAws_restXmlDeleteObjectCommand = async (output, context) => {
+const de_DeleteObjectCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeleteObjectCommandError(output, context);
+        return de_DeleteObjectCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14190,8 +14190,8 @@ const deserializeAws_restXmlDeleteObjectCommand = async (output, context) => {
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlDeleteObjectCommand = deserializeAws_restXmlDeleteObjectCommand;
-const deserializeAws_restXmlDeleteObjectCommandError = async (output, context) => {
+exports.de_DeleteObjectCommand = de_DeleteObjectCommand;
+const de_DeleteObjectCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14205,9 +14205,9 @@ const deserializeAws_restXmlDeleteObjectCommandError = async (output, context) =
         errorCode,
     });
 };
-const deserializeAws_restXmlDeleteObjectsCommand = async (output, context) => {
+const de_DeleteObjectsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeleteObjectsCommandError(output, context);
+        return de_DeleteObjectsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14218,18 +14218,18 @@ const deserializeAws_restXmlDeleteObjectsCommand = async (output, context) => {
         contents.Deleted = [];
     }
     else if (data["Deleted"] !== undefined) {
-        contents.Deleted = deserializeAws_restXmlDeletedObjects((0, smithy_client_1.getArrayIfSingleItem)(data["Deleted"]), context);
+        contents.Deleted = de_DeletedObjects((0, smithy_client_1.getArrayIfSingleItem)(data["Deleted"]), context);
     }
     if (data.Error === "") {
         contents.Errors = [];
     }
     else if (data["Error"] !== undefined) {
-        contents.Errors = deserializeAws_restXmlErrors((0, smithy_client_1.getArrayIfSingleItem)(data["Error"]), context);
+        contents.Errors = de_Errors((0, smithy_client_1.getArrayIfSingleItem)(data["Error"]), context);
     }
     return contents;
 };
-exports.deserializeAws_restXmlDeleteObjectsCommand = deserializeAws_restXmlDeleteObjectsCommand;
-const deserializeAws_restXmlDeleteObjectsCommandError = async (output, context) => {
+exports.de_DeleteObjectsCommand = de_DeleteObjectsCommand;
+const de_DeleteObjectsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14243,9 +14243,9 @@ const deserializeAws_restXmlDeleteObjectsCommandError = async (output, context) 
         errorCode,
     });
 };
-const deserializeAws_restXmlDeleteObjectTaggingCommand = async (output, context) => {
+const de_DeleteObjectTaggingCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeleteObjectTaggingCommandError(output, context);
+        return de_DeleteObjectTaggingCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14254,8 +14254,8 @@ const deserializeAws_restXmlDeleteObjectTaggingCommand = async (output, context)
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlDeleteObjectTaggingCommand = deserializeAws_restXmlDeleteObjectTaggingCommand;
-const deserializeAws_restXmlDeleteObjectTaggingCommandError = async (output, context) => {
+exports.de_DeleteObjectTaggingCommand = de_DeleteObjectTaggingCommand;
+const de_DeleteObjectTaggingCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14269,9 +14269,9 @@ const deserializeAws_restXmlDeleteObjectTaggingCommandError = async (output, con
         errorCode,
     });
 };
-const deserializeAws_restXmlDeletePublicAccessBlockCommand = async (output, context) => {
+const de_DeletePublicAccessBlockCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
-        return deserializeAws_restXmlDeletePublicAccessBlockCommandError(output, context);
+        return de_DeletePublicAccessBlockCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14279,8 +14279,8 @@ const deserializeAws_restXmlDeletePublicAccessBlockCommand = async (output, cont
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlDeletePublicAccessBlockCommand = deserializeAws_restXmlDeletePublicAccessBlockCommand;
-const deserializeAws_restXmlDeletePublicAccessBlockCommandError = async (output, context) => {
+exports.de_DeletePublicAccessBlockCommand = de_DeletePublicAccessBlockCommand;
+const de_DeletePublicAccessBlockCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14294,9 +14294,9 @@ const deserializeAws_restXmlDeletePublicAccessBlockCommandError = async (output,
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketAccelerateConfigurationCommand = async (output, context) => {
+const de_GetBucketAccelerateConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketAccelerateConfigurationCommandError(output, context);
+        return de_GetBucketAccelerateConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14307,8 +14307,8 @@ const deserializeAws_restXmlGetBucketAccelerateConfigurationCommand = async (out
     }
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketAccelerateConfigurationCommand = deserializeAws_restXmlGetBucketAccelerateConfigurationCommand;
-const deserializeAws_restXmlGetBucketAccelerateConfigurationCommandError = async (output, context) => {
+exports.de_GetBucketAccelerateConfigurationCommand = de_GetBucketAccelerateConfigurationCommand;
+const de_GetBucketAccelerateConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14322,9 +14322,9 @@ const deserializeAws_restXmlGetBucketAccelerateConfigurationCommandError = async
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketAclCommand = async (output, context) => {
+const de_GetBucketAclCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketAclCommandError(output, context);
+        return de_GetBucketAclCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14334,15 +14334,15 @@ const deserializeAws_restXmlGetBucketAclCommand = async (output, context) => {
         contents.Grants = [];
     }
     else if (data["AccessControlList"] !== undefined && data["AccessControlList"]["Grant"] !== undefined) {
-        contents.Grants = deserializeAws_restXmlGrants((0, smithy_client_1.getArrayIfSingleItem)(data["AccessControlList"]["Grant"]), context);
+        contents.Grants = de_Grants((0, smithy_client_1.getArrayIfSingleItem)(data["AccessControlList"]["Grant"]), context);
     }
     if (data["Owner"] !== undefined) {
-        contents.Owner = deserializeAws_restXmlOwner(data["Owner"], context);
+        contents.Owner = de_Owner(data["Owner"], context);
     }
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketAclCommand = deserializeAws_restXmlGetBucketAclCommand;
-const deserializeAws_restXmlGetBucketAclCommandError = async (output, context) => {
+exports.de_GetBucketAclCommand = de_GetBucketAclCommand;
+const de_GetBucketAclCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14356,19 +14356,19 @@ const deserializeAws_restXmlGetBucketAclCommandError = async (output, context) =
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketAnalyticsConfigurationCommand = async (output, context) => {
+const de_GetBucketAnalyticsConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketAnalyticsConfigurationCommandError(output, context);
+        return de_GetBucketAnalyticsConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = (0, smithy_client_1.expectObject)(await parseBody(output.body, context));
-    contents.AnalyticsConfiguration = deserializeAws_restXmlAnalyticsConfiguration(data, context);
+    contents.AnalyticsConfiguration = de_AnalyticsConfiguration(data, context);
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketAnalyticsConfigurationCommand = deserializeAws_restXmlGetBucketAnalyticsConfigurationCommand;
-const deserializeAws_restXmlGetBucketAnalyticsConfigurationCommandError = async (output, context) => {
+exports.de_GetBucketAnalyticsConfigurationCommand = de_GetBucketAnalyticsConfigurationCommand;
+const de_GetBucketAnalyticsConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14382,9 +14382,9 @@ const deserializeAws_restXmlGetBucketAnalyticsConfigurationCommandError = async 
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketCorsCommand = async (output, context) => {
+const de_GetBucketCorsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketCorsCommandError(output, context);
+        return de_GetBucketCorsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14394,12 +14394,12 @@ const deserializeAws_restXmlGetBucketCorsCommand = async (output, context) => {
         contents.CORSRules = [];
     }
     else if (data["CORSRule"] !== undefined) {
-        contents.CORSRules = deserializeAws_restXmlCORSRules((0, smithy_client_1.getArrayIfSingleItem)(data["CORSRule"]), context);
+        contents.CORSRules = de_CORSRules((0, smithy_client_1.getArrayIfSingleItem)(data["CORSRule"]), context);
     }
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketCorsCommand = deserializeAws_restXmlGetBucketCorsCommand;
-const deserializeAws_restXmlGetBucketCorsCommandError = async (output, context) => {
+exports.de_GetBucketCorsCommand = de_GetBucketCorsCommand;
+const de_GetBucketCorsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14413,45 +14413,19 @@ const deserializeAws_restXmlGetBucketCorsCommandError = async (output, context) 
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketEncryptionCommand = async (output, context) => {
+const de_GetBucketEncryptionCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketEncryptionCommandError(output, context);
-    }
-    const contents = map({
-        $metadata: deserializeMetadata(output),
-    });
-    const data = (0, smithy_client_1.expectObject)(await parseBody(output.body, context));
-    contents.ServerSideEncryptionConfiguration = deserializeAws_restXmlServerSideEncryptionConfiguration(data, context);
-    return contents;
-};
-exports.deserializeAws_restXmlGetBucketEncryptionCommand = deserializeAws_restXmlGetBucketEncryptionCommand;
-const deserializeAws_restXmlGetBucketEncryptionCommandError = async (output, context) => {
-    const parsedOutput = {
-        ...output,
-        body: await parseErrorBody(output.body, context),
-    };
-    const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
-    const parsedBody = parsedOutput.body;
-    (0, smithy_client_1.throwDefaultError)({
-        output,
-        parsedBody,
-        exceptionCtor: S3ServiceException_1.S3ServiceException,
-        errorCode,
-    });
-};
-const deserializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand = async (output, context) => {
-    if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketIntelligentTieringConfigurationCommandError(output, context);
+        return de_GetBucketEncryptionCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = (0, smithy_client_1.expectObject)(await parseBody(output.body, context));
-    contents.IntelligentTieringConfiguration = deserializeAws_restXmlIntelligentTieringConfiguration(data, context);
+    contents.ServerSideEncryptionConfiguration = de_ServerSideEncryptionConfiguration(data, context);
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand = deserializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand;
-const deserializeAws_restXmlGetBucketIntelligentTieringConfigurationCommandError = async (output, context) => {
+exports.de_GetBucketEncryptionCommand = de_GetBucketEncryptionCommand;
+const de_GetBucketEncryptionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14465,19 +14439,19 @@ const deserializeAws_restXmlGetBucketIntelligentTieringConfigurationCommandError
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketInventoryConfigurationCommand = async (output, context) => {
+const de_GetBucketIntelligentTieringConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketInventoryConfigurationCommandError(output, context);
+        return de_GetBucketIntelligentTieringConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = (0, smithy_client_1.expectObject)(await parseBody(output.body, context));
-    contents.InventoryConfiguration = deserializeAws_restXmlInventoryConfiguration(data, context);
+    contents.IntelligentTieringConfiguration = de_IntelligentTieringConfiguration(data, context);
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketInventoryConfigurationCommand = deserializeAws_restXmlGetBucketInventoryConfigurationCommand;
-const deserializeAws_restXmlGetBucketInventoryConfigurationCommandError = async (output, context) => {
+exports.de_GetBucketIntelligentTieringConfigurationCommand = de_GetBucketIntelligentTieringConfigurationCommand;
+const de_GetBucketIntelligentTieringConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14491,9 +14465,35 @@ const deserializeAws_restXmlGetBucketInventoryConfigurationCommandError = async 
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketLifecycleConfigurationCommand = async (output, context) => {
+const de_GetBucketInventoryConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketLifecycleConfigurationCommandError(output, context);
+        return de_GetBucketInventoryConfigurationCommandError(output, context);
+    }
+    const contents = map({
+        $metadata: deserializeMetadata(output),
+    });
+    const data = (0, smithy_client_1.expectObject)(await parseBody(output.body, context));
+    contents.InventoryConfiguration = de_InventoryConfiguration(data, context);
+    return contents;
+};
+exports.de_GetBucketInventoryConfigurationCommand = de_GetBucketInventoryConfigurationCommand;
+const de_GetBucketInventoryConfigurationCommandError = async (output, context) => {
+    const parsedOutput = {
+        ...output,
+        body: await parseErrorBody(output.body, context),
+    };
+    const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
+    const parsedBody = parsedOutput.body;
+    (0, smithy_client_1.throwDefaultError)({
+        output,
+        parsedBody,
+        exceptionCtor: S3ServiceException_1.S3ServiceException,
+        errorCode,
+    });
+};
+const de_GetBucketLifecycleConfigurationCommand = async (output, context) => {
+    if (output.statusCode !== 200 && output.statusCode >= 300) {
+        return de_GetBucketLifecycleConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14503,12 +14503,12 @@ const deserializeAws_restXmlGetBucketLifecycleConfigurationCommand = async (outp
         contents.Rules = [];
     }
     else if (data["Rule"] !== undefined) {
-        contents.Rules = deserializeAws_restXmlLifecycleRules((0, smithy_client_1.getArrayIfSingleItem)(data["Rule"]), context);
+        contents.Rules = de_LifecycleRules((0, smithy_client_1.getArrayIfSingleItem)(data["Rule"]), context);
     }
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketLifecycleConfigurationCommand = deserializeAws_restXmlGetBucketLifecycleConfigurationCommand;
-const deserializeAws_restXmlGetBucketLifecycleConfigurationCommandError = async (output, context) => {
+exports.de_GetBucketLifecycleConfigurationCommand = de_GetBucketLifecycleConfigurationCommand;
+const de_GetBucketLifecycleConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14522,9 +14522,9 @@ const deserializeAws_restXmlGetBucketLifecycleConfigurationCommandError = async 
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketLocationCommand = async (output, context) => {
+const de_GetBucketLocationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketLocationCommandError(output, context);
+        return de_GetBucketLocationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14535,8 +14535,8 @@ const deserializeAws_restXmlGetBucketLocationCommand = async (output, context) =
     }
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketLocationCommand = deserializeAws_restXmlGetBucketLocationCommand;
-const deserializeAws_restXmlGetBucketLocationCommandError = async (output, context) => {
+exports.de_GetBucketLocationCommand = de_GetBucketLocationCommand;
+const de_GetBucketLocationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14550,21 +14550,21 @@ const deserializeAws_restXmlGetBucketLocationCommandError = async (output, conte
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketLoggingCommand = async (output, context) => {
+const de_GetBucketLoggingCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketLoggingCommandError(output, context);
+        return de_GetBucketLoggingCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = (0, smithy_client_1.expectNonNull)((0, smithy_client_1.expectObject)(await parseBody(output.body, context)), "body");
     if (data["LoggingEnabled"] !== undefined) {
-        contents.LoggingEnabled = deserializeAws_restXmlLoggingEnabled(data["LoggingEnabled"], context);
+        contents.LoggingEnabled = de_LoggingEnabled(data["LoggingEnabled"], context);
     }
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketLoggingCommand = deserializeAws_restXmlGetBucketLoggingCommand;
-const deserializeAws_restXmlGetBucketLoggingCommandError = async (output, context) => {
+exports.de_GetBucketLoggingCommand = de_GetBucketLoggingCommand;
+const de_GetBucketLoggingCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14578,19 +14578,19 @@ const deserializeAws_restXmlGetBucketLoggingCommandError = async (output, contex
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketMetricsConfigurationCommand = async (output, context) => {
+const de_GetBucketMetricsConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketMetricsConfigurationCommandError(output, context);
+        return de_GetBucketMetricsConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = (0, smithy_client_1.expectObject)(await parseBody(output.body, context));
-    contents.MetricsConfiguration = deserializeAws_restXmlMetricsConfiguration(data, context);
+    contents.MetricsConfiguration = de_MetricsConfiguration(data, context);
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketMetricsConfigurationCommand = deserializeAws_restXmlGetBucketMetricsConfigurationCommand;
-const deserializeAws_restXmlGetBucketMetricsConfigurationCommandError = async (output, context) => {
+exports.de_GetBucketMetricsConfigurationCommand = de_GetBucketMetricsConfigurationCommand;
+const de_GetBucketMetricsConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14604,39 +14604,39 @@ const deserializeAws_restXmlGetBucketMetricsConfigurationCommandError = async (o
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketNotificationConfigurationCommand = async (output, context) => {
+const de_GetBucketNotificationConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketNotificationConfigurationCommandError(output, context);
+        return de_GetBucketNotificationConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = (0, smithy_client_1.expectNonNull)((0, smithy_client_1.expectObject)(await parseBody(output.body, context)), "body");
     if (data["EventBridgeConfiguration"] !== undefined) {
-        contents.EventBridgeConfiguration = deserializeAws_restXmlEventBridgeConfiguration(data["EventBridgeConfiguration"], context);
+        contents.EventBridgeConfiguration = de_EventBridgeConfiguration(data["EventBridgeConfiguration"], context);
     }
     if (data.CloudFunctionConfiguration === "") {
         contents.LambdaFunctionConfigurations = [];
     }
     else if (data["CloudFunctionConfiguration"] !== undefined) {
-        contents.LambdaFunctionConfigurations = deserializeAws_restXmlLambdaFunctionConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["CloudFunctionConfiguration"]), context);
+        contents.LambdaFunctionConfigurations = de_LambdaFunctionConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["CloudFunctionConfiguration"]), context);
     }
     if (data.QueueConfiguration === "") {
         contents.QueueConfigurations = [];
     }
     else if (data["QueueConfiguration"] !== undefined) {
-        contents.QueueConfigurations = deserializeAws_restXmlQueueConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["QueueConfiguration"]), context);
+        contents.QueueConfigurations = de_QueueConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["QueueConfiguration"]), context);
     }
     if (data.TopicConfiguration === "") {
         contents.TopicConfigurations = [];
     }
     else if (data["TopicConfiguration"] !== undefined) {
-        contents.TopicConfigurations = deserializeAws_restXmlTopicConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["TopicConfiguration"]), context);
+        contents.TopicConfigurations = de_TopicConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["TopicConfiguration"]), context);
     }
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketNotificationConfigurationCommand = deserializeAws_restXmlGetBucketNotificationConfigurationCommand;
-const deserializeAws_restXmlGetBucketNotificationConfigurationCommandError = async (output, context) => {
+exports.de_GetBucketNotificationConfigurationCommand = de_GetBucketNotificationConfigurationCommand;
+const de_GetBucketNotificationConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14650,19 +14650,19 @@ const deserializeAws_restXmlGetBucketNotificationConfigurationCommandError = asy
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketOwnershipControlsCommand = async (output, context) => {
+const de_GetBucketOwnershipControlsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketOwnershipControlsCommandError(output, context);
+        return de_GetBucketOwnershipControlsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = (0, smithy_client_1.expectObject)(await parseBody(output.body, context));
-    contents.OwnershipControls = deserializeAws_restXmlOwnershipControls(data, context);
+    contents.OwnershipControls = de_OwnershipControls(data, context);
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketOwnershipControlsCommand = deserializeAws_restXmlGetBucketOwnershipControlsCommand;
-const deserializeAws_restXmlGetBucketOwnershipControlsCommandError = async (output, context) => {
+exports.de_GetBucketOwnershipControlsCommand = de_GetBucketOwnershipControlsCommand;
+const de_GetBucketOwnershipControlsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14676,9 +14676,9 @@ const deserializeAws_restXmlGetBucketOwnershipControlsCommandError = async (outp
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketPolicyCommand = async (output, context) => {
+const de_GetBucketPolicyCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketPolicyCommandError(output, context);
+        return de_GetBucketPolicyCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14687,8 +14687,8 @@ const deserializeAws_restXmlGetBucketPolicyCommand = async (output, context) => 
     contents.Policy = (0, smithy_client_1.expectString)(data);
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketPolicyCommand = deserializeAws_restXmlGetBucketPolicyCommand;
-const deserializeAws_restXmlGetBucketPolicyCommandError = async (output, context) => {
+exports.de_GetBucketPolicyCommand = de_GetBucketPolicyCommand;
+const de_GetBucketPolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14702,19 +14702,19 @@ const deserializeAws_restXmlGetBucketPolicyCommandError = async (output, context
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketPolicyStatusCommand = async (output, context) => {
+const de_GetBucketPolicyStatusCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketPolicyStatusCommandError(output, context);
+        return de_GetBucketPolicyStatusCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = (0, smithy_client_1.expectObject)(await parseBody(output.body, context));
-    contents.PolicyStatus = deserializeAws_restXmlPolicyStatus(data, context);
+    contents.PolicyStatus = de_PolicyStatus(data, context);
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketPolicyStatusCommand = deserializeAws_restXmlGetBucketPolicyStatusCommand;
-const deserializeAws_restXmlGetBucketPolicyStatusCommandError = async (output, context) => {
+exports.de_GetBucketPolicyStatusCommand = de_GetBucketPolicyStatusCommand;
+const de_GetBucketPolicyStatusCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14728,19 +14728,19 @@ const deserializeAws_restXmlGetBucketPolicyStatusCommandError = async (output, c
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketReplicationCommand = async (output, context) => {
+const de_GetBucketReplicationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketReplicationCommandError(output, context);
+        return de_GetBucketReplicationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = (0, smithy_client_1.expectObject)(await parseBody(output.body, context));
-    contents.ReplicationConfiguration = deserializeAws_restXmlReplicationConfiguration(data, context);
+    contents.ReplicationConfiguration = de_ReplicationConfiguration(data, context);
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketReplicationCommand = deserializeAws_restXmlGetBucketReplicationCommand;
-const deserializeAws_restXmlGetBucketReplicationCommandError = async (output, context) => {
+exports.de_GetBucketReplicationCommand = de_GetBucketReplicationCommand;
+const de_GetBucketReplicationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14754,9 +14754,9 @@ const deserializeAws_restXmlGetBucketReplicationCommandError = async (output, co
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketRequestPaymentCommand = async (output, context) => {
+const de_GetBucketRequestPaymentCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketRequestPaymentCommandError(output, context);
+        return de_GetBucketRequestPaymentCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14767,8 +14767,8 @@ const deserializeAws_restXmlGetBucketRequestPaymentCommand = async (output, cont
     }
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketRequestPaymentCommand = deserializeAws_restXmlGetBucketRequestPaymentCommand;
-const deserializeAws_restXmlGetBucketRequestPaymentCommandError = async (output, context) => {
+exports.de_GetBucketRequestPaymentCommand = de_GetBucketRequestPaymentCommand;
+const de_GetBucketRequestPaymentCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14782,9 +14782,9 @@ const deserializeAws_restXmlGetBucketRequestPaymentCommandError = async (output,
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketTaggingCommand = async (output, context) => {
+const de_GetBucketTaggingCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketTaggingCommandError(output, context);
+        return de_GetBucketTaggingCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14794,12 +14794,12 @@ const deserializeAws_restXmlGetBucketTaggingCommand = async (output, context) =>
         contents.TagSet = [];
     }
     else if (data["TagSet"] !== undefined && data["TagSet"]["Tag"] !== undefined) {
-        contents.TagSet = deserializeAws_restXmlTagSet((0, smithy_client_1.getArrayIfSingleItem)(data["TagSet"]["Tag"]), context);
+        contents.TagSet = de_TagSet((0, smithy_client_1.getArrayIfSingleItem)(data["TagSet"]["Tag"]), context);
     }
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketTaggingCommand = deserializeAws_restXmlGetBucketTaggingCommand;
-const deserializeAws_restXmlGetBucketTaggingCommandError = async (output, context) => {
+exports.de_GetBucketTaggingCommand = de_GetBucketTaggingCommand;
+const de_GetBucketTaggingCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14813,9 +14813,9 @@ const deserializeAws_restXmlGetBucketTaggingCommandError = async (output, contex
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketVersioningCommand = async (output, context) => {
+const de_GetBucketVersioningCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketVersioningCommandError(output, context);
+        return de_GetBucketVersioningCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14829,8 +14829,8 @@ const deserializeAws_restXmlGetBucketVersioningCommand = async (output, context)
     }
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketVersioningCommand = deserializeAws_restXmlGetBucketVersioningCommand;
-const deserializeAws_restXmlGetBucketVersioningCommandError = async (output, context) => {
+exports.de_GetBucketVersioningCommand = de_GetBucketVersioningCommand;
+const de_GetBucketVersioningCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14844,33 +14844,33 @@ const deserializeAws_restXmlGetBucketVersioningCommandError = async (output, con
         errorCode,
     });
 };
-const deserializeAws_restXmlGetBucketWebsiteCommand = async (output, context) => {
+const de_GetBucketWebsiteCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetBucketWebsiteCommandError(output, context);
+        return de_GetBucketWebsiteCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = (0, smithy_client_1.expectNonNull)((0, smithy_client_1.expectObject)(await parseBody(output.body, context)), "body");
     if (data["ErrorDocument"] !== undefined) {
-        contents.ErrorDocument = deserializeAws_restXmlErrorDocument(data["ErrorDocument"], context);
+        contents.ErrorDocument = de_ErrorDocument(data["ErrorDocument"], context);
     }
     if (data["IndexDocument"] !== undefined) {
-        contents.IndexDocument = deserializeAws_restXmlIndexDocument(data["IndexDocument"], context);
+        contents.IndexDocument = de_IndexDocument(data["IndexDocument"], context);
     }
     if (data["RedirectAllRequestsTo"] !== undefined) {
-        contents.RedirectAllRequestsTo = deserializeAws_restXmlRedirectAllRequestsTo(data["RedirectAllRequestsTo"], context);
+        contents.RedirectAllRequestsTo = de_RedirectAllRequestsTo(data["RedirectAllRequestsTo"], context);
     }
     if (data.RoutingRules === "") {
         contents.RoutingRules = [];
     }
     else if (data["RoutingRules"] !== undefined && data["RoutingRules"]["RoutingRule"] !== undefined) {
-        contents.RoutingRules = deserializeAws_restXmlRoutingRules((0, smithy_client_1.getArrayIfSingleItem)(data["RoutingRules"]["RoutingRule"]), context);
+        contents.RoutingRules = de_RoutingRules((0, smithy_client_1.getArrayIfSingleItem)(data["RoutingRules"]["RoutingRule"]), context);
     }
     return contents;
 };
-exports.deserializeAws_restXmlGetBucketWebsiteCommand = deserializeAws_restXmlGetBucketWebsiteCommand;
-const deserializeAws_restXmlGetBucketWebsiteCommandError = async (output, context) => {
+exports.de_GetBucketWebsiteCommand = de_GetBucketWebsiteCommand;
+const de_GetBucketWebsiteCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14884,9 +14884,9 @@ const deserializeAws_restXmlGetBucketWebsiteCommandError = async (output, contex
         errorCode,
     });
 };
-const deserializeAws_restXmlGetObjectCommand = async (output, context) => {
+const de_GetObjectCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetObjectCommandError(output, context);
+        return de_GetObjectCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -14966,8 +14966,8 @@ const deserializeAws_restXmlGetObjectCommand = async (output, context) => {
     contents.Body = data;
     return contents;
 };
-exports.deserializeAws_restXmlGetObjectCommand = deserializeAws_restXmlGetObjectCommand;
-const deserializeAws_restXmlGetObjectCommandError = async (output, context) => {
+exports.de_GetObjectCommand = de_GetObjectCommand;
+const de_GetObjectCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -14976,10 +14976,10 @@ const deserializeAws_restXmlGetObjectCommandError = async (output, context) => {
     switch (errorCode) {
         case "InvalidObjectState":
         case "com.amazonaws.s3#InvalidObjectState":
-            throw await deserializeAws_restXmlInvalidObjectStateResponse(parsedOutput, context);
+            throw await de_InvalidObjectStateRes(parsedOutput, context);
         case "NoSuchKey":
         case "com.amazonaws.s3#NoSuchKey":
-            throw await deserializeAws_restXmlNoSuchKeyResponse(parsedOutput, context);
+            throw await de_NoSuchKeyRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -14990,9 +14990,9 @@ const deserializeAws_restXmlGetObjectCommandError = async (output, context) => {
             });
     }
 };
-const deserializeAws_restXmlGetObjectAclCommand = async (output, context) => {
+const de_GetObjectAclCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetObjectAclCommandError(output, context);
+        return de_GetObjectAclCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15003,15 +15003,15 @@ const deserializeAws_restXmlGetObjectAclCommand = async (output, context) => {
         contents.Grants = [];
     }
     else if (data["AccessControlList"] !== undefined && data["AccessControlList"]["Grant"] !== undefined) {
-        contents.Grants = deserializeAws_restXmlGrants((0, smithy_client_1.getArrayIfSingleItem)(data["AccessControlList"]["Grant"]), context);
+        contents.Grants = de_Grants((0, smithy_client_1.getArrayIfSingleItem)(data["AccessControlList"]["Grant"]), context);
     }
     if (data["Owner"] !== undefined) {
-        contents.Owner = deserializeAws_restXmlOwner(data["Owner"], context);
+        contents.Owner = de_Owner(data["Owner"], context);
     }
     return contents;
 };
-exports.deserializeAws_restXmlGetObjectAclCommand = deserializeAws_restXmlGetObjectAclCommand;
-const deserializeAws_restXmlGetObjectAclCommandError = async (output, context) => {
+exports.de_GetObjectAclCommand = de_GetObjectAclCommand;
+const de_GetObjectAclCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15020,7 +15020,7 @@ const deserializeAws_restXmlGetObjectAclCommandError = async (output, context) =
     switch (errorCode) {
         case "NoSuchKey":
         case "com.amazonaws.s3#NoSuchKey":
-            throw await deserializeAws_restXmlNoSuchKeyResponse(parsedOutput, context);
+            throw await de_NoSuchKeyRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -15031,9 +15031,9 @@ const deserializeAws_restXmlGetObjectAclCommandError = async (output, context) =
             });
     }
 };
-const deserializeAws_restXmlGetObjectAttributesCommand = async (output, context) => {
+const de_GetObjectAttributesCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetObjectAttributesCommandError(output, context);
+        return de_GetObjectAttributesCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15050,13 +15050,13 @@ const deserializeAws_restXmlGetObjectAttributesCommand = async (output, context)
     });
     const data = (0, smithy_client_1.expectNonNull)((0, smithy_client_1.expectObject)(await parseBody(output.body, context)), "body");
     if (data["Checksum"] !== undefined) {
-        contents.Checksum = deserializeAws_restXmlChecksum(data["Checksum"], context);
+        contents.Checksum = de_Checksum(data["Checksum"], context);
     }
     if (data["ETag"] !== undefined) {
         contents.ETag = (0, smithy_client_1.expectString)(data["ETag"]);
     }
     if (data["ObjectParts"] !== undefined) {
-        contents.ObjectParts = deserializeAws_restXmlGetObjectAttributesParts(data["ObjectParts"], context);
+        contents.ObjectParts = de_GetObjectAttributesParts(data["ObjectParts"], context);
     }
     if (data["ObjectSize"] !== undefined) {
         contents.ObjectSize = (0, smithy_client_1.strictParseLong)(data["ObjectSize"]);
@@ -15066,8 +15066,8 @@ const deserializeAws_restXmlGetObjectAttributesCommand = async (output, context)
     }
     return contents;
 };
-exports.deserializeAws_restXmlGetObjectAttributesCommand = deserializeAws_restXmlGetObjectAttributesCommand;
-const deserializeAws_restXmlGetObjectAttributesCommandError = async (output, context) => {
+exports.de_GetObjectAttributesCommand = de_GetObjectAttributesCommand;
+const de_GetObjectAttributesCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15076,7 +15076,7 @@ const deserializeAws_restXmlGetObjectAttributesCommandError = async (output, con
     switch (errorCode) {
         case "NoSuchKey":
         case "com.amazonaws.s3#NoSuchKey":
-            throw await deserializeAws_restXmlNoSuchKeyResponse(parsedOutput, context);
+            throw await de_NoSuchKeyRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -15087,19 +15087,19 @@ const deserializeAws_restXmlGetObjectAttributesCommandError = async (output, con
             });
     }
 };
-const deserializeAws_restXmlGetObjectLegalHoldCommand = async (output, context) => {
+const de_GetObjectLegalHoldCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetObjectLegalHoldCommandError(output, context);
+        return de_GetObjectLegalHoldCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = (0, smithy_client_1.expectObject)(await parseBody(output.body, context));
-    contents.LegalHold = deserializeAws_restXmlObjectLockLegalHold(data, context);
+    contents.LegalHold = de_ObjectLockLegalHold(data, context);
     return contents;
 };
-exports.deserializeAws_restXmlGetObjectLegalHoldCommand = deserializeAws_restXmlGetObjectLegalHoldCommand;
-const deserializeAws_restXmlGetObjectLegalHoldCommandError = async (output, context) => {
+exports.de_GetObjectLegalHoldCommand = de_GetObjectLegalHoldCommand;
+const de_GetObjectLegalHoldCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15113,19 +15113,19 @@ const deserializeAws_restXmlGetObjectLegalHoldCommandError = async (output, cont
         errorCode,
     });
 };
-const deserializeAws_restXmlGetObjectLockConfigurationCommand = async (output, context) => {
+const de_GetObjectLockConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetObjectLockConfigurationCommandError(output, context);
+        return de_GetObjectLockConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = (0, smithy_client_1.expectObject)(await parseBody(output.body, context));
-    contents.ObjectLockConfiguration = deserializeAws_restXmlObjectLockConfiguration(data, context);
+    contents.ObjectLockConfiguration = de_ObjectLockConfiguration(data, context);
     return contents;
 };
-exports.deserializeAws_restXmlGetObjectLockConfigurationCommand = deserializeAws_restXmlGetObjectLockConfigurationCommand;
-const deserializeAws_restXmlGetObjectLockConfigurationCommandError = async (output, context) => {
+exports.de_GetObjectLockConfigurationCommand = de_GetObjectLockConfigurationCommand;
+const de_GetObjectLockConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15139,19 +15139,19 @@ const deserializeAws_restXmlGetObjectLockConfigurationCommandError = async (outp
         errorCode,
     });
 };
-const deserializeAws_restXmlGetObjectRetentionCommand = async (output, context) => {
+const de_GetObjectRetentionCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetObjectRetentionCommandError(output, context);
+        return de_GetObjectRetentionCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = (0, smithy_client_1.expectObject)(await parseBody(output.body, context));
-    contents.Retention = deserializeAws_restXmlObjectLockRetention(data, context);
+    contents.Retention = de_ObjectLockRetention(data, context);
     return contents;
 };
-exports.deserializeAws_restXmlGetObjectRetentionCommand = deserializeAws_restXmlGetObjectRetentionCommand;
-const deserializeAws_restXmlGetObjectRetentionCommandError = async (output, context) => {
+exports.de_GetObjectRetentionCommand = de_GetObjectRetentionCommand;
+const de_GetObjectRetentionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15165,9 +15165,9 @@ const deserializeAws_restXmlGetObjectRetentionCommandError = async (output, cont
         errorCode,
     });
 };
-const deserializeAws_restXmlGetObjectTaggingCommand = async (output, context) => {
+const de_GetObjectTaggingCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetObjectTaggingCommandError(output, context);
+        return de_GetObjectTaggingCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15178,12 +15178,12 @@ const deserializeAws_restXmlGetObjectTaggingCommand = async (output, context) =>
         contents.TagSet = [];
     }
     else if (data["TagSet"] !== undefined && data["TagSet"]["Tag"] !== undefined) {
-        contents.TagSet = deserializeAws_restXmlTagSet((0, smithy_client_1.getArrayIfSingleItem)(data["TagSet"]["Tag"]), context);
+        contents.TagSet = de_TagSet((0, smithy_client_1.getArrayIfSingleItem)(data["TagSet"]["Tag"]), context);
     }
     return contents;
 };
-exports.deserializeAws_restXmlGetObjectTaggingCommand = deserializeAws_restXmlGetObjectTaggingCommand;
-const deserializeAws_restXmlGetObjectTaggingCommandError = async (output, context) => {
+exports.de_GetObjectTaggingCommand = de_GetObjectTaggingCommand;
+const de_GetObjectTaggingCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15197,9 +15197,9 @@ const deserializeAws_restXmlGetObjectTaggingCommandError = async (output, contex
         errorCode,
     });
 };
-const deserializeAws_restXmlGetObjectTorrentCommand = async (output, context) => {
+const de_GetObjectTorrentCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetObjectTorrentCommandError(output, context);
+        return de_GetObjectTorrentCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15210,8 +15210,8 @@ const deserializeAws_restXmlGetObjectTorrentCommand = async (output, context) =>
     contents.Body = data;
     return contents;
 };
-exports.deserializeAws_restXmlGetObjectTorrentCommand = deserializeAws_restXmlGetObjectTorrentCommand;
-const deserializeAws_restXmlGetObjectTorrentCommandError = async (output, context) => {
+exports.de_GetObjectTorrentCommand = de_GetObjectTorrentCommand;
+const de_GetObjectTorrentCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15225,19 +15225,19 @@ const deserializeAws_restXmlGetObjectTorrentCommandError = async (output, contex
         errorCode,
     });
 };
-const deserializeAws_restXmlGetPublicAccessBlockCommand = async (output, context) => {
+const de_GetPublicAccessBlockCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlGetPublicAccessBlockCommandError(output, context);
+        return de_GetPublicAccessBlockCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = (0, smithy_client_1.expectObject)(await parseBody(output.body, context));
-    contents.PublicAccessBlockConfiguration = deserializeAws_restXmlPublicAccessBlockConfiguration(data, context);
+    contents.PublicAccessBlockConfiguration = de_PublicAccessBlockConfiguration(data, context);
     return contents;
 };
-exports.deserializeAws_restXmlGetPublicAccessBlockCommand = deserializeAws_restXmlGetPublicAccessBlockCommand;
-const deserializeAws_restXmlGetPublicAccessBlockCommandError = async (output, context) => {
+exports.de_GetPublicAccessBlockCommand = de_GetPublicAccessBlockCommand;
+const de_GetPublicAccessBlockCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15251,9 +15251,9 @@ const deserializeAws_restXmlGetPublicAccessBlockCommandError = async (output, co
         errorCode,
     });
 };
-const deserializeAws_restXmlHeadBucketCommand = async (output, context) => {
+const de_HeadBucketCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlHeadBucketCommandError(output, context);
+        return de_HeadBucketCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15261,8 +15261,8 @@ const deserializeAws_restXmlHeadBucketCommand = async (output, context) => {
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlHeadBucketCommand = deserializeAws_restXmlHeadBucketCommand;
-const deserializeAws_restXmlHeadBucketCommandError = async (output, context) => {
+exports.de_HeadBucketCommand = de_HeadBucketCommand;
+const de_HeadBucketCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15271,7 +15271,7 @@ const deserializeAws_restXmlHeadBucketCommandError = async (output, context) => 
     switch (errorCode) {
         case "NotFound":
         case "com.amazonaws.s3#NotFound":
-            throw await deserializeAws_restXmlNotFoundResponse(parsedOutput, context);
+            throw await de_NotFoundRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -15282,9 +15282,9 @@ const deserializeAws_restXmlHeadBucketCommandError = async (output, context) => 
             });
     }
 };
-const deserializeAws_restXmlHeadObjectCommand = async (output, context) => {
+const de_HeadObjectCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlHeadObjectCommandError(output, context);
+        return de_HeadObjectCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15358,8 +15358,8 @@ const deserializeAws_restXmlHeadObjectCommand = async (output, context) => {
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlHeadObjectCommand = deserializeAws_restXmlHeadObjectCommand;
-const deserializeAws_restXmlHeadObjectCommandError = async (output, context) => {
+exports.de_HeadObjectCommand = de_HeadObjectCommand;
+const de_HeadObjectCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15368,7 +15368,7 @@ const deserializeAws_restXmlHeadObjectCommandError = async (output, context) => 
     switch (errorCode) {
         case "NotFound":
         case "com.amazonaws.s3#NotFound":
-            throw await deserializeAws_restXmlNotFoundResponse(parsedOutput, context);
+            throw await de_NotFoundRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -15379,9 +15379,9 @@ const deserializeAws_restXmlHeadObjectCommandError = async (output, context) => 
             });
     }
 };
-const deserializeAws_restXmlListBucketAnalyticsConfigurationsCommand = async (output, context) => {
+const de_ListBucketAnalyticsConfigurationsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlListBucketAnalyticsConfigurationsCommandError(output, context);
+        return de_ListBucketAnalyticsConfigurationsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15391,7 +15391,7 @@ const deserializeAws_restXmlListBucketAnalyticsConfigurationsCommand = async (ou
         contents.AnalyticsConfigurationList = [];
     }
     else if (data["AnalyticsConfiguration"] !== undefined) {
-        contents.AnalyticsConfigurationList = deserializeAws_restXmlAnalyticsConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["AnalyticsConfiguration"]), context);
+        contents.AnalyticsConfigurationList = de_AnalyticsConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["AnalyticsConfiguration"]), context);
     }
     if (data["ContinuationToken"] !== undefined) {
         contents.ContinuationToken = (0, smithy_client_1.expectString)(data["ContinuationToken"]);
@@ -15404,8 +15404,8 @@ const deserializeAws_restXmlListBucketAnalyticsConfigurationsCommand = async (ou
     }
     return contents;
 };
-exports.deserializeAws_restXmlListBucketAnalyticsConfigurationsCommand = deserializeAws_restXmlListBucketAnalyticsConfigurationsCommand;
-const deserializeAws_restXmlListBucketAnalyticsConfigurationsCommandError = async (output, context) => {
+exports.de_ListBucketAnalyticsConfigurationsCommand = de_ListBucketAnalyticsConfigurationsCommand;
+const de_ListBucketAnalyticsConfigurationsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15419,9 +15419,9 @@ const deserializeAws_restXmlListBucketAnalyticsConfigurationsCommandError = asyn
         errorCode,
     });
 };
-const deserializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = async (output, context) => {
+const de_ListBucketIntelligentTieringConfigurationsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlListBucketIntelligentTieringConfigurationsCommandError(output, context);
+        return de_ListBucketIntelligentTieringConfigurationsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15434,7 +15434,7 @@ const deserializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = 
         contents.IntelligentTieringConfigurationList = [];
     }
     else if (data["IntelligentTieringConfiguration"] !== undefined) {
-        contents.IntelligentTieringConfigurationList = deserializeAws_restXmlIntelligentTieringConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["IntelligentTieringConfiguration"]), context);
+        contents.IntelligentTieringConfigurationList = de_IntelligentTieringConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["IntelligentTieringConfiguration"]), context);
     }
     if (data["IsTruncated"] !== undefined) {
         contents.IsTruncated = (0, smithy_client_1.parseBoolean)(data["IsTruncated"]);
@@ -15444,8 +15444,8 @@ const deserializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = 
     }
     return contents;
 };
-exports.deserializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = deserializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand;
-const deserializeAws_restXmlListBucketIntelligentTieringConfigurationsCommandError = async (output, context) => {
+exports.de_ListBucketIntelligentTieringConfigurationsCommand = de_ListBucketIntelligentTieringConfigurationsCommand;
+const de_ListBucketIntelligentTieringConfigurationsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15459,9 +15459,9 @@ const deserializeAws_restXmlListBucketIntelligentTieringConfigurationsCommandErr
         errorCode,
     });
 };
-const deserializeAws_restXmlListBucketInventoryConfigurationsCommand = async (output, context) => {
+const de_ListBucketInventoryConfigurationsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlListBucketInventoryConfigurationsCommandError(output, context);
+        return de_ListBucketInventoryConfigurationsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15474,7 +15474,7 @@ const deserializeAws_restXmlListBucketInventoryConfigurationsCommand = async (ou
         contents.InventoryConfigurationList = [];
     }
     else if (data["InventoryConfiguration"] !== undefined) {
-        contents.InventoryConfigurationList = deserializeAws_restXmlInventoryConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["InventoryConfiguration"]), context);
+        contents.InventoryConfigurationList = de_InventoryConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["InventoryConfiguration"]), context);
     }
     if (data["IsTruncated"] !== undefined) {
         contents.IsTruncated = (0, smithy_client_1.parseBoolean)(data["IsTruncated"]);
@@ -15484,8 +15484,8 @@ const deserializeAws_restXmlListBucketInventoryConfigurationsCommand = async (ou
     }
     return contents;
 };
-exports.deserializeAws_restXmlListBucketInventoryConfigurationsCommand = deserializeAws_restXmlListBucketInventoryConfigurationsCommand;
-const deserializeAws_restXmlListBucketInventoryConfigurationsCommandError = async (output, context) => {
+exports.de_ListBucketInventoryConfigurationsCommand = de_ListBucketInventoryConfigurationsCommand;
+const de_ListBucketInventoryConfigurationsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15499,9 +15499,9 @@ const deserializeAws_restXmlListBucketInventoryConfigurationsCommandError = asyn
         errorCode,
     });
 };
-const deserializeAws_restXmlListBucketMetricsConfigurationsCommand = async (output, context) => {
+const de_ListBucketMetricsConfigurationsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlListBucketMetricsConfigurationsCommandError(output, context);
+        return de_ListBucketMetricsConfigurationsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15517,15 +15517,15 @@ const deserializeAws_restXmlListBucketMetricsConfigurationsCommand = async (outp
         contents.MetricsConfigurationList = [];
     }
     else if (data["MetricsConfiguration"] !== undefined) {
-        contents.MetricsConfigurationList = deserializeAws_restXmlMetricsConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["MetricsConfiguration"]), context);
+        contents.MetricsConfigurationList = de_MetricsConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["MetricsConfiguration"]), context);
     }
     if (data["NextContinuationToken"] !== undefined) {
         contents.NextContinuationToken = (0, smithy_client_1.expectString)(data["NextContinuationToken"]);
     }
     return contents;
 };
-exports.deserializeAws_restXmlListBucketMetricsConfigurationsCommand = deserializeAws_restXmlListBucketMetricsConfigurationsCommand;
-const deserializeAws_restXmlListBucketMetricsConfigurationsCommandError = async (output, context) => {
+exports.de_ListBucketMetricsConfigurationsCommand = de_ListBucketMetricsConfigurationsCommand;
+const de_ListBucketMetricsConfigurationsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15539,9 +15539,9 @@ const deserializeAws_restXmlListBucketMetricsConfigurationsCommandError = async 
         errorCode,
     });
 };
-const deserializeAws_restXmlListBucketsCommand = async (output, context) => {
+const de_ListBucketsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlListBucketsCommandError(output, context);
+        return de_ListBucketsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15551,15 +15551,15 @@ const deserializeAws_restXmlListBucketsCommand = async (output, context) => {
         contents.Buckets = [];
     }
     else if (data["Buckets"] !== undefined && data["Buckets"]["Bucket"] !== undefined) {
-        contents.Buckets = deserializeAws_restXmlBuckets((0, smithy_client_1.getArrayIfSingleItem)(data["Buckets"]["Bucket"]), context);
+        contents.Buckets = de_Buckets((0, smithy_client_1.getArrayIfSingleItem)(data["Buckets"]["Bucket"]), context);
     }
     if (data["Owner"] !== undefined) {
-        contents.Owner = deserializeAws_restXmlOwner(data["Owner"], context);
+        contents.Owner = de_Owner(data["Owner"], context);
     }
     return contents;
 };
-exports.deserializeAws_restXmlListBucketsCommand = deserializeAws_restXmlListBucketsCommand;
-const deserializeAws_restXmlListBucketsCommandError = async (output, context) => {
+exports.de_ListBucketsCommand = de_ListBucketsCommand;
+const de_ListBucketsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15573,9 +15573,9 @@ const deserializeAws_restXmlListBucketsCommandError = async (output, context) =>
         errorCode,
     });
 };
-const deserializeAws_restXmlListMultipartUploadsCommand = async (output, context) => {
+const de_ListMultipartUploadsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlListMultipartUploadsCommandError(output, context);
+        return de_ListMultipartUploadsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15588,7 +15588,7 @@ const deserializeAws_restXmlListMultipartUploadsCommand = async (output, context
         contents.CommonPrefixes = [];
     }
     else if (data["CommonPrefixes"] !== undefined) {
-        contents.CommonPrefixes = deserializeAws_restXmlCommonPrefixList((0, smithy_client_1.getArrayIfSingleItem)(data["CommonPrefixes"]), context);
+        contents.CommonPrefixes = de_CommonPrefixList((0, smithy_client_1.getArrayIfSingleItem)(data["CommonPrefixes"]), context);
     }
     if (data["Delimiter"] !== undefined) {
         contents.Delimiter = (0, smithy_client_1.expectString)(data["Delimiter"]);
@@ -15621,12 +15621,12 @@ const deserializeAws_restXmlListMultipartUploadsCommand = async (output, context
         contents.Uploads = [];
     }
     else if (data["Upload"] !== undefined) {
-        contents.Uploads = deserializeAws_restXmlMultipartUploadList((0, smithy_client_1.getArrayIfSingleItem)(data["Upload"]), context);
+        contents.Uploads = de_MultipartUploadList((0, smithy_client_1.getArrayIfSingleItem)(data["Upload"]), context);
     }
     return contents;
 };
-exports.deserializeAws_restXmlListMultipartUploadsCommand = deserializeAws_restXmlListMultipartUploadsCommand;
-const deserializeAws_restXmlListMultipartUploadsCommandError = async (output, context) => {
+exports.de_ListMultipartUploadsCommand = de_ListMultipartUploadsCommand;
+const de_ListMultipartUploadsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15640,9 +15640,9 @@ const deserializeAws_restXmlListMultipartUploadsCommandError = async (output, co
         errorCode,
     });
 };
-const deserializeAws_restXmlListObjectsCommand = async (output, context) => {
+const de_ListObjectsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlListObjectsCommandError(output, context);
+        return de_ListObjectsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15652,13 +15652,13 @@ const deserializeAws_restXmlListObjectsCommand = async (output, context) => {
         contents.CommonPrefixes = [];
     }
     else if (data["CommonPrefixes"] !== undefined) {
-        contents.CommonPrefixes = deserializeAws_restXmlCommonPrefixList((0, smithy_client_1.getArrayIfSingleItem)(data["CommonPrefixes"]), context);
+        contents.CommonPrefixes = de_CommonPrefixList((0, smithy_client_1.getArrayIfSingleItem)(data["CommonPrefixes"]), context);
     }
     if (data.Contents === "") {
         contents.Contents = [];
     }
     else if (data["Contents"] !== undefined) {
-        contents.Contents = deserializeAws_restXmlObjectList((0, smithy_client_1.getArrayIfSingleItem)(data["Contents"]), context);
+        contents.Contents = de_ObjectList((0, smithy_client_1.getArrayIfSingleItem)(data["Contents"]), context);
     }
     if (data["Delimiter"] !== undefined) {
         contents.Delimiter = (0, smithy_client_1.expectString)(data["Delimiter"]);
@@ -15686,8 +15686,8 @@ const deserializeAws_restXmlListObjectsCommand = async (output, context) => {
     }
     return contents;
 };
-exports.deserializeAws_restXmlListObjectsCommand = deserializeAws_restXmlListObjectsCommand;
-const deserializeAws_restXmlListObjectsCommandError = async (output, context) => {
+exports.de_ListObjectsCommand = de_ListObjectsCommand;
+const de_ListObjectsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15696,7 +15696,7 @@ const deserializeAws_restXmlListObjectsCommandError = async (output, context) =>
     switch (errorCode) {
         case "NoSuchBucket":
         case "com.amazonaws.s3#NoSuchBucket":
-            throw await deserializeAws_restXmlNoSuchBucketResponse(parsedOutput, context);
+            throw await de_NoSuchBucketRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -15707,9 +15707,9 @@ const deserializeAws_restXmlListObjectsCommandError = async (output, context) =>
             });
     }
 };
-const deserializeAws_restXmlListObjectsV2Command = async (output, context) => {
+const de_ListObjectsV2Command = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlListObjectsV2CommandError(output, context);
+        return de_ListObjectsV2CommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15719,13 +15719,13 @@ const deserializeAws_restXmlListObjectsV2Command = async (output, context) => {
         contents.CommonPrefixes = [];
     }
     else if (data["CommonPrefixes"] !== undefined) {
-        contents.CommonPrefixes = deserializeAws_restXmlCommonPrefixList((0, smithy_client_1.getArrayIfSingleItem)(data["CommonPrefixes"]), context);
+        contents.CommonPrefixes = de_CommonPrefixList((0, smithy_client_1.getArrayIfSingleItem)(data["CommonPrefixes"]), context);
     }
     if (data.Contents === "") {
         contents.Contents = [];
     }
     else if (data["Contents"] !== undefined) {
-        contents.Contents = deserializeAws_restXmlObjectList((0, smithy_client_1.getArrayIfSingleItem)(data["Contents"]), context);
+        contents.Contents = de_ObjectList((0, smithy_client_1.getArrayIfSingleItem)(data["Contents"]), context);
     }
     if (data["ContinuationToken"] !== undefined) {
         contents.ContinuationToken = (0, smithy_client_1.expectString)(data["ContinuationToken"]);
@@ -15759,8 +15759,8 @@ const deserializeAws_restXmlListObjectsV2Command = async (output, context) => {
     }
     return contents;
 };
-exports.deserializeAws_restXmlListObjectsV2Command = deserializeAws_restXmlListObjectsV2Command;
-const deserializeAws_restXmlListObjectsV2CommandError = async (output, context) => {
+exports.de_ListObjectsV2Command = de_ListObjectsV2Command;
+const de_ListObjectsV2CommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15769,7 +15769,7 @@ const deserializeAws_restXmlListObjectsV2CommandError = async (output, context) 
     switch (errorCode) {
         case "NoSuchBucket":
         case "com.amazonaws.s3#NoSuchBucket":
-            throw await deserializeAws_restXmlNoSuchBucketResponse(parsedOutput, context);
+            throw await de_NoSuchBucketRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -15780,9 +15780,9 @@ const deserializeAws_restXmlListObjectsV2CommandError = async (output, context) 
             });
     }
 };
-const deserializeAws_restXmlListObjectVersionsCommand = async (output, context) => {
+const de_ListObjectVersionsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlListObjectVersionsCommandError(output, context);
+        return de_ListObjectVersionsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15792,13 +15792,13 @@ const deserializeAws_restXmlListObjectVersionsCommand = async (output, context) 
         contents.CommonPrefixes = [];
     }
     else if (data["CommonPrefixes"] !== undefined) {
-        contents.CommonPrefixes = deserializeAws_restXmlCommonPrefixList((0, smithy_client_1.getArrayIfSingleItem)(data["CommonPrefixes"]), context);
+        contents.CommonPrefixes = de_CommonPrefixList((0, smithy_client_1.getArrayIfSingleItem)(data["CommonPrefixes"]), context);
     }
     if (data.DeleteMarker === "") {
         contents.DeleteMarkers = [];
     }
     else if (data["DeleteMarker"] !== undefined) {
-        contents.DeleteMarkers = deserializeAws_restXmlDeleteMarkers((0, smithy_client_1.getArrayIfSingleItem)(data["DeleteMarker"]), context);
+        contents.DeleteMarkers = de_DeleteMarkers((0, smithy_client_1.getArrayIfSingleItem)(data["DeleteMarker"]), context);
     }
     if (data["Delimiter"] !== undefined) {
         contents.Delimiter = (0, smithy_client_1.expectString)(data["Delimiter"]);
@@ -15834,12 +15834,12 @@ const deserializeAws_restXmlListObjectVersionsCommand = async (output, context) 
         contents.Versions = [];
     }
     else if (data["Version"] !== undefined) {
-        contents.Versions = deserializeAws_restXmlObjectVersionList((0, smithy_client_1.getArrayIfSingleItem)(data["Version"]), context);
+        contents.Versions = de_ObjectVersionList((0, smithy_client_1.getArrayIfSingleItem)(data["Version"]), context);
     }
     return contents;
 };
-exports.deserializeAws_restXmlListObjectVersionsCommand = deserializeAws_restXmlListObjectVersionsCommand;
-const deserializeAws_restXmlListObjectVersionsCommandError = async (output, context) => {
+exports.de_ListObjectVersionsCommand = de_ListObjectVersionsCommand;
+const de_ListObjectVersionsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15853,9 +15853,9 @@ const deserializeAws_restXmlListObjectVersionsCommandError = async (output, cont
         errorCode,
     });
 };
-const deserializeAws_restXmlListPartsCommand = async (output, context) => {
+const de_ListPartsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlListPartsCommandError(output, context);
+        return de_ListPartsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15874,7 +15874,7 @@ const deserializeAws_restXmlListPartsCommand = async (output, context) => {
         contents.ChecksumAlgorithm = (0, smithy_client_1.expectString)(data["ChecksumAlgorithm"]);
     }
     if (data["Initiator"] !== undefined) {
-        contents.Initiator = deserializeAws_restXmlInitiator(data["Initiator"], context);
+        contents.Initiator = de_Initiator(data["Initiator"], context);
     }
     if (data["IsTruncated"] !== undefined) {
         contents.IsTruncated = (0, smithy_client_1.parseBoolean)(data["IsTruncated"]);
@@ -15889,7 +15889,7 @@ const deserializeAws_restXmlListPartsCommand = async (output, context) => {
         contents.NextPartNumberMarker = (0, smithy_client_1.expectString)(data["NextPartNumberMarker"]);
     }
     if (data["Owner"] !== undefined) {
-        contents.Owner = deserializeAws_restXmlOwner(data["Owner"], context);
+        contents.Owner = de_Owner(data["Owner"], context);
     }
     if (data["PartNumberMarker"] !== undefined) {
         contents.PartNumberMarker = (0, smithy_client_1.expectString)(data["PartNumberMarker"]);
@@ -15898,7 +15898,7 @@ const deserializeAws_restXmlListPartsCommand = async (output, context) => {
         contents.Parts = [];
     }
     else if (data["Part"] !== undefined) {
-        contents.Parts = deserializeAws_restXmlParts((0, smithy_client_1.getArrayIfSingleItem)(data["Part"]), context);
+        contents.Parts = de_Parts((0, smithy_client_1.getArrayIfSingleItem)(data["Part"]), context);
     }
     if (data["StorageClass"] !== undefined) {
         contents.StorageClass = (0, smithy_client_1.expectString)(data["StorageClass"]);
@@ -15908,8 +15908,8 @@ const deserializeAws_restXmlListPartsCommand = async (output, context) => {
     }
     return contents;
 };
-exports.deserializeAws_restXmlListPartsCommand = deserializeAws_restXmlListPartsCommand;
-const deserializeAws_restXmlListPartsCommandError = async (output, context) => {
+exports.de_ListPartsCommand = de_ListPartsCommand;
+const de_ListPartsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15923,9 +15923,9 @@ const deserializeAws_restXmlListPartsCommandError = async (output, context) => {
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketAccelerateConfigurationCommand = async (output, context) => {
+const de_PutBucketAccelerateConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketAccelerateConfigurationCommandError(output, context);
+        return de_PutBucketAccelerateConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15933,8 +15933,8 @@ const deserializeAws_restXmlPutBucketAccelerateConfigurationCommand = async (out
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketAccelerateConfigurationCommand = deserializeAws_restXmlPutBucketAccelerateConfigurationCommand;
-const deserializeAws_restXmlPutBucketAccelerateConfigurationCommandError = async (output, context) => {
+exports.de_PutBucketAccelerateConfigurationCommand = de_PutBucketAccelerateConfigurationCommand;
+const de_PutBucketAccelerateConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15948,9 +15948,9 @@ const deserializeAws_restXmlPutBucketAccelerateConfigurationCommandError = async
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketAclCommand = async (output, context) => {
+const de_PutBucketAclCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketAclCommandError(output, context);
+        return de_PutBucketAclCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15958,8 +15958,8 @@ const deserializeAws_restXmlPutBucketAclCommand = async (output, context) => {
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketAclCommand = deserializeAws_restXmlPutBucketAclCommand;
-const deserializeAws_restXmlPutBucketAclCommandError = async (output, context) => {
+exports.de_PutBucketAclCommand = de_PutBucketAclCommand;
+const de_PutBucketAclCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15973,9 +15973,9 @@ const deserializeAws_restXmlPutBucketAclCommandError = async (output, context) =
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketAnalyticsConfigurationCommand = async (output, context) => {
+const de_PutBucketAnalyticsConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketAnalyticsConfigurationCommandError(output, context);
+        return de_PutBucketAnalyticsConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -15983,8 +15983,8 @@ const deserializeAws_restXmlPutBucketAnalyticsConfigurationCommand = async (outp
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketAnalyticsConfigurationCommand = deserializeAws_restXmlPutBucketAnalyticsConfigurationCommand;
-const deserializeAws_restXmlPutBucketAnalyticsConfigurationCommandError = async (output, context) => {
+exports.de_PutBucketAnalyticsConfigurationCommand = de_PutBucketAnalyticsConfigurationCommand;
+const de_PutBucketAnalyticsConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -15998,9 +15998,9 @@ const deserializeAws_restXmlPutBucketAnalyticsConfigurationCommandError = async 
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketCorsCommand = async (output, context) => {
+const de_PutBucketCorsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketCorsCommandError(output, context);
+        return de_PutBucketCorsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16008,8 +16008,8 @@ const deserializeAws_restXmlPutBucketCorsCommand = async (output, context) => {
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketCorsCommand = deserializeAws_restXmlPutBucketCorsCommand;
-const deserializeAws_restXmlPutBucketCorsCommandError = async (output, context) => {
+exports.de_PutBucketCorsCommand = de_PutBucketCorsCommand;
+const de_PutBucketCorsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16023,9 +16023,9 @@ const deserializeAws_restXmlPutBucketCorsCommandError = async (output, context) 
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketEncryptionCommand = async (output, context) => {
+const de_PutBucketEncryptionCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketEncryptionCommandError(output, context);
+        return de_PutBucketEncryptionCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16033,8 +16033,8 @@ const deserializeAws_restXmlPutBucketEncryptionCommand = async (output, context)
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketEncryptionCommand = deserializeAws_restXmlPutBucketEncryptionCommand;
-const deserializeAws_restXmlPutBucketEncryptionCommandError = async (output, context) => {
+exports.de_PutBucketEncryptionCommand = de_PutBucketEncryptionCommand;
+const de_PutBucketEncryptionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16048,9 +16048,9 @@ const deserializeAws_restXmlPutBucketEncryptionCommandError = async (output, con
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = async (output, context) => {
+const de_PutBucketIntelligentTieringConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketIntelligentTieringConfigurationCommandError(output, context);
+        return de_PutBucketIntelligentTieringConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16058,8 +16058,8 @@ const deserializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = as
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = deserializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand;
-const deserializeAws_restXmlPutBucketIntelligentTieringConfigurationCommandError = async (output, context) => {
+exports.de_PutBucketIntelligentTieringConfigurationCommand = de_PutBucketIntelligentTieringConfigurationCommand;
+const de_PutBucketIntelligentTieringConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16073,9 +16073,9 @@ const deserializeAws_restXmlPutBucketIntelligentTieringConfigurationCommandError
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketInventoryConfigurationCommand = async (output, context) => {
+const de_PutBucketInventoryConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketInventoryConfigurationCommandError(output, context);
+        return de_PutBucketInventoryConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16083,8 +16083,8 @@ const deserializeAws_restXmlPutBucketInventoryConfigurationCommand = async (outp
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketInventoryConfigurationCommand = deserializeAws_restXmlPutBucketInventoryConfigurationCommand;
-const deserializeAws_restXmlPutBucketInventoryConfigurationCommandError = async (output, context) => {
+exports.de_PutBucketInventoryConfigurationCommand = de_PutBucketInventoryConfigurationCommand;
+const de_PutBucketInventoryConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16098,9 +16098,9 @@ const deserializeAws_restXmlPutBucketInventoryConfigurationCommandError = async 
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketLifecycleConfigurationCommand = async (output, context) => {
+const de_PutBucketLifecycleConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketLifecycleConfigurationCommandError(output, context);
+        return de_PutBucketLifecycleConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16108,8 +16108,8 @@ const deserializeAws_restXmlPutBucketLifecycleConfigurationCommand = async (outp
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketLifecycleConfigurationCommand = deserializeAws_restXmlPutBucketLifecycleConfigurationCommand;
-const deserializeAws_restXmlPutBucketLifecycleConfigurationCommandError = async (output, context) => {
+exports.de_PutBucketLifecycleConfigurationCommand = de_PutBucketLifecycleConfigurationCommand;
+const de_PutBucketLifecycleConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16123,9 +16123,9 @@ const deserializeAws_restXmlPutBucketLifecycleConfigurationCommandError = async 
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketLoggingCommand = async (output, context) => {
+const de_PutBucketLoggingCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketLoggingCommandError(output, context);
+        return de_PutBucketLoggingCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16133,8 +16133,8 @@ const deserializeAws_restXmlPutBucketLoggingCommand = async (output, context) =>
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketLoggingCommand = deserializeAws_restXmlPutBucketLoggingCommand;
-const deserializeAws_restXmlPutBucketLoggingCommandError = async (output, context) => {
+exports.de_PutBucketLoggingCommand = de_PutBucketLoggingCommand;
+const de_PutBucketLoggingCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16148,9 +16148,9 @@ const deserializeAws_restXmlPutBucketLoggingCommandError = async (output, contex
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketMetricsConfigurationCommand = async (output, context) => {
+const de_PutBucketMetricsConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketMetricsConfigurationCommandError(output, context);
+        return de_PutBucketMetricsConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16158,8 +16158,8 @@ const deserializeAws_restXmlPutBucketMetricsConfigurationCommand = async (output
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketMetricsConfigurationCommand = deserializeAws_restXmlPutBucketMetricsConfigurationCommand;
-const deserializeAws_restXmlPutBucketMetricsConfigurationCommandError = async (output, context) => {
+exports.de_PutBucketMetricsConfigurationCommand = de_PutBucketMetricsConfigurationCommand;
+const de_PutBucketMetricsConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16173,9 +16173,9 @@ const deserializeAws_restXmlPutBucketMetricsConfigurationCommandError = async (o
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketNotificationConfigurationCommand = async (output, context) => {
+const de_PutBucketNotificationConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketNotificationConfigurationCommandError(output, context);
+        return de_PutBucketNotificationConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16183,8 +16183,8 @@ const deserializeAws_restXmlPutBucketNotificationConfigurationCommand = async (o
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketNotificationConfigurationCommand = deserializeAws_restXmlPutBucketNotificationConfigurationCommand;
-const deserializeAws_restXmlPutBucketNotificationConfigurationCommandError = async (output, context) => {
+exports.de_PutBucketNotificationConfigurationCommand = de_PutBucketNotificationConfigurationCommand;
+const de_PutBucketNotificationConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16198,9 +16198,9 @@ const deserializeAws_restXmlPutBucketNotificationConfigurationCommandError = asy
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketOwnershipControlsCommand = async (output, context) => {
+const de_PutBucketOwnershipControlsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketOwnershipControlsCommandError(output, context);
+        return de_PutBucketOwnershipControlsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16208,8 +16208,8 @@ const deserializeAws_restXmlPutBucketOwnershipControlsCommand = async (output, c
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketOwnershipControlsCommand = deserializeAws_restXmlPutBucketOwnershipControlsCommand;
-const deserializeAws_restXmlPutBucketOwnershipControlsCommandError = async (output, context) => {
+exports.de_PutBucketOwnershipControlsCommand = de_PutBucketOwnershipControlsCommand;
+const de_PutBucketOwnershipControlsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16223,9 +16223,9 @@ const deserializeAws_restXmlPutBucketOwnershipControlsCommandError = async (outp
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketPolicyCommand = async (output, context) => {
+const de_PutBucketPolicyCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketPolicyCommandError(output, context);
+        return de_PutBucketPolicyCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16233,8 +16233,8 @@ const deserializeAws_restXmlPutBucketPolicyCommand = async (output, context) => 
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketPolicyCommand = deserializeAws_restXmlPutBucketPolicyCommand;
-const deserializeAws_restXmlPutBucketPolicyCommandError = async (output, context) => {
+exports.de_PutBucketPolicyCommand = de_PutBucketPolicyCommand;
+const de_PutBucketPolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16248,9 +16248,9 @@ const deserializeAws_restXmlPutBucketPolicyCommandError = async (output, context
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketReplicationCommand = async (output, context) => {
+const de_PutBucketReplicationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketReplicationCommandError(output, context);
+        return de_PutBucketReplicationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16258,8 +16258,8 @@ const deserializeAws_restXmlPutBucketReplicationCommand = async (output, context
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketReplicationCommand = deserializeAws_restXmlPutBucketReplicationCommand;
-const deserializeAws_restXmlPutBucketReplicationCommandError = async (output, context) => {
+exports.de_PutBucketReplicationCommand = de_PutBucketReplicationCommand;
+const de_PutBucketReplicationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16273,9 +16273,9 @@ const deserializeAws_restXmlPutBucketReplicationCommandError = async (output, co
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketRequestPaymentCommand = async (output, context) => {
+const de_PutBucketRequestPaymentCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketRequestPaymentCommandError(output, context);
+        return de_PutBucketRequestPaymentCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16283,8 +16283,8 @@ const deserializeAws_restXmlPutBucketRequestPaymentCommand = async (output, cont
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketRequestPaymentCommand = deserializeAws_restXmlPutBucketRequestPaymentCommand;
-const deserializeAws_restXmlPutBucketRequestPaymentCommandError = async (output, context) => {
+exports.de_PutBucketRequestPaymentCommand = de_PutBucketRequestPaymentCommand;
+const de_PutBucketRequestPaymentCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16298,9 +16298,9 @@ const deserializeAws_restXmlPutBucketRequestPaymentCommandError = async (output,
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketTaggingCommand = async (output, context) => {
+const de_PutBucketTaggingCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketTaggingCommandError(output, context);
+        return de_PutBucketTaggingCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16308,8 +16308,8 @@ const deserializeAws_restXmlPutBucketTaggingCommand = async (output, context) =>
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketTaggingCommand = deserializeAws_restXmlPutBucketTaggingCommand;
-const deserializeAws_restXmlPutBucketTaggingCommandError = async (output, context) => {
+exports.de_PutBucketTaggingCommand = de_PutBucketTaggingCommand;
+const de_PutBucketTaggingCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16323,9 +16323,9 @@ const deserializeAws_restXmlPutBucketTaggingCommandError = async (output, contex
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketVersioningCommand = async (output, context) => {
+const de_PutBucketVersioningCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketVersioningCommandError(output, context);
+        return de_PutBucketVersioningCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16333,8 +16333,8 @@ const deserializeAws_restXmlPutBucketVersioningCommand = async (output, context)
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketVersioningCommand = deserializeAws_restXmlPutBucketVersioningCommand;
-const deserializeAws_restXmlPutBucketVersioningCommandError = async (output, context) => {
+exports.de_PutBucketVersioningCommand = de_PutBucketVersioningCommand;
+const de_PutBucketVersioningCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16348,9 +16348,9 @@ const deserializeAws_restXmlPutBucketVersioningCommandError = async (output, con
         errorCode,
     });
 };
-const deserializeAws_restXmlPutBucketWebsiteCommand = async (output, context) => {
+const de_PutBucketWebsiteCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutBucketWebsiteCommandError(output, context);
+        return de_PutBucketWebsiteCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16358,8 +16358,8 @@ const deserializeAws_restXmlPutBucketWebsiteCommand = async (output, context) =>
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutBucketWebsiteCommand = deserializeAws_restXmlPutBucketWebsiteCommand;
-const deserializeAws_restXmlPutBucketWebsiteCommandError = async (output, context) => {
+exports.de_PutBucketWebsiteCommand = de_PutBucketWebsiteCommand;
+const de_PutBucketWebsiteCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16373,9 +16373,9 @@ const deserializeAws_restXmlPutBucketWebsiteCommandError = async (output, contex
         errorCode,
     });
 };
-const deserializeAws_restXmlPutObjectCommand = async (output, context) => {
+const de_PutObjectCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutObjectCommandError(output, context);
+        return de_PutObjectCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16400,8 +16400,8 @@ const deserializeAws_restXmlPutObjectCommand = async (output, context) => {
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutObjectCommand = deserializeAws_restXmlPutObjectCommand;
-const deserializeAws_restXmlPutObjectCommandError = async (output, context) => {
+exports.de_PutObjectCommand = de_PutObjectCommand;
+const de_PutObjectCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16415,9 +16415,9 @@ const deserializeAws_restXmlPutObjectCommandError = async (output, context) => {
         errorCode,
     });
 };
-const deserializeAws_restXmlPutObjectAclCommand = async (output, context) => {
+const de_PutObjectAclCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutObjectAclCommandError(output, context);
+        return de_PutObjectAclCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16426,8 +16426,8 @@ const deserializeAws_restXmlPutObjectAclCommand = async (output, context) => {
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutObjectAclCommand = deserializeAws_restXmlPutObjectAclCommand;
-const deserializeAws_restXmlPutObjectAclCommandError = async (output, context) => {
+exports.de_PutObjectAclCommand = de_PutObjectAclCommand;
+const de_PutObjectAclCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16436,7 +16436,7 @@ const deserializeAws_restXmlPutObjectAclCommandError = async (output, context) =
     switch (errorCode) {
         case "NoSuchKey":
         case "com.amazonaws.s3#NoSuchKey":
-            throw await deserializeAws_restXmlNoSuchKeyResponse(parsedOutput, context);
+            throw await de_NoSuchKeyRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -16447,9 +16447,9 @@ const deserializeAws_restXmlPutObjectAclCommandError = async (output, context) =
             });
     }
 };
-const deserializeAws_restXmlPutObjectLegalHoldCommand = async (output, context) => {
+const de_PutObjectLegalHoldCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutObjectLegalHoldCommandError(output, context);
+        return de_PutObjectLegalHoldCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16458,8 +16458,8 @@ const deserializeAws_restXmlPutObjectLegalHoldCommand = async (output, context) 
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutObjectLegalHoldCommand = deserializeAws_restXmlPutObjectLegalHoldCommand;
-const deserializeAws_restXmlPutObjectLegalHoldCommandError = async (output, context) => {
+exports.de_PutObjectLegalHoldCommand = de_PutObjectLegalHoldCommand;
+const de_PutObjectLegalHoldCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16473,9 +16473,9 @@ const deserializeAws_restXmlPutObjectLegalHoldCommandError = async (output, cont
         errorCode,
     });
 };
-const deserializeAws_restXmlPutObjectLockConfigurationCommand = async (output, context) => {
+const de_PutObjectLockConfigurationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutObjectLockConfigurationCommandError(output, context);
+        return de_PutObjectLockConfigurationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16484,8 +16484,8 @@ const deserializeAws_restXmlPutObjectLockConfigurationCommand = async (output, c
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutObjectLockConfigurationCommand = deserializeAws_restXmlPutObjectLockConfigurationCommand;
-const deserializeAws_restXmlPutObjectLockConfigurationCommandError = async (output, context) => {
+exports.de_PutObjectLockConfigurationCommand = de_PutObjectLockConfigurationCommand;
+const de_PutObjectLockConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16499,9 +16499,9 @@ const deserializeAws_restXmlPutObjectLockConfigurationCommandError = async (outp
         errorCode,
     });
 };
-const deserializeAws_restXmlPutObjectRetentionCommand = async (output, context) => {
+const de_PutObjectRetentionCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutObjectRetentionCommandError(output, context);
+        return de_PutObjectRetentionCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16510,8 +16510,8 @@ const deserializeAws_restXmlPutObjectRetentionCommand = async (output, context) 
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutObjectRetentionCommand = deserializeAws_restXmlPutObjectRetentionCommand;
-const deserializeAws_restXmlPutObjectRetentionCommandError = async (output, context) => {
+exports.de_PutObjectRetentionCommand = de_PutObjectRetentionCommand;
+const de_PutObjectRetentionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16525,9 +16525,9 @@ const deserializeAws_restXmlPutObjectRetentionCommandError = async (output, cont
         errorCode,
     });
 };
-const deserializeAws_restXmlPutObjectTaggingCommand = async (output, context) => {
+const de_PutObjectTaggingCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutObjectTaggingCommandError(output, context);
+        return de_PutObjectTaggingCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16536,8 +16536,8 @@ const deserializeAws_restXmlPutObjectTaggingCommand = async (output, context) =>
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutObjectTaggingCommand = deserializeAws_restXmlPutObjectTaggingCommand;
-const deserializeAws_restXmlPutObjectTaggingCommandError = async (output, context) => {
+exports.de_PutObjectTaggingCommand = de_PutObjectTaggingCommand;
+const de_PutObjectTaggingCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16551,9 +16551,9 @@ const deserializeAws_restXmlPutObjectTaggingCommandError = async (output, contex
         errorCode,
     });
 };
-const deserializeAws_restXmlPutPublicAccessBlockCommand = async (output, context) => {
+const de_PutPublicAccessBlockCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlPutPublicAccessBlockCommandError(output, context);
+        return de_PutPublicAccessBlockCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16561,8 +16561,8 @@ const deserializeAws_restXmlPutPublicAccessBlockCommand = async (output, context
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlPutPublicAccessBlockCommand = deserializeAws_restXmlPutPublicAccessBlockCommand;
-const deserializeAws_restXmlPutPublicAccessBlockCommandError = async (output, context) => {
+exports.de_PutPublicAccessBlockCommand = de_PutPublicAccessBlockCommand;
+const de_PutPublicAccessBlockCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16576,9 +16576,9 @@ const deserializeAws_restXmlPutPublicAccessBlockCommandError = async (output, co
         errorCode,
     });
 };
-const deserializeAws_restXmlRestoreObjectCommand = async (output, context) => {
+const de_RestoreObjectCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlRestoreObjectCommandError(output, context);
+        return de_RestoreObjectCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16588,8 +16588,8 @@ const deserializeAws_restXmlRestoreObjectCommand = async (output, context) => {
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlRestoreObjectCommand = deserializeAws_restXmlRestoreObjectCommand;
-const deserializeAws_restXmlRestoreObjectCommandError = async (output, context) => {
+exports.de_RestoreObjectCommand = de_RestoreObjectCommand;
+const de_RestoreObjectCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16598,7 +16598,7 @@ const deserializeAws_restXmlRestoreObjectCommandError = async (output, context) 
     switch (errorCode) {
         case "ObjectAlreadyInActiveTierError":
         case "com.amazonaws.s3#ObjectAlreadyInActiveTierError":
-            throw await deserializeAws_restXmlObjectAlreadyInActiveTierErrorResponse(parsedOutput, context);
+            throw await de_ObjectAlreadyInActiveTierErrorRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -16609,19 +16609,19 @@ const deserializeAws_restXmlRestoreObjectCommandError = async (output, context) 
             });
     }
 };
-const deserializeAws_restXmlSelectObjectContentCommand = async (output, context) => {
+const de_SelectObjectContentCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlSelectObjectContentCommandError(output, context);
+        return de_SelectObjectContentCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = output.body;
-    contents.Payload = deserializeAws_restXmlSelectObjectContentEventStream(data, context);
+    contents.Payload = de_SelectObjectContentEventStream(data, context);
     return contents;
 };
-exports.deserializeAws_restXmlSelectObjectContentCommand = deserializeAws_restXmlSelectObjectContentCommand;
-const deserializeAws_restXmlSelectObjectContentCommandError = async (output, context) => {
+exports.de_SelectObjectContentCommand = de_SelectObjectContentCommand;
+const de_SelectObjectContentCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16635,9 +16635,9 @@ const deserializeAws_restXmlSelectObjectContentCommandError = async (output, con
         errorCode,
     });
 };
-const deserializeAws_restXmlUploadPartCommand = async (output, context) => {
+const de_UploadPartCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlUploadPartCommandError(output, context);
+        return de_UploadPartCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16659,8 +16659,8 @@ const deserializeAws_restXmlUploadPartCommand = async (output, context) => {
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlUploadPartCommand = deserializeAws_restXmlUploadPartCommand;
-const deserializeAws_restXmlUploadPartCommandError = async (output, context) => {
+exports.de_UploadPartCommand = de_UploadPartCommand;
+const de_UploadPartCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16674,9 +16674,9 @@ const deserializeAws_restXmlUploadPartCommandError = async (output, context) => 
         errorCode,
     });
 };
-const deserializeAws_restXmlUploadPartCopyCommand = async (output, context) => {
+const de_UploadPartCopyCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlUploadPartCopyCommandError(output, context);
+        return de_UploadPartCopyCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16692,11 +16692,11 @@ const deserializeAws_restXmlUploadPartCopyCommand = async (output, context) => {
         RequestCharged: [, output.headers["x-amz-request-charged"]],
     });
     const data = (0, smithy_client_1.expectObject)(await parseBody(output.body, context));
-    contents.CopyPartResult = deserializeAws_restXmlCopyPartResult(data, context);
+    contents.CopyPartResult = de_CopyPartResult(data, context);
     return contents;
 };
-exports.deserializeAws_restXmlUploadPartCopyCommand = deserializeAws_restXmlUploadPartCopyCommand;
-const deserializeAws_restXmlUploadPartCopyCommandError = async (output, context) => {
+exports.de_UploadPartCopyCommand = de_UploadPartCopyCommand;
+const de_UploadPartCopyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16710,9 +16710,9 @@ const deserializeAws_restXmlUploadPartCopyCommandError = async (output, context)
         errorCode,
     });
 };
-const deserializeAws_restXmlWriteGetObjectResponseCommand = async (output, context) => {
+const de_WriteGetObjectResponseCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restXmlWriteGetObjectResponseCommandError(output, context);
+        return de_WriteGetObjectResponseCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -16720,8 +16720,8 @@ const deserializeAws_restXmlWriteGetObjectResponseCommand = async (output, conte
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restXmlWriteGetObjectResponseCommand = deserializeAws_restXmlWriteGetObjectResponseCommand;
-const deserializeAws_restXmlWriteGetObjectResponseCommandError = async (output, context) => {
+exports.de_WriteGetObjectResponseCommand = de_WriteGetObjectResponseCommand;
+const de_WriteGetObjectResponseCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -16736,7 +16736,7 @@ const deserializeAws_restXmlWriteGetObjectResponseCommandError = async (output, 
     });
 };
 const map = smithy_client_1.map;
-const deserializeAws_restXmlBucketAlreadyExistsResponse = async (parsedOutput, context) => {
+const de_BucketAlreadyExistsRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     const exception = new models_0_1.BucketAlreadyExists({
@@ -16745,7 +16745,7 @@ const deserializeAws_restXmlBucketAlreadyExistsResponse = async (parsedOutput, c
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restXmlBucketAlreadyOwnedByYouResponse = async (parsedOutput, context) => {
+const de_BucketAlreadyOwnedByYouRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     const exception = new models_0_1.BucketAlreadyOwnedByYou({
@@ -16754,7 +16754,7 @@ const deserializeAws_restXmlBucketAlreadyOwnedByYouResponse = async (parsedOutpu
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restXmlInvalidObjectStateResponse = async (parsedOutput, context) => {
+const de_InvalidObjectStateRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data["AccessTier"] !== undefined) {
@@ -16769,7 +16769,7 @@ const deserializeAws_restXmlInvalidObjectStateResponse = async (parsedOutput, co
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restXmlNoSuchBucketResponse = async (parsedOutput, context) => {
+const de_NoSuchBucketRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     const exception = new models_0_1.NoSuchBucket({
@@ -16778,7 +16778,7 @@ const deserializeAws_restXmlNoSuchBucketResponse = async (parsedOutput, context)
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restXmlNoSuchKeyResponse = async (parsedOutput, context) => {
+const de_NoSuchKeyRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     const exception = new models_0_1.NoSuchKey({
@@ -16787,7 +16787,7 @@ const deserializeAws_restXmlNoSuchKeyResponse = async (parsedOutput, context) =>
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restXmlNoSuchUploadResponse = async (parsedOutput, context) => {
+const de_NoSuchUploadRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     const exception = new models_0_1.NoSuchUpload({
@@ -16796,7 +16796,7 @@ const deserializeAws_restXmlNoSuchUploadResponse = async (parsedOutput, context)
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restXmlNotFoundResponse = async (parsedOutput, context) => {
+const de_NotFoundRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     const exception = new models_0_1.NotFound({
@@ -16805,7 +16805,7 @@ const deserializeAws_restXmlNotFoundResponse = async (parsedOutput, context) => 
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restXmlObjectAlreadyInActiveTierErrorResponse = async (parsedOutput, context) => {
+const de_ObjectAlreadyInActiveTierErrorRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     const exception = new models_1_1.ObjectAlreadyInActiveTierError({
@@ -16814,7 +16814,7 @@ const deserializeAws_restXmlObjectAlreadyInActiveTierErrorResponse = async (pars
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restXmlObjectNotInActiveTierErrorResponse = async (parsedOutput, context) => {
+const de_ObjectNotInActiveTierErrorRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     const exception = new models_0_1.ObjectNotInActiveTierError({
@@ -16823,66 +16823,66 @@ const deserializeAws_restXmlObjectNotInActiveTierErrorResponse = async (parsedOu
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restXmlSelectObjectContentEventStream = (output, context) => {
+const de_SelectObjectContentEventStream = (output, context) => {
     return context.eventStreamMarshaller.deserialize(output, async (event) => {
         if (event["Records"] != null) {
             return {
-                Records: await deserializeAws_restXmlRecordsEvent_event(event["Records"], context),
+                Records: await de_RecordsEvent_event(event["Records"], context),
             };
         }
         if (event["Stats"] != null) {
             return {
-                Stats: await deserializeAws_restXmlStatsEvent_event(event["Stats"], context),
+                Stats: await de_StatsEvent_event(event["Stats"], context),
             };
         }
         if (event["Progress"] != null) {
             return {
-                Progress: await deserializeAws_restXmlProgressEvent_event(event["Progress"], context),
+                Progress: await de_ProgressEvent_event(event["Progress"], context),
             };
         }
         if (event["Cont"] != null) {
             return {
-                Cont: await deserializeAws_restXmlContinuationEvent_event(event["Cont"], context),
+                Cont: await de_ContinuationEvent_event(event["Cont"], context),
             };
         }
         if (event["End"] != null) {
             return {
-                End: await deserializeAws_restXmlEndEvent_event(event["End"], context),
+                End: await de_EndEvent_event(event["End"], context),
             };
         }
         return { $unknown: output };
     });
 };
-const deserializeAws_restXmlContinuationEvent_event = async (output, context) => {
+const de_ContinuationEvent_event = async (output, context) => {
     const contents = {};
     const data = await parseBody(output.body, context);
-    Object.assign(contents, deserializeAws_restXmlContinuationEvent(data, context));
+    Object.assign(contents, de_ContinuationEvent(data, context));
     return contents;
 };
-const deserializeAws_restXmlEndEvent_event = async (output, context) => {
+const de_EndEvent_event = async (output, context) => {
     const contents = {};
     const data = await parseBody(output.body, context);
-    Object.assign(contents, deserializeAws_restXmlEndEvent(data, context));
+    Object.assign(contents, de_EndEvent(data, context));
     return contents;
 };
-const deserializeAws_restXmlProgressEvent_event = async (output, context) => {
+const de_ProgressEvent_event = async (output, context) => {
     const contents = {};
     const data = await parseBody(output.body, context);
-    contents.Details = deserializeAws_restXmlProgress(data, context);
+    contents.Details = de_Progress(data, context);
     return contents;
 };
-const deserializeAws_restXmlRecordsEvent_event = async (output, context) => {
+const de_RecordsEvent_event = async (output, context) => {
     const contents = {};
     contents.Payload = output.body;
     return contents;
 };
-const deserializeAws_restXmlStatsEvent_event = async (output, context) => {
+const de_StatsEvent_event = async (output, context) => {
     const contents = {};
     const data = await parseBody(output.body, context);
-    contents.Details = deserializeAws_restXmlStats(data, context);
+    contents.Details = de_Stats(data, context);
     return contents;
 };
-const serializeAws_restXmlAbortIncompleteMultipartUpload = (input, context) => {
+const se_AbortIncompleteMultipartUpload = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AbortIncompleteMultipartUpload");
     if (input.DaysAfterInitiation != null) {
         const node = xml_builder_1.XmlNode.of("DaysAfterInitiation", String(input.DaysAfterInitiation)).withName("DaysAfterInitiation");
@@ -16890,7 +16890,7 @@ const serializeAws_restXmlAbortIncompleteMultipartUpload = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlAccelerateConfiguration = (input, context) => {
+const se_AccelerateConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AccelerateConfiguration");
     if (input.Status != null) {
         const node = xml_builder_1.XmlNode.of("BucketAccelerateStatus", input.Status).withName("Status");
@@ -16898,10 +16898,10 @@ const serializeAws_restXmlAccelerateConfiguration = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlAccessControlPolicy = (input, context) => {
+const se_AccessControlPolicy = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AccessControlPolicy");
     if (input.Grants != null) {
-        const nodes = serializeAws_restXmlGrants(input.Grants, context);
+        const nodes = se_Grants(input.Grants, context);
         const containerNode = new xml_builder_1.XmlNode("AccessControlList");
         nodes.map((node) => {
             containerNode.addChildNode(node);
@@ -16909,12 +16909,12 @@ const serializeAws_restXmlAccessControlPolicy = (input, context) => {
         bodyNode.addChildNode(containerNode);
     }
     if (input.Owner != null) {
-        const node = serializeAws_restXmlOwner(input.Owner, context).withName("Owner");
+        const node = se_Owner(input.Owner, context).withName("Owner");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlAccessControlTranslation = (input, context) => {
+const se_AccessControlTranslation = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AccessControlTranslation");
     if (input.Owner != null) {
         const node = xml_builder_1.XmlNode.of("OwnerOverride", input.Owner).withName("Owner");
@@ -16922,7 +16922,7 @@ const serializeAws_restXmlAccessControlTranslation = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlAllowedHeaders = (input, context) => {
+const se_AllowedHeaders = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
@@ -16930,7 +16930,7 @@ const serializeAws_restXmlAllowedHeaders = (input, context) => {
         return node.withName("member");
     });
 };
-const serializeAws_restXmlAllowedMethods = (input, context) => {
+const se_AllowedMethods = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
@@ -16938,7 +16938,7 @@ const serializeAws_restXmlAllowedMethods = (input, context) => {
         return node.withName("member");
     });
 };
-const serializeAws_restXmlAllowedOrigins = (input, context) => {
+const se_AllowedOrigins = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
@@ -16946,14 +16946,14 @@ const serializeAws_restXmlAllowedOrigins = (input, context) => {
         return node.withName("member");
     });
 };
-const serializeAws_restXmlAnalyticsAndOperator = (input, context) => {
+const se_AnalyticsAndOperator = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AnalyticsAndOperator");
     if (input.Prefix != null) {
         const node = xml_builder_1.XmlNode.of("Prefix", input.Prefix).withName("Prefix");
         bodyNode.addChildNode(node);
     }
     if (input.Tags != null) {
-        const nodes = serializeAws_restXmlTagSet(input.Tags, context);
+        const nodes = se_TagSet(input.Tags, context);
         nodes.map((node) => {
             node = node.withName("Tag");
             bodyNode.addChildNode(node);
@@ -16961,31 +16961,31 @@ const serializeAws_restXmlAnalyticsAndOperator = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlAnalyticsConfiguration = (input, context) => {
+const se_AnalyticsConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AnalyticsConfiguration");
     if (input.Id != null) {
         const node = xml_builder_1.XmlNode.of("AnalyticsId", input.Id).withName("Id");
         bodyNode.addChildNode(node);
     }
     if (input.Filter != null) {
-        const node = serializeAws_restXmlAnalyticsFilter(input.Filter, context).withName("Filter");
+        const node = se_AnalyticsFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
     if (input.StorageClassAnalysis != null) {
-        const node = serializeAws_restXmlStorageClassAnalysis(input.StorageClassAnalysis, context).withName("StorageClassAnalysis");
+        const node = se_StorageClassAnalysis(input.StorageClassAnalysis, context).withName("StorageClassAnalysis");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlAnalyticsExportDestination = (input, context) => {
+const se_AnalyticsExportDestination = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AnalyticsExportDestination");
     if (input.S3BucketDestination != null) {
-        const node = serializeAws_restXmlAnalyticsS3BucketDestination(input.S3BucketDestination, context).withName("S3BucketDestination");
+        const node = se_AnalyticsS3BucketDestination(input.S3BucketDestination, context).withName("S3BucketDestination");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlAnalyticsFilter = (input, context) => {
+const se_AnalyticsFilter = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AnalyticsFilter");
     models_0_1.AnalyticsFilter.visit(input, {
         Prefix: (value) => {
@@ -16993,11 +16993,11 @@ const serializeAws_restXmlAnalyticsFilter = (input, context) => {
             bodyNode.addChildNode(node);
         },
         Tag: (value) => {
-            const node = serializeAws_restXmlTag(value, context).withName("Tag");
+            const node = se_Tag(value, context).withName("Tag");
             bodyNode.addChildNode(node);
         },
         And: (value) => {
-            const node = serializeAws_restXmlAnalyticsAndOperator(value, context).withName("And");
+            const node = se_AnalyticsAndOperator(value, context).withName("And");
             bodyNode.addChildNode(node);
         },
         _: (name, value) => {
@@ -17009,7 +17009,7 @@ const serializeAws_restXmlAnalyticsFilter = (input, context) => {
     });
     return bodyNode;
 };
-const serializeAws_restXmlAnalyticsS3BucketDestination = (input, context) => {
+const se_AnalyticsS3BucketDestination = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AnalyticsS3BucketDestination");
     if (input.Format != null) {
         const node = xml_builder_1.XmlNode.of("AnalyticsS3ExportFileFormat", input.Format).withName("Format");
@@ -17029,10 +17029,10 @@ const serializeAws_restXmlAnalyticsS3BucketDestination = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlBucketLifecycleConfiguration = (input, context) => {
+const se_BucketLifecycleConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("BucketLifecycleConfiguration");
     if (input.Rules != null) {
-        const nodes = serializeAws_restXmlLifecycleRules(input.Rules, context);
+        const nodes = se_LifecycleRules(input.Rules, context);
         nodes.map((node) => {
             node = node.withName("Rule");
             bodyNode.addChildNode(node);
@@ -17040,18 +17040,18 @@ const serializeAws_restXmlBucketLifecycleConfiguration = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlBucketLoggingStatus = (input, context) => {
+const se_BucketLoggingStatus = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("BucketLoggingStatus");
     if (input.LoggingEnabled != null) {
-        const node = serializeAws_restXmlLoggingEnabled(input.LoggingEnabled, context).withName("LoggingEnabled");
+        const node = se_LoggingEnabled(input.LoggingEnabled, context).withName("LoggingEnabled");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlCompletedMultipartUpload = (input, context) => {
+const se_CompletedMultipartUpload = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CompletedMultipartUpload");
     if (input.Parts != null) {
-        const nodes = serializeAws_restXmlCompletedPartList(input.Parts, context);
+        const nodes = se_CompletedPartList(input.Parts, context);
         nodes.map((node) => {
             node = node.withName("Part");
             bodyNode.addChildNode(node);
@@ -17059,7 +17059,7 @@ const serializeAws_restXmlCompletedMultipartUpload = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlCompletedPart = (input, context) => {
+const se_CompletedPart = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CompletedPart");
     if (input.ETag != null) {
         const node = xml_builder_1.XmlNode.of("ETag", input.ETag).withName("ETag");
@@ -17087,15 +17087,15 @@ const serializeAws_restXmlCompletedPart = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlCompletedPartList = (input, context) => {
+const se_CompletedPartList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlCompletedPart(entry, context);
+        const node = se_CompletedPart(entry, context);
         return node.withName("member");
     });
 };
-const serializeAws_restXmlCondition = (input, context) => {
+const se_Condition = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Condition");
     if (input.HttpErrorCodeReturnedEquals != null) {
         const node = xml_builder_1.XmlNode
@@ -17109,10 +17109,10 @@ const serializeAws_restXmlCondition = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlCORSConfiguration = (input, context) => {
+const se_CORSConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CORSConfiguration");
     if (input.CORSRules != null) {
-        const nodes = serializeAws_restXmlCORSRules(input.CORSRules, context);
+        const nodes = se_CORSRules(input.CORSRules, context);
         nodes.map((node) => {
             node = node.withName("CORSRule");
             bodyNode.addChildNode(node);
@@ -17120,35 +17120,35 @@ const serializeAws_restXmlCORSConfiguration = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlCORSRule = (input, context) => {
+const se_CORSRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CORSRule");
     if (input.ID != null) {
         const node = xml_builder_1.XmlNode.of("ID", input.ID).withName("ID");
         bodyNode.addChildNode(node);
     }
     if (input.AllowedHeaders != null) {
-        const nodes = serializeAws_restXmlAllowedHeaders(input.AllowedHeaders, context);
+        const nodes = se_AllowedHeaders(input.AllowedHeaders, context);
         nodes.map((node) => {
             node = node.withName("AllowedHeader");
             bodyNode.addChildNode(node);
         });
     }
     if (input.AllowedMethods != null) {
-        const nodes = serializeAws_restXmlAllowedMethods(input.AllowedMethods, context);
+        const nodes = se_AllowedMethods(input.AllowedMethods, context);
         nodes.map((node) => {
             node = node.withName("AllowedMethod");
             bodyNode.addChildNode(node);
         });
     }
     if (input.AllowedOrigins != null) {
-        const nodes = serializeAws_restXmlAllowedOrigins(input.AllowedOrigins, context);
+        const nodes = se_AllowedOrigins(input.AllowedOrigins, context);
         nodes.map((node) => {
             node = node.withName("AllowedOrigin");
             bodyNode.addChildNode(node);
         });
     }
     if (input.ExposeHeaders != null) {
-        const nodes = serializeAws_restXmlExposeHeaders(input.ExposeHeaders, context);
+        const nodes = se_ExposeHeaders(input.ExposeHeaders, context);
         nodes.map((node) => {
             node = node.withName("ExposeHeader");
             bodyNode.addChildNode(node);
@@ -17160,15 +17160,15 @@ const serializeAws_restXmlCORSRule = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlCORSRules = (input, context) => {
+const se_CORSRules = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlCORSRule(entry, context);
+        const node = se_CORSRule(entry, context);
         return node.withName("member");
     });
 };
-const serializeAws_restXmlCreateBucketConfiguration = (input, context) => {
+const se_CreateBucketConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CreateBucketConfiguration");
     if (input.LocationConstraint != null) {
         const node = xml_builder_1.XmlNode.of("BucketLocationConstraint", input.LocationConstraint).withName("LocationConstraint");
@@ -17176,7 +17176,7 @@ const serializeAws_restXmlCreateBucketConfiguration = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlCSVInput = (input, context) => {
+const se_CSVInput = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CSVInput");
     if (input.FileHeaderInfo != null) {
         const node = xml_builder_1.XmlNode.of("FileHeaderInfo", input.FileHeaderInfo).withName("FileHeaderInfo");
@@ -17210,7 +17210,7 @@ const serializeAws_restXmlCSVInput = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlCSVOutput = (input, context) => {
+const se_CSVOutput = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CSVOutput");
     if (input.QuoteFields != null) {
         const node = xml_builder_1.XmlNode.of("QuoteFields", input.QuoteFields).withName("QuoteFields");
@@ -17234,7 +17234,7 @@ const serializeAws_restXmlCSVOutput = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlDefaultRetention = (input, context) => {
+const se_DefaultRetention = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("DefaultRetention");
     if (input.Mode != null) {
         const node = xml_builder_1.XmlNode.of("ObjectLockRetentionMode", input.Mode).withName("Mode");
@@ -17250,10 +17250,10 @@ const serializeAws_restXmlDefaultRetention = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlDelete = (input, context) => {
+const se_Delete = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Delete");
     if (input.Objects != null) {
-        const nodes = serializeAws_restXmlObjectIdentifierList(input.Objects, context);
+        const nodes = se_ObjectIdentifierList(input.Objects, context);
         nodes.map((node) => {
             node = node.withName("Object");
             bodyNode.addChildNode(node);
@@ -17265,7 +17265,7 @@ const serializeAws_restXmlDelete = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlDeleteMarkerReplication = (input, context) => {
+const se_DeleteMarkerReplication = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("DeleteMarkerReplication");
     if (input.Status != null) {
         const node = xml_builder_1.XmlNode.of("DeleteMarkerReplicationStatus", input.Status).withName("Status");
@@ -17273,7 +17273,7 @@ const serializeAws_restXmlDeleteMarkerReplication = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlDestination = (input, context) => {
+const se_Destination = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Destination");
     if (input.Bucket != null) {
         const node = xml_builder_1.XmlNode.of("BucketName", input.Bucket).withName("Bucket");
@@ -17288,24 +17288,24 @@ const serializeAws_restXmlDestination = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.AccessControlTranslation != null) {
-        const node = serializeAws_restXmlAccessControlTranslation(input.AccessControlTranslation, context).withName("AccessControlTranslation");
+        const node = se_AccessControlTranslation(input.AccessControlTranslation, context).withName("AccessControlTranslation");
         bodyNode.addChildNode(node);
     }
     if (input.EncryptionConfiguration != null) {
-        const node = serializeAws_restXmlEncryptionConfiguration(input.EncryptionConfiguration, context).withName("EncryptionConfiguration");
+        const node = se_EncryptionConfiguration(input.EncryptionConfiguration, context).withName("EncryptionConfiguration");
         bodyNode.addChildNode(node);
     }
     if (input.ReplicationTime != null) {
-        const node = serializeAws_restXmlReplicationTime(input.ReplicationTime, context).withName("ReplicationTime");
+        const node = se_ReplicationTime(input.ReplicationTime, context).withName("ReplicationTime");
         bodyNode.addChildNode(node);
     }
     if (input.Metrics != null) {
-        const node = serializeAws_restXmlMetrics(input.Metrics, context).withName("Metrics");
+        const node = se_Metrics(input.Metrics, context).withName("Metrics");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlEncryption = (input, context) => {
+const se_Encryption = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Encryption");
     if (input.EncryptionType != null) {
         const node = xml_builder_1.XmlNode.of("ServerSideEncryption", input.EncryptionType).withName("EncryptionType");
@@ -17321,7 +17321,7 @@ const serializeAws_restXmlEncryption = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlEncryptionConfiguration = (input, context) => {
+const se_EncryptionConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("EncryptionConfiguration");
     if (input.ReplicaKmsKeyID != null) {
         const node = xml_builder_1.XmlNode.of("ReplicaKmsKeyID", input.ReplicaKmsKeyID).withName("ReplicaKmsKeyID");
@@ -17329,7 +17329,7 @@ const serializeAws_restXmlEncryptionConfiguration = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlErrorDocument = (input, context) => {
+const se_ErrorDocument = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ErrorDocument");
     if (input.Key != null) {
         const node = xml_builder_1.XmlNode.of("ObjectKey", input.Key).withName("Key");
@@ -17337,11 +17337,11 @@ const serializeAws_restXmlErrorDocument = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlEventBridgeConfiguration = (input, context) => {
+const se_EventBridgeConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("EventBridgeConfiguration");
     return bodyNode;
 };
-const serializeAws_restXmlEventList = (input, context) => {
+const se_EventList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
@@ -17349,7 +17349,7 @@ const serializeAws_restXmlEventList = (input, context) => {
         return node.withName("member");
     });
 };
-const serializeAws_restXmlExistingObjectReplication = (input, context) => {
+const se_ExistingObjectReplication = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ExistingObjectReplication");
     if (input.Status != null) {
         const node = xml_builder_1.XmlNode.of("ExistingObjectReplicationStatus", input.Status).withName("Status");
@@ -17357,7 +17357,7 @@ const serializeAws_restXmlExistingObjectReplication = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlExposeHeaders = (input, context) => {
+const se_ExposeHeaders = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
@@ -17365,7 +17365,7 @@ const serializeAws_restXmlExposeHeaders = (input, context) => {
         return node.withName("member");
     });
 };
-const serializeAws_restXmlFilterRule = (input, context) => {
+const se_FilterRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("FilterRule");
     if (input.Name != null) {
         const node = xml_builder_1.XmlNode.of("FilterRuleName", input.Name).withName("Name");
@@ -17377,15 +17377,15 @@ const serializeAws_restXmlFilterRule = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlFilterRuleList = (input, context) => {
+const se_FilterRuleList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlFilterRule(entry, context);
+        const node = se_FilterRule(entry, context);
         return node.withName("member");
     });
 };
-const serializeAws_restXmlGlacierJobParameters = (input, context) => {
+const se_GlacierJobParameters = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("GlacierJobParameters");
     if (input.Tier != null) {
         const node = xml_builder_1.XmlNode.of("Tier", input.Tier).withName("Tier");
@@ -17393,10 +17393,10 @@ const serializeAws_restXmlGlacierJobParameters = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlGrant = (input, context) => {
+const se_Grant = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Grant");
     if (input.Grantee != null) {
-        const node = serializeAws_restXmlGrantee(input.Grantee, context).withName("Grantee");
+        const node = se_Grantee(input.Grantee, context).withName("Grantee");
         node.addAttribute("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
         bodyNode.addChildNode(node);
     }
@@ -17406,7 +17406,7 @@ const serializeAws_restXmlGrant = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlGrantee = (input, context) => {
+const se_Grantee = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Grantee");
     if (input.DisplayName != null) {
         const node = xml_builder_1.XmlNode.of("DisplayName", input.DisplayName).withName("DisplayName");
@@ -17429,15 +17429,15 @@ const serializeAws_restXmlGrantee = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlGrants = (input, context) => {
+const se_Grants = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlGrant(entry, context);
+        const node = se_Grant(entry, context);
         return node.withName("Grant");
     });
 };
-const serializeAws_restXmlIndexDocument = (input, context) => {
+const se_IndexDocument = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("IndexDocument");
     if (input.Suffix != null) {
         const node = xml_builder_1.XmlNode.of("Suffix", input.Suffix).withName("Suffix");
@@ -17445,10 +17445,10 @@ const serializeAws_restXmlIndexDocument = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlInputSerialization = (input, context) => {
+const se_InputSerialization = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("InputSerialization");
     if (input.CSV != null) {
-        const node = serializeAws_restXmlCSVInput(input.CSV, context).withName("CSV");
+        const node = se_CSVInput(input.CSV, context).withName("CSV");
         bodyNode.addChildNode(node);
     }
     if (input.CompressionType != null) {
@@ -17456,23 +17456,23 @@ const serializeAws_restXmlInputSerialization = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.JSON != null) {
-        const node = serializeAws_restXmlJSONInput(input.JSON, context).withName("JSON");
+        const node = se_JSONInput(input.JSON, context).withName("JSON");
         bodyNode.addChildNode(node);
     }
     if (input.Parquet != null) {
-        const node = serializeAws_restXmlParquetInput(input.Parquet, context).withName("Parquet");
+        const node = se_ParquetInput(input.Parquet, context).withName("Parquet");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlIntelligentTieringAndOperator = (input, context) => {
+const se_IntelligentTieringAndOperator = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("IntelligentTieringAndOperator");
     if (input.Prefix != null) {
         const node = xml_builder_1.XmlNode.of("Prefix", input.Prefix).withName("Prefix");
         bodyNode.addChildNode(node);
     }
     if (input.Tags != null) {
-        const nodes = serializeAws_restXmlTagSet(input.Tags, context);
+        const nodes = se_TagSet(input.Tags, context);
         nodes.map((node) => {
             node = node.withName("Tag");
             bodyNode.addChildNode(node);
@@ -17480,14 +17480,14 @@ const serializeAws_restXmlIntelligentTieringAndOperator = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlIntelligentTieringConfiguration = (input, context) => {
+const se_IntelligentTieringConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("IntelligentTieringConfiguration");
     if (input.Id != null) {
         const node = xml_builder_1.XmlNode.of("IntelligentTieringId", input.Id).withName("Id");
         bodyNode.addChildNode(node);
     }
     if (input.Filter != null) {
-        const node = serializeAws_restXmlIntelligentTieringFilter(input.Filter, context).withName("Filter");
+        const node = se_IntelligentTieringFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
     if (input.Status != null) {
@@ -17495,7 +17495,7 @@ const serializeAws_restXmlIntelligentTieringConfiguration = (input, context) => 
         bodyNode.addChildNode(node);
     }
     if (input.Tierings != null) {
-        const nodes = serializeAws_restXmlTieringList(input.Tierings, context);
+        const nodes = se_TieringList(input.Tierings, context);
         nodes.map((node) => {
             node = node.withName("Tiering");
             bodyNode.addChildNode(node);
@@ -17503,26 +17503,26 @@ const serializeAws_restXmlIntelligentTieringConfiguration = (input, context) => 
     }
     return bodyNode;
 };
-const serializeAws_restXmlIntelligentTieringFilter = (input, context) => {
+const se_IntelligentTieringFilter = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("IntelligentTieringFilter");
     if (input.Prefix != null) {
         const node = xml_builder_1.XmlNode.of("Prefix", input.Prefix).withName("Prefix");
         bodyNode.addChildNode(node);
     }
     if (input.Tag != null) {
-        const node = serializeAws_restXmlTag(input.Tag, context).withName("Tag");
+        const node = se_Tag(input.Tag, context).withName("Tag");
         bodyNode.addChildNode(node);
     }
     if (input.And != null) {
-        const node = serializeAws_restXmlIntelligentTieringAndOperator(input.And, context).withName("And");
+        const node = se_IntelligentTieringAndOperator(input.And, context).withName("And");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlInventoryConfiguration = (input, context) => {
+const se_InventoryConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("InventoryConfiguration");
     if (input.Destination != null) {
-        const node = serializeAws_restXmlInventoryDestination(input.Destination, context).withName("Destination");
+        const node = se_InventoryDestination(input.Destination, context).withName("Destination");
         bodyNode.addChildNode(node);
     }
     if (input.IsEnabled != null) {
@@ -17530,7 +17530,7 @@ const serializeAws_restXmlInventoryConfiguration = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.Filter != null) {
-        const node = serializeAws_restXmlInventoryFilter(input.Filter, context).withName("Filter");
+        const node = se_InventoryFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
     if (input.Id != null) {
@@ -17544,7 +17544,7 @@ const serializeAws_restXmlInventoryConfiguration = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.OptionalFields != null) {
-        const nodes = serializeAws_restXmlInventoryOptionalFields(input.OptionalFields, context);
+        const nodes = se_InventoryOptionalFields(input.OptionalFields, context);
         const containerNode = new xml_builder_1.XmlNode("OptionalFields");
         nodes.map((node) => {
             containerNode.addChildNode(node);
@@ -17552,32 +17552,32 @@ const serializeAws_restXmlInventoryConfiguration = (input, context) => {
         bodyNode.addChildNode(containerNode);
     }
     if (input.Schedule != null) {
-        const node = serializeAws_restXmlInventorySchedule(input.Schedule, context).withName("Schedule");
+        const node = se_InventorySchedule(input.Schedule, context).withName("Schedule");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlInventoryDestination = (input, context) => {
+const se_InventoryDestination = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("InventoryDestination");
     if (input.S3BucketDestination != null) {
-        const node = serializeAws_restXmlInventoryS3BucketDestination(input.S3BucketDestination, context).withName("S3BucketDestination");
+        const node = se_InventoryS3BucketDestination(input.S3BucketDestination, context).withName("S3BucketDestination");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlInventoryEncryption = (input, context) => {
+const se_InventoryEncryption = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("InventoryEncryption");
     if (input.SSES3 != null) {
-        const node = serializeAws_restXmlSSES3(input.SSES3, context).withName("SSE-S3");
+        const node = se_SSES3(input.SSES3, context).withName("SSE-S3");
         bodyNode.addChildNode(node);
     }
     if (input.SSEKMS != null) {
-        const node = serializeAws_restXmlSSEKMS(input.SSEKMS, context).withName("SSE-KMS");
+        const node = se_SSEKMS(input.SSEKMS, context).withName("SSE-KMS");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlInventoryFilter = (input, context) => {
+const se_InventoryFilter = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("InventoryFilter");
     if (input.Prefix != null) {
         const node = xml_builder_1.XmlNode.of("Prefix", input.Prefix).withName("Prefix");
@@ -17585,7 +17585,7 @@ const serializeAws_restXmlInventoryFilter = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlInventoryOptionalFields = (input, context) => {
+const se_InventoryOptionalFields = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
@@ -17593,7 +17593,7 @@ const serializeAws_restXmlInventoryOptionalFields = (input, context) => {
         return node.withName("Field");
     });
 };
-const serializeAws_restXmlInventoryS3BucketDestination = (input, context) => {
+const se_InventoryS3BucketDestination = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("InventoryS3BucketDestination");
     if (input.AccountId != null) {
         const node = xml_builder_1.XmlNode.of("AccountId", input.AccountId).withName("AccountId");
@@ -17612,12 +17612,12 @@ const serializeAws_restXmlInventoryS3BucketDestination = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.Encryption != null) {
-        const node = serializeAws_restXmlInventoryEncryption(input.Encryption, context).withName("Encryption");
+        const node = se_InventoryEncryption(input.Encryption, context).withName("Encryption");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlInventorySchedule = (input, context) => {
+const se_InventorySchedule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("InventorySchedule");
     if (input.Frequency != null) {
         const node = xml_builder_1.XmlNode.of("InventoryFrequency", input.Frequency).withName("Frequency");
@@ -17625,7 +17625,7 @@ const serializeAws_restXmlInventorySchedule = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlJSONInput = (input, context) => {
+const se_JSONInput = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("JSONInput");
     if (input.Type != null) {
         const node = xml_builder_1.XmlNode.of("JSONType", input.Type).withName("Type");
@@ -17633,7 +17633,7 @@ const serializeAws_restXmlJSONInput = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlJSONOutput = (input, context) => {
+const se_JSONOutput = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("JSONOutput");
     if (input.RecordDelimiter != null) {
         const node = xml_builder_1.XmlNode.of("RecordDelimiter", input.RecordDelimiter).withName("RecordDelimiter");
@@ -17641,7 +17641,7 @@ const serializeAws_restXmlJSONOutput = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlLambdaFunctionConfiguration = (input, context) => {
+const se_LambdaFunctionConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("LambdaFunctionConfiguration");
     if (input.Id != null) {
         const node = xml_builder_1.XmlNode.of("NotificationId", input.Id).withName("Id");
@@ -17652,27 +17652,27 @@ const serializeAws_restXmlLambdaFunctionConfiguration = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.Events != null) {
-        const nodes = serializeAws_restXmlEventList(input.Events, context);
+        const nodes = se_EventList(input.Events, context);
         nodes.map((node) => {
             node = node.withName("Event");
             bodyNode.addChildNode(node);
         });
     }
     if (input.Filter != null) {
-        const node = serializeAws_restXmlNotificationConfigurationFilter(input.Filter, context).withName("Filter");
+        const node = se_NotificationConfigurationFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlLambdaFunctionConfigurationList = (input, context) => {
+const se_LambdaFunctionConfigurationList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlLambdaFunctionConfiguration(entry, context);
+        const node = se_LambdaFunctionConfiguration(entry, context);
         return node.withName("member");
     });
 };
-const serializeAws_restXmlLifecycleExpiration = (input, context) => {
+const se_LifecycleExpiration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("LifecycleExpiration");
     if (input.Date != null) {
         const node = xml_builder_1.XmlNode.of("Date", (input.Date.toISOString().split(".")[0] + "Z").toString()).withName("Date");
@@ -17690,10 +17690,10 @@ const serializeAws_restXmlLifecycleExpiration = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlLifecycleRule = (input, context) => {
+const se_LifecycleRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("LifecycleRule");
     if (input.Expiration != null) {
-        const node = serializeAws_restXmlLifecycleExpiration(input.Expiration, context).withName("Expiration");
+        const node = se_LifecycleExpiration(input.Expiration, context).withName("Expiration");
         bodyNode.addChildNode(node);
     }
     if (input.ID != null) {
@@ -17705,7 +17705,7 @@ const serializeAws_restXmlLifecycleRule = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.Filter != null) {
-        const node = serializeAws_restXmlLifecycleRuleFilter(input.Filter, context).withName("Filter");
+        const node = se_LifecycleRuleFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
     if (input.Status != null) {
@@ -17713,37 +17713,37 @@ const serializeAws_restXmlLifecycleRule = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.Transitions != null) {
-        const nodes = serializeAws_restXmlTransitionList(input.Transitions, context);
+        const nodes = se_TransitionList(input.Transitions, context);
         nodes.map((node) => {
             node = node.withName("Transition");
             bodyNode.addChildNode(node);
         });
     }
     if (input.NoncurrentVersionTransitions != null) {
-        const nodes = serializeAws_restXmlNoncurrentVersionTransitionList(input.NoncurrentVersionTransitions, context);
+        const nodes = se_NoncurrentVersionTransitionList(input.NoncurrentVersionTransitions, context);
         nodes.map((node) => {
             node = node.withName("NoncurrentVersionTransition");
             bodyNode.addChildNode(node);
         });
     }
     if (input.NoncurrentVersionExpiration != null) {
-        const node = serializeAws_restXmlNoncurrentVersionExpiration(input.NoncurrentVersionExpiration, context).withName("NoncurrentVersionExpiration");
+        const node = se_NoncurrentVersionExpiration(input.NoncurrentVersionExpiration, context).withName("NoncurrentVersionExpiration");
         bodyNode.addChildNode(node);
     }
     if (input.AbortIncompleteMultipartUpload != null) {
-        const node = serializeAws_restXmlAbortIncompleteMultipartUpload(input.AbortIncompleteMultipartUpload, context).withName("AbortIncompleteMultipartUpload");
+        const node = se_AbortIncompleteMultipartUpload(input.AbortIncompleteMultipartUpload, context).withName("AbortIncompleteMultipartUpload");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlLifecycleRuleAndOperator = (input, context) => {
+const se_LifecycleRuleAndOperator = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("LifecycleRuleAndOperator");
     if (input.Prefix != null) {
         const node = xml_builder_1.XmlNode.of("Prefix", input.Prefix).withName("Prefix");
         bodyNode.addChildNode(node);
     }
     if (input.Tags != null) {
-        const nodes = serializeAws_restXmlTagSet(input.Tags, context);
+        const nodes = se_TagSet(input.Tags, context);
         nodes.map((node) => {
             node = node.withName("Tag");
             bodyNode.addChildNode(node);
@@ -17763,7 +17763,7 @@ const serializeAws_restXmlLifecycleRuleAndOperator = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlLifecycleRuleFilter = (input, context) => {
+const se_LifecycleRuleFilter = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("LifecycleRuleFilter");
     models_0_1.LifecycleRuleFilter.visit(input, {
         Prefix: (value) => {
@@ -17771,7 +17771,7 @@ const serializeAws_restXmlLifecycleRuleFilter = (input, context) => {
             bodyNode.addChildNode(node);
         },
         Tag: (value) => {
-            const node = serializeAws_restXmlTag(value, context).withName("Tag");
+            const node = se_Tag(value, context).withName("Tag");
             bodyNode.addChildNode(node);
         },
         ObjectSizeGreaterThan: (value) => {
@@ -17783,7 +17783,7 @@ const serializeAws_restXmlLifecycleRuleFilter = (input, context) => {
             bodyNode.addChildNode(node);
         },
         And: (value) => {
-            const node = serializeAws_restXmlLifecycleRuleAndOperator(value, context).withName("And");
+            const node = se_LifecycleRuleAndOperator(value, context).withName("And");
             bodyNode.addChildNode(node);
         },
         _: (name, value) => {
@@ -17795,22 +17795,22 @@ const serializeAws_restXmlLifecycleRuleFilter = (input, context) => {
     });
     return bodyNode;
 };
-const serializeAws_restXmlLifecycleRules = (input, context) => {
+const se_LifecycleRules = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlLifecycleRule(entry, context);
+        const node = se_LifecycleRule(entry, context);
         return node.withName("member");
     });
 };
-const serializeAws_restXmlLoggingEnabled = (input, context) => {
+const se_LoggingEnabled = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("LoggingEnabled");
     if (input.TargetBucket != null) {
         const node = xml_builder_1.XmlNode.of("TargetBucket", input.TargetBucket).withName("TargetBucket");
         bodyNode.addChildNode(node);
     }
     if (input.TargetGrants != null) {
-        const nodes = serializeAws_restXmlTargetGrants(input.TargetGrants, context);
+        const nodes = se_TargetGrants(input.TargetGrants, context);
         const containerNode = new xml_builder_1.XmlNode("TargetGrants");
         nodes.map((node) => {
             containerNode.addChildNode(node);
@@ -17823,7 +17823,7 @@ const serializeAws_restXmlLoggingEnabled = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlMetadataEntry = (input, context) => {
+const se_MetadataEntry = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("MetadataEntry");
     if (input.Name != null) {
         const node = xml_builder_1.XmlNode.of("MetadataKey", input.Name).withName("Name");
@@ -17835,26 +17835,26 @@ const serializeAws_restXmlMetadataEntry = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlMetrics = (input, context) => {
+const se_Metrics = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Metrics");
     if (input.Status != null) {
         const node = xml_builder_1.XmlNode.of("MetricsStatus", input.Status).withName("Status");
         bodyNode.addChildNode(node);
     }
     if (input.EventThreshold != null) {
-        const node = serializeAws_restXmlReplicationTimeValue(input.EventThreshold, context).withName("EventThreshold");
+        const node = se_ReplicationTimeValue(input.EventThreshold, context).withName("EventThreshold");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlMetricsAndOperator = (input, context) => {
+const se_MetricsAndOperator = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("MetricsAndOperator");
     if (input.Prefix != null) {
         const node = xml_builder_1.XmlNode.of("Prefix", input.Prefix).withName("Prefix");
         bodyNode.addChildNode(node);
     }
     if (input.Tags != null) {
-        const nodes = serializeAws_restXmlTagSet(input.Tags, context);
+        const nodes = se_TagSet(input.Tags, context);
         nodes.map((node) => {
             node = node.withName("Tag");
             bodyNode.addChildNode(node);
@@ -17866,19 +17866,19 @@ const serializeAws_restXmlMetricsAndOperator = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlMetricsConfiguration = (input, context) => {
+const se_MetricsConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("MetricsConfiguration");
     if (input.Id != null) {
         const node = xml_builder_1.XmlNode.of("MetricsId", input.Id).withName("Id");
         bodyNode.addChildNode(node);
     }
     if (input.Filter != null) {
-        const node = serializeAws_restXmlMetricsFilter(input.Filter, context).withName("Filter");
+        const node = se_MetricsFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlMetricsFilter = (input, context) => {
+const se_MetricsFilter = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("MetricsFilter");
     models_0_1.MetricsFilter.visit(input, {
         Prefix: (value) => {
@@ -17886,7 +17886,7 @@ const serializeAws_restXmlMetricsFilter = (input, context) => {
             bodyNode.addChildNode(node);
         },
         Tag: (value) => {
-            const node = serializeAws_restXmlTag(value, context).withName("Tag");
+            const node = se_Tag(value, context).withName("Tag");
             bodyNode.addChildNode(node);
         },
         AccessPointArn: (value) => {
@@ -17894,7 +17894,7 @@ const serializeAws_restXmlMetricsFilter = (input, context) => {
             bodyNode.addChildNode(node);
         },
         And: (value) => {
-            const node = serializeAws_restXmlMetricsAndOperator(value, context).withName("And");
+            const node = se_MetricsAndOperator(value, context).withName("And");
             bodyNode.addChildNode(node);
         },
         _: (name, value) => {
@@ -17906,7 +17906,7 @@ const serializeAws_restXmlMetricsFilter = (input, context) => {
     });
     return bodyNode;
 };
-const serializeAws_restXmlNoncurrentVersionExpiration = (input, context) => {
+const se_NoncurrentVersionExpiration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("NoncurrentVersionExpiration");
     if (input.NoncurrentDays != null) {
         const node = xml_builder_1.XmlNode.of("Days", String(input.NoncurrentDays)).withName("NoncurrentDays");
@@ -17920,7 +17920,7 @@ const serializeAws_restXmlNoncurrentVersionExpiration = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlNoncurrentVersionTransition = (input, context) => {
+const se_NoncurrentVersionTransition = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("NoncurrentVersionTransition");
     if (input.NoncurrentDays != null) {
         const node = xml_builder_1.XmlNode.of("Days", String(input.NoncurrentDays)).withName("NoncurrentDays");
@@ -17938,52 +17938,52 @@ const serializeAws_restXmlNoncurrentVersionTransition = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlNoncurrentVersionTransitionList = (input, context) => {
+const se_NoncurrentVersionTransitionList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlNoncurrentVersionTransition(entry, context);
+        const node = se_NoncurrentVersionTransition(entry, context);
         return node.withName("member");
     });
 };
-const serializeAws_restXmlNotificationConfiguration = (input, context) => {
+const se_NotificationConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("NotificationConfiguration");
     if (input.TopicConfigurations != null) {
-        const nodes = serializeAws_restXmlTopicConfigurationList(input.TopicConfigurations, context);
+        const nodes = se_TopicConfigurationList(input.TopicConfigurations, context);
         nodes.map((node) => {
             node = node.withName("TopicConfiguration");
             bodyNode.addChildNode(node);
         });
     }
     if (input.QueueConfigurations != null) {
-        const nodes = serializeAws_restXmlQueueConfigurationList(input.QueueConfigurations, context);
+        const nodes = se_QueueConfigurationList(input.QueueConfigurations, context);
         nodes.map((node) => {
             node = node.withName("QueueConfiguration");
             bodyNode.addChildNode(node);
         });
     }
     if (input.LambdaFunctionConfigurations != null) {
-        const nodes = serializeAws_restXmlLambdaFunctionConfigurationList(input.LambdaFunctionConfigurations, context);
+        const nodes = se_LambdaFunctionConfigurationList(input.LambdaFunctionConfigurations, context);
         nodes.map((node) => {
             node = node.withName("CloudFunctionConfiguration");
             bodyNode.addChildNode(node);
         });
     }
     if (input.EventBridgeConfiguration != null) {
-        const node = serializeAws_restXmlEventBridgeConfiguration(input.EventBridgeConfiguration, context).withName("EventBridgeConfiguration");
+        const node = se_EventBridgeConfiguration(input.EventBridgeConfiguration, context).withName("EventBridgeConfiguration");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlNotificationConfigurationFilter = (input, context) => {
+const se_NotificationConfigurationFilter = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("NotificationConfigurationFilter");
     if (input.Key != null) {
-        const node = serializeAws_restXmlS3KeyFilter(input.Key, context).withName("S3Key");
+        const node = se_S3KeyFilter(input.Key, context).withName("S3Key");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlObjectIdentifier = (input, context) => {
+const se_ObjectIdentifier = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ObjectIdentifier");
     if (input.Key != null) {
         const node = xml_builder_1.XmlNode.of("ObjectKey", input.Key).withName("Key");
@@ -17995,27 +17995,27 @@ const serializeAws_restXmlObjectIdentifier = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlObjectIdentifierList = (input, context) => {
+const se_ObjectIdentifierList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlObjectIdentifier(entry, context);
+        const node = se_ObjectIdentifier(entry, context);
         return node.withName("member");
     });
 };
-const serializeAws_restXmlObjectLockConfiguration = (input, context) => {
+const se_ObjectLockConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ObjectLockConfiguration");
     if (input.ObjectLockEnabled != null) {
         const node = xml_builder_1.XmlNode.of("ObjectLockEnabled", input.ObjectLockEnabled).withName("ObjectLockEnabled");
         bodyNode.addChildNode(node);
     }
     if (input.Rule != null) {
-        const node = serializeAws_restXmlObjectLockRule(input.Rule, context).withName("Rule");
+        const node = se_ObjectLockRule(input.Rule, context).withName("Rule");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlObjectLockLegalHold = (input, context) => {
+const se_ObjectLockLegalHold = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ObjectLockLegalHold");
     if (input.Status != null) {
         const node = xml_builder_1.XmlNode.of("ObjectLockLegalHoldStatus", input.Status).withName("Status");
@@ -18023,7 +18023,7 @@ const serializeAws_restXmlObjectLockLegalHold = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlObjectLockRetention = (input, context) => {
+const se_ObjectLockRetention = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ObjectLockRetention");
     if (input.Mode != null) {
         const node = xml_builder_1.XmlNode.of("ObjectLockRetentionMode", input.Mode).withName("Mode");
@@ -18037,35 +18037,35 @@ const serializeAws_restXmlObjectLockRetention = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlObjectLockRule = (input, context) => {
+const se_ObjectLockRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ObjectLockRule");
     if (input.DefaultRetention != null) {
-        const node = serializeAws_restXmlDefaultRetention(input.DefaultRetention, context).withName("DefaultRetention");
+        const node = se_DefaultRetention(input.DefaultRetention, context).withName("DefaultRetention");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlOutputLocation = (input, context) => {
+const se_OutputLocation = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OutputLocation");
     if (input.S3 != null) {
-        const node = serializeAws_restXmlS3Location(input.S3, context).withName("S3");
+        const node = se_S3Location(input.S3, context).withName("S3");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlOutputSerialization = (input, context) => {
+const se_OutputSerialization = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OutputSerialization");
     if (input.CSV != null) {
-        const node = serializeAws_restXmlCSVOutput(input.CSV, context).withName("CSV");
+        const node = se_CSVOutput(input.CSV, context).withName("CSV");
         bodyNode.addChildNode(node);
     }
     if (input.JSON != null) {
-        const node = serializeAws_restXmlJSONOutput(input.JSON, context).withName("JSON");
+        const node = se_JSONOutput(input.JSON, context).withName("JSON");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlOwner = (input, context) => {
+const se_Owner = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Owner");
     if (input.DisplayName != null) {
         const node = xml_builder_1.XmlNode.of("DisplayName", input.DisplayName).withName("DisplayName");
@@ -18077,10 +18077,10 @@ const serializeAws_restXmlOwner = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlOwnershipControls = (input, context) => {
+const se_OwnershipControls = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OwnershipControls");
     if (input.Rules != null) {
-        const nodes = serializeAws_restXmlOwnershipControlsRules(input.Rules, context);
+        const nodes = se_OwnershipControlsRules(input.Rules, context);
         nodes.map((node) => {
             node = node.withName("Rule");
             bodyNode.addChildNode(node);
@@ -18088,7 +18088,7 @@ const serializeAws_restXmlOwnershipControls = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlOwnershipControlsRule = (input, context) => {
+const se_OwnershipControlsRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OwnershipControlsRule");
     if (input.ObjectOwnership != null) {
         const node = xml_builder_1.XmlNode.of("ObjectOwnership", input.ObjectOwnership).withName("ObjectOwnership");
@@ -18096,19 +18096,19 @@ const serializeAws_restXmlOwnershipControlsRule = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlOwnershipControlsRules = (input, context) => {
+const se_OwnershipControlsRules = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlOwnershipControlsRule(entry, context);
+        const node = se_OwnershipControlsRule(entry, context);
         return node.withName("member");
     });
 };
-const serializeAws_restXmlParquetInput = (input, context) => {
+const se_ParquetInput = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ParquetInput");
     return bodyNode;
 };
-const serializeAws_restXmlPublicAccessBlockConfiguration = (input, context) => {
+const se_PublicAccessBlockConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("PublicAccessBlockConfiguration");
     if (input.BlockPublicAcls != null) {
         const node = xml_builder_1.XmlNode.of("Setting", String(input.BlockPublicAcls)).withName("BlockPublicAcls");
@@ -18128,7 +18128,7 @@ const serializeAws_restXmlPublicAccessBlockConfiguration = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlQueueConfiguration = (input, context) => {
+const se_QueueConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("QueueConfiguration");
     if (input.Id != null) {
         const node = xml_builder_1.XmlNode.of("NotificationId", input.Id).withName("Id");
@@ -18139,27 +18139,27 @@ const serializeAws_restXmlQueueConfiguration = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.Events != null) {
-        const nodes = serializeAws_restXmlEventList(input.Events, context);
+        const nodes = se_EventList(input.Events, context);
         nodes.map((node) => {
             node = node.withName("Event");
             bodyNode.addChildNode(node);
         });
     }
     if (input.Filter != null) {
-        const node = serializeAws_restXmlNotificationConfigurationFilter(input.Filter, context).withName("Filter");
+        const node = se_NotificationConfigurationFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlQueueConfigurationList = (input, context) => {
+const se_QueueConfigurationList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlQueueConfiguration(entry, context);
+        const node = se_QueueConfiguration(entry, context);
         return node.withName("member");
     });
 };
-const serializeAws_restXmlRedirect = (input, context) => {
+const se_Redirect = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Redirect");
     if (input.HostName != null) {
         const node = xml_builder_1.XmlNode.of("HostName", input.HostName).withName("HostName");
@@ -18183,7 +18183,7 @@ const serializeAws_restXmlRedirect = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlRedirectAllRequestsTo = (input, context) => {
+const se_RedirectAllRequestsTo = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("RedirectAllRequestsTo");
     if (input.HostName != null) {
         const node = xml_builder_1.XmlNode.of("HostName", input.HostName).withName("HostName");
@@ -18195,7 +18195,7 @@ const serializeAws_restXmlRedirectAllRequestsTo = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlReplicaModifications = (input, context) => {
+const se_ReplicaModifications = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ReplicaModifications");
     if (input.Status != null) {
         const node = xml_builder_1.XmlNode.of("ReplicaModificationsStatus", input.Status).withName("Status");
@@ -18203,14 +18203,14 @@ const serializeAws_restXmlReplicaModifications = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlReplicationConfiguration = (input, context) => {
+const se_ReplicationConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ReplicationConfiguration");
     if (input.Role != null) {
         const node = xml_builder_1.XmlNode.of("Role", input.Role).withName("Role");
         bodyNode.addChildNode(node);
     }
     if (input.Rules != null) {
-        const nodes = serializeAws_restXmlReplicationRules(input.Rules, context);
+        const nodes = se_ReplicationRules(input.Rules, context);
         nodes.map((node) => {
             node = node.withName("Rule");
             bodyNode.addChildNode(node);
@@ -18218,7 +18218,7 @@ const serializeAws_restXmlReplicationConfiguration = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlReplicationRule = (input, context) => {
+const se_ReplicationRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ReplicationRule");
     if (input.ID != null) {
         const node = xml_builder_1.XmlNode.of("ID", input.ID).withName("ID");
@@ -18233,7 +18233,7 @@ const serializeAws_restXmlReplicationRule = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.Filter != null) {
-        const node = serializeAws_restXmlReplicationRuleFilter(input.Filter, context).withName("Filter");
+        const node = se_ReplicationRuleFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
     if (input.Status != null) {
@@ -18241,31 +18241,31 @@ const serializeAws_restXmlReplicationRule = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.SourceSelectionCriteria != null) {
-        const node = serializeAws_restXmlSourceSelectionCriteria(input.SourceSelectionCriteria, context).withName("SourceSelectionCriteria");
+        const node = se_SourceSelectionCriteria(input.SourceSelectionCriteria, context).withName("SourceSelectionCriteria");
         bodyNode.addChildNode(node);
     }
     if (input.ExistingObjectReplication != null) {
-        const node = serializeAws_restXmlExistingObjectReplication(input.ExistingObjectReplication, context).withName("ExistingObjectReplication");
+        const node = se_ExistingObjectReplication(input.ExistingObjectReplication, context).withName("ExistingObjectReplication");
         bodyNode.addChildNode(node);
     }
     if (input.Destination != null) {
-        const node = serializeAws_restXmlDestination(input.Destination, context).withName("Destination");
+        const node = se_Destination(input.Destination, context).withName("Destination");
         bodyNode.addChildNode(node);
     }
     if (input.DeleteMarkerReplication != null) {
-        const node = serializeAws_restXmlDeleteMarkerReplication(input.DeleteMarkerReplication, context).withName("DeleteMarkerReplication");
+        const node = se_DeleteMarkerReplication(input.DeleteMarkerReplication, context).withName("DeleteMarkerReplication");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlReplicationRuleAndOperator = (input, context) => {
+const se_ReplicationRuleAndOperator = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ReplicationRuleAndOperator");
     if (input.Prefix != null) {
         const node = xml_builder_1.XmlNode.of("Prefix", input.Prefix).withName("Prefix");
         bodyNode.addChildNode(node);
     }
     if (input.Tags != null) {
-        const nodes = serializeAws_restXmlTagSet(input.Tags, context);
+        const nodes = se_TagSet(input.Tags, context);
         nodes.map((node) => {
             node = node.withName("Tag");
             bodyNode.addChildNode(node);
@@ -18273,7 +18273,7 @@ const serializeAws_restXmlReplicationRuleAndOperator = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlReplicationRuleFilter = (input, context) => {
+const se_ReplicationRuleFilter = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ReplicationRuleFilter");
     models_0_1.ReplicationRuleFilter.visit(input, {
         Prefix: (value) => {
@@ -18281,11 +18281,11 @@ const serializeAws_restXmlReplicationRuleFilter = (input, context) => {
             bodyNode.addChildNode(node);
         },
         Tag: (value) => {
-            const node = serializeAws_restXmlTag(value, context).withName("Tag");
+            const node = se_Tag(value, context).withName("Tag");
             bodyNode.addChildNode(node);
         },
         And: (value) => {
-            const node = serializeAws_restXmlReplicationRuleAndOperator(value, context).withName("And");
+            const node = se_ReplicationRuleAndOperator(value, context).withName("And");
             bodyNode.addChildNode(node);
         },
         _: (name, value) => {
@@ -18297,27 +18297,27 @@ const serializeAws_restXmlReplicationRuleFilter = (input, context) => {
     });
     return bodyNode;
 };
-const serializeAws_restXmlReplicationRules = (input, context) => {
+const se_ReplicationRules = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlReplicationRule(entry, context);
+        const node = se_ReplicationRule(entry, context);
         return node.withName("member");
     });
 };
-const serializeAws_restXmlReplicationTime = (input, context) => {
+const se_ReplicationTime = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ReplicationTime");
     if (input.Status != null) {
         const node = xml_builder_1.XmlNode.of("ReplicationTimeStatus", input.Status).withName("Status");
         bodyNode.addChildNode(node);
     }
     if (input.Time != null) {
-        const node = serializeAws_restXmlReplicationTimeValue(input.Time, context).withName("Time");
+        const node = se_ReplicationTimeValue(input.Time, context).withName("Time");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlReplicationTimeValue = (input, context) => {
+const se_ReplicationTimeValue = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ReplicationTimeValue");
     if (input.Minutes != null) {
         const node = xml_builder_1.XmlNode.of("Minutes", String(input.Minutes)).withName("Minutes");
@@ -18325,7 +18325,7 @@ const serializeAws_restXmlReplicationTimeValue = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlRequestPaymentConfiguration = (input, context) => {
+const se_RequestPaymentConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("RequestPaymentConfiguration");
     if (input.Payer != null) {
         const node = xml_builder_1.XmlNode.of("Payer", input.Payer).withName("Payer");
@@ -18333,7 +18333,7 @@ const serializeAws_restXmlRequestPaymentConfiguration = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlRequestProgress = (input, context) => {
+const se_RequestProgress = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("RequestProgress");
     if (input.Enabled != null) {
         const node = xml_builder_1.XmlNode.of("EnableRequestProgress", String(input.Enabled)).withName("Enabled");
@@ -18341,14 +18341,14 @@ const serializeAws_restXmlRequestProgress = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlRestoreRequest = (input, context) => {
+const se_RestoreRequest = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("RestoreRequest");
     if (input.Days != null) {
         const node = xml_builder_1.XmlNode.of("Days", String(input.Days)).withName("Days");
         bodyNode.addChildNode(node);
     }
     if (input.GlacierJobParameters != null) {
-        const node = serializeAws_restXmlGlacierJobParameters(input.GlacierJobParameters, context).withName("GlacierJobParameters");
+        const node = se_GlacierJobParameters(input.GlacierJobParameters, context).withName("GlacierJobParameters");
         bodyNode.addChildNode(node);
     }
     if (input.Type != null) {
@@ -18364,39 +18364,39 @@ const serializeAws_restXmlRestoreRequest = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.SelectParameters != null) {
-        const node = serializeAws_restXmlSelectParameters(input.SelectParameters, context).withName("SelectParameters");
+        const node = se_SelectParameters(input.SelectParameters, context).withName("SelectParameters");
         bodyNode.addChildNode(node);
     }
     if (input.OutputLocation != null) {
-        const node = serializeAws_restXmlOutputLocation(input.OutputLocation, context).withName("OutputLocation");
+        const node = se_OutputLocation(input.OutputLocation, context).withName("OutputLocation");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlRoutingRule = (input, context) => {
+const se_RoutingRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("RoutingRule");
     if (input.Condition != null) {
-        const node = serializeAws_restXmlCondition(input.Condition, context).withName("Condition");
+        const node = se_Condition(input.Condition, context).withName("Condition");
         bodyNode.addChildNode(node);
     }
     if (input.Redirect != null) {
-        const node = serializeAws_restXmlRedirect(input.Redirect, context).withName("Redirect");
+        const node = se_Redirect(input.Redirect, context).withName("Redirect");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlRoutingRules = (input, context) => {
+const se_RoutingRules = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlRoutingRule(entry, context);
+        const node = se_RoutingRule(entry, context);
         return node.withName("RoutingRule");
     });
 };
-const serializeAws_restXmlS3KeyFilter = (input, context) => {
+const se_S3KeyFilter = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("S3KeyFilter");
     if (input.FilterRules != null) {
-        const nodes = serializeAws_restXmlFilterRuleList(input.FilterRules, context);
+        const nodes = se_FilterRuleList(input.FilterRules, context);
         nodes.map((node) => {
             node = node.withName("FilterRule");
             bodyNode.addChildNode(node);
@@ -18404,7 +18404,7 @@ const serializeAws_restXmlS3KeyFilter = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlS3Location = (input, context) => {
+const se_S3Location = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("S3Location");
     if (input.BucketName != null) {
         const node = xml_builder_1.XmlNode.of("BucketName", input.BucketName).withName("BucketName");
@@ -18415,7 +18415,7 @@ const serializeAws_restXmlS3Location = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.Encryption != null) {
-        const node = serializeAws_restXmlEncryption(input.Encryption, context).withName("Encryption");
+        const node = se_Encryption(input.Encryption, context).withName("Encryption");
         bodyNode.addChildNode(node);
     }
     if (input.CannedACL != null) {
@@ -18423,7 +18423,7 @@ const serializeAws_restXmlS3Location = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.AccessControlList != null) {
-        const nodes = serializeAws_restXmlGrants(input.AccessControlList, context);
+        const nodes = se_Grants(input.AccessControlList, context);
         const containerNode = new xml_builder_1.XmlNode("AccessControlList");
         nodes.map((node) => {
             containerNode.addChildNode(node);
@@ -18431,11 +18431,11 @@ const serializeAws_restXmlS3Location = (input, context) => {
         bodyNode.addChildNode(containerNode);
     }
     if (input.Tagging != null) {
-        const node = serializeAws_restXmlTagging(input.Tagging, context).withName("Tagging");
+        const node = se_Tagging(input.Tagging, context).withName("Tagging");
         bodyNode.addChildNode(node);
     }
     if (input.UserMetadata != null) {
-        const nodes = serializeAws_restXmlUserMetadata(input.UserMetadata, context);
+        const nodes = se_UserMetadata(input.UserMetadata, context);
         const containerNode = new xml_builder_1.XmlNode("UserMetadata");
         nodes.map((node) => {
             containerNode.addChildNode(node);
@@ -18448,7 +18448,7 @@ const serializeAws_restXmlS3Location = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlScanRange = (input, context) => {
+const se_ScanRange = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ScanRange");
     if (input.Start != null) {
         const node = xml_builder_1.XmlNode.of("Start", String(input.Start)).withName("Start");
@@ -18460,10 +18460,10 @@ const serializeAws_restXmlScanRange = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlSelectParameters = (input, context) => {
+const se_SelectParameters = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("SelectParameters");
     if (input.InputSerialization != null) {
-        const node = serializeAws_restXmlInputSerialization(input.InputSerialization, context).withName("InputSerialization");
+        const node = se_InputSerialization(input.InputSerialization, context).withName("InputSerialization");
         bodyNode.addChildNode(node);
     }
     if (input.ExpressionType != null) {
@@ -18475,12 +18475,12 @@ const serializeAws_restXmlSelectParameters = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.OutputSerialization != null) {
-        const node = serializeAws_restXmlOutputSerialization(input.OutputSerialization, context).withName("OutputSerialization");
+        const node = se_OutputSerialization(input.OutputSerialization, context).withName("OutputSerialization");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlServerSideEncryptionByDefault = (input, context) => {
+const se_ServerSideEncryptionByDefault = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ServerSideEncryptionByDefault");
     if (input.SSEAlgorithm != null) {
         const node = xml_builder_1.XmlNode.of("ServerSideEncryption", input.SSEAlgorithm).withName("SSEAlgorithm");
@@ -18492,10 +18492,10 @@ const serializeAws_restXmlServerSideEncryptionByDefault = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlServerSideEncryptionConfiguration = (input, context) => {
+const se_ServerSideEncryptionConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ServerSideEncryptionConfiguration");
     if (input.Rules != null) {
-        const nodes = serializeAws_restXmlServerSideEncryptionRules(input.Rules, context);
+        const nodes = se_ServerSideEncryptionRules(input.Rules, context);
         nodes.map((node) => {
             node = node.withName("Rule");
             bodyNode.addChildNode(node);
@@ -18503,10 +18503,10 @@ const serializeAws_restXmlServerSideEncryptionConfiguration = (input, context) =
     }
     return bodyNode;
 };
-const serializeAws_restXmlServerSideEncryptionRule = (input, context) => {
+const se_ServerSideEncryptionRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ServerSideEncryptionRule");
     if (input.ApplyServerSideEncryptionByDefault != null) {
-        const node = serializeAws_restXmlServerSideEncryptionByDefault(input.ApplyServerSideEncryptionByDefault, context).withName("ApplyServerSideEncryptionByDefault");
+        const node = se_ServerSideEncryptionByDefault(input.ApplyServerSideEncryptionByDefault, context).withName("ApplyServerSideEncryptionByDefault");
         bodyNode.addChildNode(node);
     }
     if (input.BucketKeyEnabled != null) {
@@ -18515,27 +18515,27 @@ const serializeAws_restXmlServerSideEncryptionRule = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlServerSideEncryptionRules = (input, context) => {
+const se_ServerSideEncryptionRules = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlServerSideEncryptionRule(entry, context);
+        const node = se_ServerSideEncryptionRule(entry, context);
         return node.withName("member");
     });
 };
-const serializeAws_restXmlSourceSelectionCriteria = (input, context) => {
+const se_SourceSelectionCriteria = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("SourceSelectionCriteria");
     if (input.SseKmsEncryptedObjects != null) {
-        const node = serializeAws_restXmlSseKmsEncryptedObjects(input.SseKmsEncryptedObjects, context).withName("SseKmsEncryptedObjects");
+        const node = se_SseKmsEncryptedObjects(input.SseKmsEncryptedObjects, context).withName("SseKmsEncryptedObjects");
         bodyNode.addChildNode(node);
     }
     if (input.ReplicaModifications != null) {
-        const node = serializeAws_restXmlReplicaModifications(input.ReplicaModifications, context).withName("ReplicaModifications");
+        const node = se_ReplicaModifications(input.ReplicaModifications, context).withName("ReplicaModifications");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlSSEKMS = (input, context) => {
+const se_SSEKMS = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("SSE-KMS");
     if (input.KeyId != null) {
         const node = xml_builder_1.XmlNode.of("SSEKMSKeyId", input.KeyId).withName("KeyId");
@@ -18543,7 +18543,7 @@ const serializeAws_restXmlSSEKMS = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlSseKmsEncryptedObjects = (input, context) => {
+const se_SseKmsEncryptedObjects = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("SseKmsEncryptedObjects");
     if (input.Status != null) {
         const node = xml_builder_1.XmlNode.of("SseKmsEncryptedObjectsStatus", input.Status).withName("Status");
@@ -18551,19 +18551,19 @@ const serializeAws_restXmlSseKmsEncryptedObjects = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlSSES3 = (input, context) => {
+const se_SSES3 = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("SSE-S3");
     return bodyNode;
 };
-const serializeAws_restXmlStorageClassAnalysis = (input, context) => {
+const se_StorageClassAnalysis = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("StorageClassAnalysis");
     if (input.DataExport != null) {
-        const node = serializeAws_restXmlStorageClassAnalysisDataExport(input.DataExport, context).withName("DataExport");
+        const node = se_StorageClassAnalysisDataExport(input.DataExport, context).withName("DataExport");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlStorageClassAnalysisDataExport = (input, context) => {
+const se_StorageClassAnalysisDataExport = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("StorageClassAnalysisDataExport");
     if (input.OutputSchemaVersion != null) {
         const node = xml_builder_1.XmlNode
@@ -18572,12 +18572,12 @@ const serializeAws_restXmlStorageClassAnalysisDataExport = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.Destination != null) {
-        const node = serializeAws_restXmlAnalyticsExportDestination(input.Destination, context).withName("Destination");
+        const node = se_AnalyticsExportDestination(input.Destination, context).withName("Destination");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlTag = (input, context) => {
+const se_Tag = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Tag");
     if (input.Key != null) {
         const node = xml_builder_1.XmlNode.of("ObjectKey", input.Key).withName("Key");
@@ -18589,10 +18589,10 @@ const serializeAws_restXmlTag = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlTagging = (input, context) => {
+const se_Tagging = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Tagging");
     if (input.TagSet != null) {
-        const nodes = serializeAws_restXmlTagSet(input.TagSet, context);
+        const nodes = se_TagSet(input.TagSet, context);
         const containerNode = new xml_builder_1.XmlNode("TagSet");
         nodes.map((node) => {
             containerNode.addChildNode(node);
@@ -18601,18 +18601,18 @@ const serializeAws_restXmlTagging = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlTagSet = (input, context) => {
+const se_TagSet = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlTag(entry, context);
+        const node = se_Tag(entry, context);
         return node.withName("Tag");
     });
 };
-const serializeAws_restXmlTargetGrant = (input, context) => {
+const se_TargetGrant = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("TargetGrant");
     if (input.Grantee != null) {
-        const node = serializeAws_restXmlGrantee(input.Grantee, context).withName("Grantee");
+        const node = se_Grantee(input.Grantee, context).withName("Grantee");
         node.addAttribute("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
         bodyNode.addChildNode(node);
     }
@@ -18622,15 +18622,15 @@ const serializeAws_restXmlTargetGrant = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlTargetGrants = (input, context) => {
+const se_TargetGrants = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlTargetGrant(entry, context);
+        const node = se_TargetGrant(entry, context);
         return node.withName("Grant");
     });
 };
-const serializeAws_restXmlTiering = (input, context) => {
+const se_Tiering = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Tiering");
     if (input.Days != null) {
         const node = xml_builder_1.XmlNode.of("IntelligentTieringDays", String(input.Days)).withName("Days");
@@ -18642,15 +18642,15 @@ const serializeAws_restXmlTiering = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlTieringList = (input, context) => {
+const se_TieringList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlTiering(entry, context);
+        const node = se_Tiering(entry, context);
         return node.withName("member");
     });
 };
-const serializeAws_restXmlTopicConfiguration = (input, context) => {
+const se_TopicConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("TopicConfiguration");
     if (input.Id != null) {
         const node = xml_builder_1.XmlNode.of("NotificationId", input.Id).withName("Id");
@@ -18661,27 +18661,27 @@ const serializeAws_restXmlTopicConfiguration = (input, context) => {
         bodyNode.addChildNode(node);
     }
     if (input.Events != null) {
-        const nodes = serializeAws_restXmlEventList(input.Events, context);
+        const nodes = se_EventList(input.Events, context);
         nodes.map((node) => {
             node = node.withName("Event");
             bodyNode.addChildNode(node);
         });
     }
     if (input.Filter != null) {
-        const node = serializeAws_restXmlNotificationConfigurationFilter(input.Filter, context).withName("Filter");
+        const node = se_NotificationConfigurationFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
-const serializeAws_restXmlTopicConfigurationList = (input, context) => {
+const se_TopicConfigurationList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlTopicConfiguration(entry, context);
+        const node = se_TopicConfiguration(entry, context);
         return node.withName("member");
     });
 };
-const serializeAws_restXmlTransition = (input, context) => {
+const se_Transition = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Transition");
     if (input.Date != null) {
         const node = xml_builder_1.XmlNode.of("Date", (input.Date.toISOString().split(".")[0] + "Z").toString()).withName("Date");
@@ -18697,23 +18697,23 @@ const serializeAws_restXmlTransition = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlTransitionList = (input, context) => {
+const se_TransitionList = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlTransition(entry, context);
+        const node = se_Transition(entry, context);
         return node.withName("member");
     });
 };
-const serializeAws_restXmlUserMetadata = (input, context) => {
+const se_UserMetadata = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
-        const node = serializeAws_restXmlMetadataEntry(entry, context);
+        const node = se_MetadataEntry(entry, context);
         return node.withName("MetadataEntry");
     });
 };
-const serializeAws_restXmlVersioningConfiguration = (input, context) => {
+const se_VersioningConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("VersioningConfiguration");
     if (input.MFADelete != null) {
         const node = xml_builder_1.XmlNode.of("MFADelete", input.MFADelete).withName("MfaDelete");
@@ -18725,22 +18725,22 @@ const serializeAws_restXmlVersioningConfiguration = (input, context) => {
     }
     return bodyNode;
 };
-const serializeAws_restXmlWebsiteConfiguration = (input, context) => {
+const se_WebsiteConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("WebsiteConfiguration");
     if (input.ErrorDocument != null) {
-        const node = serializeAws_restXmlErrorDocument(input.ErrorDocument, context).withName("ErrorDocument");
+        const node = se_ErrorDocument(input.ErrorDocument, context).withName("ErrorDocument");
         bodyNode.addChildNode(node);
     }
     if (input.IndexDocument != null) {
-        const node = serializeAws_restXmlIndexDocument(input.IndexDocument, context).withName("IndexDocument");
+        const node = se_IndexDocument(input.IndexDocument, context).withName("IndexDocument");
         bodyNode.addChildNode(node);
     }
     if (input.RedirectAllRequestsTo != null) {
-        const node = serializeAws_restXmlRedirectAllRequestsTo(input.RedirectAllRequestsTo, context).withName("RedirectAllRequestsTo");
+        const node = se_RedirectAllRequestsTo(input.RedirectAllRequestsTo, context).withName("RedirectAllRequestsTo");
         bodyNode.addChildNode(node);
     }
     if (input.RoutingRules != null) {
-        const nodes = serializeAws_restXmlRoutingRules(input.RoutingRules, context);
+        const nodes = se_RoutingRules(input.RoutingRules, context);
         const containerNode = new xml_builder_1.XmlNode("RoutingRules");
         nodes.map((node) => {
             containerNode.addChildNode(node);
@@ -18749,42 +18749,42 @@ const serializeAws_restXmlWebsiteConfiguration = (input, context) => {
     }
     return bodyNode;
 };
-const deserializeAws_restXmlAbortIncompleteMultipartUpload = (output, context) => {
+const de_AbortIncompleteMultipartUpload = (output, context) => {
     const contents = {};
     if (output["DaysAfterInitiation"] !== undefined) {
         contents.DaysAfterInitiation = (0, smithy_client_1.strictParseInt32)(output["DaysAfterInitiation"]);
     }
     return contents;
 };
-const deserializeAws_restXmlAccessControlTranslation = (output, context) => {
+const de_AccessControlTranslation = (output, context) => {
     const contents = {};
     if (output["Owner"] !== undefined) {
         contents.Owner = (0, smithy_client_1.expectString)(output["Owner"]);
     }
     return contents;
 };
-const deserializeAws_restXmlAllowedHeaders = (output, context) => {
+const de_AllowedHeaders = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
         return (0, smithy_client_1.expectString)(entry);
     });
 };
-const deserializeAws_restXmlAllowedMethods = (output, context) => {
+const de_AllowedMethods = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
         return (0, smithy_client_1.expectString)(entry);
     });
 };
-const deserializeAws_restXmlAllowedOrigins = (output, context) => {
+const de_AllowedOrigins = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
         return (0, smithy_client_1.expectString)(entry);
     });
 };
-const deserializeAws_restXmlAnalyticsAndOperator = (output, context) => {
+const de_AnalyticsAndOperator = (output, context) => {
     const contents = {};
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
@@ -18793,11 +18793,11 @@ const deserializeAws_restXmlAnalyticsAndOperator = (output, context) => {
         contents.Tags = [];
     }
     else if (output["Tag"] !== undefined) {
-        contents.Tags = deserializeAws_restXmlTagSet((0, smithy_client_1.getArrayIfSingleItem)(output["Tag"]), context);
+        contents.Tags = de_TagSet((0, smithy_client_1.getArrayIfSingleItem)(output["Tag"]), context);
     }
     return contents;
 };
-const deserializeAws_restXmlAnalyticsConfiguration = (output, context) => {
+const de_AnalyticsConfiguration = (output, context) => {
     const contents = {};
     if (output["Id"] !== undefined) {
         contents.Id = (0, smithy_client_1.expectString)(output["Id"]);
@@ -18805,28 +18805,28 @@ const deserializeAws_restXmlAnalyticsConfiguration = (output, context) => {
     if (output.Filter === "") {
     }
     else if (output["Filter"] !== undefined) {
-        contents.Filter = deserializeAws_restXmlAnalyticsFilter((0, smithy_client_1.expectUnion)(output["Filter"]), context);
+        contents.Filter = de_AnalyticsFilter((0, smithy_client_1.expectUnion)(output["Filter"]), context);
     }
     if (output["StorageClassAnalysis"] !== undefined) {
-        contents.StorageClassAnalysis = deserializeAws_restXmlStorageClassAnalysis(output["StorageClassAnalysis"], context);
+        contents.StorageClassAnalysis = de_StorageClassAnalysis(output["StorageClassAnalysis"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlAnalyticsConfigurationList = (output, context) => {
+const de_AnalyticsConfigurationList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlAnalyticsConfiguration(entry, context);
+        return de_AnalyticsConfiguration(entry, context);
     });
 };
-const deserializeAws_restXmlAnalyticsExportDestination = (output, context) => {
+const de_AnalyticsExportDestination = (output, context) => {
     const contents = {};
     if (output["S3BucketDestination"] !== undefined) {
-        contents.S3BucketDestination = deserializeAws_restXmlAnalyticsS3BucketDestination(output["S3BucketDestination"], context);
+        contents.S3BucketDestination = de_AnalyticsS3BucketDestination(output["S3BucketDestination"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlAnalyticsFilter = (output, context) => {
+const de_AnalyticsFilter = (output, context) => {
     if (output["Prefix"] !== undefined) {
         return {
             Prefix: (0, smithy_client_1.expectString)(output["Prefix"]),
@@ -18834,17 +18834,17 @@ const deserializeAws_restXmlAnalyticsFilter = (output, context) => {
     }
     if (output["Tag"] !== undefined) {
         return {
-            Tag: deserializeAws_restXmlTag(output["Tag"], context),
+            Tag: de_Tag(output["Tag"], context),
         };
     }
     if (output["And"] !== undefined) {
         return {
-            And: deserializeAws_restXmlAnalyticsAndOperator(output["And"], context),
+            And: de_AnalyticsAndOperator(output["And"], context),
         };
     }
     return { $unknown: Object.entries(output)[0] };
 };
-const deserializeAws_restXmlAnalyticsS3BucketDestination = (output, context) => {
+const de_AnalyticsS3BucketDestination = (output, context) => {
     const contents = {};
     if (output["Format"] !== undefined) {
         contents.Format = (0, smithy_client_1.expectString)(output["Format"]);
@@ -18860,7 +18860,7 @@ const deserializeAws_restXmlAnalyticsS3BucketDestination = (output, context) => 
     }
     return contents;
 };
-const deserializeAws_restXmlBucket = (output, context) => {
+const de_Bucket = (output, context) => {
     const contents = {};
     if (output["Name"] !== undefined) {
         contents.Name = (0, smithy_client_1.expectString)(output["Name"]);
@@ -18870,14 +18870,14 @@ const deserializeAws_restXmlBucket = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlBuckets = (output, context) => {
+const de_Buckets = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlBucket(entry, context);
+        return de_Bucket(entry, context);
     });
 };
-const deserializeAws_restXmlChecksum = (output, context) => {
+const de_Checksum = (output, context) => {
     const contents = {};
     if (output["ChecksumCRC32"] !== undefined) {
         contents.ChecksumCRC32 = (0, smithy_client_1.expectString)(output["ChecksumCRC32"]);
@@ -18893,28 +18893,28 @@ const deserializeAws_restXmlChecksum = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlChecksumAlgorithmList = (output, context) => {
+const de_ChecksumAlgorithmList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
         return (0, smithy_client_1.expectString)(entry);
     });
 };
-const deserializeAws_restXmlCommonPrefix = (output, context) => {
+const de_CommonPrefix = (output, context) => {
     const contents = {};
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
     }
     return contents;
 };
-const deserializeAws_restXmlCommonPrefixList = (output, context) => {
+const de_CommonPrefixList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlCommonPrefix(entry, context);
+        return de_CommonPrefix(entry, context);
     });
 };
-const deserializeAws_restXmlCondition = (output, context) => {
+const de_Condition = (output, context) => {
     const contents = {};
     if (output["HttpErrorCodeReturnedEquals"] !== undefined) {
         contents.HttpErrorCodeReturnedEquals = (0, smithy_client_1.expectString)(output["HttpErrorCodeReturnedEquals"]);
@@ -18924,33 +18924,11 @@ const deserializeAws_restXmlCondition = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlContinuationEvent = (output, context) => {
+const de_ContinuationEvent = (output, context) => {
     const contents = {};
     return contents;
 };
-const deserializeAws_restXmlCopyObjectResult = (output, context) => {
-    const contents = {};
-    if (output["ETag"] !== undefined) {
-        contents.ETag = (0, smithy_client_1.expectString)(output["ETag"]);
-    }
-    if (output["LastModified"] !== undefined) {
-        contents.LastModified = (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseRfc3339DateTimeWithOffset)(output["LastModified"]));
-    }
-    if (output["ChecksumCRC32"] !== undefined) {
-        contents.ChecksumCRC32 = (0, smithy_client_1.expectString)(output["ChecksumCRC32"]);
-    }
-    if (output["ChecksumCRC32C"] !== undefined) {
-        contents.ChecksumCRC32C = (0, smithy_client_1.expectString)(output["ChecksumCRC32C"]);
-    }
-    if (output["ChecksumSHA1"] !== undefined) {
-        contents.ChecksumSHA1 = (0, smithy_client_1.expectString)(output["ChecksumSHA1"]);
-    }
-    if (output["ChecksumSHA256"] !== undefined) {
-        contents.ChecksumSHA256 = (0, smithy_client_1.expectString)(output["ChecksumSHA256"]);
-    }
-    return contents;
-};
-const deserializeAws_restXmlCopyPartResult = (output, context) => {
+const de_CopyObjectResult = (output, context) => {
     const contents = {};
     if (output["ETag"] !== undefined) {
         contents.ETag = (0, smithy_client_1.expectString)(output["ETag"]);
@@ -18972,7 +18950,29 @@ const deserializeAws_restXmlCopyPartResult = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlCORSRule = (output, context) => {
+const de_CopyPartResult = (output, context) => {
+    const contents = {};
+    if (output["ETag"] !== undefined) {
+        contents.ETag = (0, smithy_client_1.expectString)(output["ETag"]);
+    }
+    if (output["LastModified"] !== undefined) {
+        contents.LastModified = (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseRfc3339DateTimeWithOffset)(output["LastModified"]));
+    }
+    if (output["ChecksumCRC32"] !== undefined) {
+        contents.ChecksumCRC32 = (0, smithy_client_1.expectString)(output["ChecksumCRC32"]);
+    }
+    if (output["ChecksumCRC32C"] !== undefined) {
+        contents.ChecksumCRC32C = (0, smithy_client_1.expectString)(output["ChecksumCRC32C"]);
+    }
+    if (output["ChecksumSHA1"] !== undefined) {
+        contents.ChecksumSHA1 = (0, smithy_client_1.expectString)(output["ChecksumSHA1"]);
+    }
+    if (output["ChecksumSHA256"] !== undefined) {
+        contents.ChecksumSHA256 = (0, smithy_client_1.expectString)(output["ChecksumSHA256"]);
+    }
+    return contents;
+};
+const de_CORSRule = (output, context) => {
     const contents = {};
     if (output["ID"] !== undefined) {
         contents.ID = (0, smithy_client_1.expectString)(output["ID"]);
@@ -18981,39 +18981,39 @@ const deserializeAws_restXmlCORSRule = (output, context) => {
         contents.AllowedHeaders = [];
     }
     else if (output["AllowedHeader"] !== undefined) {
-        contents.AllowedHeaders = deserializeAws_restXmlAllowedHeaders((0, smithy_client_1.getArrayIfSingleItem)(output["AllowedHeader"]), context);
+        contents.AllowedHeaders = de_AllowedHeaders((0, smithy_client_1.getArrayIfSingleItem)(output["AllowedHeader"]), context);
     }
     if (output.AllowedMethod === "") {
         contents.AllowedMethods = [];
     }
     else if (output["AllowedMethod"] !== undefined) {
-        contents.AllowedMethods = deserializeAws_restXmlAllowedMethods((0, smithy_client_1.getArrayIfSingleItem)(output["AllowedMethod"]), context);
+        contents.AllowedMethods = de_AllowedMethods((0, smithy_client_1.getArrayIfSingleItem)(output["AllowedMethod"]), context);
     }
     if (output.AllowedOrigin === "") {
         contents.AllowedOrigins = [];
     }
     else if (output["AllowedOrigin"] !== undefined) {
-        contents.AllowedOrigins = deserializeAws_restXmlAllowedOrigins((0, smithy_client_1.getArrayIfSingleItem)(output["AllowedOrigin"]), context);
+        contents.AllowedOrigins = de_AllowedOrigins((0, smithy_client_1.getArrayIfSingleItem)(output["AllowedOrigin"]), context);
     }
     if (output.ExposeHeader === "") {
         contents.ExposeHeaders = [];
     }
     else if (output["ExposeHeader"] !== undefined) {
-        contents.ExposeHeaders = deserializeAws_restXmlExposeHeaders((0, smithy_client_1.getArrayIfSingleItem)(output["ExposeHeader"]), context);
+        contents.ExposeHeaders = de_ExposeHeaders((0, smithy_client_1.getArrayIfSingleItem)(output["ExposeHeader"]), context);
     }
     if (output["MaxAgeSeconds"] !== undefined) {
         contents.MaxAgeSeconds = (0, smithy_client_1.strictParseInt32)(output["MaxAgeSeconds"]);
     }
     return contents;
 };
-const deserializeAws_restXmlCORSRules = (output, context) => {
+const de_CORSRules = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlCORSRule(entry, context);
+        return de_CORSRule(entry, context);
     });
 };
-const deserializeAws_restXmlDefaultRetention = (output, context) => {
+const de_DefaultRetention = (output, context) => {
     const contents = {};
     if (output["Mode"] !== undefined) {
         contents.Mode = (0, smithy_client_1.expectString)(output["Mode"]);
@@ -19026,7 +19026,7 @@ const deserializeAws_restXmlDefaultRetention = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlDeletedObject = (output, context) => {
+const de_DeletedObject = (output, context) => {
     const contents = {};
     if (output["Key"] !== undefined) {
         contents.Key = (0, smithy_client_1.expectString)(output["Key"]);
@@ -19042,17 +19042,17 @@ const deserializeAws_restXmlDeletedObject = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlDeletedObjects = (output, context) => {
+const de_DeletedObjects = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlDeletedObject(entry, context);
+        return de_DeletedObject(entry, context);
     });
 };
-const deserializeAws_restXmlDeleteMarkerEntry = (output, context) => {
+const de_DeleteMarkerEntry = (output, context) => {
     const contents = {};
     if (output["Owner"] !== undefined) {
-        contents.Owner = deserializeAws_restXmlOwner(output["Owner"], context);
+        contents.Owner = de_Owner(output["Owner"], context);
     }
     if (output["Key"] !== undefined) {
         contents.Key = (0, smithy_client_1.expectString)(output["Key"]);
@@ -19068,21 +19068,21 @@ const deserializeAws_restXmlDeleteMarkerEntry = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlDeleteMarkerReplication = (output, context) => {
+const de_DeleteMarkerReplication = (output, context) => {
     const contents = {};
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
     }
     return contents;
 };
-const deserializeAws_restXmlDeleteMarkers = (output, context) => {
+const de_DeleteMarkers = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlDeleteMarkerEntry(entry, context);
+        return de_DeleteMarkerEntry(entry, context);
     });
 };
-const deserializeAws_restXmlDestination = (output, context) => {
+const de_Destination = (output, context) => {
     const contents = {};
     if (output["Bucket"] !== undefined) {
         contents.Bucket = (0, smithy_client_1.expectString)(output["Bucket"]);
@@ -19094,31 +19094,31 @@ const deserializeAws_restXmlDestination = (output, context) => {
         contents.StorageClass = (0, smithy_client_1.expectString)(output["StorageClass"]);
     }
     if (output["AccessControlTranslation"] !== undefined) {
-        contents.AccessControlTranslation = deserializeAws_restXmlAccessControlTranslation(output["AccessControlTranslation"], context);
+        contents.AccessControlTranslation = de_AccessControlTranslation(output["AccessControlTranslation"], context);
     }
     if (output["EncryptionConfiguration"] !== undefined) {
-        contents.EncryptionConfiguration = deserializeAws_restXmlEncryptionConfiguration(output["EncryptionConfiguration"], context);
+        contents.EncryptionConfiguration = de_EncryptionConfiguration(output["EncryptionConfiguration"], context);
     }
     if (output["ReplicationTime"] !== undefined) {
-        contents.ReplicationTime = deserializeAws_restXmlReplicationTime(output["ReplicationTime"], context);
+        contents.ReplicationTime = de_ReplicationTime(output["ReplicationTime"], context);
     }
     if (output["Metrics"] !== undefined) {
-        contents.Metrics = deserializeAws_restXmlMetrics(output["Metrics"], context);
+        contents.Metrics = de_Metrics(output["Metrics"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlEncryptionConfiguration = (output, context) => {
+const de_EncryptionConfiguration = (output, context) => {
     const contents = {};
     if (output["ReplicaKmsKeyID"] !== undefined) {
         contents.ReplicaKmsKeyID = (0, smithy_client_1.expectString)(output["ReplicaKmsKeyID"]);
     }
     return contents;
 };
-const deserializeAws_restXmlEndEvent = (output, context) => {
+const de_EndEvent = (output, context) => {
     const contents = {};
     return contents;
 };
-const deserializeAws_restXml_Error = (output, context) => {
+const de__Error = (output, context) => {
     const contents = {};
     if (output["Key"] !== undefined) {
         contents.Key = (0, smithy_client_1.expectString)(output["Key"]);
@@ -19134,46 +19134,46 @@ const deserializeAws_restXml_Error = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlErrorDocument = (output, context) => {
+const de_ErrorDocument = (output, context) => {
     const contents = {};
     if (output["Key"] !== undefined) {
         contents.Key = (0, smithy_client_1.expectString)(output["Key"]);
     }
     return contents;
 };
-const deserializeAws_restXmlErrors = (output, context) => {
+const de_Errors = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXml_Error(entry, context);
+        return de__Error(entry, context);
     });
 };
-const deserializeAws_restXmlEventBridgeConfiguration = (output, context) => {
+const de_EventBridgeConfiguration = (output, context) => {
     const contents = {};
     return contents;
 };
-const deserializeAws_restXmlEventList = (output, context) => {
+const de_EventList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
         return (0, smithy_client_1.expectString)(entry);
     });
 };
-const deserializeAws_restXmlExistingObjectReplication = (output, context) => {
+const de_ExistingObjectReplication = (output, context) => {
     const contents = {};
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
     }
     return contents;
 };
-const deserializeAws_restXmlExposeHeaders = (output, context) => {
+const de_ExposeHeaders = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
         return (0, smithy_client_1.expectString)(entry);
     });
 };
-const deserializeAws_restXmlFilterRule = (output, context) => {
+const de_FilterRule = (output, context) => {
     const contents = {};
     if (output["Name"] !== undefined) {
         contents.Name = (0, smithy_client_1.expectString)(output["Name"]);
@@ -19183,14 +19183,14 @@ const deserializeAws_restXmlFilterRule = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlFilterRuleList = (output, context) => {
+const de_FilterRuleList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlFilterRule(entry, context);
+        return de_FilterRule(entry, context);
     });
 };
-const deserializeAws_restXmlGetObjectAttributesParts = (output, context) => {
+const de_GetObjectAttributesParts = (output, context) => {
     const contents = {};
     if (output["PartsCount"] !== undefined) {
         contents.TotalPartsCount = (0, smithy_client_1.strictParseInt32)(output["PartsCount"]);
@@ -19211,21 +19211,21 @@ const deserializeAws_restXmlGetObjectAttributesParts = (output, context) => {
         contents.Parts = [];
     }
     else if (output["Part"] !== undefined) {
-        contents.Parts = deserializeAws_restXmlPartsList((0, smithy_client_1.getArrayIfSingleItem)(output["Part"]), context);
+        contents.Parts = de_PartsList((0, smithy_client_1.getArrayIfSingleItem)(output["Part"]), context);
     }
     return contents;
 };
-const deserializeAws_restXmlGrant = (output, context) => {
+const de_Grant = (output, context) => {
     const contents = {};
     if (output["Grantee"] !== undefined) {
-        contents.Grantee = deserializeAws_restXmlGrantee(output["Grantee"], context);
+        contents.Grantee = de_Grantee(output["Grantee"], context);
     }
     if (output["Permission"] !== undefined) {
         contents.Permission = (0, smithy_client_1.expectString)(output["Permission"]);
     }
     return contents;
 };
-const deserializeAws_restXmlGrantee = (output, context) => {
+const de_Grantee = (output, context) => {
     const contents = {};
     if (output["DisplayName"] !== undefined) {
         contents.DisplayName = (0, smithy_client_1.expectString)(output["DisplayName"]);
@@ -19244,21 +19244,21 @@ const deserializeAws_restXmlGrantee = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlGrants = (output, context) => {
+const de_Grants = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlGrant(entry, context);
+        return de_Grant(entry, context);
     });
 };
-const deserializeAws_restXmlIndexDocument = (output, context) => {
+const de_IndexDocument = (output, context) => {
     const contents = {};
     if (output["Suffix"] !== undefined) {
         contents.Suffix = (0, smithy_client_1.expectString)(output["Suffix"]);
     }
     return contents;
 };
-const deserializeAws_restXmlInitiator = (output, context) => {
+const de_Initiator = (output, context) => {
     const contents = {};
     if (output["ID"] !== undefined) {
         contents.ID = (0, smithy_client_1.expectString)(output["ID"]);
@@ -19268,7 +19268,7 @@ const deserializeAws_restXmlInitiator = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlIntelligentTieringAndOperator = (output, context) => {
+const de_IntelligentTieringAndOperator = (output, context) => {
     const contents = {};
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
@@ -19277,17 +19277,17 @@ const deserializeAws_restXmlIntelligentTieringAndOperator = (output, context) =>
         contents.Tags = [];
     }
     else if (output["Tag"] !== undefined) {
-        contents.Tags = deserializeAws_restXmlTagSet((0, smithy_client_1.getArrayIfSingleItem)(output["Tag"]), context);
+        contents.Tags = de_TagSet((0, smithy_client_1.getArrayIfSingleItem)(output["Tag"]), context);
     }
     return contents;
 };
-const deserializeAws_restXmlIntelligentTieringConfiguration = (output, context) => {
+const de_IntelligentTieringConfiguration = (output, context) => {
     const contents = {};
     if (output["Id"] !== undefined) {
         contents.Id = (0, smithy_client_1.expectString)(output["Id"]);
     }
     if (output["Filter"] !== undefined) {
-        contents.Filter = deserializeAws_restXmlIntelligentTieringFilter(output["Filter"], context);
+        contents.Filter = de_IntelligentTieringFilter(output["Filter"], context);
     }
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
@@ -19296,40 +19296,40 @@ const deserializeAws_restXmlIntelligentTieringConfiguration = (output, context) 
         contents.Tierings = [];
     }
     else if (output["Tiering"] !== undefined) {
-        contents.Tierings = deserializeAws_restXmlTieringList((0, smithy_client_1.getArrayIfSingleItem)(output["Tiering"]), context);
+        contents.Tierings = de_TieringList((0, smithy_client_1.getArrayIfSingleItem)(output["Tiering"]), context);
     }
     return contents;
 };
-const deserializeAws_restXmlIntelligentTieringConfigurationList = (output, context) => {
+const de_IntelligentTieringConfigurationList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlIntelligentTieringConfiguration(entry, context);
+        return de_IntelligentTieringConfiguration(entry, context);
     });
 };
-const deserializeAws_restXmlIntelligentTieringFilter = (output, context) => {
+const de_IntelligentTieringFilter = (output, context) => {
     const contents = {};
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
     }
     if (output["Tag"] !== undefined) {
-        contents.Tag = deserializeAws_restXmlTag(output["Tag"], context);
+        contents.Tag = de_Tag(output["Tag"], context);
     }
     if (output["And"] !== undefined) {
-        contents.And = deserializeAws_restXmlIntelligentTieringAndOperator(output["And"], context);
+        contents.And = de_IntelligentTieringAndOperator(output["And"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlInventoryConfiguration = (output, context) => {
+const de_InventoryConfiguration = (output, context) => {
     const contents = {};
     if (output["Destination"] !== undefined) {
-        contents.Destination = deserializeAws_restXmlInventoryDestination(output["Destination"], context);
+        contents.Destination = de_InventoryDestination(output["Destination"], context);
     }
     if (output["IsEnabled"] !== undefined) {
         contents.IsEnabled = (0, smithy_client_1.parseBoolean)(output["IsEnabled"]);
     }
     if (output["Filter"] !== undefined) {
-        contents.Filter = deserializeAws_restXmlInventoryFilter(output["Filter"], context);
+        contents.Filter = de_InventoryFilter(output["Filter"], context);
     }
     if (output["Id"] !== undefined) {
         contents.Id = (0, smithy_client_1.expectString)(output["Id"]);
@@ -19341,52 +19341,52 @@ const deserializeAws_restXmlInventoryConfiguration = (output, context) => {
         contents.OptionalFields = [];
     }
     else if (output["OptionalFields"] !== undefined && output["OptionalFields"]["Field"] !== undefined) {
-        contents.OptionalFields = deserializeAws_restXmlInventoryOptionalFields((0, smithy_client_1.getArrayIfSingleItem)(output["OptionalFields"]["Field"]), context);
+        contents.OptionalFields = de_InventoryOptionalFields((0, smithy_client_1.getArrayIfSingleItem)(output["OptionalFields"]["Field"]), context);
     }
     if (output["Schedule"] !== undefined) {
-        contents.Schedule = deserializeAws_restXmlInventorySchedule(output["Schedule"], context);
+        contents.Schedule = de_InventorySchedule(output["Schedule"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlInventoryConfigurationList = (output, context) => {
+const de_InventoryConfigurationList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlInventoryConfiguration(entry, context);
+        return de_InventoryConfiguration(entry, context);
     });
 };
-const deserializeAws_restXmlInventoryDestination = (output, context) => {
+const de_InventoryDestination = (output, context) => {
     const contents = {};
     if (output["S3BucketDestination"] !== undefined) {
-        contents.S3BucketDestination = deserializeAws_restXmlInventoryS3BucketDestination(output["S3BucketDestination"], context);
+        contents.S3BucketDestination = de_InventoryS3BucketDestination(output["S3BucketDestination"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlInventoryEncryption = (output, context) => {
+const de_InventoryEncryption = (output, context) => {
     const contents = {};
     if (output["SSE-S3"] !== undefined) {
-        contents.SSES3 = deserializeAws_restXmlSSES3(output["SSE-S3"], context);
+        contents.SSES3 = de_SSES3(output["SSE-S3"], context);
     }
     if (output["SSE-KMS"] !== undefined) {
-        contents.SSEKMS = deserializeAws_restXmlSSEKMS(output["SSE-KMS"], context);
+        contents.SSEKMS = de_SSEKMS(output["SSE-KMS"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlInventoryFilter = (output, context) => {
+const de_InventoryFilter = (output, context) => {
     const contents = {};
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
     }
     return contents;
 };
-const deserializeAws_restXmlInventoryOptionalFields = (output, context) => {
+const de_InventoryOptionalFields = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
         return (0, smithy_client_1.expectString)(entry);
     });
 };
-const deserializeAws_restXmlInventoryS3BucketDestination = (output, context) => {
+const de_InventoryS3BucketDestination = (output, context) => {
     const contents = {};
     if (output["AccountId"] !== undefined) {
         contents.AccountId = (0, smithy_client_1.expectString)(output["AccountId"]);
@@ -19401,18 +19401,18 @@ const deserializeAws_restXmlInventoryS3BucketDestination = (output, context) => 
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
     }
     if (output["Encryption"] !== undefined) {
-        contents.Encryption = deserializeAws_restXmlInventoryEncryption(output["Encryption"], context);
+        contents.Encryption = de_InventoryEncryption(output["Encryption"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlInventorySchedule = (output, context) => {
+const de_InventorySchedule = (output, context) => {
     const contents = {};
     if (output["Frequency"] !== undefined) {
         contents.Frequency = (0, smithy_client_1.expectString)(output["Frequency"]);
     }
     return contents;
 };
-const deserializeAws_restXmlLambdaFunctionConfiguration = (output, context) => {
+const de_LambdaFunctionConfiguration = (output, context) => {
     const contents = {};
     if (output["Id"] !== undefined) {
         contents.Id = (0, smithy_client_1.expectString)(output["Id"]);
@@ -19424,21 +19424,21 @@ const deserializeAws_restXmlLambdaFunctionConfiguration = (output, context) => {
         contents.Events = [];
     }
     else if (output["Event"] !== undefined) {
-        contents.Events = deserializeAws_restXmlEventList((0, smithy_client_1.getArrayIfSingleItem)(output["Event"]), context);
+        contents.Events = de_EventList((0, smithy_client_1.getArrayIfSingleItem)(output["Event"]), context);
     }
     if (output["Filter"] !== undefined) {
-        contents.Filter = deserializeAws_restXmlNotificationConfigurationFilter(output["Filter"], context);
+        contents.Filter = de_NotificationConfigurationFilter(output["Filter"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlLambdaFunctionConfigurationList = (output, context) => {
+const de_LambdaFunctionConfigurationList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlLambdaFunctionConfiguration(entry, context);
+        return de_LambdaFunctionConfiguration(entry, context);
     });
 };
-const deserializeAws_restXmlLifecycleExpiration = (output, context) => {
+const de_LifecycleExpiration = (output, context) => {
     const contents = {};
     if (output["Date"] !== undefined) {
         contents.Date = (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseRfc3339DateTimeWithOffset)(output["Date"]));
@@ -19451,10 +19451,10 @@ const deserializeAws_restXmlLifecycleExpiration = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlLifecycleRule = (output, context) => {
+const de_LifecycleRule = (output, context) => {
     const contents = {};
     if (output["Expiration"] !== undefined) {
-        contents.Expiration = deserializeAws_restXmlLifecycleExpiration(output["Expiration"], context);
+        contents.Expiration = de_LifecycleExpiration(output["Expiration"], context);
     }
     if (output["ID"] !== undefined) {
         contents.ID = (0, smithy_client_1.expectString)(output["ID"]);
@@ -19465,7 +19465,7 @@ const deserializeAws_restXmlLifecycleRule = (output, context) => {
     if (output.Filter === "") {
     }
     else if (output["Filter"] !== undefined) {
-        contents.Filter = deserializeAws_restXmlLifecycleRuleFilter((0, smithy_client_1.expectUnion)(output["Filter"]), context);
+        contents.Filter = de_LifecycleRuleFilter((0, smithy_client_1.expectUnion)(output["Filter"]), context);
     }
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
@@ -19474,23 +19474,23 @@ const deserializeAws_restXmlLifecycleRule = (output, context) => {
         contents.Transitions = [];
     }
     else if (output["Transition"] !== undefined) {
-        contents.Transitions = deserializeAws_restXmlTransitionList((0, smithy_client_1.getArrayIfSingleItem)(output["Transition"]), context);
+        contents.Transitions = de_TransitionList((0, smithy_client_1.getArrayIfSingleItem)(output["Transition"]), context);
     }
     if (output.NoncurrentVersionTransition === "") {
         contents.NoncurrentVersionTransitions = [];
     }
     else if (output["NoncurrentVersionTransition"] !== undefined) {
-        contents.NoncurrentVersionTransitions = deserializeAws_restXmlNoncurrentVersionTransitionList((0, smithy_client_1.getArrayIfSingleItem)(output["NoncurrentVersionTransition"]), context);
+        contents.NoncurrentVersionTransitions = de_NoncurrentVersionTransitionList((0, smithy_client_1.getArrayIfSingleItem)(output["NoncurrentVersionTransition"]), context);
     }
     if (output["NoncurrentVersionExpiration"] !== undefined) {
-        contents.NoncurrentVersionExpiration = deserializeAws_restXmlNoncurrentVersionExpiration(output["NoncurrentVersionExpiration"], context);
+        contents.NoncurrentVersionExpiration = de_NoncurrentVersionExpiration(output["NoncurrentVersionExpiration"], context);
     }
     if (output["AbortIncompleteMultipartUpload"] !== undefined) {
-        contents.AbortIncompleteMultipartUpload = deserializeAws_restXmlAbortIncompleteMultipartUpload(output["AbortIncompleteMultipartUpload"], context);
+        contents.AbortIncompleteMultipartUpload = de_AbortIncompleteMultipartUpload(output["AbortIncompleteMultipartUpload"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlLifecycleRuleAndOperator = (output, context) => {
+const de_LifecycleRuleAndOperator = (output, context) => {
     const contents = {};
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
@@ -19499,7 +19499,7 @@ const deserializeAws_restXmlLifecycleRuleAndOperator = (output, context) => {
         contents.Tags = [];
     }
     else if (output["Tag"] !== undefined) {
-        contents.Tags = deserializeAws_restXmlTagSet((0, smithy_client_1.getArrayIfSingleItem)(output["Tag"]), context);
+        contents.Tags = de_TagSet((0, smithy_client_1.getArrayIfSingleItem)(output["Tag"]), context);
     }
     if (output["ObjectSizeGreaterThan"] !== undefined) {
         contents.ObjectSizeGreaterThan = (0, smithy_client_1.strictParseLong)(output["ObjectSizeGreaterThan"]);
@@ -19509,7 +19509,7 @@ const deserializeAws_restXmlLifecycleRuleAndOperator = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlLifecycleRuleFilter = (output, context) => {
+const de_LifecycleRuleFilter = (output, context) => {
     if (output["Prefix"] !== undefined) {
         return {
             Prefix: (0, smithy_client_1.expectString)(output["Prefix"]),
@@ -19517,7 +19517,7 @@ const deserializeAws_restXmlLifecycleRuleFilter = (output, context) => {
     }
     if (output["Tag"] !== undefined) {
         return {
-            Tag: deserializeAws_restXmlTag(output["Tag"], context),
+            Tag: de_Tag(output["Tag"], context),
         };
     }
     if (output["ObjectSizeGreaterThan"] !== undefined) {
@@ -19532,19 +19532,19 @@ const deserializeAws_restXmlLifecycleRuleFilter = (output, context) => {
     }
     if (output["And"] !== undefined) {
         return {
-            And: deserializeAws_restXmlLifecycleRuleAndOperator(output["And"], context),
+            And: de_LifecycleRuleAndOperator(output["And"], context),
         };
     }
     return { $unknown: Object.entries(output)[0] };
 };
-const deserializeAws_restXmlLifecycleRules = (output, context) => {
+const de_LifecycleRules = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlLifecycleRule(entry, context);
+        return de_LifecycleRule(entry, context);
     });
 };
-const deserializeAws_restXmlLoggingEnabled = (output, context) => {
+const de_LoggingEnabled = (output, context) => {
     const contents = {};
     if (output["TargetBucket"] !== undefined) {
         contents.TargetBucket = (0, smithy_client_1.expectString)(output["TargetBucket"]);
@@ -19553,24 +19553,24 @@ const deserializeAws_restXmlLoggingEnabled = (output, context) => {
         contents.TargetGrants = [];
     }
     else if (output["TargetGrants"] !== undefined && output["TargetGrants"]["Grant"] !== undefined) {
-        contents.TargetGrants = deserializeAws_restXmlTargetGrants((0, smithy_client_1.getArrayIfSingleItem)(output["TargetGrants"]["Grant"]), context);
+        contents.TargetGrants = de_TargetGrants((0, smithy_client_1.getArrayIfSingleItem)(output["TargetGrants"]["Grant"]), context);
     }
     if (output["TargetPrefix"] !== undefined) {
         contents.TargetPrefix = (0, smithy_client_1.expectString)(output["TargetPrefix"]);
     }
     return contents;
 };
-const deserializeAws_restXmlMetrics = (output, context) => {
+const de_Metrics = (output, context) => {
     const contents = {};
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
     }
     if (output["EventThreshold"] !== undefined) {
-        contents.EventThreshold = deserializeAws_restXmlReplicationTimeValue(output["EventThreshold"], context);
+        contents.EventThreshold = de_ReplicationTimeValue(output["EventThreshold"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlMetricsAndOperator = (output, context) => {
+const de_MetricsAndOperator = (output, context) => {
     const contents = {};
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
@@ -19579,14 +19579,14 @@ const deserializeAws_restXmlMetricsAndOperator = (output, context) => {
         contents.Tags = [];
     }
     else if (output["Tag"] !== undefined) {
-        contents.Tags = deserializeAws_restXmlTagSet((0, smithy_client_1.getArrayIfSingleItem)(output["Tag"]), context);
+        contents.Tags = de_TagSet((0, smithy_client_1.getArrayIfSingleItem)(output["Tag"]), context);
     }
     if (output["AccessPointArn"] !== undefined) {
         contents.AccessPointArn = (0, smithy_client_1.expectString)(output["AccessPointArn"]);
     }
     return contents;
 };
-const deserializeAws_restXmlMetricsConfiguration = (output, context) => {
+const de_MetricsConfiguration = (output, context) => {
     const contents = {};
     if (output["Id"] !== undefined) {
         contents.Id = (0, smithy_client_1.expectString)(output["Id"]);
@@ -19594,18 +19594,18 @@ const deserializeAws_restXmlMetricsConfiguration = (output, context) => {
     if (output.Filter === "") {
     }
     else if (output["Filter"] !== undefined) {
-        contents.Filter = deserializeAws_restXmlMetricsFilter((0, smithy_client_1.expectUnion)(output["Filter"]), context);
+        contents.Filter = de_MetricsFilter((0, smithy_client_1.expectUnion)(output["Filter"]), context);
     }
     return contents;
 };
-const deserializeAws_restXmlMetricsConfigurationList = (output, context) => {
+const de_MetricsConfigurationList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlMetricsConfiguration(entry, context);
+        return de_MetricsConfiguration(entry, context);
     });
 };
-const deserializeAws_restXmlMetricsFilter = (output, context) => {
+const de_MetricsFilter = (output, context) => {
     if (output["Prefix"] !== undefined) {
         return {
             Prefix: (0, smithy_client_1.expectString)(output["Prefix"]),
@@ -19613,7 +19613,7 @@ const deserializeAws_restXmlMetricsFilter = (output, context) => {
     }
     if (output["Tag"] !== undefined) {
         return {
-            Tag: deserializeAws_restXmlTag(output["Tag"], context),
+            Tag: de_Tag(output["Tag"], context),
         };
     }
     if (output["AccessPointArn"] !== undefined) {
@@ -19623,12 +19623,12 @@ const deserializeAws_restXmlMetricsFilter = (output, context) => {
     }
     if (output["And"] !== undefined) {
         return {
-            And: deserializeAws_restXmlMetricsAndOperator(output["And"], context),
+            And: de_MetricsAndOperator(output["And"], context),
         };
     }
     return { $unknown: Object.entries(output)[0] };
 };
-const deserializeAws_restXmlMultipartUpload = (output, context) => {
+const de_MultipartUpload = (output, context) => {
     const contents = {};
     if (output["UploadId"] !== undefined) {
         contents.UploadId = (0, smithy_client_1.expectString)(output["UploadId"]);
@@ -19643,24 +19643,24 @@ const deserializeAws_restXmlMultipartUpload = (output, context) => {
         contents.StorageClass = (0, smithy_client_1.expectString)(output["StorageClass"]);
     }
     if (output["Owner"] !== undefined) {
-        contents.Owner = deserializeAws_restXmlOwner(output["Owner"], context);
+        contents.Owner = de_Owner(output["Owner"], context);
     }
     if (output["Initiator"] !== undefined) {
-        contents.Initiator = deserializeAws_restXmlInitiator(output["Initiator"], context);
+        contents.Initiator = de_Initiator(output["Initiator"], context);
     }
     if (output["ChecksumAlgorithm"] !== undefined) {
         contents.ChecksumAlgorithm = (0, smithy_client_1.expectString)(output["ChecksumAlgorithm"]);
     }
     return contents;
 };
-const deserializeAws_restXmlMultipartUploadList = (output, context) => {
+const de_MultipartUploadList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlMultipartUpload(entry, context);
+        return de_MultipartUpload(entry, context);
     });
 };
-const deserializeAws_restXmlNoncurrentVersionExpiration = (output, context) => {
+const de_NoncurrentVersionExpiration = (output, context) => {
     const contents = {};
     if (output["NoncurrentDays"] !== undefined) {
         contents.NoncurrentDays = (0, smithy_client_1.strictParseInt32)(output["NoncurrentDays"]);
@@ -19670,7 +19670,7 @@ const deserializeAws_restXmlNoncurrentVersionExpiration = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlNoncurrentVersionTransition = (output, context) => {
+const de_NoncurrentVersionTransition = (output, context) => {
     const contents = {};
     if (output["NoncurrentDays"] !== undefined) {
         contents.NoncurrentDays = (0, smithy_client_1.strictParseInt32)(output["NoncurrentDays"]);
@@ -19683,21 +19683,21 @@ const deserializeAws_restXmlNoncurrentVersionTransition = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlNoncurrentVersionTransitionList = (output, context) => {
+const de_NoncurrentVersionTransitionList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlNoncurrentVersionTransition(entry, context);
+        return de_NoncurrentVersionTransition(entry, context);
     });
 };
-const deserializeAws_restXmlNotificationConfigurationFilter = (output, context) => {
+const de_NotificationConfigurationFilter = (output, context) => {
     const contents = {};
     if (output["S3Key"] !== undefined) {
-        contents.Key = deserializeAws_restXmlS3KeyFilter(output["S3Key"], context);
+        contents.Key = de_S3KeyFilter(output["S3Key"], context);
     }
     return contents;
 };
-const deserializeAws_restXml_Object = (output, context) => {
+const de__Object = (output, context) => {
     const contents = {};
     if (output["Key"] !== undefined) {
         contents.Key = (0, smithy_client_1.expectString)(output["Key"]);
@@ -19712,7 +19712,7 @@ const deserializeAws_restXml_Object = (output, context) => {
         contents.ChecksumAlgorithm = [];
     }
     else if (output["ChecksumAlgorithm"] !== undefined) {
-        contents.ChecksumAlgorithm = deserializeAws_restXmlChecksumAlgorithmList((0, smithy_client_1.getArrayIfSingleItem)(output["ChecksumAlgorithm"]), context);
+        contents.ChecksumAlgorithm = de_ChecksumAlgorithmList((0, smithy_client_1.getArrayIfSingleItem)(output["ChecksumAlgorithm"]), context);
     }
     if (output["Size"] !== undefined) {
         contents.Size = (0, smithy_client_1.strictParseLong)(output["Size"]);
@@ -19721,35 +19721,35 @@ const deserializeAws_restXml_Object = (output, context) => {
         contents.StorageClass = (0, smithy_client_1.expectString)(output["StorageClass"]);
     }
     if (output["Owner"] !== undefined) {
-        contents.Owner = deserializeAws_restXmlOwner(output["Owner"], context);
+        contents.Owner = de_Owner(output["Owner"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlObjectList = (output, context) => {
+const de_ObjectList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXml_Object(entry, context);
+        return de__Object(entry, context);
     });
 };
-const deserializeAws_restXmlObjectLockConfiguration = (output, context) => {
+const de_ObjectLockConfiguration = (output, context) => {
     const contents = {};
     if (output["ObjectLockEnabled"] !== undefined) {
         contents.ObjectLockEnabled = (0, smithy_client_1.expectString)(output["ObjectLockEnabled"]);
     }
     if (output["Rule"] !== undefined) {
-        contents.Rule = deserializeAws_restXmlObjectLockRule(output["Rule"], context);
+        contents.Rule = de_ObjectLockRule(output["Rule"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlObjectLockLegalHold = (output, context) => {
+const de_ObjectLockLegalHold = (output, context) => {
     const contents = {};
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
     }
     return contents;
 };
-const deserializeAws_restXmlObjectLockRetention = (output, context) => {
+const de_ObjectLockRetention = (output, context) => {
     const contents = {};
     if (output["Mode"] !== undefined) {
         contents.Mode = (0, smithy_client_1.expectString)(output["Mode"]);
@@ -19759,14 +19759,14 @@ const deserializeAws_restXmlObjectLockRetention = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlObjectLockRule = (output, context) => {
+const de_ObjectLockRule = (output, context) => {
     const contents = {};
     if (output["DefaultRetention"] !== undefined) {
-        contents.DefaultRetention = deserializeAws_restXmlDefaultRetention(output["DefaultRetention"], context);
+        contents.DefaultRetention = de_DefaultRetention(output["DefaultRetention"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlObjectPart = (output, context) => {
+const de_ObjectPart = (output, context) => {
     const contents = {};
     if (output["PartNumber"] !== undefined) {
         contents.PartNumber = (0, smithy_client_1.strictParseInt32)(output["PartNumber"]);
@@ -19788,7 +19788,7 @@ const deserializeAws_restXmlObjectPart = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlObjectVersion = (output, context) => {
+const de_ObjectVersion = (output, context) => {
     const contents = {};
     if (output["ETag"] !== undefined) {
         contents.ETag = (0, smithy_client_1.expectString)(output["ETag"]);
@@ -19797,7 +19797,7 @@ const deserializeAws_restXmlObjectVersion = (output, context) => {
         contents.ChecksumAlgorithm = [];
     }
     else if (output["ChecksumAlgorithm"] !== undefined) {
-        contents.ChecksumAlgorithm = deserializeAws_restXmlChecksumAlgorithmList((0, smithy_client_1.getArrayIfSingleItem)(output["ChecksumAlgorithm"]), context);
+        contents.ChecksumAlgorithm = de_ChecksumAlgorithmList((0, smithy_client_1.getArrayIfSingleItem)(output["ChecksumAlgorithm"]), context);
     }
     if (output["Size"] !== undefined) {
         contents.Size = (0, smithy_client_1.strictParseLong)(output["Size"]);
@@ -19818,18 +19818,18 @@ const deserializeAws_restXmlObjectVersion = (output, context) => {
         contents.LastModified = (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseRfc3339DateTimeWithOffset)(output["LastModified"]));
     }
     if (output["Owner"] !== undefined) {
-        contents.Owner = deserializeAws_restXmlOwner(output["Owner"], context);
+        contents.Owner = de_Owner(output["Owner"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlObjectVersionList = (output, context) => {
+const de_ObjectVersionList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlObjectVersion(entry, context);
+        return de_ObjectVersion(entry, context);
     });
 };
-const deserializeAws_restXmlOwner = (output, context) => {
+const de_Owner = (output, context) => {
     const contents = {};
     if (output["DisplayName"] !== undefined) {
         contents.DisplayName = (0, smithy_client_1.expectString)(output["DisplayName"]);
@@ -19839,31 +19839,31 @@ const deserializeAws_restXmlOwner = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlOwnershipControls = (output, context) => {
+const de_OwnershipControls = (output, context) => {
     const contents = {};
     if (output.Rule === "") {
         contents.Rules = [];
     }
     else if (output["Rule"] !== undefined) {
-        contents.Rules = deserializeAws_restXmlOwnershipControlsRules((0, smithy_client_1.getArrayIfSingleItem)(output["Rule"]), context);
+        contents.Rules = de_OwnershipControlsRules((0, smithy_client_1.getArrayIfSingleItem)(output["Rule"]), context);
     }
     return contents;
 };
-const deserializeAws_restXmlOwnershipControlsRule = (output, context) => {
+const de_OwnershipControlsRule = (output, context) => {
     const contents = {};
     if (output["ObjectOwnership"] !== undefined) {
         contents.ObjectOwnership = (0, smithy_client_1.expectString)(output["ObjectOwnership"]);
     }
     return contents;
 };
-const deserializeAws_restXmlOwnershipControlsRules = (output, context) => {
+const de_OwnershipControlsRules = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlOwnershipControlsRule(entry, context);
+        return de_OwnershipControlsRule(entry, context);
     });
 };
-const deserializeAws_restXmlPart = (output, context) => {
+const de_Part = (output, context) => {
     const contents = {};
     if (output["PartNumber"] !== undefined) {
         contents.PartNumber = (0, smithy_client_1.strictParseInt32)(output["PartNumber"]);
@@ -19891,28 +19891,28 @@ const deserializeAws_restXmlPart = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlParts = (output, context) => {
+const de_Parts = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlPart(entry, context);
+        return de_Part(entry, context);
     });
 };
-const deserializeAws_restXmlPartsList = (output, context) => {
+const de_PartsList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlObjectPart(entry, context);
+        return de_ObjectPart(entry, context);
     });
 };
-const deserializeAws_restXmlPolicyStatus = (output, context) => {
+const de_PolicyStatus = (output, context) => {
     const contents = {};
     if (output["IsPublic"] !== undefined) {
         contents.IsPublic = (0, smithy_client_1.parseBoolean)(output["IsPublic"]);
     }
     return contents;
 };
-const deserializeAws_restXmlProgress = (output, context) => {
+const de_Progress = (output, context) => {
     const contents = {};
     if (output["BytesScanned"] !== undefined) {
         contents.BytesScanned = (0, smithy_client_1.strictParseLong)(output["BytesScanned"]);
@@ -19925,7 +19925,7 @@ const deserializeAws_restXmlProgress = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlPublicAccessBlockConfiguration = (output, context) => {
+const de_PublicAccessBlockConfiguration = (output, context) => {
     const contents = {};
     if (output["BlockPublicAcls"] !== undefined) {
         contents.BlockPublicAcls = (0, smithy_client_1.parseBoolean)(output["BlockPublicAcls"]);
@@ -19941,7 +19941,7 @@ const deserializeAws_restXmlPublicAccessBlockConfiguration = (output, context) =
     }
     return contents;
 };
-const deserializeAws_restXmlQueueConfiguration = (output, context) => {
+const de_QueueConfiguration = (output, context) => {
     const contents = {};
     if (output["Id"] !== undefined) {
         contents.Id = (0, smithy_client_1.expectString)(output["Id"]);
@@ -19953,21 +19953,21 @@ const deserializeAws_restXmlQueueConfiguration = (output, context) => {
         contents.Events = [];
     }
     else if (output["Event"] !== undefined) {
-        contents.Events = deserializeAws_restXmlEventList((0, smithy_client_1.getArrayIfSingleItem)(output["Event"]), context);
+        contents.Events = de_EventList((0, smithy_client_1.getArrayIfSingleItem)(output["Event"]), context);
     }
     if (output["Filter"] !== undefined) {
-        contents.Filter = deserializeAws_restXmlNotificationConfigurationFilter(output["Filter"], context);
+        contents.Filter = de_NotificationConfigurationFilter(output["Filter"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlQueueConfigurationList = (output, context) => {
+const de_QueueConfigurationList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlQueueConfiguration(entry, context);
+        return de_QueueConfiguration(entry, context);
     });
 };
-const deserializeAws_restXmlRedirect = (output, context) => {
+const de_Redirect = (output, context) => {
     const contents = {};
     if (output["HostName"] !== undefined) {
         contents.HostName = (0, smithy_client_1.expectString)(output["HostName"]);
@@ -19986,7 +19986,7 @@ const deserializeAws_restXmlRedirect = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlRedirectAllRequestsTo = (output, context) => {
+const de_RedirectAllRequestsTo = (output, context) => {
     const contents = {};
     if (output["HostName"] !== undefined) {
         contents.HostName = (0, smithy_client_1.expectString)(output["HostName"]);
@@ -19996,14 +19996,14 @@ const deserializeAws_restXmlRedirectAllRequestsTo = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlReplicaModifications = (output, context) => {
+const de_ReplicaModifications = (output, context) => {
     const contents = {};
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
     }
     return contents;
 };
-const deserializeAws_restXmlReplicationConfiguration = (output, context) => {
+const de_ReplicationConfiguration = (output, context) => {
     const contents = {};
     if (output["Role"] !== undefined) {
         contents.Role = (0, smithy_client_1.expectString)(output["Role"]);
@@ -20012,11 +20012,11 @@ const deserializeAws_restXmlReplicationConfiguration = (output, context) => {
         contents.Rules = [];
     }
     else if (output["Rule"] !== undefined) {
-        contents.Rules = deserializeAws_restXmlReplicationRules((0, smithy_client_1.getArrayIfSingleItem)(output["Rule"]), context);
+        contents.Rules = de_ReplicationRules((0, smithy_client_1.getArrayIfSingleItem)(output["Rule"]), context);
     }
     return contents;
 };
-const deserializeAws_restXmlReplicationRule = (output, context) => {
+const de_ReplicationRule = (output, context) => {
     const contents = {};
     if (output["ID"] !== undefined) {
         contents.ID = (0, smithy_client_1.expectString)(output["ID"]);
@@ -20030,26 +20030,26 @@ const deserializeAws_restXmlReplicationRule = (output, context) => {
     if (output.Filter === "") {
     }
     else if (output["Filter"] !== undefined) {
-        contents.Filter = deserializeAws_restXmlReplicationRuleFilter((0, smithy_client_1.expectUnion)(output["Filter"]), context);
+        contents.Filter = de_ReplicationRuleFilter((0, smithy_client_1.expectUnion)(output["Filter"]), context);
     }
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
     }
     if (output["SourceSelectionCriteria"] !== undefined) {
-        contents.SourceSelectionCriteria = deserializeAws_restXmlSourceSelectionCriteria(output["SourceSelectionCriteria"], context);
+        contents.SourceSelectionCriteria = de_SourceSelectionCriteria(output["SourceSelectionCriteria"], context);
     }
     if (output["ExistingObjectReplication"] !== undefined) {
-        contents.ExistingObjectReplication = deserializeAws_restXmlExistingObjectReplication(output["ExistingObjectReplication"], context);
+        contents.ExistingObjectReplication = de_ExistingObjectReplication(output["ExistingObjectReplication"], context);
     }
     if (output["Destination"] !== undefined) {
-        contents.Destination = deserializeAws_restXmlDestination(output["Destination"], context);
+        contents.Destination = de_Destination(output["Destination"], context);
     }
     if (output["DeleteMarkerReplication"] !== undefined) {
-        contents.DeleteMarkerReplication = deserializeAws_restXmlDeleteMarkerReplication(output["DeleteMarkerReplication"], context);
+        contents.DeleteMarkerReplication = de_DeleteMarkerReplication(output["DeleteMarkerReplication"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlReplicationRuleAndOperator = (output, context) => {
+const de_ReplicationRuleAndOperator = (output, context) => {
     const contents = {};
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
@@ -20058,11 +20058,11 @@ const deserializeAws_restXmlReplicationRuleAndOperator = (output, context) => {
         contents.Tags = [];
     }
     else if (output["Tag"] !== undefined) {
-        contents.Tags = deserializeAws_restXmlTagSet((0, smithy_client_1.getArrayIfSingleItem)(output["Tag"]), context);
+        contents.Tags = de_TagSet((0, smithy_client_1.getArrayIfSingleItem)(output["Tag"]), context);
     }
     return contents;
 };
-const deserializeAws_restXmlReplicationRuleFilter = (output, context) => {
+const de_ReplicationRuleFilter = (output, context) => {
     if (output["Prefix"] !== undefined) {
         return {
             Prefix: (0, smithy_client_1.expectString)(output["Prefix"]),
@@ -20070,68 +20070,68 @@ const deserializeAws_restXmlReplicationRuleFilter = (output, context) => {
     }
     if (output["Tag"] !== undefined) {
         return {
-            Tag: deserializeAws_restXmlTag(output["Tag"], context),
+            Tag: de_Tag(output["Tag"], context),
         };
     }
     if (output["And"] !== undefined) {
         return {
-            And: deserializeAws_restXmlReplicationRuleAndOperator(output["And"], context),
+            And: de_ReplicationRuleAndOperator(output["And"], context),
         };
     }
     return { $unknown: Object.entries(output)[0] };
 };
-const deserializeAws_restXmlReplicationRules = (output, context) => {
+const de_ReplicationRules = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlReplicationRule(entry, context);
+        return de_ReplicationRule(entry, context);
     });
 };
-const deserializeAws_restXmlReplicationTime = (output, context) => {
+const de_ReplicationTime = (output, context) => {
     const contents = {};
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
     }
     if (output["Time"] !== undefined) {
-        contents.Time = deserializeAws_restXmlReplicationTimeValue(output["Time"], context);
+        contents.Time = de_ReplicationTimeValue(output["Time"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlReplicationTimeValue = (output, context) => {
+const de_ReplicationTimeValue = (output, context) => {
     const contents = {};
     if (output["Minutes"] !== undefined) {
         contents.Minutes = (0, smithy_client_1.strictParseInt32)(output["Minutes"]);
     }
     return contents;
 };
-const deserializeAws_restXmlRoutingRule = (output, context) => {
+const de_RoutingRule = (output, context) => {
     const contents = {};
     if (output["Condition"] !== undefined) {
-        contents.Condition = deserializeAws_restXmlCondition(output["Condition"], context);
+        contents.Condition = de_Condition(output["Condition"], context);
     }
     if (output["Redirect"] !== undefined) {
-        contents.Redirect = deserializeAws_restXmlRedirect(output["Redirect"], context);
+        contents.Redirect = de_Redirect(output["Redirect"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlRoutingRules = (output, context) => {
+const de_RoutingRules = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlRoutingRule(entry, context);
+        return de_RoutingRule(entry, context);
     });
 };
-const deserializeAws_restXmlS3KeyFilter = (output, context) => {
+const de_S3KeyFilter = (output, context) => {
     const contents = {};
     if (output.FilterRule === "") {
         contents.FilterRules = [];
     }
     else if (output["FilterRule"] !== undefined) {
-        contents.FilterRules = deserializeAws_restXmlFilterRuleList((0, smithy_client_1.getArrayIfSingleItem)(output["FilterRule"]), context);
+        contents.FilterRules = de_FilterRuleList((0, smithy_client_1.getArrayIfSingleItem)(output["FilterRule"]), context);
     }
     return contents;
 };
-const deserializeAws_restXmlServerSideEncryptionByDefault = (output, context) => {
+const de_ServerSideEncryptionByDefault = (output, context) => {
     const contents = {};
     if (output["SSEAlgorithm"] !== undefined) {
         contents.SSEAlgorithm = (0, smithy_client_1.expectString)(output["SSEAlgorithm"]);
@@ -20141,62 +20141,62 @@ const deserializeAws_restXmlServerSideEncryptionByDefault = (output, context) =>
     }
     return contents;
 };
-const deserializeAws_restXmlServerSideEncryptionConfiguration = (output, context) => {
+const de_ServerSideEncryptionConfiguration = (output, context) => {
     const contents = {};
     if (output.Rule === "") {
         contents.Rules = [];
     }
     else if (output["Rule"] !== undefined) {
-        contents.Rules = deserializeAws_restXmlServerSideEncryptionRules((0, smithy_client_1.getArrayIfSingleItem)(output["Rule"]), context);
+        contents.Rules = de_ServerSideEncryptionRules((0, smithy_client_1.getArrayIfSingleItem)(output["Rule"]), context);
     }
     return contents;
 };
-const deserializeAws_restXmlServerSideEncryptionRule = (output, context) => {
+const de_ServerSideEncryptionRule = (output, context) => {
     const contents = {};
     if (output["ApplyServerSideEncryptionByDefault"] !== undefined) {
-        contents.ApplyServerSideEncryptionByDefault = deserializeAws_restXmlServerSideEncryptionByDefault(output["ApplyServerSideEncryptionByDefault"], context);
+        contents.ApplyServerSideEncryptionByDefault = de_ServerSideEncryptionByDefault(output["ApplyServerSideEncryptionByDefault"], context);
     }
     if (output["BucketKeyEnabled"] !== undefined) {
         contents.BucketKeyEnabled = (0, smithy_client_1.parseBoolean)(output["BucketKeyEnabled"]);
     }
     return contents;
 };
-const deserializeAws_restXmlServerSideEncryptionRules = (output, context) => {
+const de_ServerSideEncryptionRules = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlServerSideEncryptionRule(entry, context);
+        return de_ServerSideEncryptionRule(entry, context);
     });
 };
-const deserializeAws_restXmlSourceSelectionCriteria = (output, context) => {
+const de_SourceSelectionCriteria = (output, context) => {
     const contents = {};
     if (output["SseKmsEncryptedObjects"] !== undefined) {
-        contents.SseKmsEncryptedObjects = deserializeAws_restXmlSseKmsEncryptedObjects(output["SseKmsEncryptedObjects"], context);
+        contents.SseKmsEncryptedObjects = de_SseKmsEncryptedObjects(output["SseKmsEncryptedObjects"], context);
     }
     if (output["ReplicaModifications"] !== undefined) {
-        contents.ReplicaModifications = deserializeAws_restXmlReplicaModifications(output["ReplicaModifications"], context);
+        contents.ReplicaModifications = de_ReplicaModifications(output["ReplicaModifications"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlSSEKMS = (output, context) => {
+const de_SSEKMS = (output, context) => {
     const contents = {};
     if (output["KeyId"] !== undefined) {
         contents.KeyId = (0, smithy_client_1.expectString)(output["KeyId"]);
     }
     return contents;
 };
-const deserializeAws_restXmlSseKmsEncryptedObjects = (output, context) => {
+const de_SseKmsEncryptedObjects = (output, context) => {
     const contents = {};
     if (output["Status"] !== undefined) {
         contents.Status = (0, smithy_client_1.expectString)(output["Status"]);
     }
     return contents;
 };
-const deserializeAws_restXmlSSES3 = (output, context) => {
+const de_SSES3 = (output, context) => {
     const contents = {};
     return contents;
 };
-const deserializeAws_restXmlStats = (output, context) => {
+const de_Stats = (output, context) => {
     const contents = {};
     if (output["BytesScanned"] !== undefined) {
         contents.BytesScanned = (0, smithy_client_1.strictParseLong)(output["BytesScanned"]);
@@ -20209,24 +20209,24 @@ const deserializeAws_restXmlStats = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlStorageClassAnalysis = (output, context) => {
+const de_StorageClassAnalysis = (output, context) => {
     const contents = {};
     if (output["DataExport"] !== undefined) {
-        contents.DataExport = deserializeAws_restXmlStorageClassAnalysisDataExport(output["DataExport"], context);
+        contents.DataExport = de_StorageClassAnalysisDataExport(output["DataExport"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlStorageClassAnalysisDataExport = (output, context) => {
+const de_StorageClassAnalysisDataExport = (output, context) => {
     const contents = {};
     if (output["OutputSchemaVersion"] !== undefined) {
         contents.OutputSchemaVersion = (0, smithy_client_1.expectString)(output["OutputSchemaVersion"]);
     }
     if (output["Destination"] !== undefined) {
-        contents.Destination = deserializeAws_restXmlAnalyticsExportDestination(output["Destination"], context);
+        contents.Destination = de_AnalyticsExportDestination(output["Destination"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlTag = (output, context) => {
+const de_Tag = (output, context) => {
     const contents = {};
     if (output["Key"] !== undefined) {
         contents.Key = (0, smithy_client_1.expectString)(output["Key"]);
@@ -20236,31 +20236,31 @@ const deserializeAws_restXmlTag = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlTagSet = (output, context) => {
+const de_TagSet = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlTag(entry, context);
+        return de_Tag(entry, context);
     });
 };
-const deserializeAws_restXmlTargetGrant = (output, context) => {
+const de_TargetGrant = (output, context) => {
     const contents = {};
     if (output["Grantee"] !== undefined) {
-        contents.Grantee = deserializeAws_restXmlGrantee(output["Grantee"], context);
+        contents.Grantee = de_Grantee(output["Grantee"], context);
     }
     if (output["Permission"] !== undefined) {
         contents.Permission = (0, smithy_client_1.expectString)(output["Permission"]);
     }
     return contents;
 };
-const deserializeAws_restXmlTargetGrants = (output, context) => {
+const de_TargetGrants = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlTargetGrant(entry, context);
+        return de_TargetGrant(entry, context);
     });
 };
-const deserializeAws_restXmlTiering = (output, context) => {
+const de_Tiering = (output, context) => {
     const contents = {};
     if (output["Days"] !== undefined) {
         contents.Days = (0, smithy_client_1.strictParseInt32)(output["Days"]);
@@ -20270,14 +20270,14 @@ const deserializeAws_restXmlTiering = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlTieringList = (output, context) => {
+const de_TieringList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlTiering(entry, context);
+        return de_Tiering(entry, context);
     });
 };
-const deserializeAws_restXmlTopicConfiguration = (output, context) => {
+const de_TopicConfiguration = (output, context) => {
     const contents = {};
     if (output["Id"] !== undefined) {
         contents.Id = (0, smithy_client_1.expectString)(output["Id"]);
@@ -20289,21 +20289,21 @@ const deserializeAws_restXmlTopicConfiguration = (output, context) => {
         contents.Events = [];
     }
     else if (output["Event"] !== undefined) {
-        contents.Events = deserializeAws_restXmlEventList((0, smithy_client_1.getArrayIfSingleItem)(output["Event"]), context);
+        contents.Events = de_EventList((0, smithy_client_1.getArrayIfSingleItem)(output["Event"]), context);
     }
     if (output["Filter"] !== undefined) {
-        contents.Filter = deserializeAws_restXmlNotificationConfigurationFilter(output["Filter"], context);
+        contents.Filter = de_NotificationConfigurationFilter(output["Filter"], context);
     }
     return contents;
 };
-const deserializeAws_restXmlTopicConfigurationList = (output, context) => {
+const de_TopicConfigurationList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlTopicConfiguration(entry, context);
+        return de_TopicConfiguration(entry, context);
     });
 };
-const deserializeAws_restXmlTransition = (output, context) => {
+const de_Transition = (output, context) => {
     const contents = {};
     if (output["Date"] !== undefined) {
         contents.Date = (0, smithy_client_1.expectNonNull)((0, smithy_client_1.parseRfc3339DateTimeWithOffset)(output["Date"]));
@@ -20316,11 +20316,11 @@ const deserializeAws_restXmlTransition = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_restXmlTransitionList = (output, context) => {
+const de_TransitionList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
         .map((entry) => {
-        return deserializeAws_restXmlTransition(entry, context);
+        return de_Transition(entry, context);
     });
 };
 const deserializeMetadata = (output) => ({
@@ -21178,10 +21178,10 @@ class CreateTokenCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restJson1_1.serializeAws_restJson1CreateTokenCommand)(input, context);
+        return (0, Aws_restJson1_1.se_CreateTokenCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restJson1_1.deserializeAws_restJson1CreateTokenCommand)(output, context);
+        return (0, Aws_restJson1_1.de_CreateTokenCommand)(output, context);
     }
 }
 exports.CreateTokenCommand = CreateTokenCommand;
@@ -21231,10 +21231,10 @@ class RegisterClientCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restJson1_1.serializeAws_restJson1RegisterClientCommand)(input, context);
+        return (0, Aws_restJson1_1.se_RegisterClientCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restJson1_1.deserializeAws_restJson1RegisterClientCommand)(output, context);
+        return (0, Aws_restJson1_1.de_RegisterClientCommand)(output, context);
     }
 }
 exports.RegisterClientCommand = RegisterClientCommand;
@@ -21284,10 +21284,10 @@ class StartDeviceAuthorizationCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restJson1_1.serializeAws_restJson1StartDeviceAuthorizationCommand)(input, context);
+        return (0, Aws_restJson1_1.se_StartDeviceAuthorizationCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restJson1_1.deserializeAws_restJson1StartDeviceAuthorizationCommand)(output, context);
+        return (0, Aws_restJson1_1.de_StartDeviceAuthorizationCommand)(output, context);
     }
 }
 exports.StartDeviceAuthorizationCommand = StartDeviceAuthorizationCommand;
@@ -21611,12 +21611,12 @@ exports.InvalidClientMetadataException = InvalidClientMetadataException;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.deserializeAws_restJson1StartDeviceAuthorizationCommand = exports.deserializeAws_restJson1RegisterClientCommand = exports.deserializeAws_restJson1CreateTokenCommand = exports.serializeAws_restJson1StartDeviceAuthorizationCommand = exports.serializeAws_restJson1RegisterClientCommand = exports.serializeAws_restJson1CreateTokenCommand = void 0;
+exports.de_StartDeviceAuthorizationCommand = exports.de_RegisterClientCommand = exports.de_CreateTokenCommand = exports.se_StartDeviceAuthorizationCommand = exports.se_RegisterClientCommand = exports.se_CreateTokenCommand = void 0;
 const protocol_http_1 = __nccwpck_require__(70223);
 const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(69374);
 const SSOOIDCServiceException_1 = __nccwpck_require__(43026);
-const serializeAws_restJson1CreateTokenCommand = async (input, context) => {
+const se_CreateTokenCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {
         "content-type": "application/json",
@@ -21631,7 +21631,7 @@ const serializeAws_restJson1CreateTokenCommand = async (input, context) => {
         ...(input.grantType != null && { grantType: input.grantType }),
         ...(input.redirectUri != null && { redirectUri: input.redirectUri }),
         ...(input.refreshToken != null && { refreshToken: input.refreshToken }),
-        ...(input.scope != null && { scope: serializeAws_restJson1Scopes(input.scope, context) }),
+        ...(input.scope != null && { scope: se_Scopes(input.scope, context) }),
     });
     return new protocol_http_1.HttpRequest({
         protocol,
@@ -21643,8 +21643,8 @@ const serializeAws_restJson1CreateTokenCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restJson1CreateTokenCommand = serializeAws_restJson1CreateTokenCommand;
-const serializeAws_restJson1RegisterClientCommand = async (input, context) => {
+exports.se_CreateTokenCommand = se_CreateTokenCommand;
+const se_RegisterClientCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {
         "content-type": "application/json",
@@ -21654,7 +21654,7 @@ const serializeAws_restJson1RegisterClientCommand = async (input, context) => {
     body = JSON.stringify({
         ...(input.clientName != null && { clientName: input.clientName }),
         ...(input.clientType != null && { clientType: input.clientType }),
-        ...(input.scopes != null && { scopes: serializeAws_restJson1Scopes(input.scopes, context) }),
+        ...(input.scopes != null && { scopes: se_Scopes(input.scopes, context) }),
     });
     return new protocol_http_1.HttpRequest({
         protocol,
@@ -21666,8 +21666,8 @@ const serializeAws_restJson1RegisterClientCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restJson1RegisterClientCommand = serializeAws_restJson1RegisterClientCommand;
-const serializeAws_restJson1StartDeviceAuthorizationCommand = async (input, context) => {
+exports.se_RegisterClientCommand = se_RegisterClientCommand;
+const se_StartDeviceAuthorizationCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {
         "content-type": "application/json",
@@ -21689,10 +21689,10 @@ const serializeAws_restJson1StartDeviceAuthorizationCommand = async (input, cont
         body,
     });
 };
-exports.serializeAws_restJson1StartDeviceAuthorizationCommand = serializeAws_restJson1StartDeviceAuthorizationCommand;
-const deserializeAws_restJson1CreateTokenCommand = async (output, context) => {
+exports.se_StartDeviceAuthorizationCommand = se_StartDeviceAuthorizationCommand;
+const de_CreateTokenCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restJson1CreateTokenCommandError(output, context);
+        return de_CreateTokenCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -21715,8 +21715,8 @@ const deserializeAws_restJson1CreateTokenCommand = async (output, context) => {
     }
     return contents;
 };
-exports.deserializeAws_restJson1CreateTokenCommand = deserializeAws_restJson1CreateTokenCommand;
-const deserializeAws_restJson1CreateTokenCommandError = async (output, context) => {
+exports.de_CreateTokenCommand = de_CreateTokenCommand;
+const de_CreateTokenCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -21725,37 +21725,37 @@ const deserializeAws_restJson1CreateTokenCommandError = async (output, context) 
     switch (errorCode) {
         case "AccessDeniedException":
         case "com.amazonaws.ssooidc#AccessDeniedException":
-            throw await deserializeAws_restJson1AccessDeniedExceptionResponse(parsedOutput, context);
+            throw await de_AccessDeniedExceptionRes(parsedOutput, context);
         case "AuthorizationPendingException":
         case "com.amazonaws.ssooidc#AuthorizationPendingException":
-            throw await deserializeAws_restJson1AuthorizationPendingExceptionResponse(parsedOutput, context);
+            throw await de_AuthorizationPendingExceptionRes(parsedOutput, context);
         case "ExpiredTokenException":
         case "com.amazonaws.ssooidc#ExpiredTokenException":
-            throw await deserializeAws_restJson1ExpiredTokenExceptionResponse(parsedOutput, context);
+            throw await de_ExpiredTokenExceptionRes(parsedOutput, context);
         case "InternalServerException":
         case "com.amazonaws.ssooidc#InternalServerException":
-            throw await deserializeAws_restJson1InternalServerExceptionResponse(parsedOutput, context);
+            throw await de_InternalServerExceptionRes(parsedOutput, context);
         case "InvalidClientException":
         case "com.amazonaws.ssooidc#InvalidClientException":
-            throw await deserializeAws_restJson1InvalidClientExceptionResponse(parsedOutput, context);
+            throw await de_InvalidClientExceptionRes(parsedOutput, context);
         case "InvalidGrantException":
         case "com.amazonaws.ssooidc#InvalidGrantException":
-            throw await deserializeAws_restJson1InvalidGrantExceptionResponse(parsedOutput, context);
+            throw await de_InvalidGrantExceptionRes(parsedOutput, context);
         case "InvalidRequestException":
         case "com.amazonaws.ssooidc#InvalidRequestException":
-            throw await deserializeAws_restJson1InvalidRequestExceptionResponse(parsedOutput, context);
+            throw await de_InvalidRequestExceptionRes(parsedOutput, context);
         case "InvalidScopeException":
         case "com.amazonaws.ssooidc#InvalidScopeException":
-            throw await deserializeAws_restJson1InvalidScopeExceptionResponse(parsedOutput, context);
+            throw await de_InvalidScopeExceptionRes(parsedOutput, context);
         case "SlowDownException":
         case "com.amazonaws.ssooidc#SlowDownException":
-            throw await deserializeAws_restJson1SlowDownExceptionResponse(parsedOutput, context);
+            throw await de_SlowDownExceptionRes(parsedOutput, context);
         case "UnauthorizedClientException":
         case "com.amazonaws.ssooidc#UnauthorizedClientException":
-            throw await deserializeAws_restJson1UnauthorizedClientExceptionResponse(parsedOutput, context);
+            throw await de_UnauthorizedClientExceptionRes(parsedOutput, context);
         case "UnsupportedGrantTypeException":
         case "com.amazonaws.ssooidc#UnsupportedGrantTypeException":
-            throw await deserializeAws_restJson1UnsupportedGrantTypeExceptionResponse(parsedOutput, context);
+            throw await de_UnsupportedGrantTypeExceptionRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -21766,9 +21766,9 @@ const deserializeAws_restJson1CreateTokenCommandError = async (output, context) 
             });
     }
 };
-const deserializeAws_restJson1RegisterClientCommand = async (output, context) => {
+const de_RegisterClientCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restJson1RegisterClientCommandError(output, context);
+        return de_RegisterClientCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -21794,8 +21794,8 @@ const deserializeAws_restJson1RegisterClientCommand = async (output, context) =>
     }
     return contents;
 };
-exports.deserializeAws_restJson1RegisterClientCommand = deserializeAws_restJson1RegisterClientCommand;
-const deserializeAws_restJson1RegisterClientCommandError = async (output, context) => {
+exports.de_RegisterClientCommand = de_RegisterClientCommand;
+const de_RegisterClientCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -21804,16 +21804,16 @@ const deserializeAws_restJson1RegisterClientCommandError = async (output, contex
     switch (errorCode) {
         case "InternalServerException":
         case "com.amazonaws.ssooidc#InternalServerException":
-            throw await deserializeAws_restJson1InternalServerExceptionResponse(parsedOutput, context);
+            throw await de_InternalServerExceptionRes(parsedOutput, context);
         case "InvalidClientMetadataException":
         case "com.amazonaws.ssooidc#InvalidClientMetadataException":
-            throw await deserializeAws_restJson1InvalidClientMetadataExceptionResponse(parsedOutput, context);
+            throw await de_InvalidClientMetadataExceptionRes(parsedOutput, context);
         case "InvalidRequestException":
         case "com.amazonaws.ssooidc#InvalidRequestException":
-            throw await deserializeAws_restJson1InvalidRequestExceptionResponse(parsedOutput, context);
+            throw await de_InvalidRequestExceptionRes(parsedOutput, context);
         case "InvalidScopeException":
         case "com.amazonaws.ssooidc#InvalidScopeException":
-            throw await deserializeAws_restJson1InvalidScopeExceptionResponse(parsedOutput, context);
+            throw await de_InvalidScopeExceptionRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -21824,9 +21824,9 @@ const deserializeAws_restJson1RegisterClientCommandError = async (output, contex
             });
     }
 };
-const deserializeAws_restJson1StartDeviceAuthorizationCommand = async (output, context) => {
+const de_StartDeviceAuthorizationCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restJson1StartDeviceAuthorizationCommandError(output, context);
+        return de_StartDeviceAuthorizationCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -21852,8 +21852,8 @@ const deserializeAws_restJson1StartDeviceAuthorizationCommand = async (output, c
     }
     return contents;
 };
-exports.deserializeAws_restJson1StartDeviceAuthorizationCommand = deserializeAws_restJson1StartDeviceAuthorizationCommand;
-const deserializeAws_restJson1StartDeviceAuthorizationCommandError = async (output, context) => {
+exports.de_StartDeviceAuthorizationCommand = de_StartDeviceAuthorizationCommand;
+const de_StartDeviceAuthorizationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -21862,19 +21862,19 @@ const deserializeAws_restJson1StartDeviceAuthorizationCommandError = async (outp
     switch (errorCode) {
         case "InternalServerException":
         case "com.amazonaws.ssooidc#InternalServerException":
-            throw await deserializeAws_restJson1InternalServerExceptionResponse(parsedOutput, context);
+            throw await de_InternalServerExceptionRes(parsedOutput, context);
         case "InvalidClientException":
         case "com.amazonaws.ssooidc#InvalidClientException":
-            throw await deserializeAws_restJson1InvalidClientExceptionResponse(parsedOutput, context);
+            throw await de_InvalidClientExceptionRes(parsedOutput, context);
         case "InvalidRequestException":
         case "com.amazonaws.ssooidc#InvalidRequestException":
-            throw await deserializeAws_restJson1InvalidRequestExceptionResponse(parsedOutput, context);
+            throw await de_InvalidRequestExceptionRes(parsedOutput, context);
         case "SlowDownException":
         case "com.amazonaws.ssooidc#SlowDownException":
-            throw await deserializeAws_restJson1SlowDownExceptionResponse(parsedOutput, context);
+            throw await de_SlowDownExceptionRes(parsedOutput, context);
         case "UnauthorizedClientException":
         case "com.amazonaws.ssooidc#UnauthorizedClientException":
-            throw await deserializeAws_restJson1UnauthorizedClientExceptionResponse(parsedOutput, context);
+            throw await de_UnauthorizedClientExceptionRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -21886,7 +21886,7 @@ const deserializeAws_restJson1StartDeviceAuthorizationCommandError = async (outp
     }
 };
 const map = smithy_client_1.map;
-const deserializeAws_restJson1AccessDeniedExceptionResponse = async (parsedOutput, context) => {
+const de_AccessDeniedExceptionRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data.error != null) {
@@ -21901,7 +21901,7 @@ const deserializeAws_restJson1AccessDeniedExceptionResponse = async (parsedOutpu
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restJson1AuthorizationPendingExceptionResponse = async (parsedOutput, context) => {
+const de_AuthorizationPendingExceptionRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data.error != null) {
@@ -21916,7 +21916,7 @@ const deserializeAws_restJson1AuthorizationPendingExceptionResponse = async (par
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restJson1ExpiredTokenExceptionResponse = async (parsedOutput, context) => {
+const de_ExpiredTokenExceptionRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data.error != null) {
@@ -21931,7 +21931,7 @@ const deserializeAws_restJson1ExpiredTokenExceptionResponse = async (parsedOutpu
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restJson1InternalServerExceptionResponse = async (parsedOutput, context) => {
+const de_InternalServerExceptionRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data.error != null) {
@@ -21946,7 +21946,7 @@ const deserializeAws_restJson1InternalServerExceptionResponse = async (parsedOut
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restJson1InvalidClientExceptionResponse = async (parsedOutput, context) => {
+const de_InvalidClientExceptionRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data.error != null) {
@@ -21961,7 +21961,7 @@ const deserializeAws_restJson1InvalidClientExceptionResponse = async (parsedOutp
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restJson1InvalidClientMetadataExceptionResponse = async (parsedOutput, context) => {
+const de_InvalidClientMetadataExceptionRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data.error != null) {
@@ -21976,7 +21976,7 @@ const deserializeAws_restJson1InvalidClientMetadataExceptionResponse = async (pa
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restJson1InvalidGrantExceptionResponse = async (parsedOutput, context) => {
+const de_InvalidGrantExceptionRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data.error != null) {
@@ -21991,7 +21991,7 @@ const deserializeAws_restJson1InvalidGrantExceptionResponse = async (parsedOutpu
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restJson1InvalidRequestExceptionResponse = async (parsedOutput, context) => {
+const de_InvalidRequestExceptionRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data.error != null) {
@@ -22006,7 +22006,7 @@ const deserializeAws_restJson1InvalidRequestExceptionResponse = async (parsedOut
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restJson1InvalidScopeExceptionResponse = async (parsedOutput, context) => {
+const de_InvalidScopeExceptionRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data.error != null) {
@@ -22021,7 +22021,7 @@ const deserializeAws_restJson1InvalidScopeExceptionResponse = async (parsedOutpu
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restJson1SlowDownExceptionResponse = async (parsedOutput, context) => {
+const de_SlowDownExceptionRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data.error != null) {
@@ -22036,7 +22036,7 @@ const deserializeAws_restJson1SlowDownExceptionResponse = async (parsedOutput, c
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restJson1UnauthorizedClientExceptionResponse = async (parsedOutput, context) => {
+const de_UnauthorizedClientExceptionRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data.error != null) {
@@ -22051,7 +22051,7 @@ const deserializeAws_restJson1UnauthorizedClientExceptionResponse = async (parse
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restJson1UnsupportedGrantTypeExceptionResponse = async (parsedOutput, context) => {
+const de_UnsupportedGrantTypeExceptionRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data.error != null) {
@@ -22066,7 +22066,7 @@ const deserializeAws_restJson1UnsupportedGrantTypeExceptionResponse = async (par
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const serializeAws_restJson1Scopes = (input, context) => {
+const se_Scopes = (input, context) => {
     return input
         .filter((e) => e != null)
         .map((entry) => {
@@ -22757,10 +22757,10 @@ class GetRoleCredentialsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restJson1_1.serializeAws_restJson1GetRoleCredentialsCommand)(input, context);
+        return (0, Aws_restJson1_1.se_GetRoleCredentialsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restJson1_1.deserializeAws_restJson1GetRoleCredentialsCommand)(output, context);
+        return (0, Aws_restJson1_1.de_GetRoleCredentialsCommand)(output, context);
     }
 }
 exports.GetRoleCredentialsCommand = GetRoleCredentialsCommand;
@@ -22811,10 +22811,10 @@ class ListAccountRolesCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restJson1_1.serializeAws_restJson1ListAccountRolesCommand)(input, context);
+        return (0, Aws_restJson1_1.se_ListAccountRolesCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restJson1_1.deserializeAws_restJson1ListAccountRolesCommand)(output, context);
+        return (0, Aws_restJson1_1.de_ListAccountRolesCommand)(output, context);
     }
 }
 exports.ListAccountRolesCommand = ListAccountRolesCommand;
@@ -22865,10 +22865,10 @@ class ListAccountsCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restJson1_1.serializeAws_restJson1ListAccountsCommand)(input, context);
+        return (0, Aws_restJson1_1.se_ListAccountsCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restJson1_1.deserializeAws_restJson1ListAccountsCommand)(output, context);
+        return (0, Aws_restJson1_1.de_ListAccountsCommand)(output, context);
     }
 }
 exports.ListAccountsCommand = ListAccountsCommand;
@@ -22919,10 +22919,10 @@ class LogoutCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_restJson1_1.serializeAws_restJson1LogoutCommand)(input, context);
+        return (0, Aws_restJson1_1.se_LogoutCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_restJson1_1.deserializeAws_restJson1LogoutCommand)(output, context);
+        return (0, Aws_restJson1_1.de_LogoutCommand)(output, context);
     }
 }
 exports.LogoutCommand = LogoutCommand;
@@ -23250,12 +23250,12 @@ tslib_1.__exportStar(__nccwpck_require__(50938), exports);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.deserializeAws_restJson1LogoutCommand = exports.deserializeAws_restJson1ListAccountsCommand = exports.deserializeAws_restJson1ListAccountRolesCommand = exports.deserializeAws_restJson1GetRoleCredentialsCommand = exports.serializeAws_restJson1LogoutCommand = exports.serializeAws_restJson1ListAccountsCommand = exports.serializeAws_restJson1ListAccountRolesCommand = exports.serializeAws_restJson1GetRoleCredentialsCommand = void 0;
+exports.de_LogoutCommand = exports.de_ListAccountsCommand = exports.de_ListAccountRolesCommand = exports.de_GetRoleCredentialsCommand = exports.se_LogoutCommand = exports.se_ListAccountsCommand = exports.se_ListAccountRolesCommand = exports.se_GetRoleCredentialsCommand = void 0;
 const protocol_http_1 = __nccwpck_require__(70223);
 const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(66390);
 const SSOServiceException_1 = __nccwpck_require__(81517);
-const serializeAws_restJson1GetRoleCredentialsCommand = async (input, context) => {
+const se_GetRoleCredentialsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-sso_bearer_token": input.accessToken,
@@ -23277,8 +23277,8 @@ const serializeAws_restJson1GetRoleCredentialsCommand = async (input, context) =
         body,
     });
 };
-exports.serializeAws_restJson1GetRoleCredentialsCommand = serializeAws_restJson1GetRoleCredentialsCommand;
-const serializeAws_restJson1ListAccountRolesCommand = async (input, context) => {
+exports.se_GetRoleCredentialsCommand = se_GetRoleCredentialsCommand;
+const se_ListAccountRolesCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-sso_bearer_token": input.accessToken,
@@ -23301,8 +23301,8 @@ const serializeAws_restJson1ListAccountRolesCommand = async (input, context) => 
         body,
     });
 };
-exports.serializeAws_restJson1ListAccountRolesCommand = serializeAws_restJson1ListAccountRolesCommand;
-const serializeAws_restJson1ListAccountsCommand = async (input, context) => {
+exports.se_ListAccountRolesCommand = se_ListAccountRolesCommand;
+const se_ListAccountsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-sso_bearer_token": input.accessToken,
@@ -23324,8 +23324,8 @@ const serializeAws_restJson1ListAccountsCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restJson1ListAccountsCommand = serializeAws_restJson1ListAccountsCommand;
-const serializeAws_restJson1LogoutCommand = async (input, context) => {
+exports.se_ListAccountsCommand = se_ListAccountsCommand;
+const se_LogoutCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = map({}, isSerializableHeaderValue, {
         "x-amz-sso_bearer_token": input.accessToken,
@@ -23342,22 +23342,22 @@ const serializeAws_restJson1LogoutCommand = async (input, context) => {
         body,
     });
 };
-exports.serializeAws_restJson1LogoutCommand = serializeAws_restJson1LogoutCommand;
-const deserializeAws_restJson1GetRoleCredentialsCommand = async (output, context) => {
+exports.se_LogoutCommand = se_LogoutCommand;
+const de_GetRoleCredentialsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restJson1GetRoleCredentialsCommandError(output, context);
+        return de_GetRoleCredentialsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = (0, smithy_client_1.expectNonNull)((0, smithy_client_1.expectObject)(await parseBody(output.body, context)), "body");
     if (data.roleCredentials != null) {
-        contents.roleCredentials = deserializeAws_restJson1RoleCredentials(data.roleCredentials, context);
+        contents.roleCredentials = de_RoleCredentials(data.roleCredentials, context);
     }
     return contents;
 };
-exports.deserializeAws_restJson1GetRoleCredentialsCommand = deserializeAws_restJson1GetRoleCredentialsCommand;
-const deserializeAws_restJson1GetRoleCredentialsCommandError = async (output, context) => {
+exports.de_GetRoleCredentialsCommand = de_GetRoleCredentialsCommand;
+const de_GetRoleCredentialsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -23366,16 +23366,16 @@ const deserializeAws_restJson1GetRoleCredentialsCommandError = async (output, co
     switch (errorCode) {
         case "InvalidRequestException":
         case "com.amazonaws.sso#InvalidRequestException":
-            throw await deserializeAws_restJson1InvalidRequestExceptionResponse(parsedOutput, context);
+            throw await de_InvalidRequestExceptionRes(parsedOutput, context);
         case "ResourceNotFoundException":
         case "com.amazonaws.sso#ResourceNotFoundException":
-            throw await deserializeAws_restJson1ResourceNotFoundExceptionResponse(parsedOutput, context);
+            throw await de_ResourceNotFoundExceptionRes(parsedOutput, context);
         case "TooManyRequestsException":
         case "com.amazonaws.sso#TooManyRequestsException":
-            throw await deserializeAws_restJson1TooManyRequestsExceptionResponse(parsedOutput, context);
+            throw await de_TooManyRequestsExceptionRes(parsedOutput, context);
         case "UnauthorizedException":
         case "com.amazonaws.sso#UnauthorizedException":
-            throw await deserializeAws_restJson1UnauthorizedExceptionResponse(parsedOutput, context);
+            throw await de_UnauthorizedExceptionRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -23386,9 +23386,9 @@ const deserializeAws_restJson1GetRoleCredentialsCommandError = async (output, co
             });
     }
 };
-const deserializeAws_restJson1ListAccountRolesCommand = async (output, context) => {
+const de_ListAccountRolesCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restJson1ListAccountRolesCommandError(output, context);
+        return de_ListAccountRolesCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -23398,12 +23398,12 @@ const deserializeAws_restJson1ListAccountRolesCommand = async (output, context) 
         contents.nextToken = (0, smithy_client_1.expectString)(data.nextToken);
     }
     if (data.roleList != null) {
-        contents.roleList = deserializeAws_restJson1RoleListType(data.roleList, context);
+        contents.roleList = de_RoleListType(data.roleList, context);
     }
     return contents;
 };
-exports.deserializeAws_restJson1ListAccountRolesCommand = deserializeAws_restJson1ListAccountRolesCommand;
-const deserializeAws_restJson1ListAccountRolesCommandError = async (output, context) => {
+exports.de_ListAccountRolesCommand = de_ListAccountRolesCommand;
+const de_ListAccountRolesCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -23412,16 +23412,16 @@ const deserializeAws_restJson1ListAccountRolesCommandError = async (output, cont
     switch (errorCode) {
         case "InvalidRequestException":
         case "com.amazonaws.sso#InvalidRequestException":
-            throw await deserializeAws_restJson1InvalidRequestExceptionResponse(parsedOutput, context);
+            throw await de_InvalidRequestExceptionRes(parsedOutput, context);
         case "ResourceNotFoundException":
         case "com.amazonaws.sso#ResourceNotFoundException":
-            throw await deserializeAws_restJson1ResourceNotFoundExceptionResponse(parsedOutput, context);
+            throw await de_ResourceNotFoundExceptionRes(parsedOutput, context);
         case "TooManyRequestsException":
         case "com.amazonaws.sso#TooManyRequestsException":
-            throw await deserializeAws_restJson1TooManyRequestsExceptionResponse(parsedOutput, context);
+            throw await de_TooManyRequestsExceptionRes(parsedOutput, context);
         case "UnauthorizedException":
         case "com.amazonaws.sso#UnauthorizedException":
-            throw await deserializeAws_restJson1UnauthorizedExceptionResponse(parsedOutput, context);
+            throw await de_UnauthorizedExceptionRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -23432,24 +23432,24 @@ const deserializeAws_restJson1ListAccountRolesCommandError = async (output, cont
             });
     }
 };
-const deserializeAws_restJson1ListAccountsCommand = async (output, context) => {
+const de_ListAccountsCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restJson1ListAccountsCommandError(output, context);
+        return de_ListAccountsCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
     });
     const data = (0, smithy_client_1.expectNonNull)((0, smithy_client_1.expectObject)(await parseBody(output.body, context)), "body");
     if (data.accountList != null) {
-        contents.accountList = deserializeAws_restJson1AccountListType(data.accountList, context);
+        contents.accountList = de_AccountListType(data.accountList, context);
     }
     if (data.nextToken != null) {
         contents.nextToken = (0, smithy_client_1.expectString)(data.nextToken);
     }
     return contents;
 };
-exports.deserializeAws_restJson1ListAccountsCommand = deserializeAws_restJson1ListAccountsCommand;
-const deserializeAws_restJson1ListAccountsCommandError = async (output, context) => {
+exports.de_ListAccountsCommand = de_ListAccountsCommand;
+const de_ListAccountsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -23458,16 +23458,16 @@ const deserializeAws_restJson1ListAccountsCommandError = async (output, context)
     switch (errorCode) {
         case "InvalidRequestException":
         case "com.amazonaws.sso#InvalidRequestException":
-            throw await deserializeAws_restJson1InvalidRequestExceptionResponse(parsedOutput, context);
+            throw await de_InvalidRequestExceptionRes(parsedOutput, context);
         case "ResourceNotFoundException":
         case "com.amazonaws.sso#ResourceNotFoundException":
-            throw await deserializeAws_restJson1ResourceNotFoundExceptionResponse(parsedOutput, context);
+            throw await de_ResourceNotFoundExceptionRes(parsedOutput, context);
         case "TooManyRequestsException":
         case "com.amazonaws.sso#TooManyRequestsException":
-            throw await deserializeAws_restJson1TooManyRequestsExceptionResponse(parsedOutput, context);
+            throw await de_TooManyRequestsExceptionRes(parsedOutput, context);
         case "UnauthorizedException":
         case "com.amazonaws.sso#UnauthorizedException":
-            throw await deserializeAws_restJson1UnauthorizedExceptionResponse(parsedOutput, context);
+            throw await de_UnauthorizedExceptionRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -23478,9 +23478,9 @@ const deserializeAws_restJson1ListAccountsCommandError = async (output, context)
             });
     }
 };
-const deserializeAws_restJson1LogoutCommand = async (output, context) => {
+const de_LogoutCommand = async (output, context) => {
     if (output.statusCode !== 200 && output.statusCode >= 300) {
-        return deserializeAws_restJson1LogoutCommandError(output, context);
+        return de_LogoutCommandError(output, context);
     }
     const contents = map({
         $metadata: deserializeMetadata(output),
@@ -23488,8 +23488,8 @@ const deserializeAws_restJson1LogoutCommand = async (output, context) => {
     await collectBody(output.body, context);
     return contents;
 };
-exports.deserializeAws_restJson1LogoutCommand = deserializeAws_restJson1LogoutCommand;
-const deserializeAws_restJson1LogoutCommandError = async (output, context) => {
+exports.de_LogoutCommand = de_LogoutCommand;
+const de_LogoutCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -23498,13 +23498,13 @@ const deserializeAws_restJson1LogoutCommandError = async (output, context) => {
     switch (errorCode) {
         case "InvalidRequestException":
         case "com.amazonaws.sso#InvalidRequestException":
-            throw await deserializeAws_restJson1InvalidRequestExceptionResponse(parsedOutput, context);
+            throw await de_InvalidRequestExceptionRes(parsedOutput, context);
         case "TooManyRequestsException":
         case "com.amazonaws.sso#TooManyRequestsException":
-            throw await deserializeAws_restJson1TooManyRequestsExceptionResponse(parsedOutput, context);
+            throw await de_TooManyRequestsExceptionRes(parsedOutput, context);
         case "UnauthorizedException":
         case "com.amazonaws.sso#UnauthorizedException":
-            throw await deserializeAws_restJson1UnauthorizedExceptionResponse(parsedOutput, context);
+            throw await de_UnauthorizedExceptionRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -23516,7 +23516,7 @@ const deserializeAws_restJson1LogoutCommandError = async (output, context) => {
     }
 };
 const map = smithy_client_1.map;
-const deserializeAws_restJson1InvalidRequestExceptionResponse = async (parsedOutput, context) => {
+const de_InvalidRequestExceptionRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data.message != null) {
@@ -23528,7 +23528,7 @@ const deserializeAws_restJson1InvalidRequestExceptionResponse = async (parsedOut
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restJson1ResourceNotFoundExceptionResponse = async (parsedOutput, context) => {
+const de_ResourceNotFoundExceptionRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data.message != null) {
@@ -23540,7 +23540,7 @@ const deserializeAws_restJson1ResourceNotFoundExceptionResponse = async (parsedO
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restJson1TooManyRequestsExceptionResponse = async (parsedOutput, context) => {
+const de_TooManyRequestsExceptionRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data.message != null) {
@@ -23552,7 +23552,7 @@ const deserializeAws_restJson1TooManyRequestsExceptionResponse = async (parsedOu
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restJson1UnauthorizedExceptionResponse = async (parsedOutput, context) => {
+const de_UnauthorizedExceptionRes = async (parsedOutput, context) => {
     const contents = map({});
     const data = parsedOutput.body;
     if (data.message != null) {
@@ -23564,25 +23564,25 @@ const deserializeAws_restJson1UnauthorizedExceptionResponse = async (parsedOutpu
     });
     return (0, smithy_client_1.decorateServiceException)(exception, parsedOutput.body);
 };
-const deserializeAws_restJson1AccountInfo = (output, context) => {
+const de_AccountInfo = (output, context) => {
     return {
         accountId: (0, smithy_client_1.expectString)(output.accountId),
         accountName: (0, smithy_client_1.expectString)(output.accountName),
         emailAddress: (0, smithy_client_1.expectString)(output.emailAddress),
     };
 };
-const deserializeAws_restJson1AccountListType = (output, context) => {
+const de_AccountListType = (output, context) => {
     const retVal = (output || [])
         .filter((e) => e != null)
         .map((entry) => {
         if (entry === null) {
             return null;
         }
-        return deserializeAws_restJson1AccountInfo(entry, context);
+        return de_AccountInfo(entry, context);
     });
     return retVal;
 };
-const deserializeAws_restJson1RoleCredentials = (output, context) => {
+const de_RoleCredentials = (output, context) => {
     return {
         accessKeyId: (0, smithy_client_1.expectString)(output.accessKeyId),
         expiration: (0, smithy_client_1.expectLong)(output.expiration),
@@ -23590,20 +23590,20 @@ const deserializeAws_restJson1RoleCredentials = (output, context) => {
         sessionToken: (0, smithy_client_1.expectString)(output.sessionToken),
     };
 };
-const deserializeAws_restJson1RoleInfo = (output, context) => {
+const de_RoleInfo = (output, context) => {
     return {
         accountId: (0, smithy_client_1.expectString)(output.accountId),
         roleName: (0, smithy_client_1.expectString)(output.roleName),
     };
 };
-const deserializeAws_restJson1RoleListType = (output, context) => {
+const de_RoleListType = (output, context) => {
     const retVal = (output || [])
         .filter((e) => e != null)
         .map((entry) => {
         if (entry === null) {
             return null;
         }
-        return deserializeAws_restJson1RoleInfo(entry, context);
+        return de_RoleInfo(entry, context);
     });
     return retVal;
 };
@@ -24355,10 +24355,10 @@ class AssumeRoleCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_query_1.serializeAws_queryAssumeRoleCommand)(input, context);
+        return (0, Aws_query_1.se_AssumeRoleCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_query_1.deserializeAws_queryAssumeRoleCommand)(output, context);
+        return (0, Aws_query_1.de_AssumeRoleCommand)(output, context);
     }
 }
 exports.AssumeRoleCommand = AssumeRoleCommand;
@@ -24409,10 +24409,10 @@ class AssumeRoleWithSAMLCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_query_1.serializeAws_queryAssumeRoleWithSAMLCommand)(input, context);
+        return (0, Aws_query_1.se_AssumeRoleWithSAMLCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_query_1.deserializeAws_queryAssumeRoleWithSAMLCommand)(output, context);
+        return (0, Aws_query_1.de_AssumeRoleWithSAMLCommand)(output, context);
     }
 }
 exports.AssumeRoleWithSAMLCommand = AssumeRoleWithSAMLCommand;
@@ -24463,10 +24463,10 @@ class AssumeRoleWithWebIdentityCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_query_1.serializeAws_queryAssumeRoleWithWebIdentityCommand)(input, context);
+        return (0, Aws_query_1.se_AssumeRoleWithWebIdentityCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_query_1.deserializeAws_queryAssumeRoleWithWebIdentityCommand)(output, context);
+        return (0, Aws_query_1.de_AssumeRoleWithWebIdentityCommand)(output, context);
     }
 }
 exports.AssumeRoleWithWebIdentityCommand = AssumeRoleWithWebIdentityCommand;
@@ -24519,10 +24519,10 @@ class DecodeAuthorizationMessageCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_query_1.serializeAws_queryDecodeAuthorizationMessageCommand)(input, context);
+        return (0, Aws_query_1.se_DecodeAuthorizationMessageCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_query_1.deserializeAws_queryDecodeAuthorizationMessageCommand)(output, context);
+        return (0, Aws_query_1.de_DecodeAuthorizationMessageCommand)(output, context);
     }
 }
 exports.DecodeAuthorizationMessageCommand = DecodeAuthorizationMessageCommand;
@@ -24575,10 +24575,10 @@ class GetAccessKeyInfoCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_query_1.serializeAws_queryGetAccessKeyInfoCommand)(input, context);
+        return (0, Aws_query_1.se_GetAccessKeyInfoCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_query_1.deserializeAws_queryGetAccessKeyInfoCommand)(output, context);
+        return (0, Aws_query_1.de_GetAccessKeyInfoCommand)(output, context);
     }
 }
 exports.GetAccessKeyInfoCommand = GetAccessKeyInfoCommand;
@@ -24631,10 +24631,10 @@ class GetCallerIdentityCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_query_1.serializeAws_queryGetCallerIdentityCommand)(input, context);
+        return (0, Aws_query_1.se_GetCallerIdentityCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_query_1.deserializeAws_queryGetCallerIdentityCommand)(output, context);
+        return (0, Aws_query_1.de_GetCallerIdentityCommand)(output, context);
     }
 }
 exports.GetCallerIdentityCommand = GetCallerIdentityCommand;
@@ -24687,10 +24687,10 @@ class GetFederationTokenCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_query_1.serializeAws_queryGetFederationTokenCommand)(input, context);
+        return (0, Aws_query_1.se_GetFederationTokenCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_query_1.deserializeAws_queryGetFederationTokenCommand)(output, context);
+        return (0, Aws_query_1.de_GetFederationTokenCommand)(output, context);
     }
 }
 exports.GetFederationTokenCommand = GetFederationTokenCommand;
@@ -24743,10 +24743,10 @@ class GetSessionTokenCommand extends smithy_client_1.Command {
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
     serialize(input, context) {
-        return (0, Aws_query_1.serializeAws_queryGetSessionTokenCommand)(input, context);
+        return (0, Aws_query_1.se_GetSessionTokenCommand)(input, context);
     }
     deserialize(output, context) {
-        return (0, Aws_query_1.deserializeAws_queryGetSessionTokenCommand)(output, context);
+        return (0, Aws_query_1.de_GetSessionTokenCommand)(output, context);
     }
 }
 exports.GetSessionTokenCommand = GetSessionTokenCommand;
@@ -25121,131 +25121,115 @@ exports.InvalidAuthorizationMessageException = InvalidAuthorizationMessageExcept
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.deserializeAws_queryGetSessionTokenCommand = exports.deserializeAws_queryGetFederationTokenCommand = exports.deserializeAws_queryGetCallerIdentityCommand = exports.deserializeAws_queryGetAccessKeyInfoCommand = exports.deserializeAws_queryDecodeAuthorizationMessageCommand = exports.deserializeAws_queryAssumeRoleWithWebIdentityCommand = exports.deserializeAws_queryAssumeRoleWithSAMLCommand = exports.deserializeAws_queryAssumeRoleCommand = exports.serializeAws_queryGetSessionTokenCommand = exports.serializeAws_queryGetFederationTokenCommand = exports.serializeAws_queryGetCallerIdentityCommand = exports.serializeAws_queryGetAccessKeyInfoCommand = exports.serializeAws_queryDecodeAuthorizationMessageCommand = exports.serializeAws_queryAssumeRoleWithWebIdentityCommand = exports.serializeAws_queryAssumeRoleWithSAMLCommand = exports.serializeAws_queryAssumeRoleCommand = void 0;
+exports.de_GetSessionTokenCommand = exports.de_GetFederationTokenCommand = exports.de_GetCallerIdentityCommand = exports.de_GetAccessKeyInfoCommand = exports.de_DecodeAuthorizationMessageCommand = exports.de_AssumeRoleWithWebIdentityCommand = exports.de_AssumeRoleWithSAMLCommand = exports.de_AssumeRoleCommand = exports.se_GetSessionTokenCommand = exports.se_GetFederationTokenCommand = exports.se_GetCallerIdentityCommand = exports.se_GetAccessKeyInfoCommand = exports.se_DecodeAuthorizationMessageCommand = exports.se_AssumeRoleWithWebIdentityCommand = exports.se_AssumeRoleWithSAMLCommand = exports.se_AssumeRoleCommand = void 0;
 const protocol_http_1 = __nccwpck_require__(70223);
 const smithy_client_1 = __nccwpck_require__(4963);
 const fast_xml_parser_1 = __nccwpck_require__(12603);
 const models_0_1 = __nccwpck_require__(21780);
 const STSServiceException_1 = __nccwpck_require__(26450);
-const serializeAws_queryAssumeRoleCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-    };
+const se_AssumeRoleCommand = async (input, context) => {
+    const headers = SHARED_HEADERS;
     let body;
     body = buildFormUrlencodedString({
-        ...serializeAws_queryAssumeRoleRequest(input, context),
+        ...se_AssumeRoleRequest(input, context),
         Action: "AssumeRole",
         Version: "2011-06-15",
     });
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
-exports.serializeAws_queryAssumeRoleCommand = serializeAws_queryAssumeRoleCommand;
-const serializeAws_queryAssumeRoleWithSAMLCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-    };
+exports.se_AssumeRoleCommand = se_AssumeRoleCommand;
+const se_AssumeRoleWithSAMLCommand = async (input, context) => {
+    const headers = SHARED_HEADERS;
     let body;
     body = buildFormUrlencodedString({
-        ...serializeAws_queryAssumeRoleWithSAMLRequest(input, context),
+        ...se_AssumeRoleWithSAMLRequest(input, context),
         Action: "AssumeRoleWithSAML",
         Version: "2011-06-15",
     });
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
-exports.serializeAws_queryAssumeRoleWithSAMLCommand = serializeAws_queryAssumeRoleWithSAMLCommand;
-const serializeAws_queryAssumeRoleWithWebIdentityCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-    };
+exports.se_AssumeRoleWithSAMLCommand = se_AssumeRoleWithSAMLCommand;
+const se_AssumeRoleWithWebIdentityCommand = async (input, context) => {
+    const headers = SHARED_HEADERS;
     let body;
     body = buildFormUrlencodedString({
-        ...serializeAws_queryAssumeRoleWithWebIdentityRequest(input, context),
+        ...se_AssumeRoleWithWebIdentityRequest(input, context),
         Action: "AssumeRoleWithWebIdentity",
         Version: "2011-06-15",
     });
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
-exports.serializeAws_queryAssumeRoleWithWebIdentityCommand = serializeAws_queryAssumeRoleWithWebIdentityCommand;
-const serializeAws_queryDecodeAuthorizationMessageCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-    };
+exports.se_AssumeRoleWithWebIdentityCommand = se_AssumeRoleWithWebIdentityCommand;
+const se_DecodeAuthorizationMessageCommand = async (input, context) => {
+    const headers = SHARED_HEADERS;
     let body;
     body = buildFormUrlencodedString({
-        ...serializeAws_queryDecodeAuthorizationMessageRequest(input, context),
+        ...se_DecodeAuthorizationMessageRequest(input, context),
         Action: "DecodeAuthorizationMessage",
         Version: "2011-06-15",
     });
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
-exports.serializeAws_queryDecodeAuthorizationMessageCommand = serializeAws_queryDecodeAuthorizationMessageCommand;
-const serializeAws_queryGetAccessKeyInfoCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-    };
+exports.se_DecodeAuthorizationMessageCommand = se_DecodeAuthorizationMessageCommand;
+const se_GetAccessKeyInfoCommand = async (input, context) => {
+    const headers = SHARED_HEADERS;
     let body;
     body = buildFormUrlencodedString({
-        ...serializeAws_queryGetAccessKeyInfoRequest(input, context),
+        ...se_GetAccessKeyInfoRequest(input, context),
         Action: "GetAccessKeyInfo",
         Version: "2011-06-15",
     });
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
-exports.serializeAws_queryGetAccessKeyInfoCommand = serializeAws_queryGetAccessKeyInfoCommand;
-const serializeAws_queryGetCallerIdentityCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-    };
+exports.se_GetAccessKeyInfoCommand = se_GetAccessKeyInfoCommand;
+const se_GetCallerIdentityCommand = async (input, context) => {
+    const headers = SHARED_HEADERS;
     let body;
     body = buildFormUrlencodedString({
-        ...serializeAws_queryGetCallerIdentityRequest(input, context),
+        ...se_GetCallerIdentityRequest(input, context),
         Action: "GetCallerIdentity",
         Version: "2011-06-15",
     });
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
-exports.serializeAws_queryGetCallerIdentityCommand = serializeAws_queryGetCallerIdentityCommand;
-const serializeAws_queryGetFederationTokenCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-    };
+exports.se_GetCallerIdentityCommand = se_GetCallerIdentityCommand;
+const se_GetFederationTokenCommand = async (input, context) => {
+    const headers = SHARED_HEADERS;
     let body;
     body = buildFormUrlencodedString({
-        ...serializeAws_queryGetFederationTokenRequest(input, context),
+        ...se_GetFederationTokenRequest(input, context),
         Action: "GetFederationToken",
         Version: "2011-06-15",
     });
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
-exports.serializeAws_queryGetFederationTokenCommand = serializeAws_queryGetFederationTokenCommand;
-const serializeAws_queryGetSessionTokenCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-    };
+exports.se_GetFederationTokenCommand = se_GetFederationTokenCommand;
+const se_GetSessionTokenCommand = async (input, context) => {
+    const headers = SHARED_HEADERS;
     let body;
     body = buildFormUrlencodedString({
-        ...serializeAws_queryGetSessionTokenRequest(input, context),
+        ...se_GetSessionTokenRequest(input, context),
         Action: "GetSessionToken",
         Version: "2011-06-15",
     });
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
-exports.serializeAws_queryGetSessionTokenCommand = serializeAws_queryGetSessionTokenCommand;
-const deserializeAws_queryAssumeRoleCommand = async (output, context) => {
+exports.se_GetSessionTokenCommand = se_GetSessionTokenCommand;
+const de_AssumeRoleCommand = async (output, context) => {
     if (output.statusCode >= 300) {
-        return deserializeAws_queryAssumeRoleCommandError(output, context);
+        return de_AssumeRoleCommandError(output, context);
     }
     const data = await parseBody(output.body, context);
     let contents = {};
-    contents = deserializeAws_queryAssumeRoleResponse(data.AssumeRoleResult, context);
+    contents = de_AssumeRoleResponse(data.AssumeRoleResult, context);
     const response = {
         $metadata: deserializeMetadata(output),
         ...contents,
     };
     return Promise.resolve(response);
 };
-exports.deserializeAws_queryAssumeRoleCommand = deserializeAws_queryAssumeRoleCommand;
-const deserializeAws_queryAssumeRoleCommandError = async (output, context) => {
+exports.de_AssumeRoleCommand = de_AssumeRoleCommand;
+const de_AssumeRoleCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -25254,16 +25238,16 @@ const deserializeAws_queryAssumeRoleCommandError = async (output, context) => {
     switch (errorCode) {
         case "ExpiredTokenException":
         case "com.amazonaws.sts#ExpiredTokenException":
-            throw await deserializeAws_queryExpiredTokenExceptionResponse(parsedOutput, context);
+            throw await de_ExpiredTokenExceptionRes(parsedOutput, context);
         case "MalformedPolicyDocument":
         case "com.amazonaws.sts#MalformedPolicyDocumentException":
-            throw await deserializeAws_queryMalformedPolicyDocumentExceptionResponse(parsedOutput, context);
+            throw await de_MalformedPolicyDocumentExceptionRes(parsedOutput, context);
         case "PackedPolicyTooLarge":
         case "com.amazonaws.sts#PackedPolicyTooLargeException":
-            throw await deserializeAws_queryPackedPolicyTooLargeExceptionResponse(parsedOutput, context);
+            throw await de_PackedPolicyTooLargeExceptionRes(parsedOutput, context);
         case "RegionDisabledException":
         case "com.amazonaws.sts#RegionDisabledException":
-            throw await deserializeAws_queryRegionDisabledExceptionResponse(parsedOutput, context);
+            throw await de_RegionDisabledExceptionRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -25274,21 +25258,21 @@ const deserializeAws_queryAssumeRoleCommandError = async (output, context) => {
             });
     }
 };
-const deserializeAws_queryAssumeRoleWithSAMLCommand = async (output, context) => {
+const de_AssumeRoleWithSAMLCommand = async (output, context) => {
     if (output.statusCode >= 300) {
-        return deserializeAws_queryAssumeRoleWithSAMLCommandError(output, context);
+        return de_AssumeRoleWithSAMLCommandError(output, context);
     }
     const data = await parseBody(output.body, context);
     let contents = {};
-    contents = deserializeAws_queryAssumeRoleWithSAMLResponse(data.AssumeRoleWithSAMLResult, context);
+    contents = de_AssumeRoleWithSAMLResponse(data.AssumeRoleWithSAMLResult, context);
     const response = {
         $metadata: deserializeMetadata(output),
         ...contents,
     };
     return Promise.resolve(response);
 };
-exports.deserializeAws_queryAssumeRoleWithSAMLCommand = deserializeAws_queryAssumeRoleWithSAMLCommand;
-const deserializeAws_queryAssumeRoleWithSAMLCommandError = async (output, context) => {
+exports.de_AssumeRoleWithSAMLCommand = de_AssumeRoleWithSAMLCommand;
+const de_AssumeRoleWithSAMLCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -25297,22 +25281,22 @@ const deserializeAws_queryAssumeRoleWithSAMLCommandError = async (output, contex
     switch (errorCode) {
         case "ExpiredTokenException":
         case "com.amazonaws.sts#ExpiredTokenException":
-            throw await deserializeAws_queryExpiredTokenExceptionResponse(parsedOutput, context);
+            throw await de_ExpiredTokenExceptionRes(parsedOutput, context);
         case "IDPRejectedClaim":
         case "com.amazonaws.sts#IDPRejectedClaimException":
-            throw await deserializeAws_queryIDPRejectedClaimExceptionResponse(parsedOutput, context);
+            throw await de_IDPRejectedClaimExceptionRes(parsedOutput, context);
         case "InvalidIdentityToken":
         case "com.amazonaws.sts#InvalidIdentityTokenException":
-            throw await deserializeAws_queryInvalidIdentityTokenExceptionResponse(parsedOutput, context);
+            throw await de_InvalidIdentityTokenExceptionRes(parsedOutput, context);
         case "MalformedPolicyDocument":
         case "com.amazonaws.sts#MalformedPolicyDocumentException":
-            throw await deserializeAws_queryMalformedPolicyDocumentExceptionResponse(parsedOutput, context);
+            throw await de_MalformedPolicyDocumentExceptionRes(parsedOutput, context);
         case "PackedPolicyTooLarge":
         case "com.amazonaws.sts#PackedPolicyTooLargeException":
-            throw await deserializeAws_queryPackedPolicyTooLargeExceptionResponse(parsedOutput, context);
+            throw await de_PackedPolicyTooLargeExceptionRes(parsedOutput, context);
         case "RegionDisabledException":
         case "com.amazonaws.sts#RegionDisabledException":
-            throw await deserializeAws_queryRegionDisabledExceptionResponse(parsedOutput, context);
+            throw await de_RegionDisabledExceptionRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -25323,21 +25307,21 @@ const deserializeAws_queryAssumeRoleWithSAMLCommandError = async (output, contex
             });
     }
 };
-const deserializeAws_queryAssumeRoleWithWebIdentityCommand = async (output, context) => {
+const de_AssumeRoleWithWebIdentityCommand = async (output, context) => {
     if (output.statusCode >= 300) {
-        return deserializeAws_queryAssumeRoleWithWebIdentityCommandError(output, context);
+        return de_AssumeRoleWithWebIdentityCommandError(output, context);
     }
     const data = await parseBody(output.body, context);
     let contents = {};
-    contents = deserializeAws_queryAssumeRoleWithWebIdentityResponse(data.AssumeRoleWithWebIdentityResult, context);
+    contents = de_AssumeRoleWithWebIdentityResponse(data.AssumeRoleWithWebIdentityResult, context);
     const response = {
         $metadata: deserializeMetadata(output),
         ...contents,
     };
     return Promise.resolve(response);
 };
-exports.deserializeAws_queryAssumeRoleWithWebIdentityCommand = deserializeAws_queryAssumeRoleWithWebIdentityCommand;
-const deserializeAws_queryAssumeRoleWithWebIdentityCommandError = async (output, context) => {
+exports.de_AssumeRoleWithWebIdentityCommand = de_AssumeRoleWithWebIdentityCommand;
+const de_AssumeRoleWithWebIdentityCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -25346,25 +25330,25 @@ const deserializeAws_queryAssumeRoleWithWebIdentityCommandError = async (output,
     switch (errorCode) {
         case "ExpiredTokenException":
         case "com.amazonaws.sts#ExpiredTokenException":
-            throw await deserializeAws_queryExpiredTokenExceptionResponse(parsedOutput, context);
+            throw await de_ExpiredTokenExceptionRes(parsedOutput, context);
         case "IDPCommunicationError":
         case "com.amazonaws.sts#IDPCommunicationErrorException":
-            throw await deserializeAws_queryIDPCommunicationErrorExceptionResponse(parsedOutput, context);
+            throw await de_IDPCommunicationErrorExceptionRes(parsedOutput, context);
         case "IDPRejectedClaim":
         case "com.amazonaws.sts#IDPRejectedClaimException":
-            throw await deserializeAws_queryIDPRejectedClaimExceptionResponse(parsedOutput, context);
+            throw await de_IDPRejectedClaimExceptionRes(parsedOutput, context);
         case "InvalidIdentityToken":
         case "com.amazonaws.sts#InvalidIdentityTokenException":
-            throw await deserializeAws_queryInvalidIdentityTokenExceptionResponse(parsedOutput, context);
+            throw await de_InvalidIdentityTokenExceptionRes(parsedOutput, context);
         case "MalformedPolicyDocument":
         case "com.amazonaws.sts#MalformedPolicyDocumentException":
-            throw await deserializeAws_queryMalformedPolicyDocumentExceptionResponse(parsedOutput, context);
+            throw await de_MalformedPolicyDocumentExceptionRes(parsedOutput, context);
         case "PackedPolicyTooLarge":
         case "com.amazonaws.sts#PackedPolicyTooLargeException":
-            throw await deserializeAws_queryPackedPolicyTooLargeExceptionResponse(parsedOutput, context);
+            throw await de_PackedPolicyTooLargeExceptionRes(parsedOutput, context);
         case "RegionDisabledException":
         case "com.amazonaws.sts#RegionDisabledException":
-            throw await deserializeAws_queryRegionDisabledExceptionResponse(parsedOutput, context);
+            throw await de_RegionDisabledExceptionRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -25375,21 +25359,21 @@ const deserializeAws_queryAssumeRoleWithWebIdentityCommandError = async (output,
             });
     }
 };
-const deserializeAws_queryDecodeAuthorizationMessageCommand = async (output, context) => {
+const de_DecodeAuthorizationMessageCommand = async (output, context) => {
     if (output.statusCode >= 300) {
-        return deserializeAws_queryDecodeAuthorizationMessageCommandError(output, context);
+        return de_DecodeAuthorizationMessageCommandError(output, context);
     }
     const data = await parseBody(output.body, context);
     let contents = {};
-    contents = deserializeAws_queryDecodeAuthorizationMessageResponse(data.DecodeAuthorizationMessageResult, context);
+    contents = de_DecodeAuthorizationMessageResponse(data.DecodeAuthorizationMessageResult, context);
     const response = {
         $metadata: deserializeMetadata(output),
         ...contents,
     };
     return Promise.resolve(response);
 };
-exports.deserializeAws_queryDecodeAuthorizationMessageCommand = deserializeAws_queryDecodeAuthorizationMessageCommand;
-const deserializeAws_queryDecodeAuthorizationMessageCommandError = async (output, context) => {
+exports.de_DecodeAuthorizationMessageCommand = de_DecodeAuthorizationMessageCommand;
+const de_DecodeAuthorizationMessageCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -25398,7 +25382,7 @@ const deserializeAws_queryDecodeAuthorizationMessageCommandError = async (output
     switch (errorCode) {
         case "InvalidAuthorizationMessageException":
         case "com.amazonaws.sts#InvalidAuthorizationMessageException":
-            throw await deserializeAws_queryInvalidAuthorizationMessageExceptionResponse(parsedOutput, context);
+            throw await de_InvalidAuthorizationMessageExceptionRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -25409,21 +25393,21 @@ const deserializeAws_queryDecodeAuthorizationMessageCommandError = async (output
             });
     }
 };
-const deserializeAws_queryGetAccessKeyInfoCommand = async (output, context) => {
+const de_GetAccessKeyInfoCommand = async (output, context) => {
     if (output.statusCode >= 300) {
-        return deserializeAws_queryGetAccessKeyInfoCommandError(output, context);
+        return de_GetAccessKeyInfoCommandError(output, context);
     }
     const data = await parseBody(output.body, context);
     let contents = {};
-    contents = deserializeAws_queryGetAccessKeyInfoResponse(data.GetAccessKeyInfoResult, context);
+    contents = de_GetAccessKeyInfoResponse(data.GetAccessKeyInfoResult, context);
     const response = {
         $metadata: deserializeMetadata(output),
         ...contents,
     };
     return Promise.resolve(response);
 };
-exports.deserializeAws_queryGetAccessKeyInfoCommand = deserializeAws_queryGetAccessKeyInfoCommand;
-const deserializeAws_queryGetAccessKeyInfoCommandError = async (output, context) => {
+exports.de_GetAccessKeyInfoCommand = de_GetAccessKeyInfoCommand;
+const de_GetAccessKeyInfoCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -25437,21 +25421,21 @@ const deserializeAws_queryGetAccessKeyInfoCommandError = async (output, context)
         errorCode,
     });
 };
-const deserializeAws_queryGetCallerIdentityCommand = async (output, context) => {
+const de_GetCallerIdentityCommand = async (output, context) => {
     if (output.statusCode >= 300) {
-        return deserializeAws_queryGetCallerIdentityCommandError(output, context);
+        return de_GetCallerIdentityCommandError(output, context);
     }
     const data = await parseBody(output.body, context);
     let contents = {};
-    contents = deserializeAws_queryGetCallerIdentityResponse(data.GetCallerIdentityResult, context);
+    contents = de_GetCallerIdentityResponse(data.GetCallerIdentityResult, context);
     const response = {
         $metadata: deserializeMetadata(output),
         ...contents,
     };
     return Promise.resolve(response);
 };
-exports.deserializeAws_queryGetCallerIdentityCommand = deserializeAws_queryGetCallerIdentityCommand;
-const deserializeAws_queryGetCallerIdentityCommandError = async (output, context) => {
+exports.de_GetCallerIdentityCommand = de_GetCallerIdentityCommand;
+const de_GetCallerIdentityCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -25465,21 +25449,21 @@ const deserializeAws_queryGetCallerIdentityCommandError = async (output, context
         errorCode,
     });
 };
-const deserializeAws_queryGetFederationTokenCommand = async (output, context) => {
+const de_GetFederationTokenCommand = async (output, context) => {
     if (output.statusCode >= 300) {
-        return deserializeAws_queryGetFederationTokenCommandError(output, context);
+        return de_GetFederationTokenCommandError(output, context);
     }
     const data = await parseBody(output.body, context);
     let contents = {};
-    contents = deserializeAws_queryGetFederationTokenResponse(data.GetFederationTokenResult, context);
+    contents = de_GetFederationTokenResponse(data.GetFederationTokenResult, context);
     const response = {
         $metadata: deserializeMetadata(output),
         ...contents,
     };
     return Promise.resolve(response);
 };
-exports.deserializeAws_queryGetFederationTokenCommand = deserializeAws_queryGetFederationTokenCommand;
-const deserializeAws_queryGetFederationTokenCommandError = async (output, context) => {
+exports.de_GetFederationTokenCommand = de_GetFederationTokenCommand;
+const de_GetFederationTokenCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -25488,13 +25472,13 @@ const deserializeAws_queryGetFederationTokenCommandError = async (output, contex
     switch (errorCode) {
         case "MalformedPolicyDocument":
         case "com.amazonaws.sts#MalformedPolicyDocumentException":
-            throw await deserializeAws_queryMalformedPolicyDocumentExceptionResponse(parsedOutput, context);
+            throw await de_MalformedPolicyDocumentExceptionRes(parsedOutput, context);
         case "PackedPolicyTooLarge":
         case "com.amazonaws.sts#PackedPolicyTooLargeException":
-            throw await deserializeAws_queryPackedPolicyTooLargeExceptionResponse(parsedOutput, context);
+            throw await de_PackedPolicyTooLargeExceptionRes(parsedOutput, context);
         case "RegionDisabledException":
         case "com.amazonaws.sts#RegionDisabledException":
-            throw await deserializeAws_queryRegionDisabledExceptionResponse(parsedOutput, context);
+            throw await de_RegionDisabledExceptionRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -25505,21 +25489,21 @@ const deserializeAws_queryGetFederationTokenCommandError = async (output, contex
             });
     }
 };
-const deserializeAws_queryGetSessionTokenCommand = async (output, context) => {
+const de_GetSessionTokenCommand = async (output, context) => {
     if (output.statusCode >= 300) {
-        return deserializeAws_queryGetSessionTokenCommandError(output, context);
+        return de_GetSessionTokenCommandError(output, context);
     }
     const data = await parseBody(output.body, context);
     let contents = {};
-    contents = deserializeAws_queryGetSessionTokenResponse(data.GetSessionTokenResult, context);
+    contents = de_GetSessionTokenResponse(data.GetSessionTokenResult, context);
     const response = {
         $metadata: deserializeMetadata(output),
         ...contents,
     };
     return Promise.resolve(response);
 };
-exports.deserializeAws_queryGetSessionTokenCommand = deserializeAws_queryGetSessionTokenCommand;
-const deserializeAws_queryGetSessionTokenCommandError = async (output, context) => {
+exports.de_GetSessionTokenCommand = de_GetSessionTokenCommand;
+const de_GetSessionTokenCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context),
@@ -25528,7 +25512,7 @@ const deserializeAws_queryGetSessionTokenCommandError = async (output, context) 
     switch (errorCode) {
         case "RegionDisabledException":
         case "com.amazonaws.sts#RegionDisabledException":
-            throw await deserializeAws_queryRegionDisabledExceptionResponse(parsedOutput, context);
+            throw await de_RegionDisabledExceptionRes(parsedOutput, context);
         default:
             const parsedBody = parsedOutput.body;
             (0, smithy_client_1.throwDefaultError)({
@@ -25539,79 +25523,79 @@ const deserializeAws_queryGetSessionTokenCommandError = async (output, context) 
             });
     }
 };
-const deserializeAws_queryExpiredTokenExceptionResponse = async (parsedOutput, context) => {
+const de_ExpiredTokenExceptionRes = async (parsedOutput, context) => {
     const body = parsedOutput.body;
-    const deserialized = deserializeAws_queryExpiredTokenException(body.Error, context);
+    const deserialized = de_ExpiredTokenException(body.Error, context);
     const exception = new models_0_1.ExpiredTokenException({
         $metadata: deserializeMetadata(parsedOutput),
         ...deserialized,
     });
     return (0, smithy_client_1.decorateServiceException)(exception, body);
 };
-const deserializeAws_queryIDPCommunicationErrorExceptionResponse = async (parsedOutput, context) => {
+const de_IDPCommunicationErrorExceptionRes = async (parsedOutput, context) => {
     const body = parsedOutput.body;
-    const deserialized = deserializeAws_queryIDPCommunicationErrorException(body.Error, context);
+    const deserialized = de_IDPCommunicationErrorException(body.Error, context);
     const exception = new models_0_1.IDPCommunicationErrorException({
         $metadata: deserializeMetadata(parsedOutput),
         ...deserialized,
     });
     return (0, smithy_client_1.decorateServiceException)(exception, body);
 };
-const deserializeAws_queryIDPRejectedClaimExceptionResponse = async (parsedOutput, context) => {
+const de_IDPRejectedClaimExceptionRes = async (parsedOutput, context) => {
     const body = parsedOutput.body;
-    const deserialized = deserializeAws_queryIDPRejectedClaimException(body.Error, context);
+    const deserialized = de_IDPRejectedClaimException(body.Error, context);
     const exception = new models_0_1.IDPRejectedClaimException({
         $metadata: deserializeMetadata(parsedOutput),
         ...deserialized,
     });
     return (0, smithy_client_1.decorateServiceException)(exception, body);
 };
-const deserializeAws_queryInvalidAuthorizationMessageExceptionResponse = async (parsedOutput, context) => {
+const de_InvalidAuthorizationMessageExceptionRes = async (parsedOutput, context) => {
     const body = parsedOutput.body;
-    const deserialized = deserializeAws_queryInvalidAuthorizationMessageException(body.Error, context);
+    const deserialized = de_InvalidAuthorizationMessageException(body.Error, context);
     const exception = new models_0_1.InvalidAuthorizationMessageException({
         $metadata: deserializeMetadata(parsedOutput),
         ...deserialized,
     });
     return (0, smithy_client_1.decorateServiceException)(exception, body);
 };
-const deserializeAws_queryInvalidIdentityTokenExceptionResponse = async (parsedOutput, context) => {
+const de_InvalidIdentityTokenExceptionRes = async (parsedOutput, context) => {
     const body = parsedOutput.body;
-    const deserialized = deserializeAws_queryInvalidIdentityTokenException(body.Error, context);
+    const deserialized = de_InvalidIdentityTokenException(body.Error, context);
     const exception = new models_0_1.InvalidIdentityTokenException({
         $metadata: deserializeMetadata(parsedOutput),
         ...deserialized,
     });
     return (0, smithy_client_1.decorateServiceException)(exception, body);
 };
-const deserializeAws_queryMalformedPolicyDocumentExceptionResponse = async (parsedOutput, context) => {
+const de_MalformedPolicyDocumentExceptionRes = async (parsedOutput, context) => {
     const body = parsedOutput.body;
-    const deserialized = deserializeAws_queryMalformedPolicyDocumentException(body.Error, context);
+    const deserialized = de_MalformedPolicyDocumentException(body.Error, context);
     const exception = new models_0_1.MalformedPolicyDocumentException({
         $metadata: deserializeMetadata(parsedOutput),
         ...deserialized,
     });
     return (0, smithy_client_1.decorateServiceException)(exception, body);
 };
-const deserializeAws_queryPackedPolicyTooLargeExceptionResponse = async (parsedOutput, context) => {
+const de_PackedPolicyTooLargeExceptionRes = async (parsedOutput, context) => {
     const body = parsedOutput.body;
-    const deserialized = deserializeAws_queryPackedPolicyTooLargeException(body.Error, context);
+    const deserialized = de_PackedPolicyTooLargeException(body.Error, context);
     const exception = new models_0_1.PackedPolicyTooLargeException({
         $metadata: deserializeMetadata(parsedOutput),
         ...deserialized,
     });
     return (0, smithy_client_1.decorateServiceException)(exception, body);
 };
-const deserializeAws_queryRegionDisabledExceptionResponse = async (parsedOutput, context) => {
+const de_RegionDisabledExceptionRes = async (parsedOutput, context) => {
     const body = parsedOutput.body;
-    const deserialized = deserializeAws_queryRegionDisabledException(body.Error, context);
+    const deserialized = de_RegionDisabledException(body.Error, context);
     const exception = new models_0_1.RegionDisabledException({
         $metadata: deserializeMetadata(parsedOutput),
         ...deserialized,
     });
     return (0, smithy_client_1.decorateServiceException)(exception, body);
 };
-const serializeAws_queryAssumeRoleRequest = (input, context) => {
+const se_AssumeRoleRequest = (input, context) => {
     const entries = {};
     if (input.RoleArn != null) {
         entries["RoleArn"] = input.RoleArn;
@@ -25620,7 +25604,7 @@ const serializeAws_queryAssumeRoleRequest = (input, context) => {
         entries["RoleSessionName"] = input.RoleSessionName;
     }
     if (input.PolicyArns != null) {
-        const memberEntries = serializeAws_querypolicyDescriptorListType(input.PolicyArns, context);
+        const memberEntries = se_policyDescriptorListType(input.PolicyArns, context);
         if (input.PolicyArns?.length === 0) {
             entries.PolicyArns = [];
         }
@@ -25636,7 +25620,7 @@ const serializeAws_queryAssumeRoleRequest = (input, context) => {
         entries["DurationSeconds"] = input.DurationSeconds;
     }
     if (input.Tags != null) {
-        const memberEntries = serializeAws_querytagListType(input.Tags, context);
+        const memberEntries = se_tagListType(input.Tags, context);
         if (input.Tags?.length === 0) {
             entries.Tags = [];
         }
@@ -25646,7 +25630,7 @@ const serializeAws_queryAssumeRoleRequest = (input, context) => {
         });
     }
     if (input.TransitiveTagKeys != null) {
-        const memberEntries = serializeAws_querytagKeyListType(input.TransitiveTagKeys, context);
+        const memberEntries = se_tagKeyListType(input.TransitiveTagKeys, context);
         if (input.TransitiveTagKeys?.length === 0) {
             entries.TransitiveTagKeys = [];
         }
@@ -25669,7 +25653,7 @@ const serializeAws_queryAssumeRoleRequest = (input, context) => {
     }
     return entries;
 };
-const serializeAws_queryAssumeRoleWithSAMLRequest = (input, context) => {
+const se_AssumeRoleWithSAMLRequest = (input, context) => {
     const entries = {};
     if (input.RoleArn != null) {
         entries["RoleArn"] = input.RoleArn;
@@ -25681,7 +25665,7 @@ const serializeAws_queryAssumeRoleWithSAMLRequest = (input, context) => {
         entries["SAMLAssertion"] = input.SAMLAssertion;
     }
     if (input.PolicyArns != null) {
-        const memberEntries = serializeAws_querypolicyDescriptorListType(input.PolicyArns, context);
+        const memberEntries = se_policyDescriptorListType(input.PolicyArns, context);
         if (input.PolicyArns?.length === 0) {
             entries.PolicyArns = [];
         }
@@ -25698,7 +25682,7 @@ const serializeAws_queryAssumeRoleWithSAMLRequest = (input, context) => {
     }
     return entries;
 };
-const serializeAws_queryAssumeRoleWithWebIdentityRequest = (input, context) => {
+const se_AssumeRoleWithWebIdentityRequest = (input, context) => {
     const entries = {};
     if (input.RoleArn != null) {
         entries["RoleArn"] = input.RoleArn;
@@ -25713,7 +25697,7 @@ const serializeAws_queryAssumeRoleWithWebIdentityRequest = (input, context) => {
         entries["ProviderId"] = input.ProviderId;
     }
     if (input.PolicyArns != null) {
-        const memberEntries = serializeAws_querypolicyDescriptorListType(input.PolicyArns, context);
+        const memberEntries = se_policyDescriptorListType(input.PolicyArns, context);
         if (input.PolicyArns?.length === 0) {
             entries.PolicyArns = [];
         }
@@ -25730,25 +25714,25 @@ const serializeAws_queryAssumeRoleWithWebIdentityRequest = (input, context) => {
     }
     return entries;
 };
-const serializeAws_queryDecodeAuthorizationMessageRequest = (input, context) => {
+const se_DecodeAuthorizationMessageRequest = (input, context) => {
     const entries = {};
     if (input.EncodedMessage != null) {
         entries["EncodedMessage"] = input.EncodedMessage;
     }
     return entries;
 };
-const serializeAws_queryGetAccessKeyInfoRequest = (input, context) => {
+const se_GetAccessKeyInfoRequest = (input, context) => {
     const entries = {};
     if (input.AccessKeyId != null) {
         entries["AccessKeyId"] = input.AccessKeyId;
     }
     return entries;
 };
-const serializeAws_queryGetCallerIdentityRequest = (input, context) => {
+const se_GetCallerIdentityRequest = (input, context) => {
     const entries = {};
     return entries;
 };
-const serializeAws_queryGetFederationTokenRequest = (input, context) => {
+const se_GetFederationTokenRequest = (input, context) => {
     const entries = {};
     if (input.Name != null) {
         entries["Name"] = input.Name;
@@ -25757,7 +25741,7 @@ const serializeAws_queryGetFederationTokenRequest = (input, context) => {
         entries["Policy"] = input.Policy;
     }
     if (input.PolicyArns != null) {
-        const memberEntries = serializeAws_querypolicyDescriptorListType(input.PolicyArns, context);
+        const memberEntries = se_policyDescriptorListType(input.PolicyArns, context);
         if (input.PolicyArns?.length === 0) {
             entries.PolicyArns = [];
         }
@@ -25770,7 +25754,7 @@ const serializeAws_queryGetFederationTokenRequest = (input, context) => {
         entries["DurationSeconds"] = input.DurationSeconds;
     }
     if (input.Tags != null) {
-        const memberEntries = serializeAws_querytagListType(input.Tags, context);
+        const memberEntries = se_tagListType(input.Tags, context);
         if (input.Tags?.length === 0) {
             entries.Tags = [];
         }
@@ -25781,7 +25765,7 @@ const serializeAws_queryGetFederationTokenRequest = (input, context) => {
     }
     return entries;
 };
-const serializeAws_queryGetSessionTokenRequest = (input, context) => {
+const se_GetSessionTokenRequest = (input, context) => {
     const entries = {};
     if (input.DurationSeconds != null) {
         entries["DurationSeconds"] = input.DurationSeconds;
@@ -25794,14 +25778,14 @@ const serializeAws_queryGetSessionTokenRequest = (input, context) => {
     }
     return entries;
 };
-const serializeAws_querypolicyDescriptorListType = (input, context) => {
+const se_policyDescriptorListType = (input, context) => {
     const entries = {};
     let counter = 1;
     for (const entry of input) {
         if (entry === null) {
             continue;
         }
-        const memberEntries = serializeAws_queryPolicyDescriptorType(entry, context);
+        const memberEntries = se_PolicyDescriptorType(entry, context);
         Object.entries(memberEntries).forEach(([key, value]) => {
             entries[`member.${counter}.${key}`] = value;
         });
@@ -25809,14 +25793,14 @@ const serializeAws_querypolicyDescriptorListType = (input, context) => {
     }
     return entries;
 };
-const serializeAws_queryPolicyDescriptorType = (input, context) => {
+const se_PolicyDescriptorType = (input, context) => {
     const entries = {};
     if (input.arn != null) {
         entries["arn"] = input.arn;
     }
     return entries;
 };
-const serializeAws_queryTag = (input, context) => {
+const se_Tag = (input, context) => {
     const entries = {};
     if (input.Key != null) {
         entries["Key"] = input.Key;
@@ -25826,7 +25810,7 @@ const serializeAws_queryTag = (input, context) => {
     }
     return entries;
 };
-const serializeAws_querytagKeyListType = (input, context) => {
+const se_tagKeyListType = (input, context) => {
     const entries = {};
     let counter = 1;
     for (const entry of input) {
@@ -25838,14 +25822,14 @@ const serializeAws_querytagKeyListType = (input, context) => {
     }
     return entries;
 };
-const serializeAws_querytagListType = (input, context) => {
+const se_tagListType = (input, context) => {
     const entries = {};
     let counter = 1;
     for (const entry of input) {
         if (entry === null) {
             continue;
         }
-        const memberEntries = serializeAws_queryTag(entry, context);
+        const memberEntries = se_Tag(entry, context);
         Object.entries(memberEntries).forEach(([key, value]) => {
             entries[`member.${counter}.${key}`] = value;
         });
@@ -25853,7 +25837,7 @@ const serializeAws_querytagListType = (input, context) => {
     }
     return entries;
 };
-const deserializeAws_queryAssumedRoleUser = (output, context) => {
+const de_AssumedRoleUser = (output, context) => {
     const contents = {};
     if (output["AssumedRoleId"] !== undefined) {
         contents.AssumedRoleId = (0, smithy_client_1.expectString)(output["AssumedRoleId"]);
@@ -25863,13 +25847,13 @@ const deserializeAws_queryAssumedRoleUser = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_queryAssumeRoleResponse = (output, context) => {
+const de_AssumeRoleResponse = (output, context) => {
     const contents = {};
     if (output["Credentials"] !== undefined) {
-        contents.Credentials = deserializeAws_queryCredentials(output["Credentials"], context);
+        contents.Credentials = de_Credentials(output["Credentials"], context);
     }
     if (output["AssumedRoleUser"] !== undefined) {
-        contents.AssumedRoleUser = deserializeAws_queryAssumedRoleUser(output["AssumedRoleUser"], context);
+        contents.AssumedRoleUser = de_AssumedRoleUser(output["AssumedRoleUser"], context);
     }
     if (output["PackedPolicySize"] !== undefined) {
         contents.PackedPolicySize = (0, smithy_client_1.strictParseInt32)(output["PackedPolicySize"]);
@@ -25879,13 +25863,13 @@ const deserializeAws_queryAssumeRoleResponse = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_queryAssumeRoleWithSAMLResponse = (output, context) => {
+const de_AssumeRoleWithSAMLResponse = (output, context) => {
     const contents = {};
     if (output["Credentials"] !== undefined) {
-        contents.Credentials = deserializeAws_queryCredentials(output["Credentials"], context);
+        contents.Credentials = de_Credentials(output["Credentials"], context);
     }
     if (output["AssumedRoleUser"] !== undefined) {
-        contents.AssumedRoleUser = deserializeAws_queryAssumedRoleUser(output["AssumedRoleUser"], context);
+        contents.AssumedRoleUser = de_AssumedRoleUser(output["AssumedRoleUser"], context);
     }
     if (output["PackedPolicySize"] !== undefined) {
         contents.PackedPolicySize = (0, smithy_client_1.strictParseInt32)(output["PackedPolicySize"]);
@@ -25910,16 +25894,16 @@ const deserializeAws_queryAssumeRoleWithSAMLResponse = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_queryAssumeRoleWithWebIdentityResponse = (output, context) => {
+const de_AssumeRoleWithWebIdentityResponse = (output, context) => {
     const contents = {};
     if (output["Credentials"] !== undefined) {
-        contents.Credentials = deserializeAws_queryCredentials(output["Credentials"], context);
+        contents.Credentials = de_Credentials(output["Credentials"], context);
     }
     if (output["SubjectFromWebIdentityToken"] !== undefined) {
         contents.SubjectFromWebIdentityToken = (0, smithy_client_1.expectString)(output["SubjectFromWebIdentityToken"]);
     }
     if (output["AssumedRoleUser"] !== undefined) {
-        contents.AssumedRoleUser = deserializeAws_queryAssumedRoleUser(output["AssumedRoleUser"], context);
+        contents.AssumedRoleUser = de_AssumedRoleUser(output["AssumedRoleUser"], context);
     }
     if (output["PackedPolicySize"] !== undefined) {
         contents.PackedPolicySize = (0, smithy_client_1.strictParseInt32)(output["PackedPolicySize"]);
@@ -25935,7 +25919,7 @@ const deserializeAws_queryAssumeRoleWithWebIdentityResponse = (output, context) 
     }
     return contents;
 };
-const deserializeAws_queryCredentials = (output, context) => {
+const de_Credentials = (output, context) => {
     const contents = {};
     if (output["AccessKeyId"] !== undefined) {
         contents.AccessKeyId = (0, smithy_client_1.expectString)(output["AccessKeyId"]);
@@ -25951,21 +25935,21 @@ const deserializeAws_queryCredentials = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_queryDecodeAuthorizationMessageResponse = (output, context) => {
+const de_DecodeAuthorizationMessageResponse = (output, context) => {
     const contents = {};
     if (output["DecodedMessage"] !== undefined) {
         contents.DecodedMessage = (0, smithy_client_1.expectString)(output["DecodedMessage"]);
     }
     return contents;
 };
-const deserializeAws_queryExpiredTokenException = (output, context) => {
+const de_ExpiredTokenException = (output, context) => {
     const contents = {};
     if (output["message"] !== undefined) {
         contents.message = (0, smithy_client_1.expectString)(output["message"]);
     }
     return contents;
 };
-const deserializeAws_queryFederatedUser = (output, context) => {
+const de_FederatedUser = (output, context) => {
     const contents = {};
     if (output["FederatedUserId"] !== undefined) {
         contents.FederatedUserId = (0, smithy_client_1.expectString)(output["FederatedUserId"]);
@@ -25975,14 +25959,14 @@ const deserializeAws_queryFederatedUser = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_queryGetAccessKeyInfoResponse = (output, context) => {
+const de_GetAccessKeyInfoResponse = (output, context) => {
     const contents = {};
     if (output["Account"] !== undefined) {
         contents.Account = (0, smithy_client_1.expectString)(output["Account"]);
     }
     return contents;
 };
-const deserializeAws_queryGetCallerIdentityResponse = (output, context) => {
+const de_GetCallerIdentityResponse = (output, context) => {
     const contents = {};
     if (output["UserId"] !== undefined) {
         contents.UserId = (0, smithy_client_1.expectString)(output["UserId"]);
@@ -25995,69 +25979,69 @@ const deserializeAws_queryGetCallerIdentityResponse = (output, context) => {
     }
     return contents;
 };
-const deserializeAws_queryGetFederationTokenResponse = (output, context) => {
+const de_GetFederationTokenResponse = (output, context) => {
     const contents = {};
     if (output["Credentials"] !== undefined) {
-        contents.Credentials = deserializeAws_queryCredentials(output["Credentials"], context);
+        contents.Credentials = de_Credentials(output["Credentials"], context);
     }
     if (output["FederatedUser"] !== undefined) {
-        contents.FederatedUser = deserializeAws_queryFederatedUser(output["FederatedUser"], context);
+        contents.FederatedUser = de_FederatedUser(output["FederatedUser"], context);
     }
     if (output["PackedPolicySize"] !== undefined) {
         contents.PackedPolicySize = (0, smithy_client_1.strictParseInt32)(output["PackedPolicySize"]);
     }
     return contents;
 };
-const deserializeAws_queryGetSessionTokenResponse = (output, context) => {
+const de_GetSessionTokenResponse = (output, context) => {
     const contents = {};
     if (output["Credentials"] !== undefined) {
-        contents.Credentials = deserializeAws_queryCredentials(output["Credentials"], context);
+        contents.Credentials = de_Credentials(output["Credentials"], context);
     }
     return contents;
 };
-const deserializeAws_queryIDPCommunicationErrorException = (output, context) => {
+const de_IDPCommunicationErrorException = (output, context) => {
     const contents = {};
     if (output["message"] !== undefined) {
         contents.message = (0, smithy_client_1.expectString)(output["message"]);
     }
     return contents;
 };
-const deserializeAws_queryIDPRejectedClaimException = (output, context) => {
+const de_IDPRejectedClaimException = (output, context) => {
     const contents = {};
     if (output["message"] !== undefined) {
         contents.message = (0, smithy_client_1.expectString)(output["message"]);
     }
     return contents;
 };
-const deserializeAws_queryInvalidAuthorizationMessageException = (output, context) => {
+const de_InvalidAuthorizationMessageException = (output, context) => {
     const contents = {};
     if (output["message"] !== undefined) {
         contents.message = (0, smithy_client_1.expectString)(output["message"]);
     }
     return contents;
 };
-const deserializeAws_queryInvalidIdentityTokenException = (output, context) => {
+const de_InvalidIdentityTokenException = (output, context) => {
     const contents = {};
     if (output["message"] !== undefined) {
         contents.message = (0, smithy_client_1.expectString)(output["message"]);
     }
     return contents;
 };
-const deserializeAws_queryMalformedPolicyDocumentException = (output, context) => {
+const de_MalformedPolicyDocumentException = (output, context) => {
     const contents = {};
     if (output["message"] !== undefined) {
         contents.message = (0, smithy_client_1.expectString)(output["message"]);
     }
     return contents;
 };
-const deserializeAws_queryPackedPolicyTooLargeException = (output, context) => {
+const de_PackedPolicyTooLargeException = (output, context) => {
     const contents = {};
     if (output["message"] !== undefined) {
         contents.message = (0, smithy_client_1.expectString)(output["message"]);
     }
     return contents;
 };
-const deserializeAws_queryRegionDisabledException = (output, context) => {
+const de_RegionDisabledException = (output, context) => {
     const contents = {};
     if (output["message"] !== undefined) {
         contents.message = (0, smithy_client_1.expectString)(output["message"]);
@@ -26094,6 +26078,9 @@ const buildHttpRpcRequest = async (context, headers, path, resolvedHostname, bod
         contents.body = body;
     }
     return new protocol_http_1.HttpRequest(contents);
+};
+const SHARED_HEADERS = {
+    "content-type": "application/x-www-form-urlencoded",
 };
 const parseBody = (streamBody, context) => collectBodyString(streamBody, context).then((encoded) => {
     if (encoded.length) {
@@ -45908,7 +45895,7 @@ exports.LazyJsonString = LazyJsonString;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.convertMap = exports.map = void 0;
+exports.take = exports.convertMap = exports.map = void 0;
 function map(arg0, arg1, arg2) {
     let target;
     let filter;
@@ -45933,25 +45920,7 @@ function map(arg0, arg1, arg2) {
             target[key] = instructions[key];
             continue;
         }
-        let [filter, value] = instructions[key];
-        if (typeof value === "function") {
-            let _value;
-            const defaultFilterPassed = filter === undefined && (_value = value()) != null;
-            const customFilterPassed = (typeof filter === "function" && !!filter(void 0)) || (typeof filter !== "function" && !!filter);
-            if (defaultFilterPassed) {
-                target[key] = _value;
-            }
-            else if (customFilterPassed) {
-                target[key] = value();
-            }
-        }
-        else {
-            const defaultFilterPassed = filter === undefined && value != null;
-            const customFilterPassed = (typeof filter === "function" && !!filter(value)) || (typeof filter !== "function" && !!filter);
-            if (defaultFilterPassed || customFilterPassed) {
-                target[key] = value;
-            }
-        }
+        applyInstruction(target, null, instructions, key);
     }
     return target;
 }
@@ -45964,6 +45933,14 @@ const convertMap = (target) => {
     return output;
 };
 exports.convertMap = convertMap;
+const take = (source, instructions) => {
+    const out = {};
+    for (const key in instructions) {
+        applyInstruction(out, source, instructions, key);
+    }
+    return out;
+};
+exports.take = take;
 const mapWithFilter = (target, filter, instructions) => {
     return map(target, Object.entries(instructions).reduce((_instructions, [key, value]) => {
         if (Array.isArray(value)) {
@@ -45980,6 +45957,40 @@ const mapWithFilter = (target, filter, instructions) => {
         return _instructions;
     }, {}));
 };
+const applyInstruction = (target, source, instructions, targetKey) => {
+    if (source !== null) {
+        let instruction = instructions[targetKey];
+        if (typeof instruction === "function") {
+            instruction = [, instruction];
+        }
+        const [filter = nonNullish, valueFn = pass, sourceKey = targetKey] = instruction;
+        if ((typeof filter === "function" && filter(source[sourceKey])) || (typeof filter !== "function" && !!filter)) {
+            target[targetKey] = valueFn(source[sourceKey]);
+        }
+        return;
+    }
+    let [filter, value] = instructions[targetKey];
+    if (typeof value === "function") {
+        let _value;
+        const defaultFilterPassed = filter === undefined && (_value = value()) != null;
+        const customFilterPassed = (typeof filter === "function" && !!filter(void 0)) || (typeof filter !== "function" && !!filter);
+        if (defaultFilterPassed) {
+            target[targetKey] = _value;
+        }
+        else if (customFilterPassed) {
+            target[targetKey] = value();
+        }
+    }
+    else {
+        const defaultFilterPassed = filter === undefined && value != null;
+        const customFilterPassed = (typeof filter === "function" && !!filter(value)) || (typeof filter !== "function" && !!filter);
+        if (defaultFilterPassed || customFilterPassed) {
+            target[targetKey] = value;
+        }
+    }
+};
+const nonNullish = (_) => _ != null;
+const pass = (_) => _;
 
 
 /***/ }),
@@ -65903,7 +65914,7 @@ module.exports = require("util");
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.306.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo s3","test":"yarn test:unit","test:e2e":"ts-mocha test/**/*.ispec.ts && karma start karma.conf.js","test:unit":"ts-mocha test/**/*.spec.ts"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha1-browser":"3.0.0","@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.306.0","@aws-sdk/config-resolver":"3.306.0","@aws-sdk/credential-provider-node":"3.306.0","@aws-sdk/eventstream-serde-browser":"3.306.0","@aws-sdk/eventstream-serde-config-resolver":"3.306.0","@aws-sdk/eventstream-serde-node":"3.306.0","@aws-sdk/fetch-http-handler":"3.306.0","@aws-sdk/hash-blob-browser":"3.306.0","@aws-sdk/hash-node":"3.306.0","@aws-sdk/hash-stream-node":"3.306.0","@aws-sdk/invalid-dependency":"3.306.0","@aws-sdk/md5-js":"3.306.0","@aws-sdk/middleware-bucket-endpoint":"3.306.0","@aws-sdk/middleware-content-length":"3.306.0","@aws-sdk/middleware-endpoint":"3.306.0","@aws-sdk/middleware-expect-continue":"3.306.0","@aws-sdk/middleware-flexible-checksums":"3.306.0","@aws-sdk/middleware-host-header":"3.306.0","@aws-sdk/middleware-location-constraint":"3.306.0","@aws-sdk/middleware-logger":"3.306.0","@aws-sdk/middleware-recursion-detection":"3.306.0","@aws-sdk/middleware-retry":"3.306.0","@aws-sdk/middleware-sdk-s3":"3.306.0","@aws-sdk/middleware-serde":"3.306.0","@aws-sdk/middleware-signing":"3.306.0","@aws-sdk/middleware-ssec":"3.306.0","@aws-sdk/middleware-stack":"3.306.0","@aws-sdk/middleware-user-agent":"3.306.0","@aws-sdk/node-config-provider":"3.306.0","@aws-sdk/node-http-handler":"3.306.0","@aws-sdk/protocol-http":"3.306.0","@aws-sdk/signature-v4-multi-region":"3.306.0","@aws-sdk/smithy-client":"3.306.0","@aws-sdk/types":"3.306.0","@aws-sdk/url-parser":"3.306.0","@aws-sdk/util-base64":"3.303.0","@aws-sdk/util-body-length-browser":"3.303.0","@aws-sdk/util-body-length-node":"3.303.0","@aws-sdk/util-defaults-mode-browser":"3.306.0","@aws-sdk/util-defaults-mode-node":"3.306.0","@aws-sdk/util-endpoints":"3.306.0","@aws-sdk/util-retry":"3.306.0","@aws-sdk/util-stream-browser":"3.306.0","@aws-sdk/util-stream-node":"3.306.0","@aws-sdk/util-user-agent-browser":"3.306.0","@aws-sdk/util-user-agent-node":"3.306.0","@aws-sdk/util-utf8":"3.303.0","@aws-sdk/util-waiter":"3.306.0","@aws-sdk/xml-builder":"3.303.0","fast-xml-parser":"4.1.2","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.303.0","@tsconfig/node14":"1.0.3","@types/chai":"^4.2.11","@types/mocha":"^8.0.4","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.312.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo s3","test":"yarn test:unit","test:e2e":"ts-mocha test/**/*.ispec.ts && karma start karma.conf.js","test:unit":"ts-mocha test/**/*.spec.ts"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha1-browser":"3.0.0","@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.312.0","@aws-sdk/config-resolver":"3.310.0","@aws-sdk/credential-provider-node":"3.310.0","@aws-sdk/eventstream-serde-browser":"3.310.0","@aws-sdk/eventstream-serde-config-resolver":"3.310.0","@aws-sdk/eventstream-serde-node":"3.310.0","@aws-sdk/fetch-http-handler":"3.310.0","@aws-sdk/hash-blob-browser":"3.310.0","@aws-sdk/hash-node":"3.310.0","@aws-sdk/hash-stream-node":"3.310.0","@aws-sdk/invalid-dependency":"3.310.0","@aws-sdk/md5-js":"3.310.0","@aws-sdk/middleware-bucket-endpoint":"3.310.0","@aws-sdk/middleware-content-length":"3.310.0","@aws-sdk/middleware-endpoint":"3.310.0","@aws-sdk/middleware-expect-continue":"3.310.0","@aws-sdk/middleware-flexible-checksums":"3.310.0","@aws-sdk/middleware-host-header":"3.310.0","@aws-sdk/middleware-location-constraint":"3.310.0","@aws-sdk/middleware-logger":"3.310.0","@aws-sdk/middleware-recursion-detection":"3.310.0","@aws-sdk/middleware-retry":"3.310.0","@aws-sdk/middleware-sdk-s3":"3.310.0","@aws-sdk/middleware-serde":"3.310.0","@aws-sdk/middleware-signing":"3.310.0","@aws-sdk/middleware-ssec":"3.310.0","@aws-sdk/middleware-stack":"3.310.0","@aws-sdk/middleware-user-agent":"3.310.0","@aws-sdk/node-config-provider":"3.310.0","@aws-sdk/node-http-handler":"3.310.0","@aws-sdk/protocol-http":"3.310.0","@aws-sdk/signature-v4-multi-region":"3.310.0","@aws-sdk/smithy-client":"3.310.0","@aws-sdk/types":"3.310.0","@aws-sdk/url-parser":"3.310.0","@aws-sdk/util-base64":"3.310.0","@aws-sdk/util-body-length-browser":"3.310.0","@aws-sdk/util-body-length-node":"3.310.0","@aws-sdk/util-defaults-mode-browser":"3.310.0","@aws-sdk/util-defaults-mode-node":"3.310.0","@aws-sdk/util-endpoints":"3.310.0","@aws-sdk/util-retry":"3.310.0","@aws-sdk/util-stream-browser":"3.310.0","@aws-sdk/util-stream-node":"3.310.0","@aws-sdk/util-user-agent-browser":"3.310.0","@aws-sdk/util-user-agent-node":"3.310.0","@aws-sdk/util-utf8":"3.310.0","@aws-sdk/util-waiter":"3.310.0","@aws-sdk/xml-builder":"3.310.0","fast-xml-parser":"4.1.2","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.310.0","@tsconfig/node14":"1.0.3","@types/chai":"^4.2.11","@types/mocha":"^8.0.4","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
 
 /***/ }),
 
@@ -65911,7 +65922,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"AWS SDK for JavaScript Sso Oidc Client for Node.js, Browser and React Native","version":"3.306.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sso-oidc"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.306.0","@aws-sdk/fetch-http-handler":"3.306.0","@aws-sdk/hash-node":"3.306.0","@aws-sdk/invalid-dependency":"3.306.0","@aws-sdk/middleware-content-length":"3.306.0","@aws-sdk/middleware-endpoint":"3.306.0","@aws-sdk/middleware-host-header":"3.306.0","@aws-sdk/middleware-logger":"3.306.0","@aws-sdk/middleware-recursion-detection":"3.306.0","@aws-sdk/middleware-retry":"3.306.0","@aws-sdk/middleware-serde":"3.306.0","@aws-sdk/middleware-stack":"3.306.0","@aws-sdk/middleware-user-agent":"3.306.0","@aws-sdk/node-config-provider":"3.306.0","@aws-sdk/node-http-handler":"3.306.0","@aws-sdk/protocol-http":"3.306.0","@aws-sdk/smithy-client":"3.306.0","@aws-sdk/types":"3.306.0","@aws-sdk/url-parser":"3.306.0","@aws-sdk/util-base64":"3.303.0","@aws-sdk/util-body-length-browser":"3.303.0","@aws-sdk/util-body-length-node":"3.303.0","@aws-sdk/util-defaults-mode-browser":"3.306.0","@aws-sdk/util-defaults-mode-node":"3.306.0","@aws-sdk/util-endpoints":"3.306.0","@aws-sdk/util-retry":"3.306.0","@aws-sdk/util-user-agent-browser":"3.306.0","@aws-sdk/util-user-agent-node":"3.306.0","@aws-sdk/util-utf8":"3.303.0","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.303.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso-oidc","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso-oidc"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"AWS SDK for JavaScript Sso Oidc Client for Node.js, Browser and React Native","version":"3.310.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sso-oidc"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.310.0","@aws-sdk/fetch-http-handler":"3.310.0","@aws-sdk/hash-node":"3.310.0","@aws-sdk/invalid-dependency":"3.310.0","@aws-sdk/middleware-content-length":"3.310.0","@aws-sdk/middleware-endpoint":"3.310.0","@aws-sdk/middleware-host-header":"3.310.0","@aws-sdk/middleware-logger":"3.310.0","@aws-sdk/middleware-recursion-detection":"3.310.0","@aws-sdk/middleware-retry":"3.310.0","@aws-sdk/middleware-serde":"3.310.0","@aws-sdk/middleware-stack":"3.310.0","@aws-sdk/middleware-user-agent":"3.310.0","@aws-sdk/node-config-provider":"3.310.0","@aws-sdk/node-http-handler":"3.310.0","@aws-sdk/protocol-http":"3.310.0","@aws-sdk/smithy-client":"3.310.0","@aws-sdk/types":"3.310.0","@aws-sdk/url-parser":"3.310.0","@aws-sdk/util-base64":"3.310.0","@aws-sdk/util-body-length-browser":"3.310.0","@aws-sdk/util-body-length-node":"3.310.0","@aws-sdk/util-defaults-mode-browser":"3.310.0","@aws-sdk/util-defaults-mode-node":"3.310.0","@aws-sdk/util-endpoints":"3.310.0","@aws-sdk/util-retry":"3.310.0","@aws-sdk/util-user-agent-browser":"3.310.0","@aws-sdk/util-user-agent-node":"3.310.0","@aws-sdk/util-utf8":"3.310.0","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.310.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso-oidc","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso-oidc"}}');
 
 /***/ }),
 
@@ -65919,7 +65930,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"A
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.306.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sso"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.306.0","@aws-sdk/fetch-http-handler":"3.306.0","@aws-sdk/hash-node":"3.306.0","@aws-sdk/invalid-dependency":"3.306.0","@aws-sdk/middleware-content-length":"3.306.0","@aws-sdk/middleware-endpoint":"3.306.0","@aws-sdk/middleware-host-header":"3.306.0","@aws-sdk/middleware-logger":"3.306.0","@aws-sdk/middleware-recursion-detection":"3.306.0","@aws-sdk/middleware-retry":"3.306.0","@aws-sdk/middleware-serde":"3.306.0","@aws-sdk/middleware-stack":"3.306.0","@aws-sdk/middleware-user-agent":"3.306.0","@aws-sdk/node-config-provider":"3.306.0","@aws-sdk/node-http-handler":"3.306.0","@aws-sdk/protocol-http":"3.306.0","@aws-sdk/smithy-client":"3.306.0","@aws-sdk/types":"3.306.0","@aws-sdk/url-parser":"3.306.0","@aws-sdk/util-base64":"3.303.0","@aws-sdk/util-body-length-browser":"3.303.0","@aws-sdk/util-body-length-node":"3.303.0","@aws-sdk/util-defaults-mode-browser":"3.306.0","@aws-sdk/util-defaults-mode-node":"3.306.0","@aws-sdk/util-endpoints":"3.306.0","@aws-sdk/util-retry":"3.306.0","@aws-sdk/util-user-agent-browser":"3.306.0","@aws-sdk/util-user-agent-node":"3.306.0","@aws-sdk/util-utf8":"3.303.0","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.303.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.310.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sso"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.310.0","@aws-sdk/fetch-http-handler":"3.310.0","@aws-sdk/hash-node":"3.310.0","@aws-sdk/invalid-dependency":"3.310.0","@aws-sdk/middleware-content-length":"3.310.0","@aws-sdk/middleware-endpoint":"3.310.0","@aws-sdk/middleware-host-header":"3.310.0","@aws-sdk/middleware-logger":"3.310.0","@aws-sdk/middleware-recursion-detection":"3.310.0","@aws-sdk/middleware-retry":"3.310.0","@aws-sdk/middleware-serde":"3.310.0","@aws-sdk/middleware-stack":"3.310.0","@aws-sdk/middleware-user-agent":"3.310.0","@aws-sdk/node-config-provider":"3.310.0","@aws-sdk/node-http-handler":"3.310.0","@aws-sdk/protocol-http":"3.310.0","@aws-sdk/smithy-client":"3.310.0","@aws-sdk/types":"3.310.0","@aws-sdk/url-parser":"3.310.0","@aws-sdk/util-base64":"3.310.0","@aws-sdk/util-body-length-browser":"3.310.0","@aws-sdk/util-body-length-node":"3.310.0","@aws-sdk/util-defaults-mode-browser":"3.310.0","@aws-sdk/util-defaults-mode-node":"3.310.0","@aws-sdk/util-endpoints":"3.310.0","@aws-sdk/util-retry":"3.310.0","@aws-sdk/util-user-agent-browser":"3.310.0","@aws-sdk/util-user-agent-node":"3.310.0","@aws-sdk/util-utf8":"3.310.0","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.310.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
 
 /***/ }),
 
@@ -65927,7 +65938,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.306.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sts","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.306.0","@aws-sdk/credential-provider-node":"3.306.0","@aws-sdk/fetch-http-handler":"3.306.0","@aws-sdk/hash-node":"3.306.0","@aws-sdk/invalid-dependency":"3.306.0","@aws-sdk/middleware-content-length":"3.306.0","@aws-sdk/middleware-endpoint":"3.306.0","@aws-sdk/middleware-host-header":"3.306.0","@aws-sdk/middleware-logger":"3.306.0","@aws-sdk/middleware-recursion-detection":"3.306.0","@aws-sdk/middleware-retry":"3.306.0","@aws-sdk/middleware-sdk-sts":"3.306.0","@aws-sdk/middleware-serde":"3.306.0","@aws-sdk/middleware-signing":"3.306.0","@aws-sdk/middleware-stack":"3.306.0","@aws-sdk/middleware-user-agent":"3.306.0","@aws-sdk/node-config-provider":"3.306.0","@aws-sdk/node-http-handler":"3.306.0","@aws-sdk/protocol-http":"3.306.0","@aws-sdk/smithy-client":"3.306.0","@aws-sdk/types":"3.306.0","@aws-sdk/url-parser":"3.306.0","@aws-sdk/util-base64":"3.303.0","@aws-sdk/util-body-length-browser":"3.303.0","@aws-sdk/util-body-length-node":"3.303.0","@aws-sdk/util-defaults-mode-browser":"3.306.0","@aws-sdk/util-defaults-mode-node":"3.306.0","@aws-sdk/util-endpoints":"3.306.0","@aws-sdk/util-retry":"3.306.0","@aws-sdk/util-user-agent-browser":"3.306.0","@aws-sdk/util-user-agent-node":"3.306.0","@aws-sdk/util-utf8":"3.303.0","fast-xml-parser":"4.1.2","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.303.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.312.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sts","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.310.0","@aws-sdk/credential-provider-node":"3.310.0","@aws-sdk/fetch-http-handler":"3.310.0","@aws-sdk/hash-node":"3.310.0","@aws-sdk/invalid-dependency":"3.310.0","@aws-sdk/middleware-content-length":"3.310.0","@aws-sdk/middleware-endpoint":"3.310.0","@aws-sdk/middleware-host-header":"3.310.0","@aws-sdk/middleware-logger":"3.310.0","@aws-sdk/middleware-recursion-detection":"3.310.0","@aws-sdk/middleware-retry":"3.310.0","@aws-sdk/middleware-sdk-sts":"3.310.0","@aws-sdk/middleware-serde":"3.310.0","@aws-sdk/middleware-signing":"3.310.0","@aws-sdk/middleware-stack":"3.310.0","@aws-sdk/middleware-user-agent":"3.310.0","@aws-sdk/node-config-provider":"3.310.0","@aws-sdk/node-http-handler":"3.310.0","@aws-sdk/protocol-http":"3.310.0","@aws-sdk/smithy-client":"3.310.0","@aws-sdk/types":"3.310.0","@aws-sdk/url-parser":"3.310.0","@aws-sdk/util-base64":"3.310.0","@aws-sdk/util-body-length-browser":"3.310.0","@aws-sdk/util-body-length-node":"3.310.0","@aws-sdk/util-defaults-mode-browser":"3.310.0","@aws-sdk/util-defaults-mode-node":"3.310.0","@aws-sdk/util-endpoints":"3.310.0","@aws-sdk/util-retry":"3.310.0","@aws-sdk/util-user-agent-browser":"3.310.0","@aws-sdk/util-user-agent-node":"3.310.0","@aws-sdk/util-utf8":"3.310.0","fast-xml-parser":"4.1.2","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.310.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
 
 /***/ }),
 
