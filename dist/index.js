@@ -78,6 +78,7 @@ function run() {
                 bucketName: core.getInput('bucketName', { required: true }),
                 sourceDir: core.getInput('sourceDir') || node_process_1.default.cwd(),
                 include: include.length > 0 ? include : ['**'],
+                includeDots: core.getBooleanInput('includeDots'),
                 exclude: core.getMultilineInput('exclude'),
                 region: core.getInput('region') || constants_1.YANDEX_CLOUD_REGION,
                 clear: core.getBooleanInput('clear')
@@ -179,7 +180,8 @@ function upload(s3Client, logger, options) {
         const fileStream = fast_glob_1.default.stream(options.include, {
             ignore: options.exclude,
             cwd: options.sourceDir,
-            onlyFiles: true
+            onlyFiles: true,
+            dot: options.includeDots
         });
         const s3Requests = [];
         try {

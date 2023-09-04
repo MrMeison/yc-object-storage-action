@@ -6,6 +6,7 @@ export type Options = {
   region: string
   sourceDir: string
   include: string[]
+  includeDots: boolean
   exclude: string[]
   clear: boolean
 }

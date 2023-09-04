@@ -22,6 +22,9 @@ inputs:
   include:
     description: 'Include patterns for files'
     required: false
+  includeDots:
+    description: 'Include dot files'
+    required: false
   exclude:
     description: 'Exclude patterns for files'
     required: false
