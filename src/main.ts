@@ -26,6 +26,7 @@ async function run(): Promise<void> {
       bucketName: core.getInput('bucketName', {required: true}),
       sourceDir: core.getInput('sourceDir') || process.cwd(),
       include: include.length > 0 ? include : ['**'],
+      includeDots: core.getBooleanInput('includeDots'),
       exclude: core.getMultilineInput('exclude'),
       region: core.getInput('region') || YANDEX_CLOUD_REGION,
       clear: core.getBooleanInput('clear')

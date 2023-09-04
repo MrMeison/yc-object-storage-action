@@ -50,7 +50,8 @@ export async function upload(
   const fileStream = fg.stream(options.include, {
     ignore: options.exclude,
     cwd: options.sourceDir,
-    onlyFiles: true
+    onlyFiles: true,
+    dot: options.includeDots
   })
 
   const s3Requests = []

@@ -14,6 +14,7 @@ so you can use it with Yandex CDN for a static site serving.
 | `bucketName`       | Bucket name                                   | `string`  | Yes      |
 | `sourceDir`                           | Path to upload folder                         | `string`  | No      |
 | `include`                           | Include [patterns](https://github.com/mrmlnc/fast-glob#pattern-syntax) for files.                         | `multiline`  | No      |
+| `includeDots`                           | Include dots files.                         | `boolean`  | No      |
 | `exclude`                           | Exclude [patterns](https://github.com/mrmlnc/fast-glob#pattern-syntax) for files.                         | `multiline`  | No      |
 | `clear`                          | Clear bucket before deploy (default: `false`) | `boolean` | No       |
 

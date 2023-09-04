@@ -9,6 +9,7 @@ import {
   DeleteObjectsCommand,
   PutObjectCommand
 } from '@aws-sdk/client-s3'
+import {Options} from '../src/types'
 
 let s3Mock: ReturnType<typeof mockClient>
 
@@ -16,7 +17,8 @@ const baseOptions = {
   sourceDir: './__fixtures__/upload',
   accessKeyId: 'accessKeyId',
   secretAccessKey: 'secretAccessKey',
-  region: 'region'
+  region: 'region',
+  includeDots: false
 }
 
 beforeEach(() => {
@@ -50,6 +52,35 @@ test('clean', async () => {
       true
     )
   ).toHaveLength(1)
+})
+
+test('base', async () => {
+  const s3Client = new S3Client({})
+
+  await upload(s3Client, logger, {
+    ...baseOptions,
+    clear: false,
+    include: ['**'],
+    bucketName: 'bucket',
+    exclude: []
+  })
+
+  expect(s3Mock.commandCalls(PutObjectCommand)).toHaveLength(4)
+})
+
+test('include dots', async () => {
+  const s3Client = new S3Client({})
+
+  await upload(s3Client, logger, {
+    ...baseOptions,
+    clear: false,
+    includeDots: true,
+    include: ['**'],
+    bucketName: 'bucket',
+    exclude: []
+  })
+
+  expect(s3Mock.commandCalls(PutObjectCommand)).toHaveLength(5)
 })
 
 test('exclude', async () => {
