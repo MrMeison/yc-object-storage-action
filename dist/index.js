@@ -185,29 +185,24 @@ function upload(s3Client, logger, options) {
         });
         const s3Requests = [];
         try {
-            for (var _d = true, fileStream_1 = __asyncValues(fileStream), fileStream_1_1; fileStream_1_1 = yield fileStream_1.next(), _a = fileStream_1_1.done, !_a;) {
+            for (var _d = true, fileStream_1 = __asyncValues(fileStream), fileStream_1_1; fileStream_1_1 = yield fileStream_1.next(), _a = fileStream_1_1.done, !_a; _d = true) {
                 _c = fileStream_1_1.value;
                 _d = false;
-                try {
-                    const entry = _c;
-                    const filePath = entry.toString();
-                    const type = mime_types_1.default.lookup(filePath) || 'text/plain';
-                    const putCommand = new client_s3_1.PutObjectCommand({
-                        Key: filePath,
-                        Bucket: options.bucketName,
-                        Body: node_fs_1.default.createReadStream(node_path_1.default.resolve(sourceDirFullPath, filePath)),
-                        ContentType: type
-                    });
-                    logger.info(`Starting to upload: ${filePath}`);
-                    s3Requests.push(
-                    // eslint-disable-next-line github/no-then
-                    s3Client.send(putCommand).then(() => {
-                        logger.info(`Uploaded: ${filePath}`);
-                    }));
-                }
-                finally {
-                    _d = true;
-                }
+                const entry = _c;
+                const filePath = entry.toString();
+                const type = mime_types_1.default.lookup(filePath) || 'text/plain';
+                const putCommand = new client_s3_1.PutObjectCommand({
+                    Key: filePath,
+                    Bucket: options.bucketName,
+                    Body: node_fs_1.default.createReadStream(node_path_1.default.resolve(sourceDirFullPath, filePath)),
+                    ContentType: type
+                });
+                logger.info(`Starting to upload: ${filePath}`);
+                s3Requests.push(
+                // eslint-disable-next-line github/no-then
+                s3Client.send(putCommand).then(() => {
+                    logger.info(`Uploaded: ${filePath}`);
+                }));
             }
         }
         catch (e_1_1) { e_1 = { error: e_1_1 }; }
@@ -60915,6 +60910,8 @@ class Settings {
         if (this.stats) {
             this.objectMode = true;
         }
+        // Remove the cast to the array in the next major (#404).
+        this.ignore = [].concat(this.ignore);
     }
     _getValue(option, value) {
         return option === undefined ? value : option;
