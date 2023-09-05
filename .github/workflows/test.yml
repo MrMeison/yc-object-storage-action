@@ -24,4 +24,5 @@ jobs:
           secretAccessKey: ${{ secrets.SECRET_ACCESS_KEY }}
           bucketName: ${{ secrets.BUCKET }}
           sourceDir: ./__fixtures__/upload
+          includeDots: false
           clear: true
