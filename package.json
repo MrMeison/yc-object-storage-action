@@ -1,6 +1,6 @@
 {
   "name": "yc-object-storage-upload-action",
-  "version": "1.0.2",
+  "version": "1.2.0",
   "description": "Deploy static website to Yandex Object Storage",
   "main": "lib/main.js",
   "scripts": {
@@ -34,6 +34,7 @@
     "@types/mime-types": "2.1.1",
     "@types/node": "18.15.3",
     "@typescript-eslint/parser": "6.6.0",
+    "@typescript-eslint/eslint-plugin": "6.6.0",
     "@vercel/ncc": "0.36.1",
     "aws-sdk-client-mock": "3.0.0",
     "eslint": "8.48.0",
