@@ -43,7 +43,7 @@ jobs:
             - name: Build application
               run: npm run build
     
-            - uses: MrMeison/yc-object-storage-upload-action@main
+            - uses: MrMeison/yc-object-storage-action@main
               with:
                 accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
                 secretAccessKey: ${{ secrets.SECRET_ACCESS_KEY }}
