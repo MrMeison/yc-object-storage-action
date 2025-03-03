@@ -21,15 +21,19 @@ inputs:
     required: true
   include:
     description: 'Include patterns for files'
+    default: false
     required: false
   includeDots:
     description: 'Include dot files'
+    default: false
     required: false
   exclude:
     description: 'Exclude patterns for files'
+    default: false
     required: false
   clear:
     description: 'Clear bucket before deploy'
+    default: false
     required: false
   region:
     description: 'Bucket region'
