@@ -10,11 +10,11 @@ import require$$1 from 'tls';
 import require$$4 from 'events';
 import require$$0$4 from 'assert';
 import require$$0$3, { promisify } from 'util';
-import require$$0$6, { Duplex, Readable, Writable, PassThrough } from 'stream';
+import require$$0$6, { Duplex, Readable as Readable$1, Writable, PassThrough } from 'stream';
 import require$$7, { Buffer as Buffer$1 } from 'buffer';
 import require$$8 from 'querystring';
 import require$$14 from 'stream/web';
-import require$$0$8 from 'node:stream';
+import require$$0$8, { Readable } from 'node:stream';
 import require$$1$1 from 'node:util';
 import require$$0$7 from 'node:events';
 import require$$0$9 from 'worker_threads';
@@ -35767,6 +35767,186 @@ function createChecksumStream(init) {
     return new ChecksumStream$1(init);
 }
 
+class ByteArrayCollector {
+    constructor(allocByteArray) {
+        this.allocByteArray = allocByteArray;
+        this.byteLength = 0;
+        this.byteArrays = [];
+    }
+    push(byteArray) {
+        this.byteArrays.push(byteArray);
+        this.byteLength += byteArray.byteLength;
+    }
+    flush() {
+        if (this.byteArrays.length === 1) {
+            const bytes = this.byteArrays[0];
+            this.reset();
+            return bytes;
+        }
+        const aggregation = this.allocByteArray(this.byteLength);
+        let cursor = 0;
+        for (let i = 0; i < this.byteArrays.length; ++i) {
+            const bytes = this.byteArrays[i];
+            aggregation.set(bytes, cursor);
+            cursor += bytes.byteLength;
+        }
+        this.reset();
+        return aggregation;
+    }
+    reset() {
+        this.byteArrays = [];
+        this.byteLength = 0;
+    }
+}
+
+function createBufferedReadableStream(upstream, size, logger) {
+    const reader = upstream.getReader();
+    let streamBufferingLoggedWarning = false;
+    let bytesSeen = 0;
+    const buffers = ["", new ByteArrayCollector((size) => new Uint8Array(size))];
+    let mode = -1;
+    const pull = async (controller) => {
+        const { value, done } = await reader.read();
+        const chunk = value;
+        if (done) {
+            if (mode !== -1) {
+                const remainder = flush(buffers, mode);
+                if (sizeOf(remainder) > 0) {
+                    controller.enqueue(remainder);
+                }
+            }
+            controller.close();
+        }
+        else {
+            const chunkMode = modeOf(chunk);
+            if (mode !== chunkMode) {
+                if (mode >= 0) {
+                    controller.enqueue(flush(buffers, mode));
+                }
+                mode = chunkMode;
+            }
+            if (mode === -1) {
+                controller.enqueue(chunk);
+                return;
+            }
+            const chunkSize = sizeOf(chunk);
+            bytesSeen += chunkSize;
+            const bufferSize = sizeOf(buffers[mode]);
+            if (chunkSize >= size && bufferSize === 0) {
+                controller.enqueue(chunk);
+            }
+            else {
+                const newSize = merge(buffers, mode, chunk);
+                if (!streamBufferingLoggedWarning && bytesSeen > size * 2) {
+                    streamBufferingLoggedWarning = true;
+                    logger?.warn(`@smithy/util-stream - stream chunk size ${chunkSize} is below threshold of ${size}, automatically buffering.`);
+                }
+                if (newSize >= size) {
+                    controller.enqueue(flush(buffers, mode));
+                }
+                else {
+                    await pull(controller);
+                }
+            }
+        }
+    };
+    return new ReadableStream({
+        pull,
+    });
+}
+function merge(buffers, mode, chunk) {
+    switch (mode) {
+        case 0:
+            buffers[0] += chunk;
+            return sizeOf(buffers[0]);
+        case 1:
+        case 2:
+            buffers[mode].push(chunk);
+            return sizeOf(buffers[mode]);
+    }
+}
+function flush(buffers, mode) {
+    switch (mode) {
+        case 0:
+            const s = buffers[0];
+            buffers[0] = "";
+            return s;
+        case 1:
+        case 2:
+            return buffers[mode].flush();
+    }
+    throw new Error(`@smithy/util-stream - invalid index ${mode} given to flush()`);
+}
+function sizeOf(chunk) {
+    return chunk?.byteLength ?? chunk?.length ?? 0;
+}
+function modeOf(chunk) {
+    if (typeof Buffer !== "undefined" && chunk instanceof Buffer) {
+        return 2;
+    }
+    if (chunk instanceof Uint8Array) {
+        return 1;
+    }
+    if (typeof chunk === "string") {
+        return 0;
+    }
+    return -1;
+}
+
+function createBufferedReadable(upstream, size, logger) {
+    if (isReadableStream(upstream)) {
+        return createBufferedReadableStream(upstream, size, logger);
+    }
+    const downstream = new Readable({ read() { } });
+    let streamBufferingLoggedWarning = false;
+    let bytesSeen = 0;
+    const buffers = [
+        "",
+        new ByteArrayCollector((size) => new Uint8Array(size)),
+        new ByteArrayCollector((size) => Buffer.from(new Uint8Array(size))),
+    ];
+    let mode = -1;
+    upstream.on("data", (chunk) => {
+        const chunkMode = modeOf(chunk);
+        if (mode !== chunkMode) {
+            if (mode >= 0) {
+                downstream.push(flush(buffers, mode));
+            }
+            mode = chunkMode;
+        }
+        if (mode === -1) {
+            downstream.push(chunk);
+            return;
+        }
+        const chunkSize = sizeOf(chunk);
+        bytesSeen += chunkSize;
+        const bufferSize = sizeOf(buffers[mode]);
+        if (chunkSize >= size && bufferSize === 0) {
+            downstream.push(chunk);
+        }
+        else {
+            const newSize = merge(buffers, mode, chunk);
+            if (!streamBufferingLoggedWarning && bytesSeen > size * 2) {
+                streamBufferingLoggedWarning = true;
+                logger?.warn(`@smithy/util-stream - stream chunk size ${chunkSize} is below threshold of ${size}, automatically buffering.`);
+            }
+            if (newSize >= size) {
+                downstream.push(flush(buffers, mode));
+            }
+        }
+    });
+    upstream.on("end", () => {
+        if (mode !== -1) {
+            const remainder = flush(buffers, mode);
+            if (sizeOf(remainder) > 0) {
+                downstream.push(remainder);
+            }
+        }
+        downstream.push(null);
+    });
+    return downstream;
+}
+
 const getAwsChunkedEncodingStream = (readableStream, options) => {
     const { base64Encoder, bodyLengthChecker, checksumAlgorithmFn, checksumLocationName, streamHasher } = options;
     const checksumRequired = base64Encoder !== undefined &&
@@ -35774,7 +35954,7 @@ const getAwsChunkedEncodingStream = (readableStream, options) => {
         checksumLocationName !== undefined &&
         streamHasher !== undefined;
     const digest = checksumRequired ? streamHasher(checksumAlgorithmFn, readableStream) : undefined;
-    const awsChunkedEncodingStream = new Readable({ read: () => { } });
+    const awsChunkedEncodingStream = new Readable$1({ read: () => { } });
     readableStream.on("data", (data) => {
         const length = bodyLengthChecker(data) || 0;
         awsChunkedEncodingStream.push(`${length.toString(16)}\r\n`);
@@ -36017,7 +36197,7 @@ async function writeRequestBody(httpRequest, request, maxContinueTimeoutMs = MIN
     }
 }
 function writeBody(httpRequest, body) {
-    if (body instanceof Readable) {
+    if (body instanceof Readable$1) {
         body.pipe(httpRequest);
         return;
     }
@@ -36440,7 +36620,7 @@ const isBlobInstance = (stream) => typeof Blob === "function" && stream instance
 
 const ERR_MSG_STREAM_HAS_BEEN_TRANSFORMED = "The stream has already been transformed.";
 const sdkStreamMixin = (stream) => {
-    if (!(stream instanceof Readable)) {
+    if (!(stream instanceof Readable$1)) {
         try {
             return sdkStreamMixin$1(stream);
         }
@@ -36476,11 +36656,11 @@ const sdkStreamMixin = (stream) => {
             if (stream.readableFlowing !== null) {
                 throw new Error("The stream has been consumed by other callbacks.");
             }
-            if (typeof Readable.toWeb !== "function") {
+            if (typeof Readable$1.toWeb !== "function") {
                 throw new Error("Readable.toWeb() is not supported. Please ensure a polyfill is available.");
             }
             transformed = true;
-            return Readable.toWeb(stream);
+            return Readable$1.toWeb(stream);
         },
     });
 };
@@ -41159,7 +41339,9 @@ const flexibleChecksumsMiddleware = (config, middlewareConfig) => (next, context
         const checksumAlgorithmFn = selectChecksumAlgorithmFunction(checksumAlgorithm, config);
         if (isStreaming(requestBody)) {
             const { getAwsChunkedEncodingStream, bodyLengthChecker } = config;
-            updatedBody = getAwsChunkedEncodingStream(requestBody, {
+            updatedBody = getAwsChunkedEncodingStream(typeof config.requestStreamBufferSize === "number" && config.requestStreamBufferSize >= 8 * 1024
+                ? createBufferedReadable(requestBody, config.requestStreamBufferSize, context.logger)
+                : requestBody, {
                 base64Encoder,
                 bodyLengthChecker,
                 checksumLocationName,
@@ -41347,6 +41529,7 @@ const resolveFlexibleChecksumsConfig = (input) => ({
     ...input,
     requestChecksumCalculation: normalizeProvider$1(input.requestChecksumCalculation ?? DEFAULT_REQUEST_CHECKSUM_CALCULATION),
     responseChecksumValidation: normalizeProvider$1(input.responseChecksumValidation ?? DEFAULT_RESPONSE_CHECKSUM_VALIDATION),
+    requestStreamBufferSize: Number(input.requestStreamBufferSize ?? 0),
 });
 
 function resolveHostHeaderConfig(input) {
@@ -41460,11 +41643,12 @@ const getRecursionDetectionPlugin = (options) => ({
 });
 
 const CONTENT_LENGTH_HEADER$1 = "content-length";
+const DECODED_CONTENT_LENGTH_HEADER = "x-amz-decoded-content-length";
 function checkContentLengthHeader() {
     return (next, context) => async (args) => {
         const { request } = args;
         if (HttpRequest.isInstance(request)) {
-            if (!(CONTENT_LENGTH_HEADER$1 in request.headers)) {
+            if (!(CONTENT_LENGTH_HEADER$1 in request.headers) && !(DECODED_CONTENT_LENGTH_HEADER in request.headers)) {
                 const message = `Are you using a Stream of unknown length as the Body of a PutObject request? Consider using Upload instead from @aws-sdk/lib-storage.`;
                 if (typeof context?.logger?.warn === "function" && !(context.logger instanceof NoOpLogger)) {
                     context.logger.warn(message);
@@ -42721,6 +42905,15 @@ var partitions = [
 		},
 		regionRegex: "^us\\-isof\\-\\w+\\-\\d+$",
 		regions: {
+			"aws-iso-f-global": {
+				description: "AWS ISOF global region"
+			},
+			"us-isof-east-1": {
+				description: "US ISOF EAST"
+			},
+			"us-isof-south-1": {
+				description: "US ISOF SOUTH"
+			}
 		}
 	}
 ];
@@ -43929,7 +44122,7 @@ const NODE_RETRY_MODE_CONFIG_OPTIONS = {
     default: DEFAULT_RETRY_MODE,
 };
 
-const isStreamingPayload = (request) => request?.body instanceof Readable ||
+const isStreamingPayload = (request) => request?.body instanceof Readable$1 ||
     (typeof ReadableStream !== "undefined" && request?.body instanceof ReadableStream);
 
 const retryMiddleware = (options) => (next, context) => async (args) => {
@@ -45400,7 +45593,7 @@ class CreateSessionCommand extends Command
     .build() {
 }
 
-var version$2 = "3.741.0";
+var version$2 = "3.758.0";
 var packageInfo$2 = {
 	version: version$2};
 
@@ -46106,7 +46299,7 @@ class EventStreamMarshaller {
         return this.universalMarshaller.deserialize(bodyIterable, deserializer);
     }
     serialize(input, serializer) {
-        return Readable.from(this.universalMarshaller.serialize(input, serializer));
+        return Readable$1.from(this.universalMarshaller.serialize(input, serializer));
     }
 }
 
@@ -47958,7 +48151,7 @@ const commonParams$2 = {
     UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
 };
 
-var version$1 = "3.734.0";
+var version$1 = "3.758.0";
 var packageInfo$1 = {
 	version: version$1};
 
@@ -48699,7 +48892,7 @@ const commonParams$1 = {
     UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
 };
 
-var version = "3.734.0";
+var version = "3.758.0";
 var packageInfo = {
 	version: version};
 
