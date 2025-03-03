@@ -1,8 +1,8 @@
 import path from 'node:path'
 import fs from 'node:fs'
-import mime from 'mime-types'
+import mime from 'mime/lite'
 import fg from 'fast-glob'
-import {Logger, Options} from './types'
+import { Logger, Options } from './types.js'
 import {
   S3Client,
   ListObjectsCommand,
@@ -14,20 +14,20 @@ const emptyS3Bucket = async (
   s3Client: S3Client,
   bucketName: string
 ): Promise<void> => {
-  const listCommand = new ListObjectsCommand({Bucket: bucketName})
+  const listCommand = new ListObjectsCommand({ Bucket: bucketName })
   const listedObjects = await s3Client.send(listCommand)
 
   if (!listedObjects.Contents || listedObjects.Contents.length === 0) {
     return
   }
 
-  const deleteKeys = listedObjects.Contents.map(c => ({
+  const deleteKeys = listedObjects.Contents.map((c) => ({
     Key: c.Key as string
   }))
 
   const deleteCommand = new DeleteObjectsCommand({
     Bucket: bucketName,
-    Delete: {Objects: deleteKeys}
+    Delete: { Objects: deleteKeys }
   })
   await s3Client.send(deleteCommand)
 
@@ -58,7 +58,7 @@ export async function upload(
   for await (const entry of fileStream) {
     const filePath = entry.toString()
 
-    const type = mime.lookup(filePath) || 'text/plain'
+    const type = mime.getType(filePath) || 'text/plain'
     const putCommand = new PutObjectCommand({
       Key: filePath,
       Bucket: options.bucketName,
@@ -69,7 +69,6 @@ export async function upload(
     logger.info(`Starting to upload: ${filePath}`)
 
     s3Requests.push(
-      // eslint-disable-next-line github/no-then
       s3Client.send(putCommand).then(() => {
         logger.info(`Uploaded: ${filePath}`)
       })

@@ -10,7 +10,7 @@ updates:
     schedule:
       interval: weekly
     allow:
-      - dependency-type: "production"
+      - dependency-type: 'production'
     ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-patch"]
+      - dependency-name: '*'
+        update-types: ['version-update:semver-patch']
