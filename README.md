@@ -1,6 +1,6 @@
-[![build-test](https://github.com/MrMeison/yc-object-storage-action/actions/workflows/test.yml/badge.svg)](https://github.com/MrMeison/yc-object-storage-action/actions/workflows/test.yml)
+# Deploy static site to Yandex Object Storage
 
-# Deploy static website to Yandex Object Storage
+[![build-test](https://github.com/MrMeison/yc-object-storage-action/actions/workflows/test.yml/badge.svg)](https://github.com/MrMeison/yc-object-storage-action/actions/workflows/test.yml)
 
 This flow allows you to upload to
 [Yandex Object Storage](https://cloud.yandex.ru/docs/storage/operations/hosting/setup)
@@ -10,7 +10,7 @@ so you can use it with Yandex CDN for a static site serving.
 
 | Key               | Value                                                                             | Type        | Required |
 | ----------------- | --------------------------------------------------------------------------------- | ----------- | -------- |
-| `accessKeyId`     | Service account access key id                                                     | `string`    | Yes      |
+| `accessKeyId`     | Service account access key ID                                                    | `string`    | Yes      |
 | `secretAccessKey` | Service account secret access key                                                 | `string`    | Yes      |
 | `bucketName`      | Bucket name                                                                       | `string`    | Yes      |
 | `sourceDir`       | Path to upload folder                                                             | `string`    | No       |
@@ -22,7 +22,7 @@ so you can use it with Yandex CDN for a static site serving.
 ## Example
 
 ```yaml
-name: Deploy static website to Yandex Object Storage
+name: Deploy static site to Yandex Object Storage
 on:
   push:
     branches:
