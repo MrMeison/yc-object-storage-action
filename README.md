@@ -10,7 +10,7 @@ so you can use it with Yandex CDN for a static site serving.
 
 | Key               | Value                                                                             | Type        | Required |
 | ----------------- | --------------------------------------------------------------------------------- | ----------- | -------- |
-| `accessKeyId`     | Service account access key ID                                                    | `string`    | Yes      |
+| `accessKeyId`     | Service account access key ID                                                     | `string`    | Yes      |
 | `secretAccessKey` | Service account secret access key                                                 | `string`    | Yes      |
 | `bucketName`      | Bucket name                                                                       | `string`    | Yes      |
 | `sourceDir`       | Path to upload folder                                                             | `string`    | No       |
