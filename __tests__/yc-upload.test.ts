@@ -112,10 +112,10 @@ test('exclude', async () => {
     clear: true,
     include: ['**'],
     bucketName: 'bucket',
-    exclude: ['**/*.html']
+    exclude: ['**/*.txt']
   })
 
-  expect(s3Mock.commandCalls(PutObjectCommand)).toHaveLength(2)
+  expect(s3Mock.commandCalls(PutObjectCommand)).toHaveLength(1)
 })
 
 test('include', async () => {
@@ -124,10 +124,10 @@ test('include', async () => {
   await upload(s3Client, logger, {
     ...baseOptions,
     clear: true,
-    include: ['**/*.html'],
+    include: ['**/*.txt'],
     bucketName: 'bucket',
     exclude: []
   })
 
-  expect(s3Mock.commandCalls(PutObjectCommand)).toHaveLength(2)
+  expect(s3Mock.commandCalls(PutObjectCommand)).toHaveLength(3)
 })
