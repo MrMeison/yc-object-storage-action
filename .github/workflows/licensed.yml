@@ -37,8 +37,8 @@ jobs:
           cache: npm
 
       - name: Install Dependencies
-        id: npm-ci
-        run: npm ci
+        id: pnpm-ci
+        run: pnpm install --frozen-lockfile
 
       - name: Setup Ruby
         id: setup-ruby

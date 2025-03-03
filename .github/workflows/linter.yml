@@ -34,7 +34,7 @@ jobs:
 
       - name: Install Dependencies
         id: install
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Lint Codebase
         id: super-linter

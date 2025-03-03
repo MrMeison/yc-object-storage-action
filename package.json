@@ -5,17 +5,17 @@
   "main": "lib/main.js",
   "type": "module",
   "scripts": {
-    "bundle": "npm run format:write && npm run package",
+    "bundle": "pnpm run format:write && pnpm run package",
     "ci-test": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 npx jest",
-    "coverage": "npx make-coverage-badge --output-path ./badges/coverage.svg",
-    "format:write": "npx prettier --write .",
-    "format:check": "npx prettier --check .",
-    "lint": "npx eslint .",
-    "local-action": "npx @github/local-action . src/main.ts .env",
-    "package": "npx rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
-    "package:watch": "npm run package -- --watch",
-    "test": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 npx jest",
-    "all": "npm run format:write && npm run lint && npm run test && npm run coverage && npm run package"
+    "coverage": "pnpx make-coverage-badge --output-path ./badges/coverage.svg",
+    "format:write": "pnpx prettier --write .",
+    "format:check": "pnpx prettier --check .",
+    "lint": "pnpx eslint .",
+    "local-action": "pnpx @github/local-action . src/main.ts .env",
+    "package": "pnpx rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "package:watch": "pnpm run package -- --watch",
+    "test": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 pnpx jest",
+    "all": "pnpm run format:write && pnpm run lint && pnpm run test && pnpm run coverage && pnpm run package"
   },
   "repository": {
     "type": "git",

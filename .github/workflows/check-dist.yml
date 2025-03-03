@@ -39,7 +39,7 @@ jobs:
 
       - name: Install Dependencies
         id: install
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Build dist/ Directory
         id: build
