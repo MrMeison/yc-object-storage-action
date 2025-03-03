@@ -9,7 +9,6 @@ import {
   DeleteObjectsCommand,
   PutObjectCommand
 } from '@aws-sdk/client-s3'
-import {Options} from '../src/types'
 
 let s3Mock: ReturnType<typeof mockClient>
 
