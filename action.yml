@@ -18,7 +18,7 @@ inputs:
   sourceDir:
     description: 'Path to upload folder'
     default: ''
-    required: true
+    required: false
   include:
     description: 'Include patterns for files'
     required: false

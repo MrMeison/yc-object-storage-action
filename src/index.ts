@@ -1,9 +1,9 @@
 import process from 'node:process'
 import * as core from '@actions/core'
-import {YANDEX_CLOUD_ENDPOINT, YANDEX_CLOUD_REGION} from './constants'
-import {upload as ycUpload} from './yc-upload'
-import {Options, Logger} from './types'
-import {S3Client} from '@aws-sdk/client-s3'
+import { YANDEX_CLOUD_ENDPOINT } from './constants.js'
+import { upload as ycUpload } from './yc-upload.js'
+import { Options, Logger } from './types.js'
+import { S3Client } from '@aws-sdk/client-s3'
 
 async function run(): Promise<void> {
   try {
@@ -23,12 +23,12 @@ async function run(): Promise<void> {
     const options: Options = {
       accessKeyId,
       secretAccessKey,
-      bucketName: core.getInput('bucketName', {required: true}),
+      bucketName: core.getInput('bucketName', { required: true }),
       sourceDir: core.getInput('sourceDir') || process.cwd(),
       include: include.length > 0 ? include : ['**'],
       includeDots: core.getBooleanInput('includeDots'),
       exclude: core.getMultilineInput('exclude'),
-      region: core.getInput('region') || YANDEX_CLOUD_REGION,
+      region: core.getInput('region'),
       clear: core.getBooleanInput('clear')
     }
 
