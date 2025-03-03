@@ -4,6 +4,7 @@
   "description": "Deploy static website to Yandex Object Storage",
   "main": "lib/main.js",
   "type": "module",
+  "packageManager": "pnpm@9.12.3",
   "scripts": {
     "bundle": "pnpm run format:write && pnpm run package",
     "ci-test": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 npx jest",
@@ -31,8 +32,7 @@
     ".": "./dist/index.js"
   },
   "engines": {
-    "node": "20.9.0",
-    "pnpm": "9.12.3"
+    "node": "20.9.0"
   },
   "author": "Konstantin Mamaev",
   "license": "MIT",

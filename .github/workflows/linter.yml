@@ -32,6 +32,10 @@ jobs:
           node-version-file: .node-version
           cache: npm
 
+      - name: Install pnpm
+        id: setup-pnpm
+        uses: pnpm/action-setup@v2
+
       - name: Install Dependencies
         id: install
         run: pnpm install --frozen-lockfile
