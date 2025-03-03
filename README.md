@@ -1,6 +1,10 @@
 # Deploy static site to Yandex Object Storage
 
-[![build-test](https://github.com/MrMeison/yc-object-storage-action/actions/workflows/test.yml/badge.svg)](https://github.com/MrMeison/yc-object-storage-action/actions/workflows/test.yml)
+[![GitHub Super-Linter](https://github.com/MrMeison/yc-object-storage-action/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
+![CI](https://github.com/MrMeison/yc-object-storage-action/actions/workflows/ci.yml/badge.svg)
+[![Check dist/](https://github.com/MrMeison/yc-object-storage-action/actions/workflows/check-dist.yml/badge.svg)](https://github.com/MrMeison/yc-object-storage-action/actions/workflows/check-dist.yml)
+[![CodeQL](https://github.com/MrMeison/yc-object-storage-action/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/MrMeison/yc-object-storage-action/actions/workflows/codeql-analysis.yml)
+[![Coverage](./badges/coverage.svg)](./badges/coverage.svg)
 
 This flow allows you to upload to
 [Yandex Object Storage](https://cloud.yandex.ru/docs/storage/operations/hosting/setup)
