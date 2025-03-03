@@ -31,7 +31,8 @@
     ".": "./dist/index.js"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=20",
+    "pnpm": "9.12.3"
   },
   "author": "Konstantin Mamaev",
   "license": "MIT",
