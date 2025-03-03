@@ -24,14 +24,14 @@ inputs:
     required: false
   includeDots:
     description: 'Include dot files'
-    default: false
+    default: 'false'
     required: false
   exclude:
     description: 'Exclude patterns for files'
     required: false
   clear:
     description: 'Clear bucket before deploy'
-    default: false
+    default: 'false'
     required: false
   region:
     description: 'Bucket region'
