@@ -13,6 +13,9 @@ importers:
       '@aws-sdk/client-s3':
         specifier: 3.758.0
         version: 3.758.0
+      '@aws-sdk/middleware-flexible-checksums':
+        specifier: 3.758.0
+        version: 3.758.0
       fast-glob:
         specifier: 3.3.3
         version: 3.3.3
