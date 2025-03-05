@@ -46905,11 +46905,13 @@ async function run() {
         };
         const s3 = new S3Client({
             endpoint: YANDEX_CLOUD_ENDPOINT,
+            region: options.region,
             credentials: {
                 accessKeyId: options.accessKeyId,
                 secretAccessKey: options.secretAccessKey
             },
-            region: options.region
+            requestChecksumCalculation: RequestChecksumCalculation.WHEN_REQUIRED,
+            responseChecksumValidation: ResponseChecksumValidation.WHEN_REQUIRED
         });
         await upload(s3, logger, options);
     }

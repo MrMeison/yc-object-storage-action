@@ -4,6 +4,10 @@ import { YANDEX_CLOUD_ENDPOINT } from './constants.js'
 import { upload as ycUpload } from './yc-upload.js'
 import { Options, Logger } from './types.js'
 import { S3Client } from '@aws-sdk/client-s3'
+import {
+  RequestChecksumCalculation,
+  ResponseChecksumValidation
+} from '@aws-sdk/middleware-flexible-checksums'
 
 async function run(): Promise<void> {
   try {
@@ -52,11 +56,13 @@ async function run(): Promise<void> {
 
     const s3 = new S3Client({
       endpoint: YANDEX_CLOUD_ENDPOINT,
+      region: options.region,
       credentials: {
         accessKeyId: options.accessKeyId,
         secretAccessKey: options.secretAccessKey
       },
-      region: options.region
+      requestChecksumCalculation: RequestChecksumCalculation.WHEN_REQUIRED,
+      responseChecksumValidation: ResponseChecksumValidation.WHEN_REQUIRED
     })
 
     await ycUpload(s3, logger, options)
