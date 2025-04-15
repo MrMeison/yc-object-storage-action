@@ -35028,19 +35028,18 @@ var outExports = requireOut();
 var fg = /*@__PURE__*/getDefaultExportFromCjs(outExports);
 
 const getHttpHandlerExtensionConfiguration = (runtimeConfig) => {
-    let httpHandler = runtimeConfig.httpHandler;
     return {
         setHttpHandler(handler) {
-            httpHandler = handler;
+            runtimeConfig.httpHandler = handler;
         },
         httpHandler() {
-            return httpHandler;
+            return runtimeConfig.httpHandler;
         },
         updateHttpClientConfig(key, value) {
-            httpHandler.updateHttpClientConfig(key, value);
+            runtimeConfig.httpHandler?.updateHttpClientConfig(key, value);
         },
         httpHandlerConfigs() {
-            return httpHandler.httpHandlerConfigs();
+            return runtimeConfig.httpHandler.httpHandlerConfigs();
         },
     };
 };
@@ -35818,7 +35817,7 @@ function createBufferedReadableStream(upstream, size, logger) {
             controller.close();
         }
         else {
-            const chunkMode = modeOf(chunk);
+            const chunkMode = modeOf(chunk, false);
             if (mode !== chunkMode) {
                 if (mode >= 0) {
                     controller.enqueue(flush(buffers, mode));
@@ -35880,8 +35879,8 @@ function flush(buffers, mode) {
 function sizeOf(chunk) {
     return chunk?.byteLength ?? chunk?.length ?? 0;
 }
-function modeOf(chunk) {
-    if (typeof Buffer !== "undefined" && chunk instanceof Buffer) {
+function modeOf(chunk, allowBuffer = true) {
+    if (allowBuffer && typeof Buffer !== "undefined" && chunk instanceof Buffer) {
         return 2;
     }
     if (chunk instanceof Uint8Array) {
@@ -35907,7 +35906,7 @@ function createBufferedReadable(upstream, size, logger) {
     ];
     let mode = -1;
     upstream.on("data", (chunk) => {
-        const chunkMode = modeOf(chunk);
+        const chunkMode = modeOf(chunk, true);
         if (mode !== chunkMode) {
             if (mode >= 0) {
                 downstream.push(flush(buffers, mode));
@@ -37490,25 +37489,37 @@ const formatDate = (now) => {
 const getCanonicalHeaderList = (headers) => Object.keys(headers).sort().join(";");
 
 const resolveAwsSdkSigV4Config = (config) => {
-    let isUserSupplied = false;
-    let credentialsProvider;
-    if (config.credentials) {
-        isUserSupplied = true;
-        credentialsProvider = memoizeIdentityProvider(config.credentials, isIdentityExpired, doesIdentityRequireRefresh);
-    }
-    if (!credentialsProvider) {
-        if (config.credentialDefaultProvider) {
-            credentialsProvider = normalizeProvider(config.credentialDefaultProvider(Object.assign({}, config, {
-                parentClientConfig: config,
-            })));
-        }
-        else {
-            credentialsProvider = async () => {
-                throw new Error("`credentials` is missing");
-            };
-        }
-    }
-    const boundCredentialsProvider = async () => credentialsProvider({ callerClientConfig: config });
+    let inputCredentials = config.credentials;
+    let isUserSupplied = !!config.credentials;
+    let resolvedCredentials = undefined;
+    Object.defineProperty(config, "credentials", {
+        set(credentials) {
+            if (credentials && credentials !== inputCredentials && credentials !== resolvedCredentials) {
+                isUserSupplied = true;
+            }
+            inputCredentials = credentials;
+            const memoizedProvider = normalizeCredentialProvider(config, {
+                credentials: inputCredentials,
+                credentialDefaultProvider: config.credentialDefaultProvider,
+            });
+            const boundProvider = bindCallerConfig(config, memoizedProvider);
+            if (isUserSupplied && !boundProvider.attributed) {
+                resolvedCredentials = async (options) => boundProvider(options).then((creds) => setCredentialFeature(creds, "CREDENTIALS_CODE", "e"));
+                resolvedCredentials.memoized = boundProvider.memoized;
+                resolvedCredentials.configBound = boundProvider.configBound;
+                resolvedCredentials.attributed = true;
+            }
+            else {
+                resolvedCredentials = boundProvider;
+            }
+        },
+        get() {
+            return resolvedCredentials;
+        },
+        enumerable: true,
+        configurable: true,
+    });
+    config.credentials = inputCredentials;
     const { signingEscapePath = true, systemClockOffset = config.systemClockOffset || 0, sha256, } = config;
     let signer;
     if (config.signer) {
@@ -37529,7 +37540,7 @@ const resolveAwsSdkSigV4Config = (config) => {
             config.signingName = config.signingName || signingService || config.serviceId;
             const params = {
                 ...config,
-                credentials: boundCredentialsProvider,
+                credentials: config.credentials,
                 region: config.signingRegion,
                 service: config.signingName,
                 sha256,
@@ -37553,7 +37564,7 @@ const resolveAwsSdkSigV4Config = (config) => {
             config.signingName = config.signingName || signingService || config.serviceId;
             const params = {
                 ...config,
-                credentials: boundCredentialsProvider,
+                credentials: config.credentials,
                 region: config.signingRegion,
                 service: config.signingName,
                 sha256,
@@ -37563,16 +37574,47 @@ const resolveAwsSdkSigV4Config = (config) => {
             return new SignerCtor(params);
         };
     }
-    return {
-        ...config,
+    const resolvedConfig = Object.assign(config, {
         systemClockOffset,
         signingEscapePath,
-        credentials: isUserSupplied
-            ? async () => boundCredentialsProvider().then((creds) => setCredentialFeature(creds, "CREDENTIALS_CODE", "e"))
-            : boundCredentialsProvider,
         signer,
-    };
+    });
+    return resolvedConfig;
 };
+function normalizeCredentialProvider(config, { credentials, credentialDefaultProvider, }) {
+    let credentialsProvider;
+    if (credentials) {
+        if (!credentials?.memoized) {
+            credentialsProvider = memoizeIdentityProvider(credentials, isIdentityExpired, doesIdentityRequireRefresh);
+        }
+        else {
+            credentialsProvider = credentials;
+        }
+    }
+    else {
+        if (credentialDefaultProvider) {
+            credentialsProvider = normalizeProvider(credentialDefaultProvider(Object.assign({}, config, {
+                parentClientConfig: config,
+            })));
+        }
+        else {
+            credentialsProvider = async () => {
+                throw new Error("@aws-sdk/core::resolveAwsSdkSigV4Config - `credentials` not provided and no credentialDefaultProvider was configured.");
+            };
+        }
+    }
+    credentialsProvider.memoized = true;
+    return credentialsProvider;
+}
+function bindCallerConfig(config, credentialsProvider) {
+    if (credentialsProvider.configBound) {
+        return credentialsProvider;
+    }
+    const fn = async (options) => credentialsProvider({ ...options, callerClientConfig: config });
+    fn.memoized = credentialsProvider.memoized;
+    fn.configBound = true;
+    return fn;
+}
 
 const getAllAliases = (name, aliases) => {
     const _aliases = [];
@@ -38414,12 +38456,11 @@ const getChecksumConfiguration = (runtimeConfig) => {
         });
     }
     return {
-        _checksumAlgorithms: checksumAlgorithms,
         addChecksumAlgorithm(algo) {
-            this._checksumAlgorithms.push(algo);
+            checksumAlgorithms.push(algo);
         },
         checksumAlgorithms() {
-            return this._checksumAlgorithms;
+            return checksumAlgorithms;
         },
     };
 };
@@ -38432,13 +38473,12 @@ const resolveChecksumRuntimeConfig = (clientConfig) => {
 };
 
 const getRetryConfiguration = (runtimeConfig) => {
-    let _retryStrategy = runtimeConfig.retryStrategy;
     return {
         setRetryStrategy(retryStrategy) {
-            _retryStrategy = retryStrategy;
+            runtimeConfig.retryStrategy = retryStrategy;
         },
         retryStrategy() {
-            return _retryStrategy;
+            return runtimeConfig.retryStrategy;
         },
     };
 };
@@ -38449,16 +38489,10 @@ const resolveRetryRuntimeConfig = (retryStrategyConfiguration) => {
 };
 
 const getDefaultExtensionConfiguration = (runtimeConfig) => {
-    return {
-        ...getChecksumConfiguration(runtimeConfig),
-        ...getRetryConfiguration(runtimeConfig),
-    };
+    return Object.assign(getChecksumConfiguration(runtimeConfig), getRetryConfiguration(runtimeConfig));
 };
 const resolveDefaultRuntimeConfig = (config) => {
-    return {
-        ...resolveChecksumRuntimeConfig(config),
-        ...resolveRetryRuntimeConfig(config),
-    };
+    return Object.assign(resolveChecksumRuntimeConfig(config), resolveRetryRuntimeConfig(config));
 };
 
 const getArrayIfSingleItem = (mayBeArray) => Array.isArray(mayBeArray) ? mayBeArray : [mayBeArray];
@@ -41525,12 +41559,14 @@ const getFlexibleChecksumsPlugin = (config, middlewareConfig) => ({
     },
 });
 
-const resolveFlexibleChecksumsConfig = (input) => ({
-    ...input,
-    requestChecksumCalculation: normalizeProvider$1(input.requestChecksumCalculation ?? DEFAULT_REQUEST_CHECKSUM_CALCULATION),
-    responseChecksumValidation: normalizeProvider$1(input.responseChecksumValidation ?? DEFAULT_RESPONSE_CHECKSUM_VALIDATION),
-    requestStreamBufferSize: Number(input.requestStreamBufferSize ?? 0),
-});
+const resolveFlexibleChecksumsConfig = (input) => {
+    const { requestChecksumCalculation, responseChecksumValidation, requestStreamBufferSize } = input;
+    return Object.assign(input, {
+        requestChecksumCalculation: normalizeProvider$1(requestChecksumCalculation ?? DEFAULT_REQUEST_CHECKSUM_CALCULATION),
+        responseChecksumValidation: normalizeProvider$1(responseChecksumValidation ?? DEFAULT_RESPONSE_CHECKSUM_VALIDATION),
+        requestStreamBufferSize: Number(requestStreamBufferSize ?? 0),
+    });
+};
 
 function resolveHostHeaderConfig(input) {
     return input;
@@ -41613,9 +41649,12 @@ const ENV_LAMBDA_FUNCTION_NAME = "AWS_LAMBDA_FUNCTION_NAME";
 const ENV_TRACE_ID = "_X_AMZN_TRACE_ID";
 const recursionDetectionMiddleware = (options) => (next) => async (args) => {
     const { request } = args;
-    if (!HttpRequest.isInstance(request) ||
-        options.runtime !== "node" ||
-        request.headers.hasOwnProperty(TRACE_ID_HEADER_NAME)) {
+    if (!HttpRequest.isInstance(request) || options.runtime !== "node") {
+        return next(args);
+    }
+    const traceIdHeader = Object.keys(request.headers ?? {}).find((h) => h.toLowerCase() === TRACE_ID_HEADER_NAME.toLowerCase()) ??
+        TRACE_ID_HEADER_NAME;
+    if (request.headers.hasOwnProperty(traceIdHeader)) {
         return next(args);
     }
     const functionName = process.env[ENV_LAMBDA_FUNCTION_NAME];
@@ -42007,18 +42046,18 @@ const getS3ExpressHttpSigningPlugin = (config) => ({
 
 const resolveS3Config = (input, { session, }) => {
     const [s3ClientProvider, CreateSessionCommandCtor] = session;
-    return {
-        ...input,
-        forcePathStyle: input.forcePathStyle ?? false,
-        useAccelerateEndpoint: input.useAccelerateEndpoint ?? false,
-        disableMultiregionAccessPoints: input.disableMultiregionAccessPoints ?? false,
-        followRegionRedirects: input.followRegionRedirects ?? false,
-        s3ExpressIdentityProvider: input.s3ExpressIdentityProvider ??
+    const { forcePathStyle, useAccelerateEndpoint, disableMultiregionAccessPoints, followRegionRedirects, s3ExpressIdentityProvider, bucketEndpoint, } = input;
+    return Object.assign(input, {
+        forcePathStyle: forcePathStyle ?? false,
+        useAccelerateEndpoint: useAccelerateEndpoint ?? false,
+        disableMultiregionAccessPoints: disableMultiregionAccessPoints ?? false,
+        followRegionRedirects: followRegionRedirects ?? false,
+        s3ExpressIdentityProvider: s3ExpressIdentityProvider ??
             new S3ExpressIdentityProviderImpl(async (key) => s3ClientProvider().send(new CreateSessionCommandCtor({
                 Bucket: key,
             }))),
-        bucketEndpoint: input.bucketEndpoint ?? false,
-    };
+        bucketEndpoint: bucketEndpoint ?? false,
+    });
 };
 
 const THROW_IF_EMPTY_BODY = {
@@ -42159,9 +42198,9 @@ function isValidUserAgentAppId(appId) {
 }
 function resolveUserAgentConfig(input) {
     const normalizedAppIdProvider = normalizeProvider(input.userAgentAppId ?? DEFAULT_UA_APP_ID);
-    return {
-        ...input,
-        customUserAgent: typeof input.customUserAgent === "string" ? [[input.customUserAgent]] : input.customUserAgent,
+    const { customUserAgent } = input;
+    return Object.assign(input, {
+        customUserAgent: typeof customUserAgent === "string" ? [[customUserAgent]] : customUserAgent,
         userAgentAppId: async () => {
             const appId = await normalizedAppIdProvider();
             if (!isValidUserAgentAppId(appId)) {
@@ -42175,7 +42214,7 @@ function resolveUserAgentConfig(input) {
             }
             return appId;
         },
-    };
+    });
 }
 
 class EndpointCache {
@@ -42888,6 +42927,9 @@ var partitions = [
 		},
 		regionRegex: "^eu\\-isoe\\-\\w+\\-\\d+$",
 		regions: {
+			"aws-iso-e-global": {
+				description: "AWS ISOE (Europe) global region"
+			},
 			"eu-isoe-west-1": {
 				description: "EU ISOE West"
 			}
@@ -42913,6 +42955,23 @@ var partitions = [
 			},
 			"us-isof-south-1": {
 				description: "US ISOF SOUTH"
+			}
+		}
+	},
+	{
+		id: "aws-eusc",
+		outputs: {
+			dnsSuffix: "amazonaws.eu",
+			dualStackDnsSuffix: "amazonaws.eu",
+			implicitGlobalRegion: "eusc-de-east-1",
+			name: "aws-eusc",
+			supportsDualStack: false,
+			supportsFIPS: true
+		},
+		regionRegex: "^eusc\\-(de)\\-\\w+\\-\\d+$",
+		regions: {
+			"eusc-de-east-1": {
+				description: "EU (Germany)"
 			}
 		}
 	}
@@ -43154,8 +43213,7 @@ const resolveRegionConfig = (input) => {
     if (!region) {
         throw new Error("Region is missing");
     }
-    return {
-        ...input,
+    return Object.assign(input, {
         region: async () => {
             if (typeof region === "string") {
                 return getRealRegion(region);
@@ -43170,11 +43228,10 @@ const resolveRegionConfig = (input) => {
             }
             return typeof useFipsEndpoint !== "function" ? Promise.resolve(!!useFipsEndpoint) : useFipsEndpoint();
         },
-    };
+    });
 };
 
-const resolveEventStreamSerdeConfig = (input) => ({
-    ...input,
+const resolveEventStreamSerdeConfig = (input) => Object.assign(input, {
     eventStreamMarshaller: input.eventStreamSerdeProvider(input),
 });
 
@@ -43718,17 +43775,16 @@ const getEndpointPlugin = (config, instructions) => ({
 
 const resolveEndpointConfig = (input) => {
     const tls = input.tls ?? true;
-    const { endpoint } = input;
+    const { endpoint, useDualstackEndpoint, useFipsEndpoint } = input;
     const customEndpointProvider = endpoint != null ? async () => toEndpointV1(await normalizeProvider$1(endpoint)()) : undefined;
     const isCustomEndpoint = !!endpoint;
-    const resolvedConfig = {
-        ...input,
+    const resolvedConfig = Object.assign(input, {
         endpoint: customEndpointProvider,
         tls,
         isCustomEndpoint,
-        useDualstackEndpoint: normalizeProvider$1(input.useDualstackEndpoint ?? false),
-        useFipsEndpoint: normalizeProvider$1(input.useFipsEndpoint ?? false),
-    };
+        useDualstackEndpoint: normalizeProvider$1(useDualstackEndpoint ?? false),
+        useFipsEndpoint: normalizeProvider$1(useFipsEndpoint ?? false),
+    });
     let configuredEndpointPromise = undefined;
     resolvedConfig.serviceConfiguredEndpoint = async () => {
         if (input.serviceId && !configuredEndpointPromise) {
@@ -44097,22 +44153,21 @@ const NODE_MAX_ATTEMPT_CONFIG_OPTIONS = {
     default: DEFAULT_MAX_ATTEMPTS,
 };
 const resolveRetryConfig = (input) => {
-    const { retryStrategy } = input;
-    const maxAttempts = normalizeProvider$1(input.maxAttempts ?? DEFAULT_MAX_ATTEMPTS);
-    return {
-        ...input,
+    const { retryStrategy, retryMode: _retryMode, maxAttempts: _maxAttempts } = input;
+    const maxAttempts = normalizeProvider$1(_maxAttempts ?? DEFAULT_MAX_ATTEMPTS);
+    return Object.assign(input, {
         maxAttempts,
         retryStrategy: async () => {
             if (retryStrategy) {
                 return retryStrategy;
             }
-            const retryMode = await normalizeProvider$1(input.retryMode)();
+            const retryMode = await normalizeProvider$1(_retryMode)();
             if (retryMode === RETRY_MODES.ADAPTIVE) {
                 return new AdaptiveRetryStrategy(maxAttempts);
             }
             return new StandardRetryStrategy(maxAttempts);
         },
-    };
+    });
 };
 const ENV_RETRY_MODE = "AWS_RETRY_MODE";
 const CONFIG_RETRY_MODE = "retry_mode";
@@ -44300,9 +44355,9 @@ class SignatureV4MultiRegion {
     }
 }
 
-const ci = "required", cj = "type", ck = "conditions", cl = "fn", cm = "argv", cn = "ref", co = "assign", cp = "url", cq = "properties", cr = "backend", cs = "authSchemes", ct = "disableDoubleEncoding", cu = "signingName", cv = "signingRegion", cw = "headers", cx = "signingRegionSet";
-const a$3 = 6, b$3 = false, c$3 = true, d$3 = "isSet", e$3 = "booleanEquals", f$3 = "error", g$3 = "aws.partition", h$3 = "stringEquals", i$3 = "getAttr", j$3 = "name", k$3 = "substring", l$3 = "bucketSuffix", m$3 = "parseURL", n$3 = "{url#scheme}://{url#authority}/{uri_encoded_bucket}{url#path}", o$3 = "endpoint", p$3 = "tree", q$3 = "aws.isVirtualHostableS3Bucket", r$3 = "{url#scheme}://{Bucket}.{url#authority}{url#path}", s$3 = "not", t$3 = "{url#scheme}://{url#authority}{url#path}", u$3 = "hardwareType", v$3 = "regionPrefix", w$3 = "bucketAliasSuffix", x$3 = "outpostId", y$1 = "isValidHostLabel", z$1 = "sigv4a", A$1 = "s3-outposts", B$1 = "s3", C$1 = "{url#scheme}://{url#authority}{url#normalizedPath}{Bucket}", D$1 = "https://{Bucket}.s3-accelerate.{partitionResult#dnsSuffix}", E$1 = "https://{Bucket}.s3.{partitionResult#dnsSuffix}", F$1 = "aws.parseArn", G$1 = "bucketArn", H$1 = "arnType", I$1 = "", J$1 = "s3-object-lambda", K = "accesspoint", L = "accessPointName", M = "{url#scheme}://{accessPointName}-{bucketArn#accountId}.{url#authority}{url#path}", N = "mrapPartition", O = "outpostType", P = "arnPrefix", Q = "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", R = "https://s3.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", S = "https://s3.{partitionResult#dnsSuffix}", T = { [ci]: false, [cj]: "String" }, U = { [ci]: true, "default": false, [cj]: "Boolean" }, V = { [ci]: false, [cj]: "Boolean" }, W = { [cl]: e$3, [cm]: [{ [cn]: "Accelerate" }, true] }, X = { [cl]: e$3, [cm]: [{ [cn]: "UseFIPS" }, true] }, Y = { [cl]: e$3, [cm]: [{ [cn]: "UseDualStack" }, true] }, Z = { [cl]: d$3, [cm]: [{ [cn]: "Endpoint" }] }, aa = { [cl]: g$3, [cm]: [{ [cn]: "Region" }], [co]: "partitionResult" }, ab = { [cl]: h$3, [cm]: [{ [cl]: i$3, [cm]: [{ [cn]: "partitionResult" }, j$3] }, "aws-cn"] }, ac = { [cl]: d$3, [cm]: [{ [cn]: "Bucket" }] }, ad = { [cn]: "Bucket" }, ae = { [cl]: m$3, [cm]: [{ [cn]: "Endpoint" }], [co]: "url" }, af = { [cl]: e$3, [cm]: [{ [cl]: i$3, [cm]: [{ [cn]: "url" }, "isIp"] }, true] }, ag = { [cn]: "url" }, ah = { [cl]: "uriEncode", [cm]: [ad], [co]: "uri_encoded_bucket" }, ai = { [cr]: "S3Express", [cs]: [{ [ct]: true, [j$3]: "sigv4", [cu]: "s3express", [cv]: "{Region}" }] }, aj = {}, ak = { [cl]: q$3, [cm]: [ad, false] }, al = { [f$3]: "S3Express bucket name is not a valid virtual hostable name.", [cj]: f$3 }, am = { [cr]: "S3Express", [cs]: [{ [ct]: true, [j$3]: "sigv4-s3express", [cu]: "s3express", [cv]: "{Region}" }] }, an = { [cl]: d$3, [cm]: [{ [cn]: "UseS3ExpressControlEndpoint" }] }, ao = { [cl]: e$3, [cm]: [{ [cn]: "UseS3ExpressControlEndpoint" }, true] }, ap = { [cl]: s$3, [cm]: [Z] }, aq = { [f$3]: "Unrecognized S3Express bucket name format.", [cj]: f$3 }, ar = { [cl]: s$3, [cm]: [ac] }, as = { [cn]: u$3 }, at = { [ck]: [ap], [f$3]: "Expected a endpoint to be specified but no endpoint was found", [cj]: f$3 }, au = { [cs]: [{ [ct]: true, [j$3]: z$1, [cu]: A$1, [cx]: ["*"] }, { [ct]: true, [j$3]: "sigv4", [cu]: A$1, [cv]: "{Region}" }] }, av = { [cl]: e$3, [cm]: [{ [cn]: "ForcePathStyle" }, false] }, aw = { [cn]: "ForcePathStyle" }, ax = { [cl]: e$3, [cm]: [{ [cn]: "Accelerate" }, false] }, ay = { [cl]: h$3, [cm]: [{ [cn]: "Region" }, "aws-global"] }, az = { [cs]: [{ [ct]: true, [j$3]: "sigv4", [cu]: B$1, [cv]: "us-east-1" }] }, aA = { [cl]: s$3, [cm]: [ay] }, aB = { [cl]: e$3, [cm]: [{ [cn]: "UseGlobalEndpoint" }, true] }, aC = { [cp]: "https://{Bucket}.s3-fips.dualstack.{Region}.{partitionResult#dnsSuffix}", [cq]: { [cs]: [{ [ct]: true, [j$3]: "sigv4", [cu]: B$1, [cv]: "{Region}" }] }, [cw]: {} }, aD = { [cs]: [{ [ct]: true, [j$3]: "sigv4", [cu]: B$1, [cv]: "{Region}" }] }, aE = { [cl]: e$3, [cm]: [{ [cn]: "UseGlobalEndpoint" }, false] }, aF = { [cl]: e$3, [cm]: [{ [cn]: "UseDualStack" }, false] }, aG = { [cp]: "https://{Bucket}.s3-fips.{Region}.{partitionResult#dnsSuffix}", [cq]: aD, [cw]: {} }, aH = { [cl]: e$3, [cm]: [{ [cn]: "UseFIPS" }, false] }, aI = { [cp]: "https://{Bucket}.s3-accelerate.dualstack.{partitionResult#dnsSuffix}", [cq]: aD, [cw]: {} }, aJ = { [cp]: "https://{Bucket}.s3.dualstack.{Region}.{partitionResult#dnsSuffix}", [cq]: aD, [cw]: {} }, aK = { [cl]: e$3, [cm]: [{ [cl]: i$3, [cm]: [ag, "isIp"] }, false] }, aL = { [cp]: C$1, [cq]: aD, [cw]: {} }, aM = { [cp]: r$3, [cq]: aD, [cw]: {} }, aN = { [o$3]: aM, [cj]: o$3 }, aO = { [cp]: D$1, [cq]: aD, [cw]: {} }, aP = { [cp]: "https://{Bucket}.s3.{Region}.{partitionResult#dnsSuffix}", [cq]: aD, [cw]: {} }, aQ = { [f$3]: "Invalid region: region was not a valid DNS name.", [cj]: f$3 }, aR = { [cn]: G$1 }, aS = { [cn]: H$1 }, aT = { [cl]: i$3, [cm]: [aR, "service"] }, aU = { [cn]: L }, aV = { [ck]: [Y], [f$3]: "S3 Object Lambda does not support Dual-stack", [cj]: f$3 }, aW = { [ck]: [W], [f$3]: "S3 Object Lambda does not support S3 Accelerate", [cj]: f$3 }, aX = { [ck]: [{ [cl]: d$3, [cm]: [{ [cn]: "DisableAccessPoints" }] }, { [cl]: e$3, [cm]: [{ [cn]: "DisableAccessPoints" }, true] }], [f$3]: "Access points are not supported for this operation", [cj]: f$3 }, aY = { [ck]: [{ [cl]: d$3, [cm]: [{ [cn]: "UseArnRegion" }] }, { [cl]: e$3, [cm]: [{ [cn]: "UseArnRegion" }, false] }, { [cl]: s$3, [cm]: [{ [cl]: h$3, [cm]: [{ [cl]: i$3, [cm]: [aR, "region"] }, "{Region}"] }] }], [f$3]: "Invalid configuration: region from ARN `{bucketArn#region}` does not match client region `{Region}` and UseArnRegion is `false`", [cj]: f$3 }, aZ = { [cl]: i$3, [cm]: [{ [cn]: "bucketPartition" }, j$3] }, ba = { [cl]: i$3, [cm]: [aR, "accountId"] }, bb = { [cs]: [{ [ct]: true, [j$3]: "sigv4", [cu]: J$1, [cv]: "{bucketArn#region}" }] }, bc = { [f$3]: "Invalid ARN: The access point name may only contain a-z, A-Z, 0-9 and `-`. Found: `{accessPointName}`", [cj]: f$3 }, bd = { [f$3]: "Invalid ARN: The account id may only contain a-z, A-Z, 0-9 and `-`. Found: `{bucketArn#accountId}`", [cj]: f$3 }, be = { [f$3]: "Invalid region in ARN: `{bucketArn#region}` (invalid DNS name)", [cj]: f$3 }, bf = { [f$3]: "Client was configured for partition `{partitionResult#name}` but ARN (`{Bucket}`) has `{bucketPartition#name}`", [cj]: f$3 }, bg = { [f$3]: "Invalid ARN: The ARN may only contain a single resource component after `accesspoint`.", [cj]: f$3 }, bh = { [f$3]: "Invalid ARN: Expected a resource of the format `accesspoint:<accesspoint name>` but no name was provided", [cj]: f$3 }, bi = { [cs]: [{ [ct]: true, [j$3]: "sigv4", [cu]: B$1, [cv]: "{bucketArn#region}" }] }, bj = { [cs]: [{ [ct]: true, [j$3]: z$1, [cu]: A$1, [cx]: ["*"] }, { [ct]: true, [j$3]: "sigv4", [cu]: A$1, [cv]: "{bucketArn#region}" }] }, bk = { [cl]: F$1, [cm]: [ad] }, bl = { [cp]: "https://s3-fips.dualstack.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [cq]: aD, [cw]: {} }, bm = { [cp]: "https://s3-fips.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [cq]: aD, [cw]: {} }, bn = { [cp]: "https://s3.dualstack.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [cq]: aD, [cw]: {} }, bo = { [cp]: Q, [cq]: aD, [cw]: {} }, bp = { [cp]: "https://s3.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [cq]: aD, [cw]: {} }, bq = { [cn]: "UseObjectLambdaEndpoint" }, br = { [cs]: [{ [ct]: true, [j$3]: "sigv4", [cu]: J$1, [cv]: "{Region}" }] }, bs = { [cp]: "https://s3-fips.dualstack.{Region}.{partitionResult#dnsSuffix}", [cq]: aD, [cw]: {} }, bt = { [cp]: "https://s3-fips.{Region}.{partitionResult#dnsSuffix}", [cq]: aD, [cw]: {} }, bu = { [cp]: "https://s3.dualstack.{Region}.{partitionResult#dnsSuffix}", [cq]: aD, [cw]: {} }, bv = { [cp]: t$3, [cq]: aD, [cw]: {} }, bw = { [cp]: "https://s3.{Region}.{partitionResult#dnsSuffix}", [cq]: aD, [cw]: {} }, bx = [{ [cn]: "Region" }], by = [{ [cn]: "Endpoint" }], bz = [ad], bA = [Y], bB = [W], bC = [Z, ae], bD = [{ [cl]: d$3, [cm]: [{ [cn]: "DisableS3ExpressSessionAuth" }] }, { [cl]: e$3, [cm]: [{ [cn]: "DisableS3ExpressSessionAuth" }, true] }], bE = [af], bF = [ah], bG = [ak], bH = [X], bI = [{ [cl]: k$3, [cm]: [ad, 6, 14, true], [co]: "s3expressAvailabilityZoneId" }, { [cl]: k$3, [cm]: [ad, 14, 16, true], [co]: "s3expressAvailabilityZoneDelim" }, { [cl]: h$3, [cm]: [{ [cn]: "s3expressAvailabilityZoneDelim" }, "--"] }], bJ = [{ [ck]: [X], [o$3]: { [cp]: "https://{Bucket}.s3express-fips-{s3expressAvailabilityZoneId}.{Region}.amazonaws.com", [cq]: ai, [cw]: {} }, [cj]: o$3 }, { [o$3]: { [cp]: "https://{Bucket}.s3express-{s3expressAvailabilityZoneId}.{Region}.amazonaws.com", [cq]: ai, [cw]: {} }, [cj]: o$3 }], bK = [{ [cl]: k$3, [cm]: [ad, 6, 15, true], [co]: "s3expressAvailabilityZoneId" }, { [cl]: k$3, [cm]: [ad, 15, 17, true], [co]: "s3expressAvailabilityZoneDelim" }, { [cl]: h$3, [cm]: [{ [cn]: "s3expressAvailabilityZoneDelim" }, "--"] }], bL = [{ [cl]: k$3, [cm]: [ad, 6, 19, true], [co]: "s3expressAvailabilityZoneId" }, { [cl]: k$3, [cm]: [ad, 19, 21, true], [co]: "s3expressAvailabilityZoneDelim" }, { [cl]: h$3, [cm]: [{ [cn]: "s3expressAvailabilityZoneDelim" }, "--"] }], bM = [{ [cl]: k$3, [cm]: [ad, 6, 20, true], [co]: "s3expressAvailabilityZoneId" }, { [cl]: k$3, [cm]: [ad, 20, 22, true], [co]: "s3expressAvailabilityZoneDelim" }, { [cl]: h$3, [cm]: [{ [cn]: "s3expressAvailabilityZoneDelim" }, "--"] }], bN = [{ [cl]: k$3, [cm]: [ad, 6, 26, true], [co]: "s3expressAvailabilityZoneId" }, { [cl]: k$3, [cm]: [ad, 26, 28, true], [co]: "s3expressAvailabilityZoneDelim" }, { [cl]: h$3, [cm]: [{ [cn]: "s3expressAvailabilityZoneDelim" }, "--"] }], bO = [{ [ck]: [X], [o$3]: { [cp]: "https://{Bucket}.s3express-fips-{s3expressAvailabilityZoneId}.{Region}.amazonaws.com", [cq]: am, [cw]: {} }, [cj]: o$3 }, { [o$3]: { [cp]: "https://{Bucket}.s3express-{s3expressAvailabilityZoneId}.{Region}.amazonaws.com", [cq]: am, [cw]: {} }, [cj]: o$3 }], bP = [ac], bQ = [{ [cl]: y$1, [cm]: [{ [cn]: x$3 }, false] }], bR = [{ [cl]: h$3, [cm]: [{ [cn]: v$3 }, "beta"] }], bS = ["*"], bT = [aa], bU = [{ [cl]: y$1, [cm]: [{ [cn]: "Region" }, false] }], bV = [{ [cl]: h$3, [cm]: [{ [cn]: "Region" }, "us-east-1"] }], bW = [{ [cl]: h$3, [cm]: [aS, K] }], bX = [{ [cl]: i$3, [cm]: [aR, "resourceId[1]"], [co]: L }, { [cl]: s$3, [cm]: [{ [cl]: h$3, [cm]: [aU, I$1] }] }], bY = [aR, "resourceId[1]"], bZ = [{ [cl]: s$3, [cm]: [{ [cl]: h$3, [cm]: [{ [cl]: i$3, [cm]: [aR, "region"] }, I$1] }] }], ca = [{ [cl]: s$3, [cm]: [{ [cl]: d$3, [cm]: [{ [cl]: i$3, [cm]: [aR, "resourceId[2]"] }] }] }], cb = [aR, "resourceId[2]"], cc = [{ [cl]: g$3, [cm]: [{ [cl]: i$3, [cm]: [aR, "region"] }], [co]: "bucketPartition" }], cd = [{ [cl]: h$3, [cm]: [aZ, { [cl]: i$3, [cm]: [{ [cn]: "partitionResult" }, j$3] }] }], ce = [{ [cl]: y$1, [cm]: [{ [cl]: i$3, [cm]: [aR, "region"] }, true] }], cf = [{ [cl]: y$1, [cm]: [ba, false] }], cg = [{ [cl]: y$1, [cm]: [aU, false] }], ch = [{ [cl]: y$1, [cm]: [{ [cn]: "Region" }, true] }];
-const _data$3 = { parameters: { Bucket: T, Region: T, UseFIPS: U, UseDualStack: U, Endpoint: T, ForcePathStyle: U, Accelerate: U, UseGlobalEndpoint: U, UseObjectLambdaEndpoint: V, Key: T, Prefix: T, CopySource: T, DisableAccessPoints: V, DisableMultiRegionAccessPoints: U, UseArnRegion: V, UseS3ExpressControlEndpoint: V, DisableS3ExpressSessionAuth: V }, rules: [{ [ck]: [{ [cl]: d$3, [cm]: bx }], rules: [{ [ck]: [W, X], error: "Accelerate cannot be used with FIPS", [cj]: f$3 }, { [ck]: [Y, Z], error: "Cannot set dual-stack in combination with a custom endpoint.", [cj]: f$3 }, { [ck]: [Z, X], error: "A custom endpoint cannot be combined with FIPS", [cj]: f$3 }, { [ck]: [Z, W], error: "A custom endpoint cannot be combined with S3 Accelerate", [cj]: f$3 }, { [ck]: [X, aa, ab], error: "Partition does not support FIPS", [cj]: f$3 }, { [ck]: [ac, { [cl]: k$3, [cm]: [ad, 0, a$3, c$3], [co]: l$3 }, { [cl]: h$3, [cm]: [{ [cn]: l$3 }, "--x-s3"] }], rules: [{ [ck]: bA, error: "S3Express does not support Dual-stack.", [cj]: f$3 }, { [ck]: bB, error: "S3Express does not support S3 Accelerate.", [cj]: f$3 }, { [ck]: bC, rules: [{ [ck]: bD, rules: [{ [ck]: bE, rules: [{ [ck]: bF, rules: [{ endpoint: { [cp]: n$3, [cq]: ai, [cw]: aj }, [cj]: o$3 }], [cj]: p$3 }], [cj]: p$3 }, { [ck]: bG, rules: [{ endpoint: { [cp]: r$3, [cq]: ai, [cw]: aj }, [cj]: o$3 }], [cj]: p$3 }, al], [cj]: p$3 }, { [ck]: bE, rules: [{ [ck]: bF, rules: [{ endpoint: { [cp]: n$3, [cq]: am, [cw]: aj }, [cj]: o$3 }], [cj]: p$3 }], [cj]: p$3 }, { [ck]: bG, rules: [{ endpoint: { [cp]: r$3, [cq]: am, [cw]: aj }, [cj]: o$3 }], [cj]: p$3 }, al], [cj]: p$3 }, { [ck]: [an, ao], rules: [{ [ck]: [ah, ap], rules: [{ [ck]: bH, endpoint: { [cp]: "https://s3express-control-fips.{Region}.amazonaws.com/{uri_encoded_bucket}", [cq]: ai, [cw]: aj }, [cj]: o$3 }, { endpoint: { [cp]: "https://s3express-control.{Region}.amazonaws.com/{uri_encoded_bucket}", [cq]: ai, [cw]: aj }, [cj]: o$3 }], [cj]: p$3 }], [cj]: p$3 }, { [ck]: bG, rules: [{ [ck]: bD, rules: [{ [ck]: bI, rules: bJ, [cj]: p$3 }, { [ck]: bK, rules: bJ, [cj]: p$3 }, { [ck]: bL, rules: bJ, [cj]: p$3 }, { [ck]: bM, rules: bJ, [cj]: p$3 }, { [ck]: bN, rules: bJ, [cj]: p$3 }, aq], [cj]: p$3 }, { [ck]: bI, rules: bO, [cj]: p$3 }, { [ck]: bK, rules: bO, [cj]: p$3 }, { [ck]: bL, rules: bO, [cj]: p$3 }, { [ck]: bM, rules: bO, [cj]: p$3 }, { [ck]: bN, rules: bO, [cj]: p$3 }, aq], [cj]: p$3 }, al], [cj]: p$3 }, { [ck]: [ar, an, ao], rules: [{ [ck]: bC, endpoint: { [cp]: t$3, [cq]: ai, [cw]: aj }, [cj]: o$3 }, { [ck]: bH, endpoint: { [cp]: "https://s3express-control-fips.{Region}.amazonaws.com", [cq]: ai, [cw]: aj }, [cj]: o$3 }, { endpoint: { [cp]: "https://s3express-control.{Region}.amazonaws.com", [cq]: ai, [cw]: aj }, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [ac, { [cl]: k$3, [cm]: [ad, 49, 50, c$3], [co]: u$3 }, { [cl]: k$3, [cm]: [ad, 8, 12, c$3], [co]: v$3 }, { [cl]: k$3, [cm]: [ad, 0, 7, c$3], [co]: w$3 }, { [cl]: k$3, [cm]: [ad, 32, 49, c$3], [co]: x$3 }, { [cl]: g$3, [cm]: bx, [co]: "regionPartition" }, { [cl]: h$3, [cm]: [{ [cn]: w$3 }, "--op-s3"] }], rules: [{ [ck]: bQ, rules: [{ [ck]: [{ [cl]: h$3, [cm]: [as, "e"] }], rules: [{ [ck]: bR, rules: [at, { [ck]: bC, endpoint: { [cp]: "https://{Bucket}.ec2.{url#authority}", [cq]: au, [cw]: aj }, [cj]: o$3 }], [cj]: p$3 }, { endpoint: { [cp]: "https://{Bucket}.ec2.s3-outposts.{Region}.{regionPartition#dnsSuffix}", [cq]: au, [cw]: aj }, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [{ [cl]: h$3, [cm]: [as, "o"] }], rules: [{ [ck]: bR, rules: [at, { [ck]: bC, endpoint: { [cp]: "https://{Bucket}.op-{outpostId}.{url#authority}", [cq]: au, [cw]: aj }, [cj]: o$3 }], [cj]: p$3 }, { endpoint: { [cp]: "https://{Bucket}.op-{outpostId}.s3-outposts.{Region}.{regionPartition#dnsSuffix}", [cq]: au, [cw]: aj }, [cj]: o$3 }], [cj]: p$3 }, { error: "Unrecognized hardware type: \"Expected hardware type o or e but got {hardwareType}\"", [cj]: f$3 }], [cj]: p$3 }, { error: "Invalid ARN: The outpost Id must only contain a-z, A-Z, 0-9 and `-`.", [cj]: f$3 }], [cj]: p$3 }, { [ck]: bP, rules: [{ [ck]: [Z, { [cl]: s$3, [cm]: [{ [cl]: d$3, [cm]: [{ [cl]: m$3, [cm]: by }] }] }], error: "Custom endpoint `{Endpoint}` was not a valid URI", [cj]: f$3 }, { [ck]: [av, ak], rules: [{ [ck]: bT, rules: [{ [ck]: bU, rules: [{ [ck]: [W, ab], error: "S3 Accelerate cannot be used in this region", [cj]: f$3 }, { [ck]: [Y, X, ax, ap, ay], endpoint: { [cp]: "https://{Bucket}.s3-fips.dualstack.us-east-1.{partitionResult#dnsSuffix}", [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [Y, X, ax, ap, aA, aB], rules: [{ endpoint: aC, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [Y, X, ax, ap, aA, aE], endpoint: aC, [cj]: o$3 }, { [ck]: [aF, X, ax, ap, ay], endpoint: { [cp]: "https://{Bucket}.s3-fips.us-east-1.{partitionResult#dnsSuffix}", [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [aF, X, ax, ap, aA, aB], rules: [{ endpoint: aG, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [aF, X, ax, ap, aA, aE], endpoint: aG, [cj]: o$3 }, { [ck]: [Y, aH, W, ap, ay], endpoint: { [cp]: "https://{Bucket}.s3-accelerate.dualstack.us-east-1.{partitionResult#dnsSuffix}", [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [Y, aH, W, ap, aA, aB], rules: [{ endpoint: aI, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [Y, aH, W, ap, aA, aE], endpoint: aI, [cj]: o$3 }, { [ck]: [Y, aH, ax, ap, ay], endpoint: { [cp]: "https://{Bucket}.s3.dualstack.us-east-1.{partitionResult#dnsSuffix}", [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [Y, aH, ax, ap, aA, aB], rules: [{ endpoint: aJ, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [Y, aH, ax, ap, aA, aE], endpoint: aJ, [cj]: o$3 }, { [ck]: [aF, aH, ax, Z, ae, af, ay], endpoint: { [cp]: C$1, [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [aF, aH, ax, Z, ae, aK, ay], endpoint: { [cp]: r$3, [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [aF, aH, ax, Z, ae, af, aA, aB], rules: [{ [ck]: bV, endpoint: aL, [cj]: o$3 }, { endpoint: aL, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [aF, aH, ax, Z, ae, aK, aA, aB], rules: [{ [ck]: bV, endpoint: aM, [cj]: o$3 }, aN], [cj]: p$3 }, { [ck]: [aF, aH, ax, Z, ae, af, aA, aE], endpoint: aL, [cj]: o$3 }, { [ck]: [aF, aH, ax, Z, ae, aK, aA, aE], endpoint: aM, [cj]: o$3 }, { [ck]: [aF, aH, W, ap, ay], endpoint: { [cp]: D$1, [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [aF, aH, W, ap, aA, aB], rules: [{ [ck]: bV, endpoint: aO, [cj]: o$3 }, { endpoint: aO, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [aF, aH, W, ap, aA, aE], endpoint: aO, [cj]: o$3 }, { [ck]: [aF, aH, ax, ap, ay], endpoint: { [cp]: E$1, [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [aF, aH, ax, ap, aA, aB], rules: [{ [ck]: bV, endpoint: { [cp]: E$1, [cq]: aD, [cw]: aj }, [cj]: o$3 }, { endpoint: aP, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [aF, aH, ax, ap, aA, aE], endpoint: aP, [cj]: o$3 }], [cj]: p$3 }, aQ], [cj]: p$3 }], [cj]: p$3 }, { [ck]: [Z, ae, { [cl]: h$3, [cm]: [{ [cl]: i$3, [cm]: [ag, "scheme"] }, "http"] }, { [cl]: q$3, [cm]: [ad, c$3] }, av, aH, aF, ax], rules: [{ [ck]: bT, rules: [{ [ck]: bU, rules: [aN], [cj]: p$3 }, aQ], [cj]: p$3 }], [cj]: p$3 }, { [ck]: [av, { [cl]: F$1, [cm]: bz, [co]: G$1 }], rules: [{ [ck]: [{ [cl]: i$3, [cm]: [aR, "resourceId[0]"], [co]: H$1 }, { [cl]: s$3, [cm]: [{ [cl]: h$3, [cm]: [aS, I$1] }] }], rules: [{ [ck]: [{ [cl]: h$3, [cm]: [aT, J$1] }], rules: [{ [ck]: bW, rules: [{ [ck]: bX, rules: [aV, aW, { [ck]: bZ, rules: [aX, { [ck]: ca, rules: [aY, { [ck]: cc, rules: [{ [ck]: bT, rules: [{ [ck]: cd, rules: [{ [ck]: ce, rules: [{ [ck]: [{ [cl]: h$3, [cm]: [ba, I$1] }], error: "Invalid ARN: Missing account id", [cj]: f$3 }, { [ck]: cf, rules: [{ [ck]: cg, rules: [{ [ck]: bC, endpoint: { [cp]: M, [cq]: bb, [cw]: aj }, [cj]: o$3 }, { [ck]: bH, endpoint: { [cp]: "https://{accessPointName}-{bucketArn#accountId}.s3-object-lambda-fips.{bucketArn#region}.{bucketPartition#dnsSuffix}", [cq]: bb, [cw]: aj }, [cj]: o$3 }, { endpoint: { [cp]: "https://{accessPointName}-{bucketArn#accountId}.s3-object-lambda.{bucketArn#region}.{bucketPartition#dnsSuffix}", [cq]: bb, [cw]: aj }, [cj]: o$3 }], [cj]: p$3 }, bc], [cj]: p$3 }, bd], [cj]: p$3 }, be], [cj]: p$3 }, bf], [cj]: p$3 }], [cj]: p$3 }], [cj]: p$3 }, bg], [cj]: p$3 }, { error: "Invalid ARN: bucket ARN is missing a region", [cj]: f$3 }], [cj]: p$3 }, bh], [cj]: p$3 }, { error: "Invalid ARN: Object Lambda ARNs only support `accesspoint` arn types, but found: `{arnType}`", [cj]: f$3 }], [cj]: p$3 }, { [ck]: bW, rules: [{ [ck]: bX, rules: [{ [ck]: bZ, rules: [{ [ck]: bW, rules: [{ [ck]: bZ, rules: [aX, { [ck]: ca, rules: [aY, { [ck]: cc, rules: [{ [ck]: bT, rules: [{ [ck]: [{ [cl]: h$3, [cm]: [aZ, "{partitionResult#name}"] }], rules: [{ [ck]: ce, rules: [{ [ck]: [{ [cl]: h$3, [cm]: [aT, B$1] }], rules: [{ [ck]: cf, rules: [{ [ck]: cg, rules: [{ [ck]: bB, error: "Access Points do not support S3 Accelerate", [cj]: f$3 }, { [ck]: [X, Y], endpoint: { [cp]: "https://{accessPointName}-{bucketArn#accountId}.s3-accesspoint-fips.dualstack.{bucketArn#region}.{bucketPartition#dnsSuffix}", [cq]: bi, [cw]: aj }, [cj]: o$3 }, { [ck]: [X, aF], endpoint: { [cp]: "https://{accessPointName}-{bucketArn#accountId}.s3-accesspoint-fips.{bucketArn#region}.{bucketPartition#dnsSuffix}", [cq]: bi, [cw]: aj }, [cj]: o$3 }, { [ck]: [aH, Y], endpoint: { [cp]: "https://{accessPointName}-{bucketArn#accountId}.s3-accesspoint.dualstack.{bucketArn#region}.{bucketPartition#dnsSuffix}", [cq]: bi, [cw]: aj }, [cj]: o$3 }, { [ck]: [aH, aF, Z, ae], endpoint: { [cp]: M, [cq]: bi, [cw]: aj }, [cj]: o$3 }, { [ck]: [aH, aF], endpoint: { [cp]: "https://{accessPointName}-{bucketArn#accountId}.s3-accesspoint.{bucketArn#region}.{bucketPartition#dnsSuffix}", [cq]: bi, [cw]: aj }, [cj]: o$3 }], [cj]: p$3 }, bc], [cj]: p$3 }, bd], [cj]: p$3 }, { error: "Invalid ARN: The ARN was not for the S3 service, found: {bucketArn#service}", [cj]: f$3 }], [cj]: p$3 }, be], [cj]: p$3 }, bf], [cj]: p$3 }], [cj]: p$3 }], [cj]: p$3 }, bg], [cj]: p$3 }], [cj]: p$3 }], [cj]: p$3 }, { [ck]: [{ [cl]: y$1, [cm]: [aU, c$3] }], rules: [{ [ck]: bA, error: "S3 MRAP does not support dual-stack", [cj]: f$3 }, { [ck]: bH, error: "S3 MRAP does not support FIPS", [cj]: f$3 }, { [ck]: bB, error: "S3 MRAP does not support S3 Accelerate", [cj]: f$3 }, { [ck]: [{ [cl]: e$3, [cm]: [{ [cn]: "DisableMultiRegionAccessPoints" }, c$3] }], error: "Invalid configuration: Multi-Region Access Point ARNs are disabled.", [cj]: f$3 }, { [ck]: [{ [cl]: g$3, [cm]: bx, [co]: N }], rules: [{ [ck]: [{ [cl]: h$3, [cm]: [{ [cl]: i$3, [cm]: [{ [cn]: N }, j$3] }, { [cl]: i$3, [cm]: [aR, "partition"] }] }], rules: [{ endpoint: { [cp]: "https://{accessPointName}.accesspoint.s3-global.{mrapPartition#dnsSuffix}", [cq]: { [cs]: [{ [ct]: c$3, name: z$1, [cu]: B$1, [cx]: bS }] }, [cw]: aj }, [cj]: o$3 }], [cj]: p$3 }, { error: "Client was configured for partition `{mrapPartition#name}` but bucket referred to partition `{bucketArn#partition}`", [cj]: f$3 }], [cj]: p$3 }], [cj]: p$3 }, { error: "Invalid Access Point Name", [cj]: f$3 }], [cj]: p$3 }, bh], [cj]: p$3 }, { [ck]: [{ [cl]: h$3, [cm]: [aT, A$1] }], rules: [{ [ck]: bA, error: "S3 Outposts does not support Dual-stack", [cj]: f$3 }, { [ck]: bH, error: "S3 Outposts does not support FIPS", [cj]: f$3 }, { [ck]: bB, error: "S3 Outposts does not support S3 Accelerate", [cj]: f$3 }, { [ck]: [{ [cl]: d$3, [cm]: [{ [cl]: i$3, [cm]: [aR, "resourceId[4]"] }] }], error: "Invalid Arn: Outpost Access Point ARN contains sub resources", [cj]: f$3 }, { [ck]: [{ [cl]: i$3, [cm]: bY, [co]: x$3 }], rules: [{ [ck]: bQ, rules: [aY, { [ck]: cc, rules: [{ [ck]: bT, rules: [{ [ck]: cd, rules: [{ [ck]: ce, rules: [{ [ck]: cf, rules: [{ [ck]: [{ [cl]: i$3, [cm]: cb, [co]: O }], rules: [{ [ck]: [{ [cl]: i$3, [cm]: [aR, "resourceId[3]"], [co]: L }], rules: [{ [ck]: [{ [cl]: h$3, [cm]: [{ [cn]: O }, K] }], rules: [{ [ck]: bC, endpoint: { [cp]: "https://{accessPointName}-{bucketArn#accountId}.{outpostId}.{url#authority}", [cq]: bj, [cw]: aj }, [cj]: o$3 }, { endpoint: { [cp]: "https://{accessPointName}-{bucketArn#accountId}.{outpostId}.s3-outposts.{bucketArn#region}.{bucketPartition#dnsSuffix}", [cq]: bj, [cw]: aj }, [cj]: o$3 }], [cj]: p$3 }, { error: "Expected an outpost type `accesspoint`, found {outpostType}", [cj]: f$3 }], [cj]: p$3 }, { error: "Invalid ARN: expected an access point name", [cj]: f$3 }], [cj]: p$3 }, { error: "Invalid ARN: Expected a 4-component resource", [cj]: f$3 }], [cj]: p$3 }, bd], [cj]: p$3 }, be], [cj]: p$3 }, bf], [cj]: p$3 }], [cj]: p$3 }], [cj]: p$3 }, { error: "Invalid ARN: The outpost Id may only contain a-z, A-Z, 0-9 and `-`. Found: `{outpostId}`", [cj]: f$3 }], [cj]: p$3 }, { error: "Invalid ARN: The Outpost Id was not set", [cj]: f$3 }], [cj]: p$3 }, { error: "Invalid ARN: Unrecognized format: {Bucket} (type: {arnType})", [cj]: f$3 }], [cj]: p$3 }, { error: "Invalid ARN: No ARN type specified", [cj]: f$3 }], [cj]: p$3 }, { [ck]: [{ [cl]: k$3, [cm]: [ad, 0, 4, b$3], [co]: P }, { [cl]: h$3, [cm]: [{ [cn]: P }, "arn:"] }, { [cl]: s$3, [cm]: [{ [cl]: d$3, [cm]: [bk] }] }], error: "Invalid ARN: `{Bucket}` was not a valid ARN", [cj]: f$3 }, { [ck]: [{ [cl]: e$3, [cm]: [aw, c$3] }, bk], error: "Path-style addressing cannot be used with ARN buckets", [cj]: f$3 }, { [ck]: bF, rules: [{ [ck]: bT, rules: [{ [ck]: [ax], rules: [{ [ck]: [Y, ap, X, ay], endpoint: { [cp]: "https://s3-fips.dualstack.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [Y, ap, X, aA, aB], rules: [{ endpoint: bl, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [Y, ap, X, aA, aE], endpoint: bl, [cj]: o$3 }, { [ck]: [aF, ap, X, ay], endpoint: { [cp]: "https://s3-fips.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [aF, ap, X, aA, aB], rules: [{ endpoint: bm, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [aF, ap, X, aA, aE], endpoint: bm, [cj]: o$3 }, { [ck]: [Y, ap, aH, ay], endpoint: { [cp]: "https://s3.dualstack.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [Y, ap, aH, aA, aB], rules: [{ endpoint: bn, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [Y, ap, aH, aA, aE], endpoint: bn, [cj]: o$3 }, { [ck]: [aF, Z, ae, aH, ay], endpoint: { [cp]: Q, [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [aF, Z, ae, aH, aA, aB], rules: [{ [ck]: bV, endpoint: bo, [cj]: o$3 }, { endpoint: bo, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [aF, Z, ae, aH, aA, aE], endpoint: bo, [cj]: o$3 }, { [ck]: [aF, ap, aH, ay], endpoint: { [cp]: R, [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [aF, ap, aH, aA, aB], rules: [{ [ck]: bV, endpoint: { [cp]: R, [cq]: aD, [cw]: aj }, [cj]: o$3 }, { endpoint: bp, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [aF, ap, aH, aA, aE], endpoint: bp, [cj]: o$3 }], [cj]: p$3 }, { error: "Path-style addressing cannot be used with S3 Accelerate", [cj]: f$3 }], [cj]: p$3 }], [cj]: p$3 }], [cj]: p$3 }, { [ck]: [{ [cl]: d$3, [cm]: [bq] }, { [cl]: e$3, [cm]: [bq, c$3] }], rules: [{ [ck]: bT, rules: [{ [ck]: ch, rules: [aV, aW, { [ck]: bC, endpoint: { [cp]: t$3, [cq]: br, [cw]: aj }, [cj]: o$3 }, { [ck]: bH, endpoint: { [cp]: "https://s3-object-lambda-fips.{Region}.{partitionResult#dnsSuffix}", [cq]: br, [cw]: aj }, [cj]: o$3 }, { endpoint: { [cp]: "https://s3-object-lambda.{Region}.{partitionResult#dnsSuffix}", [cq]: br, [cw]: aj }, [cj]: o$3 }], [cj]: p$3 }, aQ], [cj]: p$3 }], [cj]: p$3 }, { [ck]: [ar], rules: [{ [ck]: bT, rules: [{ [ck]: ch, rules: [{ [ck]: [X, Y, ap, ay], endpoint: { [cp]: "https://s3-fips.dualstack.us-east-1.{partitionResult#dnsSuffix}", [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [X, Y, ap, aA, aB], rules: [{ endpoint: bs, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [X, Y, ap, aA, aE], endpoint: bs, [cj]: o$3 }, { [ck]: [X, aF, ap, ay], endpoint: { [cp]: "https://s3-fips.us-east-1.{partitionResult#dnsSuffix}", [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [X, aF, ap, aA, aB], rules: [{ endpoint: bt, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [X, aF, ap, aA, aE], endpoint: bt, [cj]: o$3 }, { [ck]: [aH, Y, ap, ay], endpoint: { [cp]: "https://s3.dualstack.us-east-1.{partitionResult#dnsSuffix}", [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [aH, Y, ap, aA, aB], rules: [{ endpoint: bu, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [aH, Y, ap, aA, aE], endpoint: bu, [cj]: o$3 }, { [ck]: [aH, aF, Z, ae, ay], endpoint: { [cp]: t$3, [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [aH, aF, Z, ae, aA, aB], rules: [{ [ck]: bV, endpoint: bv, [cj]: o$3 }, { endpoint: bv, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [aH, aF, Z, ae, aA, aE], endpoint: bv, [cj]: o$3 }, { [ck]: [aH, aF, ap, ay], endpoint: { [cp]: S, [cq]: az, [cw]: aj }, [cj]: o$3 }, { [ck]: [aH, aF, ap, aA, aB], rules: [{ [ck]: bV, endpoint: { [cp]: S, [cq]: aD, [cw]: aj }, [cj]: o$3 }, { endpoint: bw, [cj]: o$3 }], [cj]: p$3 }, { [ck]: [aH, aF, ap, aA, aE], endpoint: bw, [cj]: o$3 }], [cj]: p$3 }, aQ], [cj]: p$3 }], [cj]: p$3 }], [cj]: p$3 }, { error: "A region must be set when sending requests to S3.", [cj]: f$3 }] };
+const cp = "required", cq = "type", cr = "rules", cs = "conditions", ct = "fn", cu = "argv", cv = "ref", cw = "assign", cx = "url", cy = "properties", cz = "backend", cA = "authSchemes", cB = "disableDoubleEncoding", cC = "signingName", cD = "signingRegion", cE = "headers", cF = "signingRegionSet";
+const a$3 = 6, b$3 = false, c$3 = true, d$3 = "isSet", e$3 = "booleanEquals", f$3 = "error", g$3 = "aws.partition", h$3 = "stringEquals", i$3 = "getAttr", j$3 = "name", k$3 = "substring", l$3 = "bucketSuffix", m$3 = "parseURL", n$3 = "endpoint", o$3 = "tree", p$3 = "aws.isVirtualHostableS3Bucket", q$3 = "{url#scheme}://{Bucket}.{url#authority}{url#path}", r$3 = "not", s$3 = "accessPointSuffix", t$3 = "{url#scheme}://{url#authority}{url#path}", u$3 = "hardwareType", v$3 = "regionPrefix", w$3 = "bucketAliasSuffix", x$3 = "outpostId", y$1 = "isValidHostLabel", z$1 = "sigv4a", A$1 = "s3-outposts", B$1 = "s3", C$1 = "{url#scheme}://{url#authority}{url#normalizedPath}{Bucket}", D$1 = "https://{Bucket}.s3-accelerate.{partitionResult#dnsSuffix}", E$1 = "https://{Bucket}.s3.{partitionResult#dnsSuffix}", F$1 = "aws.parseArn", G$1 = "bucketArn", H$1 = "arnType", I$1 = "", J$1 = "s3-object-lambda", K = "accesspoint", L = "accessPointName", M = "{url#scheme}://{accessPointName}-{bucketArn#accountId}.{url#authority}{url#path}", N = "mrapPartition", O = "outpostType", P = "arnPrefix", Q = "{url#scheme}://{url#authority}{url#normalizedPath}{uri_encoded_bucket}", R = "https://s3.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", S = "https://s3.{partitionResult#dnsSuffix}", T = { [cp]: false, [cq]: "String" }, U = { [cp]: true, "default": false, [cq]: "Boolean" }, V = { [cp]: false, [cq]: "Boolean" }, W = { [ct]: e$3, [cu]: [{ [cv]: "Accelerate" }, true] }, X = { [ct]: e$3, [cu]: [{ [cv]: "UseFIPS" }, true] }, Y = { [ct]: e$3, [cu]: [{ [cv]: "UseDualStack" }, true] }, Z = { [ct]: d$3, [cu]: [{ [cv]: "Endpoint" }] }, aa = { [ct]: g$3, [cu]: [{ [cv]: "Region" }], [cw]: "partitionResult" }, ab = { [ct]: h$3, [cu]: [{ [ct]: i$3, [cu]: [{ [cv]: "partitionResult" }, j$3] }, "aws-cn"] }, ac = { [ct]: d$3, [cu]: [{ [cv]: "Bucket" }] }, ad = { [cv]: "Bucket" }, ae = { [cs]: [Y], [f$3]: "S3Express does not support Dual-stack.", [cq]: f$3 }, af = { [cs]: [W], [f$3]: "S3Express does not support S3 Accelerate.", [cq]: f$3 }, ag = { [cs]: [Z, { [ct]: m$3, [cu]: [{ [cv]: "Endpoint" }], [cw]: "url" }], [cr]: [{ [cs]: [{ [ct]: d$3, [cu]: [{ [cv]: "DisableS3ExpressSessionAuth" }] }, { [ct]: e$3, [cu]: [{ [cv]: "DisableS3ExpressSessionAuth" }, true] }], [cr]: [{ [cs]: [{ [ct]: e$3, [cu]: [{ [ct]: i$3, [cu]: [{ [cv]: "url" }, "isIp"] }, true] }], [cr]: [{ [cs]: [{ [ct]: "uriEncode", [cu]: [ad], [cw]: "uri_encoded_bucket" }], [cr]: [{ [n$3]: { [cx]: "{url#scheme}://{url#authority}/{uri_encoded_bucket}{url#path}", [cy]: { [cz]: "S3Express", [cA]: [{ [cB]: true, [j$3]: "sigv4", [cC]: "s3express", [cD]: "{Region}" }] }, [cE]: {} }, [cq]: n$3 }], [cq]: o$3 }], [cq]: o$3 }, { [cs]: [{ [ct]: p$3, [cu]: [ad, false] }], [cr]: [{ [n$3]: { [cx]: q$3, [cy]: { [cz]: "S3Express", [cA]: [{ [cB]: true, [j$3]: "sigv4", [cC]: "s3express", [cD]: "{Region}" }] }, [cE]: {} }, [cq]: n$3 }], [cq]: o$3 }, { [f$3]: "S3Express bucket name is not a valid virtual hostable name.", [cq]: f$3 }], [cq]: o$3 }, { [cs]: [{ [ct]: e$3, [cu]: [{ [ct]: i$3, [cu]: [{ [cv]: "url" }, "isIp"] }, true] }], [cr]: [{ [cs]: [{ [ct]: "uriEncode", [cu]: [ad], [cw]: "uri_encoded_bucket" }], [cr]: [{ [n$3]: { [cx]: "{url#scheme}://{url#authority}/{uri_encoded_bucket}{url#path}", [cy]: { [cz]: "S3Express", [cA]: [{ [cB]: true, [j$3]: "sigv4-s3express", [cC]: "s3express", [cD]: "{Region}" }] }, [cE]: {} }, [cq]: n$3 }], [cq]: o$3 }], [cq]: o$3 }, { [cs]: [{ [ct]: p$3, [cu]: [ad, false] }], [cr]: [{ [n$3]: { [cx]: q$3, [cy]: { [cz]: "S3Express", [cA]: [{ [cB]: true, [j$3]: "sigv4-s3express", [cC]: "s3express", [cD]: "{Region}" }] }, [cE]: {} }, [cq]: n$3 }], [cq]: o$3 }, { [f$3]: "S3Express bucket name is not a valid virtual hostable name.", [cq]: f$3 }], [cq]: o$3 }, ah = { [ct]: m$3, [cu]: [{ [cv]: "Endpoint" }], [cw]: "url" }, ai = { [ct]: e$3, [cu]: [{ [ct]: i$3, [cu]: [{ [cv]: "url" }, "isIp"] }, true] }, aj = { [cv]: "url" }, ak = { [ct]: "uriEncode", [cu]: [ad], [cw]: "uri_encoded_bucket" }, al = { [cz]: "S3Express", [cA]: [{ [cB]: true, [j$3]: "sigv4", [cC]: "s3express", [cD]: "{Region}" }] }, am = {}, an = { [ct]: p$3, [cu]: [ad, false] }, ao = { [f$3]: "S3Express bucket name is not a valid virtual hostable name.", [cq]: f$3 }, ap = { [ct]: d$3, [cu]: [{ [cv]: "UseS3ExpressControlEndpoint" }] }, aq = { [ct]: e$3, [cu]: [{ [cv]: "UseS3ExpressControlEndpoint" }, true] }, ar = { [ct]: r$3, [cu]: [Z] }, as = { [f$3]: "Unrecognized S3Express bucket name format.", [cq]: f$3 }, at = { [ct]: r$3, [cu]: [ac] }, au = { [cv]: u$3 }, av = { [cs]: [ar], [f$3]: "Expected a endpoint to be specified but no endpoint was found", [cq]: f$3 }, aw = { [cA]: [{ [cB]: true, [j$3]: z$1, [cC]: A$1, [cF]: ["*"] }, { [cB]: true, [j$3]: "sigv4", [cC]: A$1, [cD]: "{Region}" }] }, ax = { [ct]: e$3, [cu]: [{ [cv]: "ForcePathStyle" }, false] }, ay = { [cv]: "ForcePathStyle" }, az = { [ct]: e$3, [cu]: [{ [cv]: "Accelerate" }, false] }, aA = { [ct]: h$3, [cu]: [{ [cv]: "Region" }, "aws-global"] }, aB = { [cA]: [{ [cB]: true, [j$3]: "sigv4", [cC]: B$1, [cD]: "us-east-1" }] }, aC = { [ct]: r$3, [cu]: [aA] }, aD = { [ct]: e$3, [cu]: [{ [cv]: "UseGlobalEndpoint" }, true] }, aE = { [cx]: "https://{Bucket}.s3-fips.dualstack.{Region}.{partitionResult#dnsSuffix}", [cy]: { [cA]: [{ [cB]: true, [j$3]: "sigv4", [cC]: B$1, [cD]: "{Region}" }] }, [cE]: {} }, aF = { [cA]: [{ [cB]: true, [j$3]: "sigv4", [cC]: B$1, [cD]: "{Region}" }] }, aG = { [ct]: e$3, [cu]: [{ [cv]: "UseGlobalEndpoint" }, false] }, aH = { [ct]: e$3, [cu]: [{ [cv]: "UseDualStack" }, false] }, aI = { [cx]: "https://{Bucket}.s3-fips.{Region}.{partitionResult#dnsSuffix}", [cy]: aF, [cE]: {} }, aJ = { [ct]: e$3, [cu]: [{ [cv]: "UseFIPS" }, false] }, aK = { [cx]: "https://{Bucket}.s3-accelerate.dualstack.{partitionResult#dnsSuffix}", [cy]: aF, [cE]: {} }, aL = { [cx]: "https://{Bucket}.s3.dualstack.{Region}.{partitionResult#dnsSuffix}", [cy]: aF, [cE]: {} }, aM = { [ct]: e$3, [cu]: [{ [ct]: i$3, [cu]: [aj, "isIp"] }, false] }, aN = { [cx]: C$1, [cy]: aF, [cE]: {} }, aO = { [cx]: q$3, [cy]: aF, [cE]: {} }, aP = { [n$3]: aO, [cq]: n$3 }, aQ = { [cx]: D$1, [cy]: aF, [cE]: {} }, aR = { [cx]: "https://{Bucket}.s3.{Region}.{partitionResult#dnsSuffix}", [cy]: aF, [cE]: {} }, aS = { [f$3]: "Invalid region: region was not a valid DNS name.", [cq]: f$3 }, aT = { [cv]: G$1 }, aU = { [cv]: H$1 }, aV = { [ct]: i$3, [cu]: [aT, "service"] }, aW = { [cv]: L }, aX = { [cs]: [Y], [f$3]: "S3 Object Lambda does not support Dual-stack", [cq]: f$3 }, aY = { [cs]: [W], [f$3]: "S3 Object Lambda does not support S3 Accelerate", [cq]: f$3 }, aZ = { [cs]: [{ [ct]: d$3, [cu]: [{ [cv]: "DisableAccessPoints" }] }, { [ct]: e$3, [cu]: [{ [cv]: "DisableAccessPoints" }, true] }], [f$3]: "Access points are not supported for this operation", [cq]: f$3 }, ba = { [cs]: [{ [ct]: d$3, [cu]: [{ [cv]: "UseArnRegion" }] }, { [ct]: e$3, [cu]: [{ [cv]: "UseArnRegion" }, false] }, { [ct]: r$3, [cu]: [{ [ct]: h$3, [cu]: [{ [ct]: i$3, [cu]: [aT, "region"] }, "{Region}"] }] }], [f$3]: "Invalid configuration: region from ARN `{bucketArn#region}` does not match client region `{Region}` and UseArnRegion is `false`", [cq]: f$3 }, bb = { [ct]: i$3, [cu]: [{ [cv]: "bucketPartition" }, j$3] }, bc = { [ct]: i$3, [cu]: [aT, "accountId"] }, bd = { [cA]: [{ [cB]: true, [j$3]: "sigv4", [cC]: J$1, [cD]: "{bucketArn#region}" }] }, be = { [f$3]: "Invalid ARN: The access point name may only contain a-z, A-Z, 0-9 and `-`. Found: `{accessPointName}`", [cq]: f$3 }, bf = { [f$3]: "Invalid ARN: The account id may only contain a-z, A-Z, 0-9 and `-`. Found: `{bucketArn#accountId}`", [cq]: f$3 }, bg = { [f$3]: "Invalid region in ARN: `{bucketArn#region}` (invalid DNS name)", [cq]: f$3 }, bh = { [f$3]: "Client was configured for partition `{partitionResult#name}` but ARN (`{Bucket}`) has `{bucketPartition#name}`", [cq]: f$3 }, bi = { [f$3]: "Invalid ARN: The ARN may only contain a single resource component after `accesspoint`.", [cq]: f$3 }, bj = { [f$3]: "Invalid ARN: Expected a resource of the format `accesspoint:<accesspoint name>` but no name was provided", [cq]: f$3 }, bk = { [cA]: [{ [cB]: true, [j$3]: "sigv4", [cC]: B$1, [cD]: "{bucketArn#region}" }] }, bl = { [cA]: [{ [cB]: true, [j$3]: z$1, [cC]: A$1, [cF]: ["*"] }, { [cB]: true, [j$3]: "sigv4", [cC]: A$1, [cD]: "{bucketArn#region}" }] }, bm = { [ct]: F$1, [cu]: [ad] }, bn = { [cx]: "https://s3-fips.dualstack.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [cy]: aF, [cE]: {} }, bo = { [cx]: "https://s3-fips.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [cy]: aF, [cE]: {} }, bp = { [cx]: "https://s3.dualstack.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [cy]: aF, [cE]: {} }, bq = { [cx]: Q, [cy]: aF, [cE]: {} }, br = { [cx]: "https://s3.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [cy]: aF, [cE]: {} }, bs = { [cv]: "UseObjectLambdaEndpoint" }, bt = { [cA]: [{ [cB]: true, [j$3]: "sigv4", [cC]: J$1, [cD]: "{Region}" }] }, bu = { [cx]: "https://s3-fips.dualstack.{Region}.{partitionResult#dnsSuffix}", [cy]: aF, [cE]: {} }, bv = { [cx]: "https://s3-fips.{Region}.{partitionResult#dnsSuffix}", [cy]: aF, [cE]: {} }, bw = { [cx]: "https://s3.dualstack.{Region}.{partitionResult#dnsSuffix}", [cy]: aF, [cE]: {} }, bx = { [cx]: t$3, [cy]: aF, [cE]: {} }, by = { [cx]: "https://s3.{Region}.{partitionResult#dnsSuffix}", [cy]: aF, [cE]: {} }, bz = [{ [cv]: "Region" }], bA = [{ [cv]: "Endpoint" }], bB = [ad], bC = [Y], bD = [W], bE = [Z, ah], bF = [{ [ct]: d$3, [cu]: [{ [cv]: "DisableS3ExpressSessionAuth" }] }, { [ct]: e$3, [cu]: [{ [cv]: "DisableS3ExpressSessionAuth" }, true] }], bG = [ak], bH = [an], bI = [aa], bJ = [X], bK = [{ [ct]: k$3, [cu]: [ad, 6, 14, true], [cw]: "s3expressAvailabilityZoneId" }, { [ct]: k$3, [cu]: [ad, 14, 16, true], [cw]: "s3expressAvailabilityZoneDelim" }, { [ct]: h$3, [cu]: [{ [cv]: "s3expressAvailabilityZoneDelim" }, "--"] }], bL = [{ [cs]: [X], [n$3]: { [cx]: "https://{Bucket}.s3express-fips-{s3expressAvailabilityZoneId}.{Region}.{partitionResult#dnsSuffix}", [cy]: al, [cE]: {} }, [cq]: n$3 }, { [n$3]: { [cx]: "https://{Bucket}.s3express-{s3expressAvailabilityZoneId}.{Region}.{partitionResult#dnsSuffix}", [cy]: al, [cE]: {} }, [cq]: n$3 }], bM = [{ [ct]: k$3, [cu]: [ad, 6, 15, true], [cw]: "s3expressAvailabilityZoneId" }, { [ct]: k$3, [cu]: [ad, 15, 17, true], [cw]: "s3expressAvailabilityZoneDelim" }, { [ct]: h$3, [cu]: [{ [cv]: "s3expressAvailabilityZoneDelim" }, "--"] }], bN = [{ [ct]: k$3, [cu]: [ad, 6, 19, true], [cw]: "s3expressAvailabilityZoneId" }, { [ct]: k$3, [cu]: [ad, 19, 21, true], [cw]: "s3expressAvailabilityZoneDelim" }, { [ct]: h$3, [cu]: [{ [cv]: "s3expressAvailabilityZoneDelim" }, "--"] }], bO = [{ [ct]: k$3, [cu]: [ad, 6, 20, true], [cw]: "s3expressAvailabilityZoneId" }, { [ct]: k$3, [cu]: [ad, 20, 22, true], [cw]: "s3expressAvailabilityZoneDelim" }, { [ct]: h$3, [cu]: [{ [cv]: "s3expressAvailabilityZoneDelim" }, "--"] }], bP = [{ [ct]: k$3, [cu]: [ad, 6, 26, true], [cw]: "s3expressAvailabilityZoneId" }, { [ct]: k$3, [cu]: [ad, 26, 28, true], [cw]: "s3expressAvailabilityZoneDelim" }, { [ct]: h$3, [cu]: [{ [cv]: "s3expressAvailabilityZoneDelim" }, "--"] }], bQ = [{ [cs]: [X], [n$3]: { [cx]: "https://{Bucket}.s3express-fips-{s3expressAvailabilityZoneId}.{Region}.{partitionResult#dnsSuffix}", [cy]: { [cz]: "S3Express", [cA]: [{ [cB]: true, [j$3]: "sigv4-s3express", [cC]: "s3express", [cD]: "{Region}" }] }, [cE]: {} }, [cq]: n$3 }, { [n$3]: { [cx]: "https://{Bucket}.s3express-{s3expressAvailabilityZoneId}.{Region}.{partitionResult#dnsSuffix}", [cy]: { [cz]: "S3Express", [cA]: [{ [cB]: true, [j$3]: "sigv4-s3express", [cC]: "s3express", [cD]: "{Region}" }] }, [cE]: {} }, [cq]: n$3 }], bR = [ad, 0, 7, true], bS = [{ [ct]: k$3, [cu]: [ad, 7, 15, true], [cw]: "s3expressAvailabilityZoneId" }, { [ct]: k$3, [cu]: [ad, 15, 17, true], [cw]: "s3expressAvailabilityZoneDelim" }, { [ct]: h$3, [cu]: [{ [cv]: "s3expressAvailabilityZoneDelim" }, "--"] }], bT = [{ [ct]: k$3, [cu]: [ad, 7, 16, true], [cw]: "s3expressAvailabilityZoneId" }, { [ct]: k$3, [cu]: [ad, 16, 18, true], [cw]: "s3expressAvailabilityZoneDelim" }, { [ct]: h$3, [cu]: [{ [cv]: "s3expressAvailabilityZoneDelim" }, "--"] }], bU = [{ [ct]: k$3, [cu]: [ad, 7, 20, true], [cw]: "s3expressAvailabilityZoneId" }, { [ct]: k$3, [cu]: [ad, 20, 22, true], [cw]: "s3expressAvailabilityZoneDelim" }, { [ct]: h$3, [cu]: [{ [cv]: "s3expressAvailabilityZoneDelim" }, "--"] }], bV = [{ [ct]: k$3, [cu]: [ad, 7, 21, true], [cw]: "s3expressAvailabilityZoneId" }, { [ct]: k$3, [cu]: [ad, 21, 23, true], [cw]: "s3expressAvailabilityZoneDelim" }, { [ct]: h$3, [cu]: [{ [cv]: "s3expressAvailabilityZoneDelim" }, "--"] }], bW = [{ [ct]: k$3, [cu]: [ad, 7, 27, true], [cw]: "s3expressAvailabilityZoneId" }, { [ct]: k$3, [cu]: [ad, 27, 29, true], [cw]: "s3expressAvailabilityZoneDelim" }, { [ct]: h$3, [cu]: [{ [cv]: "s3expressAvailabilityZoneDelim" }, "--"] }], bX = [ac], bY = [{ [ct]: y$1, [cu]: [{ [cv]: x$3 }, false] }], bZ = [{ [ct]: h$3, [cu]: [{ [cv]: v$3 }, "beta"] }], ca = ["*"], cb = [{ [ct]: y$1, [cu]: [{ [cv]: "Region" }, false] }], cc = [{ [ct]: h$3, [cu]: [{ [cv]: "Region" }, "us-east-1"] }], cd = [{ [ct]: h$3, [cu]: [aU, K] }], ce = [{ [ct]: i$3, [cu]: [aT, "resourceId[1]"], [cw]: L }, { [ct]: r$3, [cu]: [{ [ct]: h$3, [cu]: [aW, I$1] }] }], cf = [aT, "resourceId[1]"], cg = [{ [ct]: r$3, [cu]: [{ [ct]: h$3, [cu]: [{ [ct]: i$3, [cu]: [aT, "region"] }, I$1] }] }], ch = [{ [ct]: r$3, [cu]: [{ [ct]: d$3, [cu]: [{ [ct]: i$3, [cu]: [aT, "resourceId[2]"] }] }] }], ci = [aT, "resourceId[2]"], cj = [{ [ct]: g$3, [cu]: [{ [ct]: i$3, [cu]: [aT, "region"] }], [cw]: "bucketPartition" }], ck = [{ [ct]: h$3, [cu]: [bb, { [ct]: i$3, [cu]: [{ [cv]: "partitionResult" }, j$3] }] }], cl = [{ [ct]: y$1, [cu]: [{ [ct]: i$3, [cu]: [aT, "region"] }, true] }], cm = [{ [ct]: y$1, [cu]: [bc, false] }], cn = [{ [ct]: y$1, [cu]: [aW, false] }], co = [{ [ct]: y$1, [cu]: [{ [cv]: "Region" }, true] }];
+const _data$3 = { parameters: { Bucket: T, Region: T, UseFIPS: U, UseDualStack: U, Endpoint: T, ForcePathStyle: U, Accelerate: U, UseGlobalEndpoint: U, UseObjectLambdaEndpoint: V, Key: T, Prefix: T, CopySource: T, DisableAccessPoints: V, DisableMultiRegionAccessPoints: U, UseArnRegion: V, UseS3ExpressControlEndpoint: V, DisableS3ExpressSessionAuth: V }, [cr]: [{ [cs]: [{ [ct]: d$3, [cu]: bz }], [cr]: [{ [cs]: [W, X], error: "Accelerate cannot be used with FIPS", [cq]: f$3 }, { [cs]: [Y, Z], error: "Cannot set dual-stack in combination with a custom endpoint.", [cq]: f$3 }, { [cs]: [Z, X], error: "A custom endpoint cannot be combined with FIPS", [cq]: f$3 }, { [cs]: [Z, W], error: "A custom endpoint cannot be combined with S3 Accelerate", [cq]: f$3 }, { [cs]: [X, aa, ab], error: "Partition does not support FIPS", [cq]: f$3 }, { [cs]: [ac, { [ct]: k$3, [cu]: [ad, 0, a$3, c$3], [cw]: l$3 }, { [ct]: h$3, [cu]: [{ [cv]: l$3 }, "--x-s3"] }], [cr]: [ae, af, ag, { [cs]: [ap, aq], [cr]: [{ [cs]: bI, [cr]: [{ [cs]: [ak, ar], [cr]: [{ [cs]: bJ, endpoint: { [cx]: "https://s3express-control-fips.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [cy]: al, [cE]: am }, [cq]: n$3 }, { endpoint: { [cx]: "https://s3express-control.{Region}.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [cy]: al, [cE]: am }, [cq]: n$3 }], [cq]: o$3 }], [cq]: o$3 }], [cq]: o$3 }, { [cs]: bH, [cr]: [{ [cs]: bI, [cr]: [{ [cs]: bF, [cr]: [{ [cs]: bK, [cr]: bL, [cq]: o$3 }, { [cs]: bM, [cr]: bL, [cq]: o$3 }, { [cs]: bN, [cr]: bL, [cq]: o$3 }, { [cs]: bO, [cr]: bL, [cq]: o$3 }, { [cs]: bP, [cr]: bL, [cq]: o$3 }, as], [cq]: o$3 }, { [cs]: bK, [cr]: bQ, [cq]: o$3 }, { [cs]: bM, [cr]: bQ, [cq]: o$3 }, { [cs]: bN, [cr]: bQ, [cq]: o$3 }, { [cs]: bO, [cr]: bQ, [cq]: o$3 }, { [cs]: bP, [cr]: bQ, [cq]: o$3 }, as], [cq]: o$3 }], [cq]: o$3 }, ao], [cq]: o$3 }, { [cs]: [ac, { [ct]: k$3, [cu]: bR, [cw]: s$3 }, { [ct]: h$3, [cu]: [{ [cv]: s$3 }, "--xa-s3"] }], [cr]: [ae, af, ag, { [cs]: bH, [cr]: [{ [cs]: bI, [cr]: [{ [cs]: bF, [cr]: [{ [cs]: bS, [cr]: bL, [cq]: o$3 }, { [cs]: bT, [cr]: bL, [cq]: o$3 }, { [cs]: bU, [cr]: bL, [cq]: o$3 }, { [cs]: bV, [cr]: bL, [cq]: o$3 }, { [cs]: bW, [cr]: bL, [cq]: o$3 }, as], [cq]: o$3 }, { [cs]: bS, [cr]: bQ, [cq]: o$3 }, { [cs]: bT, [cr]: bQ, [cq]: o$3 }, { [cs]: bU, [cr]: bQ, [cq]: o$3 }, { [cs]: bV, [cr]: bQ, [cq]: o$3 }, { [cs]: bW, [cr]: bQ, [cq]: o$3 }, as], [cq]: o$3 }], [cq]: o$3 }, ao], [cq]: o$3 }, { [cs]: [at, ap, aq], [cr]: [{ [cs]: bI, [cr]: [{ [cs]: bE, endpoint: { [cx]: t$3, [cy]: al, [cE]: am }, [cq]: n$3 }, { [cs]: bJ, endpoint: { [cx]: "https://s3express-control-fips.{Region}.{partitionResult#dnsSuffix}", [cy]: al, [cE]: am }, [cq]: n$3 }, { endpoint: { [cx]: "https://s3express-control.{Region}.{partitionResult#dnsSuffix}", [cy]: al, [cE]: am }, [cq]: n$3 }], [cq]: o$3 }], [cq]: o$3 }, { [cs]: [ac, { [ct]: k$3, [cu]: [ad, 49, 50, c$3], [cw]: u$3 }, { [ct]: k$3, [cu]: [ad, 8, 12, c$3], [cw]: v$3 }, { [ct]: k$3, [cu]: bR, [cw]: w$3 }, { [ct]: k$3, [cu]: [ad, 32, 49, c$3], [cw]: x$3 }, { [ct]: g$3, [cu]: bz, [cw]: "regionPartition" }, { [ct]: h$3, [cu]: [{ [cv]: w$3 }, "--op-s3"] }], [cr]: [{ [cs]: bY, [cr]: [{ [cs]: [{ [ct]: h$3, [cu]: [au, "e"] }], [cr]: [{ [cs]: bZ, [cr]: [av, { [cs]: bE, endpoint: { [cx]: "https://{Bucket}.ec2.{url#authority}", [cy]: aw, [cE]: am }, [cq]: n$3 }], [cq]: o$3 }, { endpoint: { [cx]: "https://{Bucket}.ec2.s3-outposts.{Region}.{regionPartition#dnsSuffix}", [cy]: aw, [cE]: am }, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [{ [ct]: h$3, [cu]: [au, "o"] }], [cr]: [{ [cs]: bZ, [cr]: [av, { [cs]: bE, endpoint: { [cx]: "https://{Bucket}.op-{outpostId}.{url#authority}", [cy]: aw, [cE]: am }, [cq]: n$3 }], [cq]: o$3 }, { endpoint: { [cx]: "https://{Bucket}.op-{outpostId}.s3-outposts.{Region}.{regionPartition#dnsSuffix}", [cy]: aw, [cE]: am }, [cq]: n$3 }], [cq]: o$3 }, { error: "Unrecognized hardware type: \"Expected hardware type o or e but got {hardwareType}\"", [cq]: f$3 }], [cq]: o$3 }, { error: "Invalid ARN: The outpost Id must only contain a-z, A-Z, 0-9 and `-`.", [cq]: f$3 }], [cq]: o$3 }, { [cs]: bX, [cr]: [{ [cs]: [Z, { [ct]: r$3, [cu]: [{ [ct]: d$3, [cu]: [{ [ct]: m$3, [cu]: bA }] }] }], error: "Custom endpoint `{Endpoint}` was not a valid URI", [cq]: f$3 }, { [cs]: [ax, an], [cr]: [{ [cs]: bI, [cr]: [{ [cs]: cb, [cr]: [{ [cs]: [W, ab], error: "S3 Accelerate cannot be used in this region", [cq]: f$3 }, { [cs]: [Y, X, az, ar, aA], endpoint: { [cx]: "https://{Bucket}.s3-fips.dualstack.us-east-1.{partitionResult#dnsSuffix}", [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [Y, X, az, ar, aC, aD], [cr]: [{ endpoint: aE, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [Y, X, az, ar, aC, aG], endpoint: aE, [cq]: n$3 }, { [cs]: [aH, X, az, ar, aA], endpoint: { [cx]: "https://{Bucket}.s3-fips.us-east-1.{partitionResult#dnsSuffix}", [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [aH, X, az, ar, aC, aD], [cr]: [{ endpoint: aI, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [aH, X, az, ar, aC, aG], endpoint: aI, [cq]: n$3 }, { [cs]: [Y, aJ, W, ar, aA], endpoint: { [cx]: "https://{Bucket}.s3-accelerate.dualstack.us-east-1.{partitionResult#dnsSuffix}", [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [Y, aJ, W, ar, aC, aD], [cr]: [{ endpoint: aK, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [Y, aJ, W, ar, aC, aG], endpoint: aK, [cq]: n$3 }, { [cs]: [Y, aJ, az, ar, aA], endpoint: { [cx]: "https://{Bucket}.s3.dualstack.us-east-1.{partitionResult#dnsSuffix}", [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [Y, aJ, az, ar, aC, aD], [cr]: [{ endpoint: aL, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [Y, aJ, az, ar, aC, aG], endpoint: aL, [cq]: n$3 }, { [cs]: [aH, aJ, az, Z, ah, ai, aA], endpoint: { [cx]: C$1, [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [aH, aJ, az, Z, ah, aM, aA], endpoint: { [cx]: q$3, [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [aH, aJ, az, Z, ah, ai, aC, aD], [cr]: [{ [cs]: cc, endpoint: aN, [cq]: n$3 }, { endpoint: aN, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [aH, aJ, az, Z, ah, aM, aC, aD], [cr]: [{ [cs]: cc, endpoint: aO, [cq]: n$3 }, aP], [cq]: o$3 }, { [cs]: [aH, aJ, az, Z, ah, ai, aC, aG], endpoint: aN, [cq]: n$3 }, { [cs]: [aH, aJ, az, Z, ah, aM, aC, aG], endpoint: aO, [cq]: n$3 }, { [cs]: [aH, aJ, W, ar, aA], endpoint: { [cx]: D$1, [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [aH, aJ, W, ar, aC, aD], [cr]: [{ [cs]: cc, endpoint: aQ, [cq]: n$3 }, { endpoint: aQ, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [aH, aJ, W, ar, aC, aG], endpoint: aQ, [cq]: n$3 }, { [cs]: [aH, aJ, az, ar, aA], endpoint: { [cx]: E$1, [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [aH, aJ, az, ar, aC, aD], [cr]: [{ [cs]: cc, endpoint: { [cx]: E$1, [cy]: aF, [cE]: am }, [cq]: n$3 }, { endpoint: aR, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [aH, aJ, az, ar, aC, aG], endpoint: aR, [cq]: n$3 }], [cq]: o$3 }, aS], [cq]: o$3 }], [cq]: o$3 }, { [cs]: [Z, ah, { [ct]: h$3, [cu]: [{ [ct]: i$3, [cu]: [aj, "scheme"] }, "http"] }, { [ct]: p$3, [cu]: [ad, c$3] }, ax, aJ, aH, az], [cr]: [{ [cs]: bI, [cr]: [{ [cs]: cb, [cr]: [aP], [cq]: o$3 }, aS], [cq]: o$3 }], [cq]: o$3 }, { [cs]: [ax, { [ct]: F$1, [cu]: bB, [cw]: G$1 }], [cr]: [{ [cs]: [{ [ct]: i$3, [cu]: [aT, "resourceId[0]"], [cw]: H$1 }, { [ct]: r$3, [cu]: [{ [ct]: h$3, [cu]: [aU, I$1] }] }], [cr]: [{ [cs]: [{ [ct]: h$3, [cu]: [aV, J$1] }], [cr]: [{ [cs]: cd, [cr]: [{ [cs]: ce, [cr]: [aX, aY, { [cs]: cg, [cr]: [aZ, { [cs]: ch, [cr]: [ba, { [cs]: cj, [cr]: [{ [cs]: bI, [cr]: [{ [cs]: ck, [cr]: [{ [cs]: cl, [cr]: [{ [cs]: [{ [ct]: h$3, [cu]: [bc, I$1] }], error: "Invalid ARN: Missing account id", [cq]: f$3 }, { [cs]: cm, [cr]: [{ [cs]: cn, [cr]: [{ [cs]: bE, endpoint: { [cx]: M, [cy]: bd, [cE]: am }, [cq]: n$3 }, { [cs]: bJ, endpoint: { [cx]: "https://{accessPointName}-{bucketArn#accountId}.s3-object-lambda-fips.{bucketArn#region}.{bucketPartition#dnsSuffix}", [cy]: bd, [cE]: am }, [cq]: n$3 }, { endpoint: { [cx]: "https://{accessPointName}-{bucketArn#accountId}.s3-object-lambda.{bucketArn#region}.{bucketPartition#dnsSuffix}", [cy]: bd, [cE]: am }, [cq]: n$3 }], [cq]: o$3 }, be], [cq]: o$3 }, bf], [cq]: o$3 }, bg], [cq]: o$3 }, bh], [cq]: o$3 }], [cq]: o$3 }], [cq]: o$3 }, bi], [cq]: o$3 }, { error: "Invalid ARN: bucket ARN is missing a region", [cq]: f$3 }], [cq]: o$3 }, bj], [cq]: o$3 }, { error: "Invalid ARN: Object Lambda ARNs only support `accesspoint` arn types, but found: `{arnType}`", [cq]: f$3 }], [cq]: o$3 }, { [cs]: cd, [cr]: [{ [cs]: ce, [cr]: [{ [cs]: cg, [cr]: [{ [cs]: cd, [cr]: [{ [cs]: cg, [cr]: [aZ, { [cs]: ch, [cr]: [ba, { [cs]: cj, [cr]: [{ [cs]: bI, [cr]: [{ [cs]: [{ [ct]: h$3, [cu]: [bb, "{partitionResult#name}"] }], [cr]: [{ [cs]: cl, [cr]: [{ [cs]: [{ [ct]: h$3, [cu]: [aV, B$1] }], [cr]: [{ [cs]: cm, [cr]: [{ [cs]: cn, [cr]: [{ [cs]: bD, error: "Access Points do not support S3 Accelerate", [cq]: f$3 }, { [cs]: [X, Y], endpoint: { [cx]: "https://{accessPointName}-{bucketArn#accountId}.s3-accesspoint-fips.dualstack.{bucketArn#region}.{bucketPartition#dnsSuffix}", [cy]: bk, [cE]: am }, [cq]: n$3 }, { [cs]: [X, aH], endpoint: { [cx]: "https://{accessPointName}-{bucketArn#accountId}.s3-accesspoint-fips.{bucketArn#region}.{bucketPartition#dnsSuffix}", [cy]: bk, [cE]: am }, [cq]: n$3 }, { [cs]: [aJ, Y], endpoint: { [cx]: "https://{accessPointName}-{bucketArn#accountId}.s3-accesspoint.dualstack.{bucketArn#region}.{bucketPartition#dnsSuffix}", [cy]: bk, [cE]: am }, [cq]: n$3 }, { [cs]: [aJ, aH, Z, ah], endpoint: { [cx]: M, [cy]: bk, [cE]: am }, [cq]: n$3 }, { [cs]: [aJ, aH], endpoint: { [cx]: "https://{accessPointName}-{bucketArn#accountId}.s3-accesspoint.{bucketArn#region}.{bucketPartition#dnsSuffix}", [cy]: bk, [cE]: am }, [cq]: n$3 }], [cq]: o$3 }, be], [cq]: o$3 }, bf], [cq]: o$3 }, { error: "Invalid ARN: The ARN was not for the S3 service, found: {bucketArn#service}", [cq]: f$3 }], [cq]: o$3 }, bg], [cq]: o$3 }, bh], [cq]: o$3 }], [cq]: o$3 }], [cq]: o$3 }, bi], [cq]: o$3 }], [cq]: o$3 }], [cq]: o$3 }, { [cs]: [{ [ct]: y$1, [cu]: [aW, c$3] }], [cr]: [{ [cs]: bC, error: "S3 MRAP does not support dual-stack", [cq]: f$3 }, { [cs]: bJ, error: "S3 MRAP does not support FIPS", [cq]: f$3 }, { [cs]: bD, error: "S3 MRAP does not support S3 Accelerate", [cq]: f$3 }, { [cs]: [{ [ct]: e$3, [cu]: [{ [cv]: "DisableMultiRegionAccessPoints" }, c$3] }], error: "Invalid configuration: Multi-Region Access Point ARNs are disabled.", [cq]: f$3 }, { [cs]: [{ [ct]: g$3, [cu]: bz, [cw]: N }], [cr]: [{ [cs]: [{ [ct]: h$3, [cu]: [{ [ct]: i$3, [cu]: [{ [cv]: N }, j$3] }, { [ct]: i$3, [cu]: [aT, "partition"] }] }], [cr]: [{ endpoint: { [cx]: "https://{accessPointName}.accesspoint.s3-global.{mrapPartition#dnsSuffix}", [cy]: { [cA]: [{ [cB]: c$3, name: z$1, [cC]: B$1, [cF]: ca }] }, [cE]: am }, [cq]: n$3 }], [cq]: o$3 }, { error: "Client was configured for partition `{mrapPartition#name}` but bucket referred to partition `{bucketArn#partition}`", [cq]: f$3 }], [cq]: o$3 }], [cq]: o$3 }, { error: "Invalid Access Point Name", [cq]: f$3 }], [cq]: o$3 }, bj], [cq]: o$3 }, { [cs]: [{ [ct]: h$3, [cu]: [aV, A$1] }], [cr]: [{ [cs]: bC, error: "S3 Outposts does not support Dual-stack", [cq]: f$3 }, { [cs]: bJ, error: "S3 Outposts does not support FIPS", [cq]: f$3 }, { [cs]: bD, error: "S3 Outposts does not support S3 Accelerate", [cq]: f$3 }, { [cs]: [{ [ct]: d$3, [cu]: [{ [ct]: i$3, [cu]: [aT, "resourceId[4]"] }] }], error: "Invalid Arn: Outpost Access Point ARN contains sub resources", [cq]: f$3 }, { [cs]: [{ [ct]: i$3, [cu]: cf, [cw]: x$3 }], [cr]: [{ [cs]: bY, [cr]: [ba, { [cs]: cj, [cr]: [{ [cs]: bI, [cr]: [{ [cs]: ck, [cr]: [{ [cs]: cl, [cr]: [{ [cs]: cm, [cr]: [{ [cs]: [{ [ct]: i$3, [cu]: ci, [cw]: O }], [cr]: [{ [cs]: [{ [ct]: i$3, [cu]: [aT, "resourceId[3]"], [cw]: L }], [cr]: [{ [cs]: [{ [ct]: h$3, [cu]: [{ [cv]: O }, K] }], [cr]: [{ [cs]: bE, endpoint: { [cx]: "https://{accessPointName}-{bucketArn#accountId}.{outpostId}.{url#authority}", [cy]: bl, [cE]: am }, [cq]: n$3 }, { endpoint: { [cx]: "https://{accessPointName}-{bucketArn#accountId}.{outpostId}.s3-outposts.{bucketArn#region}.{bucketPartition#dnsSuffix}", [cy]: bl, [cE]: am }, [cq]: n$3 }], [cq]: o$3 }, { error: "Expected an outpost type `accesspoint`, found {outpostType}", [cq]: f$3 }], [cq]: o$3 }, { error: "Invalid ARN: expected an access point name", [cq]: f$3 }], [cq]: o$3 }, { error: "Invalid ARN: Expected a 4-component resource", [cq]: f$3 }], [cq]: o$3 }, bf], [cq]: o$3 }, bg], [cq]: o$3 }, bh], [cq]: o$3 }], [cq]: o$3 }], [cq]: o$3 }, { error: "Invalid ARN: The outpost Id may only contain a-z, A-Z, 0-9 and `-`. Found: `{outpostId}`", [cq]: f$3 }], [cq]: o$3 }, { error: "Invalid ARN: The Outpost Id was not set", [cq]: f$3 }], [cq]: o$3 }, { error: "Invalid ARN: Unrecognized format: {Bucket} (type: {arnType})", [cq]: f$3 }], [cq]: o$3 }, { error: "Invalid ARN: No ARN type specified", [cq]: f$3 }], [cq]: o$3 }, { [cs]: [{ [ct]: k$3, [cu]: [ad, 0, 4, b$3], [cw]: P }, { [ct]: h$3, [cu]: [{ [cv]: P }, "arn:"] }, { [ct]: r$3, [cu]: [{ [ct]: d$3, [cu]: [bm] }] }], error: "Invalid ARN: `{Bucket}` was not a valid ARN", [cq]: f$3 }, { [cs]: [{ [ct]: e$3, [cu]: [ay, c$3] }, bm], error: "Path-style addressing cannot be used with ARN buckets", [cq]: f$3 }, { [cs]: bG, [cr]: [{ [cs]: bI, [cr]: [{ [cs]: [az], [cr]: [{ [cs]: [Y, ar, X, aA], endpoint: { [cx]: "https://s3-fips.dualstack.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [Y, ar, X, aC, aD], [cr]: [{ endpoint: bn, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [Y, ar, X, aC, aG], endpoint: bn, [cq]: n$3 }, { [cs]: [aH, ar, X, aA], endpoint: { [cx]: "https://s3-fips.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [aH, ar, X, aC, aD], [cr]: [{ endpoint: bo, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [aH, ar, X, aC, aG], endpoint: bo, [cq]: n$3 }, { [cs]: [Y, ar, aJ, aA], endpoint: { [cx]: "https://s3.dualstack.us-east-1.{partitionResult#dnsSuffix}/{uri_encoded_bucket}", [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [Y, ar, aJ, aC, aD], [cr]: [{ endpoint: bp, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [Y, ar, aJ, aC, aG], endpoint: bp, [cq]: n$3 }, { [cs]: [aH, Z, ah, aJ, aA], endpoint: { [cx]: Q, [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [aH, Z, ah, aJ, aC, aD], [cr]: [{ [cs]: cc, endpoint: bq, [cq]: n$3 }, { endpoint: bq, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [aH, Z, ah, aJ, aC, aG], endpoint: bq, [cq]: n$3 }, { [cs]: [aH, ar, aJ, aA], endpoint: { [cx]: R, [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [aH, ar, aJ, aC, aD], [cr]: [{ [cs]: cc, endpoint: { [cx]: R, [cy]: aF, [cE]: am }, [cq]: n$3 }, { endpoint: br, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [aH, ar, aJ, aC, aG], endpoint: br, [cq]: n$3 }], [cq]: o$3 }, { error: "Path-style addressing cannot be used with S3 Accelerate", [cq]: f$3 }], [cq]: o$3 }], [cq]: o$3 }], [cq]: o$3 }, { [cs]: [{ [ct]: d$3, [cu]: [bs] }, { [ct]: e$3, [cu]: [bs, c$3] }], [cr]: [{ [cs]: bI, [cr]: [{ [cs]: co, [cr]: [aX, aY, { [cs]: bE, endpoint: { [cx]: t$3, [cy]: bt, [cE]: am }, [cq]: n$3 }, { [cs]: bJ, endpoint: { [cx]: "https://s3-object-lambda-fips.{Region}.{partitionResult#dnsSuffix}", [cy]: bt, [cE]: am }, [cq]: n$3 }, { endpoint: { [cx]: "https://s3-object-lambda.{Region}.{partitionResult#dnsSuffix}", [cy]: bt, [cE]: am }, [cq]: n$3 }], [cq]: o$3 }, aS], [cq]: o$3 }], [cq]: o$3 }, { [cs]: [at], [cr]: [{ [cs]: bI, [cr]: [{ [cs]: co, [cr]: [{ [cs]: [X, Y, ar, aA], endpoint: { [cx]: "https://s3-fips.dualstack.us-east-1.{partitionResult#dnsSuffix}", [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [X, Y, ar, aC, aD], [cr]: [{ endpoint: bu, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [X, Y, ar, aC, aG], endpoint: bu, [cq]: n$3 }, { [cs]: [X, aH, ar, aA], endpoint: { [cx]: "https://s3-fips.us-east-1.{partitionResult#dnsSuffix}", [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [X, aH, ar, aC, aD], [cr]: [{ endpoint: bv, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [X, aH, ar, aC, aG], endpoint: bv, [cq]: n$3 }, { [cs]: [aJ, Y, ar, aA], endpoint: { [cx]: "https://s3.dualstack.us-east-1.{partitionResult#dnsSuffix}", [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [aJ, Y, ar, aC, aD], [cr]: [{ endpoint: bw, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [aJ, Y, ar, aC, aG], endpoint: bw, [cq]: n$3 }, { [cs]: [aJ, aH, Z, ah, aA], endpoint: { [cx]: t$3, [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [aJ, aH, Z, ah, aC, aD], [cr]: [{ [cs]: cc, endpoint: bx, [cq]: n$3 }, { endpoint: bx, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [aJ, aH, Z, ah, aC, aG], endpoint: bx, [cq]: n$3 }, { [cs]: [aJ, aH, ar, aA], endpoint: { [cx]: S, [cy]: aB, [cE]: am }, [cq]: n$3 }, { [cs]: [aJ, aH, ar, aC, aD], [cr]: [{ [cs]: cc, endpoint: { [cx]: S, [cy]: aF, [cE]: am }, [cq]: n$3 }, { endpoint: by, [cq]: n$3 }], [cq]: o$3 }, { [cs]: [aJ, aH, ar, aC, aG], endpoint: by, [cq]: n$3 }], [cq]: o$3 }, aS], [cq]: o$3 }], [cq]: o$3 }], [cq]: o$3 }, { error: "A region must be set when sending requests to S3.", [cq]: f$3 }] };
 const ruleSet$3 = _data$3;
 
 const cache$3 = new EndpointCache({
@@ -44446,14 +44501,11 @@ const defaultS3HttpAuthSchemeProvider = createEndpointRuleSetHttpAuthSchemeProvi
 const resolveHttpAuthSchemeConfig$3 = (config) => {
     const config_0 = resolveAwsSdkSigV4Config(config);
     const config_1 = resolveAwsSdkSigV4AConfig(config_0);
-    return {
-        ...config_1,
-    };
+    return Object.assign(config_1, {});
 };
 
 const resolveClientEndpointParameters$3 = (options) => {
-    return {
-        ...options,
+    return Object.assign(options, {
         useFipsEndpoint: options.useFipsEndpoint ?? false,
         useDualstackEndpoint: options.useDualstackEndpoint ?? false,
         forcePathStyle: options.forcePathStyle ?? false,
@@ -44461,7 +44513,7 @@ const resolveClientEndpointParameters$3 = (options) => {
         useGlobalEndpoint: options.useGlobalEndpoint ?? false,
         disableMultiregionAccessPoints: options.disableMultiregionAccessPoints ?? false,
         defaultSigningName: "s3",
-    };
+    });
 };
 const commonParams$3 = {
     ForcePathStyle: { type: "clientContextParams", name: "forcePathStyle" },
@@ -45593,7 +45645,7 @@ class CreateSessionCommand extends Command
     .build() {
 }
 
-var version$2 = "3.758.0";
+var version$2 = "3.787.0";
 var packageInfo$2 = {
 	version: version$2};
 
@@ -46543,22 +46595,12 @@ const getRuntimeConfig$6 = (config) => {
 };
 
 const getAwsRegionExtensionConfiguration = (runtimeConfig) => {
-    let runtimeConfigRegion = async () => {
-        if (runtimeConfig.region === undefined) {
-            throw new Error("Region is missing from runtimeConfig");
-        }
-        const region = runtimeConfig.region;
-        if (typeof region === "string") {
-            return region;
-        }
-        return region();
-    };
     return {
         setRegion(region) {
-            runtimeConfigRegion = region;
+            runtimeConfig.region = region;
         },
         region() {
-            return runtimeConfigRegion;
+            return runtimeConfig.region;
         },
     };
 };
@@ -46607,28 +46649,18 @@ const resolveHttpAuthRuntimeConfig$3 = (config) => {
     };
 };
 
-const asPartial$3 = (t) => t;
 const resolveRuntimeExtensions$3 = (runtimeConfig, extensions) => {
-    const extensionConfiguration = {
-        ...asPartial$3(getAwsRegionExtensionConfiguration(runtimeConfig)),
-        ...asPartial$3(getDefaultExtensionConfiguration(runtimeConfig)),
-        ...asPartial$3(getHttpHandlerExtensionConfiguration(runtimeConfig)),
-        ...asPartial$3(getHttpAuthExtensionConfiguration$3(runtimeConfig)),
-    };
+    const extensionConfiguration = Object.assign(getAwsRegionExtensionConfiguration(runtimeConfig), getDefaultExtensionConfiguration(runtimeConfig), getHttpHandlerExtensionConfiguration(runtimeConfig), getHttpAuthExtensionConfiguration$3(runtimeConfig));
     extensions.forEach((extension) => extension.configure(extensionConfiguration));
-    return {
-        ...runtimeConfig,
-        ...resolveAwsRegionExtensionConfiguration(extensionConfiguration),
-        ...resolveDefaultRuntimeConfig(extensionConfiguration),
-        ...resolveHttpHandlerRuntimeConfig(extensionConfiguration),
-        ...resolveHttpAuthRuntimeConfig$3(extensionConfiguration),
-    };
+    return Object.assign(runtimeConfig, resolveAwsRegionExtensionConfiguration(extensionConfiguration), resolveDefaultRuntimeConfig(extensionConfiguration), resolveHttpHandlerRuntimeConfig(extensionConfiguration), resolveHttpAuthRuntimeConfig$3(extensionConfiguration));
 };
 
 class S3Client extends Client {
     config;
     constructor(...[configuration]) {
         const _config_0 = getRuntimeConfig$6(configuration || {});
+        super(_config_0);
+        this.initConfig = _config_0;
         const _config_1 = resolveClientEndpointParameters$3(_config_0);
         const _config_2 = resolveUserAgentConfig(_config_1);
         const _config_3 = resolveFlexibleChecksumsConfig(_config_2);
@@ -46640,7 +46672,6 @@ class S3Client extends Client {
         const _config_9 = resolveHttpAuthSchemeConfig$3(_config_8);
         const _config_10 = resolveS3Config(_config_9, { session: [() => this, CreateSessionCommand] });
         const _config_11 = resolveRuntimeExtensions$3(_config_10, configuration?.extensions || []);
-        super(_config_11);
         this.config = _config_11;
         this.middlewareStack.use(getUserAgentPlugin(this.config));
         this.middlewareStack.use(getRetryPlugin(this.config));
@@ -48133,18 +48164,15 @@ const defaultSSOOIDCHttpAuthSchemeProvider = (authParameters) => {
 };
 const resolveHttpAuthSchemeConfig$2 = (config) => {
     const config_0 = resolveAwsSdkSigV4Config(config);
-    return {
-        ...config_0,
-    };
+    return Object.assign(config_0, {});
 };
 
 const resolveClientEndpointParameters$2 = (options) => {
-    return {
-        ...options,
+    return Object.assign(options, {
         useDualstackEndpoint: options.useDualstackEndpoint ?? false,
         useFipsEndpoint: options.useFipsEndpoint ?? false,
         defaultSigningName: "sso-oauth",
-    };
+    });
 };
 const commonParams$2 = {
     UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -48153,7 +48181,7 @@ const commonParams$2 = {
     UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
 };
 
-var version$1 = "3.758.0";
+var version$1 = "3.787.0";
 var packageInfo$1 = {
 	version: version$1};
 
@@ -48274,28 +48302,18 @@ const resolveHttpAuthRuntimeConfig$2 = (config) => {
     };
 };
 
-const asPartial$2 = (t) => t;
 const resolveRuntimeExtensions$2 = (runtimeConfig, extensions) => {
-    const extensionConfiguration = {
-        ...asPartial$2(getAwsRegionExtensionConfiguration(runtimeConfig)),
-        ...asPartial$2(getDefaultExtensionConfiguration(runtimeConfig)),
-        ...asPartial$2(getHttpHandlerExtensionConfiguration(runtimeConfig)),
-        ...asPartial$2(getHttpAuthExtensionConfiguration$2(runtimeConfig)),
-    };
+    const extensionConfiguration = Object.assign(getAwsRegionExtensionConfiguration(runtimeConfig), getDefaultExtensionConfiguration(runtimeConfig), getHttpHandlerExtensionConfiguration(runtimeConfig), getHttpAuthExtensionConfiguration$2(runtimeConfig));
     extensions.forEach((extension) => extension.configure(extensionConfiguration));
-    return {
-        ...runtimeConfig,
-        ...resolveAwsRegionExtensionConfiguration(extensionConfiguration),
-        ...resolveDefaultRuntimeConfig(extensionConfiguration),
-        ...resolveHttpHandlerRuntimeConfig(extensionConfiguration),
-        ...resolveHttpAuthRuntimeConfig$2(extensionConfiguration),
-    };
+    return Object.assign(runtimeConfig, resolveAwsRegionExtensionConfiguration(extensionConfiguration), resolveDefaultRuntimeConfig(extensionConfiguration), resolveHttpHandlerRuntimeConfig(extensionConfiguration), resolveHttpAuthRuntimeConfig$2(extensionConfiguration));
 };
 
 class SSOOIDCClient extends Client {
     config;
     constructor(...[configuration]) {
         const _config_0 = getRuntimeConfig$4(configuration || {});
+        super(_config_0);
+        this.initConfig = _config_0;
         const _config_1 = resolveClientEndpointParameters$2(_config_0);
         const _config_2 = resolveUserAgentConfig(_config_1);
         const _config_3 = resolveRetryConfig(_config_2);
@@ -48304,7 +48322,6 @@ class SSOOIDCClient extends Client {
         const _config_6 = resolveEndpointConfig(_config_5);
         const _config_7 = resolveHttpAuthSchemeConfig$2(_config_6);
         const _config_8 = resolveRuntimeExtensions$2(_config_7, configuration?.extensions || []);
-        super(_config_8);
         this.config = _config_8;
         this.middlewareStack.use(getUserAgentPlugin(this.config));
         this.middlewareStack.use(getRetryPlugin(this.config));
@@ -48874,18 +48891,15 @@ const defaultSSOHttpAuthSchemeProvider = (authParameters) => {
 };
 const resolveHttpAuthSchemeConfig$1 = (config) => {
     const config_0 = resolveAwsSdkSigV4Config(config);
-    return {
-        ...config_0,
-    };
+    return Object.assign(config_0, {});
 };
 
 const resolveClientEndpointParameters$1 = (options) => {
-    return {
-        ...options,
+    return Object.assign(options, {
         useDualstackEndpoint: options.useDualstackEndpoint ?? false,
         useFipsEndpoint: options.useFipsEndpoint ?? false,
         defaultSigningName: "awsssoportal",
-    };
+    });
 };
 const commonParams$1 = {
     UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -48894,7 +48908,7 @@ const commonParams$1 = {
     UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
 };
 
-var version = "3.758.0";
+var version = "3.787.0";
 var packageInfo = {
 	version: version};
 
@@ -49015,28 +49029,18 @@ const resolveHttpAuthRuntimeConfig$1 = (config) => {
     };
 };
 
-const asPartial$1 = (t) => t;
 const resolveRuntimeExtensions$1 = (runtimeConfig, extensions) => {
-    const extensionConfiguration = {
-        ...asPartial$1(getAwsRegionExtensionConfiguration(runtimeConfig)),
-        ...asPartial$1(getDefaultExtensionConfiguration(runtimeConfig)),
-        ...asPartial$1(getHttpHandlerExtensionConfiguration(runtimeConfig)),
-        ...asPartial$1(getHttpAuthExtensionConfiguration$1(runtimeConfig)),
-    };
+    const extensionConfiguration = Object.assign(getAwsRegionExtensionConfiguration(runtimeConfig), getDefaultExtensionConfiguration(runtimeConfig), getHttpHandlerExtensionConfiguration(runtimeConfig), getHttpAuthExtensionConfiguration$1(runtimeConfig));
     extensions.forEach((extension) => extension.configure(extensionConfiguration));
-    return {
-        ...runtimeConfig,
-        ...resolveAwsRegionExtensionConfiguration(extensionConfiguration),
-        ...resolveDefaultRuntimeConfig(extensionConfiguration),
-        ...resolveHttpHandlerRuntimeConfig(extensionConfiguration),
-        ...resolveHttpAuthRuntimeConfig$1(extensionConfiguration),
-    };
+    return Object.assign(runtimeConfig, resolveAwsRegionExtensionConfiguration(extensionConfiguration), resolveDefaultRuntimeConfig(extensionConfiguration), resolveHttpHandlerRuntimeConfig(extensionConfiguration), resolveHttpAuthRuntimeConfig$1(extensionConfiguration));
 };
 
 class SSOClient extends Client {
     config;
     constructor(...[configuration]) {
         const _config_0 = getRuntimeConfig$2(configuration || {});
+        super(_config_0);
+        this.initConfig = _config_0;
         const _config_1 = resolveClientEndpointParameters$1(_config_0);
         const _config_2 = resolveUserAgentConfig(_config_1);
         const _config_3 = resolveRetryConfig(_config_2);
@@ -49045,7 +49049,6 @@ class SSOClient extends Client {
         const _config_6 = resolveEndpointConfig(_config_5);
         const _config_7 = resolveHttpAuthSchemeConfig$1(_config_6);
         const _config_8 = resolveRuntimeExtensions$1(_config_7, configuration?.extensions || []);
-        super(_config_8);
         this.config = _config_8;
         this.middlewareStack.use(getUserAgentPlugin(this.config));
         this.middlewareStack.use(getRetryPlugin(this.config));
@@ -49322,26 +49325,22 @@ const defaultSTSHttpAuthSchemeProvider = (authParameters) => {
     }
     return options;
 };
-const resolveStsAuthConfig = (input) => ({
-    ...input,
+const resolveStsAuthConfig = (input) => Object.assign(input, {
     stsClientCtor: STSClient,
 });
 const resolveHttpAuthSchemeConfig = (config) => {
     const config_0 = resolveStsAuthConfig(config);
     const config_1 = resolveAwsSdkSigV4Config(config_0);
-    return {
-        ...config_1,
-    };
+    return Object.assign(config_1, {});
 };
 
 const resolveClientEndpointParameters = (options) => {
-    return {
-        ...options,
+    return Object.assign(options, {
         useDualstackEndpoint: options.useDualstackEndpoint ?? false,
         useFipsEndpoint: options.useFipsEndpoint ?? false,
         useGlobalEndpoint: options.useGlobalEndpoint ?? false,
         defaultSigningName: "sts",
-    };
+    });
 };
 const commonParams = {
     UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -49481,28 +49480,18 @@ const resolveHttpAuthRuntimeConfig = (config) => {
     };
 };
 
-const asPartial = (t) => t;
 const resolveRuntimeExtensions = (runtimeConfig, extensions) => {
-    const extensionConfiguration = {
-        ...asPartial(getAwsRegionExtensionConfiguration(runtimeConfig)),
-        ...asPartial(getDefaultExtensionConfiguration(runtimeConfig)),
-        ...asPartial(getHttpHandlerExtensionConfiguration(runtimeConfig)),
-        ...asPartial(getHttpAuthExtensionConfiguration(runtimeConfig)),
-    };
+    const extensionConfiguration = Object.assign(getAwsRegionExtensionConfiguration(runtimeConfig), getDefaultExtensionConfiguration(runtimeConfig), getHttpHandlerExtensionConfiguration(runtimeConfig), getHttpAuthExtensionConfiguration(runtimeConfig));
     extensions.forEach((extension) => extension.configure(extensionConfiguration));
-    return {
-        ...runtimeConfig,
-        ...resolveAwsRegionExtensionConfiguration(extensionConfiguration),
-        ...resolveDefaultRuntimeConfig(extensionConfiguration),
-        ...resolveHttpHandlerRuntimeConfig(extensionConfiguration),
-        ...resolveHttpAuthRuntimeConfig(extensionConfiguration),
-    };
+    return Object.assign(runtimeConfig, resolveAwsRegionExtensionConfiguration(extensionConfiguration), resolveDefaultRuntimeConfig(extensionConfiguration), resolveHttpHandlerRuntimeConfig(extensionConfiguration), resolveHttpAuthRuntimeConfig(extensionConfiguration));
 };
 
 class STSClient extends Client {
     config;
     constructor(...[configuration]) {
         const _config_0 = getRuntimeConfig(configuration || {});
+        super(_config_0);
+        this.initConfig = _config_0;
         const _config_1 = resolveClientEndpointParameters(_config_0);
         const _config_2 = resolveUserAgentConfig(_config_1);
         const _config_3 = resolveRetryConfig(_config_2);
@@ -49511,7 +49500,6 @@ class STSClient extends Client {
         const _config_6 = resolveEndpointConfig(_config_5);
         const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
         const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
-        super(_config_8);
         this.config = _config_8;
         this.middlewareStack.use(getUserAgentPlugin(this.config));
         this.middlewareStack.use(getRetryPlugin(this.config));
